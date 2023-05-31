@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn Responsive Web Design by Building a Piano">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(十一)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%80/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn Responsive Web Design by Building a Piano">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-11T00:45:04.941Z">
+<meta property="article:modified_time" content="2023-05-11T00:48:55.773Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="media">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%80/","path":"responsive-web-dedign-十一/","title":"Responsive Web Dedign(十一)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(十一) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-Responsive-Web-Design-by-Building-a-Piano"><span class="nav-text">Learn Responsive Web Design by Building a Piano</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-10</time>
+        <br>
+      Responsive Web Dedign(十)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%BA%8C/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-27</time>
+        <br>
+      Responsive Web Dedign(十二)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%B8%89/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-28</time>
+        <br>
+      Responsive Web Dedign(十三)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E5%9B%9B/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-30</time>
+        <br>
+      Responsive Web Dedign(十四)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B9%9D/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-09</time>
+        <br>
+      Responsive Web Dedign(九)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(十一) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(十一)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-11 08:45:04 / 修改时间：08:48:55" itemprop="dateCreated datePublished" datetime="2023-05-11T08:45:04+08:00">2023-05-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-Responsive-Web-Design-by-Building-a-Piano/" itemprop="url" rel="index"><span itemprop="name">Learn Responsive Web Design by Building a Piano</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-Responsive-Web-Design-by-Building-a-Piano"><a href="#Learn-Responsive-Web-Design-by-Building-a-Piano" class="headerlink" title="Learn Responsive Web Design by Building a Piano"></a>Learn Responsive Web Design by Building a Piano</h4><span id="more"></span>
+
+<ol>
+<li><p>Begin with the basic HTML structure. Add a <code>DOCTYPE</code> declaration and <code>html</code>, <code>head</code>, <code>body</code>, and <code>title</code> elements.</p>
+<p>Set the language of this page to English. Set the <code>title</code> to <code>Piano</code>.</p>
+</li>
+<li><p>Add two <code>meta</code> tags, one to optimize your page for mobile devices, and one to specify an accepted <code>charset</code> for the page.</p>
+</li>
+<li><p>Time to start working on the piano. Create a <code>div</code> element within your <code>body</code> element with the <code>id</code> set to <code>piano</code>.</p>
+</li>
+<li><p>Nest a second <code>div</code> within your existing <code>div</code>, and set the <code>class</code> to be <code>keys</code>.</p>
+</li>
+<li><p>Within your <code>.keys</code> element, add seven <code>div</code> elements. Give them all the class <code>key</code>.</p>
+</li>
+<li><p>Remember that a <code>class</code> attribute can have multiple values. To separate your white keys from your black keys, you’ll add a second <code>class</code> value of <code>black--key</code>. Add this to your second, third, fifth, sixth, and seventh <code>.key</code> elements.</p>
+</li>
+<li><p>Now copy the set of seven <code>.key</code> elements, and paste two more sets into the <code>.keys</code> div.</p>
+</li>
+<li><p>Add a <code>link</code> element within your <code>head</code> element. For that <code>link</code> element, set the <code>rel</code> attribute to <code>stylesheet</code> and the <code>href</code> to <code>./styles.css</code>.</p>
+</li>
+<li><p>Browsers can apply default margin and padding values to specific elements. To make sure your piano looks correct, you need to reset the box model.</p>
+<p>Add an <code>html</code> rule selector to your CSS file, and set the <code>box-sizing</code> property to <code>border-box</code>.</p>
+</li>
+<li><p>The <code>::before</code> selector creates a pseudo-element which is the first child of the selected element, while the <code>::after</code> selector creates a pseudo-element which is the last child of the selected element. These pseudo-elements are often used to create cosmetic content, which you will see later in this project.</p>
+<p>For now, create a CSS selector to target all elements with <code>*</code>, and include the pseudo-elements with <code>::before</code> and <code>::after</code>. Set the <code>box-sizing</code> property to <code>inherit</code>.</p>
+</li>
+<li><p>Now target your <code>#piano</code> element with an <code>id</code> selector. Set <code>background-color</code> property to <code>#00471b</code>, the <code>width</code> property to <code>992px</code> and the <code>height</code> property to <code>290px</code>.</p>
+</li>
+<li><p>Set the <code>margin</code> of the <code>#piano</code> to <code>80px auto</code>.</p>
+</li>
+<li><p>Time to style the keys. Below the <code>#piano</code> rule, target the <code>.keys</code> element with a <code>class</code> selector. Give the new rule a <code>background-color</code> property of <code>#040404</code>, a <code>width</code> property of <code>949px</code> and a <code>height</code> property of <code>180px</code>.</p>
+</li>
+<li><p>Give the <code>.keys</code> a <code>padding-left</code> of <code>2px</code>.</p>
+</li>
+<li><p>Move the keys into position by adjusting the <code>#piano</code> selector. Set the <code>padding</code> property to <code>90px 20px 0 20px</code>.</p>
+</li>
+<li><p>Time to style the keys themselves. Create a <code>class</code> selector for the <code>.key</code> elements. Set the <code>background-color</code> set to the value <code>#ffffff</code>, the <code>position</code> property to <code>relative</code>, the <code>width</code> property to <code>41px</code>, and the <code>height</code> property to <code>175px</code>.</p>
+</li>
+<li><p>Give the <code>.key</code> a <code>margin</code> of <code>2px</code> and a <code>float</code> property set to <code>left</code>.</p>
+</li>
+<li><p>Now it is time to use the pseudo-selectors you prepared for earlier. To create the black keys, add a new <code>.key.black--key::after</code> selector. This will target the elements with the class <code>key black--key</code>, and select the pseudo-element after these elements in the HTML.</p>
+<p>In the new selector, set the <code>background-color</code> to <code>#1d1e22</code>. Also set the <code>content</code> property to <code>&quot;&quot;</code>. This will make the pseudo-elements empty.</p>
+<p>The <code>content</code> property is used to set or override the content of the element. By default, the pseudo-elements created by the <code>::before</code> and <code>::after</code> pseudo-selectors are empty, and the elements will not be rendered to the page. Setting the <code>content</code> property to an empty string <code>&quot;&quot;</code> will ensure the element is rendered to the page while still being empty.</p>
+<p>If you would like to experiment, try removing the <code>background-color</code> property and setting different values for the <code>content</code> property, such as <code>&quot;♥&quot;</code>. Remember to undo these changes when you are done so the tests pass.</p>
+</li>
+<li><p>Give the <code>.key.black--key::after</code> a <code>position</code> property set to <code>absolute</code> and a <code>left</code> property set to <code>-18px</code>.</p>
+</li>
+<li><p>For the <code>.key.black--key::after</code>, set the <code>width</code> to <code>32px</code> and the <code>height</code> to <code>100px</code>.</p>
+</li>
+<li><p>The piano needs the freeCodeCamp logo to make it official.</p>
+<p>Add an <code>img</code> element before your <code>.keys</code> element. Give the <code>img</code> a <code>class</code> of <code>logo</code>, and set the <code>src</code> to <code>https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg</code>. Give it an <code>alt</code> text of <code>freeCodeCamp Logo</code>.</p>
+</li>
+<li><p>Start styling the logo by creating a <code>.logo</code> selector. Set the <code>width</code> to <code>200px</code>, a <code>position</code> of <code>absolute</code> and a <code>top</code> set to <code>23px</code>.</p>
+</li>
+<li><p>The <code>img</code> element needs its parent to have a <code>position</code> set as a point of reference. Set the <code>position</code> of the <code>#piano</code> selector to <code>relative</code>.</p>
+</li>
+<li><p>To smooth the sharp edges of the piano and keys, start by giving the <code>#piano</code> a <code>border-radius</code> of <code>10px</code>.</p>
+</li>
+<li><p>Give the <code>.key</code> selector a <code>border-radius</code> value of <code>0 0 3px 3px</code>.</p>
+</li>
+<li><p>Give the <code>.key.black--key::after</code> selector a <code>border-radius</code> of <code>0 0 3px 3px</code> to match the keys.</p>
+</li>
+<li><p>The <code>@media</code> at-rule, also known as a media query, is used to conditionally apply CSS. Media queries are commonly used to apply CSS based on the viewport width using the <code>max-width</code> and <code>min-width</code> properties.</p>
+<p>In the below example the padding is applied to the <code>.card</code> class when the viewport is <code>960px</code> wide and below.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">960px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.card</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">2rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Add a media query that will be applied when the viewport is <code>768px</code> wide and below.</p>
+</li>
+<li><p>Add a new <code>#piano</code> selector within your <code>@media</code> query, and set the <code>width</code> to <code>358px</code>.</p>
+</li>
+<li><p>Within the <code>@media</code> query, add a <code>.keys</code> selector and set the <code>width</code> to <code>318px</code>.</p>
+</li>
+<li><p>Now add a <code>.logo</code> selector to the <code>@media</code> query, and set the <code>width</code> property to <code>150px</code>.</p>
+</li>
+<li><p>You might have noticed the keys collapse when the browser window is smaller than <code>768px</code>. Set <code>overflow</code> to <code>hidden</code> in the first <code>.keys</code> selector, to take care of this issue. This property will hide any element that is pushed outside the set <code>width</code> value of <code>.keys</code>.</p>
+</li>
+<li><p>Logical operators can be used to construct more complex media queries. The <code>and</code> logical operator is used to query two media conditions.</p>
+<p>For example, a media query that targets a display width between 500px and 1000px would be:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">500px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">1000px</span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Add another <code>@media</code> rule to apply if the browser window is wider than <code>769px</code> but smaller than <code>1199px</code>.</p>
+</li>
+<li><p>For the new <code>@media</code> rule, set the <code>width</code> of the <code>#piano</code> to <code>675px</code> and the <code>width</code> of the <code>.keys</code> to <code>633px</code>.</p>
+<p>With that, your piano is complete!</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Piano<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./styles.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;piano&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;logo&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;freeCodeCamp Logo&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;keys&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key black--key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*, *<span class="selector-pseudo">::before</span>, *<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: inherit;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#piano</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#00471b</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">992px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">290px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">90px</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.keys</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#040404</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">949px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.key</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">41px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">175px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.key</span><span class="selector-class">.black--key</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#1d1e22</span>;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">32px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">23px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-id">#piano</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">358px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.keys</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">318px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.logo</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%80/" title="Responsive Web Dedign(十一)">http://moyun.com/responsive-web-dedign-十一/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/media/" rel="tag"><i class="fa fa-tag"></i> media</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%8D%81/" rel="prev" title="Responsive Web Dedign(十)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(十)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/project-exercise-%E2%80%94-build-a-technical-documentation-page/" rel="next" title="Project Exercise — Build a Technical Documentation Page">
+                  Project Exercise — Build a Technical Documentation Page <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

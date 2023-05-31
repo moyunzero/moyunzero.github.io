@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn CSS Variables by Building a City Skyline">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(十二)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%8C/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn CSS Variables by Building a City Skyline">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-27T03:55:21.741Z">
+<meta property="article:modified_time" content="2023-05-27T03:58:06.406Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%8C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%8C/","path":"responsive-web-dedign-十二/","title":"Responsive Web Dedign(十二)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(十二) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-CSS-Variables-by-Building-a-City-Skyline"><span class="nav-text">Learn CSS Variables by Building a City Skyline</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%89/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-28</time>
+        <br>
+      Responsive Web Dedign(三)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-11</time>
+        <br>
+      Responsive Web Dedign(十一)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%BA%94/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-31</time>
+        <br>
+      Responsive Web Dedign(十五)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-10</time>
+        <br>
+      Responsive Web Dedign(十)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(十二) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(十二)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-27 11:55:21 / 修改时间：11:58:06" itemprop="dateCreated datePublished" datetime="2023-05-27T11:55:21+08:00">2023-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-CSS-Variables-by-Building-a-City-Skyline/" itemprop="url" rel="index"><span itemprop="name">Learn CSS Variables by Building a City Skyline</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>28k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>25 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-CSS-Variables-by-Building-a-City-Skyline"><a href="#Learn-CSS-Variables-by-Building-a-City-Skyline" class="headerlink" title="Learn CSS Variables by Building a City Skyline"></a>Learn CSS Variables by Building a City Skyline</h4><span id="more"></span>
+
+<ol>
+<li><p>Welcome to the CSS Variables Skyline project! Start by adding the <code>!DOCTYPE html</code> declaration at the top of the document so the browser knows what type of document it’s reading.</p>
+</li>
+<li><p>Add opening and closing <code>html</code> tags below the <code>DOCTYPE</code> so you have a place to start putting some code. Be sure to set the language to English.</p>
+</li>
+<li><p>Next, add opening and closing <code>head</code> and <code>body</code> tags within the <code>html</code> element.</p>
+</li>
+<li><p>Within the <code>head</code>, nest a <code>meta</code> element with a <code>charset</code> of <code>UTF-8</code>, a <code>title</code> element with a title of <code>City Skyline</code>, and a <code>link</code> element that links your <code>styles.css</code> file.</p>
+</li>
+<li><p>In CSS, you can target everything with an asterisk. Add a border to everything by using the <code>*</code> selector, and giving it a <code>border</code> of <code>1px solid black</code>. This is a trick that helps visualize where elements are and their size. You will remove this later.</p>
+</li>
+<li><p>Also add a <code>box-sizing</code> of <code>border-box</code> to everything. This will make it so the border you added doesn’t add any size to your elements.</p>
+</li>
+<li><p>You can see the <code>body</code> (it’s the inner-most box on your page); the box around it is the <code>html</code> element. Make your <code>body</code> fill the whole viewport by giving it a <code>height</code> of <code>100vh</code>. Remove the default <code>margin</code> from the <code>body</code> by setting the <code>margin</code> to <code>0</code>. Finally, set the <code>overflow</code> property to <code>hidden</code> to hide any scroll bars that appear when something extends past the viewport.</p>
+</li>
+<li><p>Create a <code>div</code> element in the <code>body</code> with a class of <code>background-buildings</code>. This will be a container for a group of buildings.</p>
+</li>
+<li><p>Give your <code>.background-buildings</code> element a <code>width</code> and <code>height</code> of <code>100%</code> to make it the full width and height of its parent, the <code>body</code>.</p>
+</li>
+<li><p>Nest a <code>div</code> with a class of <code>bb1</code> in the background buildings container. Open your <code>styles.css</code> file, and give <code>.bb1</code> a <code>width</code> of <code>10%</code> and <code>height</code> of <code>70%</code>. “bb” stands for “background building”, this will be your first building.</p>
+</li>
+<li><p>Nest four <code>div</code> elements in the <code>.bb1</code> container. Give them the classes <code>bb1a</code>, <code>bb1b</code>, <code>bb1c</code>, and <code>bb1d</code> in that order. This building will have four sections.</p>
+</li>
+<li><p>Give the parts of your building <code>width</code> and <code>height</code> properties with these values: <code>70%</code> and <code>10%</code> to <code>.bb1a</code>, <code>80%</code> and <code>10%</code> to <code>.bb1b</code>, <code>90%</code> and <code>10%</code> to <code>.bb1c</code>, and <code>100%</code> and <code>70%</code> to <code>.bb1d</code>. Remember that these percentages are relative to the parent and note that the heights will add up to 100% - vertically filling the container.</p>
+</li>
+<li><p>Center the parts of your building by turning the <code>.bb1</code> element into a flexbox parent. Use the <code>flex-direction</code> and <code>align-items</code> properties to center the children.</p>
+</li>
+<li><p>Now you have something that is resembling a building. You are ready to create your first variable. Variable declarations begin with two dashes (<code>-</code>) and are given a name and a value like this: <code>--variable-name: value;</code>. In the rule for the <code>bb1</code> class, create a variable named <code>--building-color1</code> and give it a value of <code>#999</code>.</p>
+</li>
+<li><p>To use a variable, put the variable name in parentheses with <code>var</code> in front of them like this: <code>var(--variable-name)</code>. Whatever value you gave the variable will be applied to whatever property you use it on.</p>
+<p>Add the variable <code>--building-color1</code> you created in the previous step as the value of the <code>background-color</code> property of the <code>.bb1a</code> class.</p>
+</li>
+<li><p>Use the same variable as the <code>background-color</code> of the <code>.bb1b</code>, <code>.bb1c</code>, and <code>.bb1d</code> classes to fill in the rest of the building.</p>
+</li>
+<li><p>Change the value of your variable from <code>#999</code> to <code>#aa80ff</code> and you can see how it gets applied everywhere you used the variable. This is the main advantage of using variables, being able to quickly change many values in your stylesheet by just changing the value of a variable.</p>
+</li>
+<li><p>Your first building looks pretty good now. Nest three new <code>div</code> elements in the <code>.background-buildings</code> container and give them the classes of <code>bb2</code>, <code>bb3</code>, and <code>bb4</code> in that order. These will be three more buildings for the background.</p>
+</li>
+<li><p>Give the new buildings <code>width</code> and <code>height</code> properties of: <code>10%</code> and <code>50%</code> for <code>.bb2</code>, <code>10%</code> and <code>55%</code> for <code>.bb3</code>, and <code>11%</code> and <code>58%</code> for <code>.bb4</code>. You will be using almost all percent based units and some flexbox for this project, so everything will be completely responsive.</p>
+</li>
+<li><p>The buildings are currently stacked on top of each other. Align the buildings by turning the <code>.background-buildings</code> element into a flexbox parent. Use the <code>align-items</code> and <code>justify-content</code> properties to evenly space the buildings across the bottom of the element.</p>
+</li>
+<li><p>The buildings are too spaced out. Squeeze them together by adding two empty <code>div</code> elements to the top of the <code>.background-buildings</code> element, two more at the bottom of it, and one more in between <code>.bb3</code> and <code>.bb4</code>. These will be added as evenly-spaced elements across the container, effectively moving the buildings closer to the center.</p>
+</li>
+<li><p>Create a new variable below your <code>--building-color1</code> variable. Name your new variable <code>--building-color2</code> and give it a value of <code>#66cc99</code>. Then set it as the <code>background-color</code> of <code>.bb2</code>.</p>
+</li>
+<li><p>That didn’t work. You should add a fallback value to a variable by putting it as the second value of where you use the variable like this: <code>var(--variable-name, fallback-value)</code>. The property will use the fallback value when there’s a problem with the variable. Add a fallback value of <code>green</code> to the <code>background-color</code> of <code>.bb2</code>.</p>
+</li>
+<li><p>Create a new variable below the other ones named <code>--building-color3</code> and give it a value of <code>#cc6699</code>. Then use it as the <code>background-color</code> of the <code>.bb3</code> class and give it a fallback value of <code>pink</code>.</p>
+</li>
+<li><p>That didn’t work, because the variables you declared in <code>.bb1</code> do not cascade to the <code>.bb2</code> and <code>.bb3</code> sibling elements. That’s just how CSS works. Because of this, variables are often declared in the <code>:root</code> selector. This is the highest level selector in CSS; putting your variables there will make them usable everywhere. Add the <code>:root</code> selector to the top of your stylesheet, and move all your variable declarations there.</p>
+</li>
+<li><p>Now that you’ve worked the bugs out and the buildings are the right colors, you can remove the fallback values in the two places they were used. Go ahead and do that now.</p>
+</li>
+<li><p>Create another variable named <code>--building-color4</code> and give it a value of <code>#538cc6</code>. Make sure it’s in the <code>:root</code> selector this time. Then use it to fill in the last building.</p>
+</li>
+<li><p>The background buildings are starting to look pretty good. Create a new <code>div</code> below the <code>.background-buildings</code> element and give it a class of <code>foreground-buildings</code>. This will be another container for more buildings.</p>
+</li>
+<li><p>You want the <code>.foreground-buildings</code> container to sit directly on top of the <code>.background-buildings</code> element. Give it a <code>width</code> and <code>height</code> of <code>100%</code>, set the <code>position</code> to <code>absolute</code>, and the <code>top</code> to <code>0</code>. This will make it the same size as the body and move the start of it to the top left corner.</p>
+</li>
+<li><p>Nest six <code>div</code> elements within <code>.foreground-buildings</code> and give them the classes of <code>fb1</code> through <code>fb6</code> in that order. “fb” stands for “foreground building”. These will be six more buildings for the foreground.</p>
+</li>
+<li><p>Give the six new elements these <code>width</code> and <code>height</code> values: <code>10%</code> and <code>60%</code> to <code>.fb1</code>, <code>10%</code> and <code>40%</code> to <code>.fb2</code>, <code>10%</code> and <code>35%</code> to <code>.fb3</code>, <code>8%</code> and <code>45%</code> to <code>.fb4</code>, <code>10%</code> and <code>33%</code> to <code>.fb5</code>, and <code>9%</code> and <code>38%</code> to <code>.fb6</code>.</p>
+</li>
+<li><p>Add the same <code>display</code>, <code>align-items</code>, and <code>justify-content</code> properties and values to <code>.foreground-buildings</code> that you used on <code>.background-buildings</code>. Again, this will use Flexbox to evenly space the buildings across the bottom of their container.</p>
+</li>
+<li><p>You should optimize your code. Move the <code>position</code> and <code>top</code> properties and values from <code>.foreground-buildings</code> to <code>.background-buildings</code>. Then select both <code>.background-buildings</code> and <code>.foreground-buildings</code> there, effectively applying those styles to both of the elements. You can use a comma (<code>,</code>) to separate selectors like this: <code>selector1, selector2</code>.</p>
+</li>
+<li><p>Now that you did that, you can delete the old <code>.foreground-buildings</code> declaration and all of its properties since they aren’t needed anymore.</p>
+</li>
+<li><p>The skyline is coming together. Fill in the <code>background-color</code> property of the foreground buildings. Use your <code>--building-color1</code> variable to fill in <code>.fb3</code> and <code>.fb4</code>, <code>--building-color2</code> for <code>.fb5</code>, <code>--building-color3</code> for <code>.fb2</code> and <code>.fb6</code>, and <code>--building-color4</code> for <code>.fb1</code>.</p>
+</li>
+<li><p>Squeeze the buildings together again by adding two empty <code>div</code> elements within both the top and bottom of the <code>.foreground-buildings</code> element, and one more in between <code>.fb2</code> and <code>.fb3</code>.</p>
+</li>
+<li><p>Move the position of <code>.fb4</code> relative to where it is now by adding a <code>position</code> of <code>relative</code> and <code>left</code> of <code>10%</code> to it. Do the same for <code>.fb5</code> but use <code>right</code> instead of <code>left</code>. This will cover up the remaining white space in between the buildings.</p>
+</li>
+<li><p>Your code is starting to get quite long. Add a comment above the <code>.fb1</code> class that says <code>FOREGROUND BUILDINGS - &quot;fb&quot; stands for &quot;foreground building&quot;</code> to help people understand your code. Above the <code>.bb1</code> class add another comment that says <code>BACKGROUND BUILDINGS - &quot;bb&quot; stands for &quot;background building&quot;</code>. If you don’t remember, comments in CSS look like this: <code>/* Comment here */</code>.</p>
+</li>
+<li><p>Create a new variable in <code>:root</code> called <code>--window-color1</code> and give it a value of <code>black</code>. This will be a secondary color for the purple buildings.</p>
+</li>
+<li><p>Gradients in CSS are a way to transition between colors across the distance of an element. They are applied to the <code>background</code> property and the syntax looks like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gradient-type(</span><br><span class="line">  color1,</span><br><span class="line">  color2</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>In the example, <code>color1</code> is solid at the top, <code>color2</code> is solid at the bottom, and in between it transitions evenly from one to the next. In <code>.bb1a</code>, add a <code>background</code> property below the <code>background-color</code> property. Set it as a gradient of type <code>linear-gradient</code> that uses <code>--building-color1</code> as the first color and <code>--window-color1</code> as the second.</p>
+</li>
+<li><p>You want to add the same gradient to the next two sections. Instead of doing that, create a new class selector called <code>bb1-window</code>, and move the <code>height</code> and <code>background</code> properties and values from <code>.bb1a</code> to the new class selector.</p>
+</li>
+<li><p>Add the new <code>bb1-window</code> class to the <code>.bb1a</code>, <code>.bb1b</code>, and <code>.bb1c</code> elements. This will apply the gradient to them.</p>
+</li>
+<li><p>You don’t need the <code>height</code> or <code>background-color</code> properties in <code>.bb1a</code>, <code>.bb1b</code> or <code>.bb1c</code> anymore, so go ahead and remove them.</p>
+</li>
+<li><p>Gradients can use as many colors as you want like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gradient-type(</span><br><span class="line">  color1,</span><br><span class="line">  color2,</span><br><span class="line">  color3</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Add a <code>linear-gradient</code> to <code>.bb1d</code> with <code>orange</code> as the first color, <code>--building-color1</code> as the second, and <code>--window-color1</code> as the third. Remember to use the gradient on the <code>background</code> property.</p>
+</li>
+<li><p>It’s a little hidden behind the foreground buildings, but you can see the three color gradient there. Since you are using that now, remove the <code>background-color</code> property from <code>.bb1d</code>.</p>
+</li>
+<li><p>You can specify where you want a gradient transition to complete by adding it to the color like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gradient-type(</span><br><span class="line">  color1,</span><br><span class="line">  color2 <span class="number">20%</span>,</span><br><span class="line">  color3</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Here, it will transition from <code>color1</code> to <code>color2</code> between <code>0%</code> and <code>20%</code> of the element and then transition to <code>color3</code> for the rest. Add <code>80%</code> to the <code>--building-color1</code> color of the <code>.bb1d</code> gradient so you can see it in action.</p>
+</li>
+<li><p>Remove <code>orange</code> from the <code>.bb1d</code> gradient and change the <code>80%</code> to <code>50%</code>. This will make <code>--building-color1</code> solid for the top half, and then transition to <code>--window-color1</code> for the bottom half.</p>
+</li>
+<li><p>Nest two new <code>div</code> elements within <code>.bb2</code>, give them the classes of <code>bb2a</code> and <code>bb2b</code>, in that order. These will be two sections for this building.</p>
+</li>
+<li><p>Give <code>.bb2b</code> a <code>width</code> and <code>height</code> of <code>100%</code> to make it fill the building container. You will add something on the top a little later.</p>
+</li>
+<li><p>Create a new variable in <code>:root</code> named <code>window-color2</code> with a value of <code>#8cd9b3</code>. This will be used as the secondary color for this building.</p>
+</li>
+<li><p>Gradient transitions often gradually change from one color to another. You can make the change a solid line like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">linear-gradient(</span><br><span class="line">  <span class="selector-tag">var</span>(<span class="attr">--first-color</span>) <span class="number">0%</span>,</span><br><span class="line">  <span class="selector-tag">var</span>(<span class="attr">--first-color</span>) <span class="number">40%</span>,</span><br><span class="line">  <span class="selector-tag">var</span>(<span class="attr">--second-color</span>) <span class="number">40%</span>,</span><br><span class="line">  <span class="selector-tag">var</span>(<span class="attr">--second-color</span>) <span class="number">80%</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Add a <code>linear-gradient</code> to <code>.bb2b</code> that uses <code>--building-color2</code> from <code>0%</code> to <code>6%</code> and <code>--window-color2</code> from <code>6%</code> to <code>9%</code>.</p>
+</li>
+<li><p>You can see the hard color change at the top of the section. Change the gradient type from <code>linear-gradient</code> to <code>repeating-linear-gradient</code> for this section. This will make the four colors of your gradient repeat until it gets to the bottom of the element; giving you some stripes, and saving you from having to add a bunch of elements to create them.</p>
+</li>
+<li><p>In the next few steps, you are going to use some tricks with CSS borders to turn the <code>.bb2a</code> section into a triangle at the top of the building. First, remove the <code>background-color</code> from <code>.bb2</code> since you don’t need it anymore.</p>
+</li>
+<li><p>Add these properties to <code>.bb2a</code>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">margin</span>: auto;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">5vw</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">5vw</span>;</span><br><span class="line"><span class="attribute">border-top</span>: <span class="number">1vw</span> solid <span class="number">#000</span>;</span><br><span class="line"><span class="attribute">border-bottom</span>: <span class="number">1vw</span> solid <span class="number">#000</span>;</span><br><span class="line"><span class="attribute">border-left</span>: <span class="number">1vw</span> solid <span class="number">#999</span>;</span><br><span class="line"><span class="attribute">border-right</span>: <span class="number">1vw</span> solid <span class="number">#999</span>;</span><br></pre></td></tr></table></figure>
+
+<p>After you add these, you can see how a thick border on an element gives you some angles where two sides meet. You are going to use that bottom border as the top of the building.</p>
+</li>
+<li><p>Next, remove the <code>width</code> and <code>height</code> from <code>.bb2a</code>, and change the <code>border-left</code> and <code>border-right</code> to use <code>5vw</code> instead of <code>1vw</code>. The element will now have zero size and the borders will come together in the middle.</p>
+</li>
+<li><p>Next, change the two <code>#999</code> of <code>.bb2a</code> to <code>transparent</code>. This will make the left and right borders invisible.</p>
+</li>
+<li><p>Remove the <code>margin</code> and <code>border-top</code> properties and values from <code>.bb2a</code> to turn it into a triangle for the top of the building.</p>
+</li>
+<li><p>Finally, on the <code>border-bottom</code> property of <code>.bb2a</code>, change the <code>1vw</code> to <code>5vh</code> and change the <code>#000</code> color to your <code>--building-color2</code> variable. There you go, now it looks good! At any time throughout this project, you can comment out or remove the <code>border</code> property you added to everything at the beginning to see what the buildings will look like when that gets removed at the end.</p>
+</li>
+<li><p>On to the next building! Create a new variable called <code>--window-color3</code> in <code>:root</code> and give it a value of <code>#d98cb3</code>. This will be the secondary color for the pink buildings.</p>
+</li>
+<li><p>So far, all the gradients you created have gone from top to bottom, that’s the default direction. You can specify another direction by adding it before your colors like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gradient-type(</span><br><span class="line">  <span class="attribute">direction</span>,</span><br><span class="line">  color1,</span><br><span class="line">  color2</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Fill in <code>.bb3</code> with a <code>repeating-linear-gradient</code>. Use <code>90deg</code> for the direction, your <code>building-color3</code> for the first two colors, and <code>window-color3</code> at <code>15%</code> for the third. When you don’t specify a distance for a color, it will use the values that makes sense. In this case, the first two colors will default to <code>0%</code> and <code>7.5%</code> because it starts at <code>0%</code>, and <code>7.5%</code> is half of the <code>15%</code>.</p>
+</li>
+<li><p>Remove the <code>background-color</code> property and value from <code>.bb3</code> since you are using the gradient as the background now.</p>
+</li>
+<li><p>The next building will have three sections. Nest three <code>div</code> elements within <code>.bb4</code>. Give them the classes of <code>bb4a</code>, <code>bb4b</code> and <code>bb4c</code> in that order.</p>
+</li>
+<li><p>Give the new <code>div</code> elements these <code>width</code> and <code>height</code> values: <code>3%</code> and <code>10%</code> to <code>.bb4a</code>, <code>80%</code> and <code>5%</code> to <code>.bb4b</code>, and <code>100%</code> and <code>85%</code> to <code>.bb4c</code>.</p>
+</li>
+<li><p>Remove the <code>background-color</code> property and value from <code>.bb4</code>, and add it to the three new sections <code>.bb4a</code>, <code>.bb4b</code>, and <code>.bb4c</code>, so only the sections are filled.</p>
+</li>
+<li><p>You want <code>.bb4</code> to share the properties of <code>.bb1</code> that center the sections. Instead of duplicating that code, create a new class above the background building comment called <code>building-wrap</code>. Leave it empty for now; this class will be used in a few places to save you some coding.</p>
+</li>
+<li><p>Move the <code>display</code>, <code>flex-direction</code>, and <code>align-items</code> properties and values from <code>.bb1</code> to the new <code>building-wrap</code> class.</p>
+</li>
+<li><p>Add the new <code>building-wrap</code> class to the <code>.bb1</code> and <code>.bb4</code> elements. This will apply the centering properties to the buildings that need it.</p>
+</li>
+<li><p>Create a new variable called <code>--window-color4</code> in <code>:root</code> and give it a value of <code>#8cb3d9</code>. This will be the secondary color for the last background building.</p>
+</li>
+<li><p>Nest four new <code>div</code> elements within <code>.bb4c</code>, give them all the class of <code>bb4-window</code>. These will be windows for this building.</p>
+</li>
+<li><p>Give the <code>bb4-window</code> class a <code>width</code> of <code>18%</code>, a <code>height</code> of <code>90%</code>, and add your <code>--window-color4</code> variable as the <code>background-color</code>.</p>
+</li>
+<li><p>The windows are stacked on top of each other at the left of the section, behind the purple building. Add a new class below <code>.building-wrap</code> called <code>window-wrap</code>. Make <code>.window-wrap</code> a flexbox container, and use the <code>align-items</code> and <code>justify-content</code> properties to center its child elements vertically and evenly space them in their parent, respectively.</p>
+</li>
+<li><p>Add the new <code>window-wrap</code> class to the <code>.bb4c</code> element.</p>
+</li>
+<li><p>Looks good! On to the foreground buildings! Turn the <code>.fb1</code> building into three sections by nesting three new <code>div</code> elements within it. Give them the classes of <code>fb1a</code>, <code>fb1b</code> and <code>fb1c</code>, in that order.</p>
+</li>
+<li><p>Give <code>.fb1b</code> a <code>width</code> of <code>60%</code> and <code>height</code> of <code>10%</code>, and <code>.fb1c</code> a <code>width</code> of <code>100%</code> and <code>height</code> of <code>80%</code>.</p>
+</li>
+<li><p>Add the <code>building-wrap</code> class to the <code>.fb1</code> element to center the sections.</p>
+</li>
+<li><p>Move the <code>background-color</code> property and value from <code>.fb1</code> to <code>.fb1b</code>.</p>
+</li>
+<li><p>Don’t worry about the space at the bottom, everything will get moved down later when you add some height to the element at the top of the building.</p>
+<p>Add a <code>repeating-linear-gradient</code> to <code>.fb1c</code> with a <code>90deg</code> angle, your <code>--building-color4</code> from <code>0%</code> to <code>10%</code> and <code>transparent</code> from <code>10%</code> to <code>15%</code>.</p>
+</li>
+<li><p>You can add multiple gradients to an element by separating them with a comma (<code>,</code>) like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gradient1(</span><br><span class="line">  colors</span><br><span class="line">),</span><br><span class="line">gradient2(</span><br><span class="line">  colors</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>Add a <code>repeating-linear-gradient</code> to <code>.fb1c</code> below the one that’s there; use your <code>--building-color4</code> from <code>0%</code> to <code>10%</code> and <code>--window-color4</code> from <code>10%</code> and <code>90%</code>. This will fill in behind the gradient you added last.</p>
+</li>
+<li><p>You’re going to use some more border tricks for the top section. Add a <code>border-bottom</code> with a value of <code>7vh solid var(--building-color4)</code> to <code>.fb1a</code>. This will put a <code>7vh</code> height border on the bottom. But since the element has zero size, it only shows up as a 2px wide line from the 1px border that is on all the elements.</p>
+</li>
+<li><p>When you increase the size of the left and right borders, the border on the bottom will expand to be the width of the combined left and right border widths. Add <code>2vw solid transparent</code> as the value of the <code>border-left</code> and <code>border-right</code> properties of <code>.fb1a</code>. They will be invisible, but it will make the border on the bottom <code>4vw</code> wide.</p>
+</li>
+<li><p>On to the next building! Nest two <code>div</code> elements within <code>.fb2</code> and give them classes of <code>fb2a</code> and <code>fb2b</code>, in that order.</p>
+</li>
+<li><p>Give <code>.fb2a</code> a <code>width</code> of <code>100%</code> and <code>.fb2b</code> a <code>width</code> of <code>100%</code> and <code>height</code> of <code>75%</code>.</p>
+</li>
+<li><p>Nest three <code>div</code> elements within <code>.fb2b</code> and give them a class of <code>fb2-window</code>. These will be windows for this section of the building.</p>
+</li>
+<li><p>Add your <code>window-wrap</code> class to <code>.fb2b</code> to position the new window elements.</p>
+</li>
+<li><p>Give the <code>.fb2-window</code> elements a <code>width</code> of <code>22%</code>, <code>height</code> of <code>100%</code>, and a <code>background-color</code> of your <code>--window-color3</code> variable.</p>
+</li>
+<li><p>Move the <code>background-color</code> property and value from <code>.fb2</code> to <code>.fb2b</code> to just color the section and not the container.</p>
+</li>
+<li><p>For <code>.fb2a</code>, add a <code>border-bottom</code> of <code>10vh solid var(--building-color3)</code>, and a <code>border-left</code> and <code>border-right</code> of <code>1vw solid transparent</code>. This time the border trick will create a trapezoid shape.</p>
+</li>
+<li><p>For the next building, nest four <code>div</code> elements within <code>.fb3</code> with classes of <code>fb3a</code>, <code>fb3b</code>, <code>fb3a</code> again, and <code>fb3b</code> again, in that order. This building will have four sections, and the top two will be almost the same as the bottom two.</p>
+</li>
+<li><p>Give the <code>.fb3a</code> element a <code>width</code> of <code>80%</code> and <code>height</code> of <code>15%</code>. Then give the <code>.fb3b</code> element a <code>width</code> of <code>100%</code> and <code>height</code> of <code>35%</code>.</p>
+</li>
+<li><p>Remove the <code>background-color</code> property and value from <code>.fb3</code>, and add them to <code>.fb3a</code> and <code>.fb3b</code>.</p>
+</li>
+<li><p>Add your <code>building-wrap</code> class to the <code>.fb3</code> element to center the sections.</p>
+</li>
+<li><p>Nest three new <code>div</code> elements in the first <code>.fb3a</code> element. Give them each a class of <code>fb3-window</code>. These will be windows for this section.</p>
+</li>
+<li><p>Give the <code>.fb3-window</code> elements a <code>width</code> of <code>25%</code>, a <code>height</code> of <code>80%</code>, and use your <code>--window-color1</code> variable as the <code>background-color</code> value.</p>
+</li>
+<li><p>Add your <code>window-wrap</code> class to the <code>.fb3a</code> element to center and space the windows.</p>
+</li>
+<li><p>With CSS variables you can change values without searching everywhere in the stylesheet. Change the <code>--window-color1</code> value to <code>#bb99ff</code>.</p>
+</li>
+<li><p>Only three more buildings to go. Nest two new <code>div</code> elements within the <code>.fb4</code> element and give them the classes of <code>fb4a</code> and <code>fb4b</code>, in that order. Remember that you sort of flipped the location of <code>.fb4</code> and <code>.fb5</code>, so it’s the rightmost purple building you are working on now.</p>
+</li>
+<li><p>Give <code>.fb4b</code> a <code>width</code> of <code>100%</code> and <code>height</code> of <code>89%</code>.</p>
+</li>
+<li><p>Add your <code>--building-color1</code> variable as value of the <code>background-color</code> property of <code>.fb4b</code>. Then, remove the <code>background-color</code> from <code>.fb4</code>.</p>
+</li>
+<li><p>Nest six <code>div</code> elements within <code>.fb4b</code> and give them all a class of <code>fb4-window</code>.</p>
+</li>
+<li><p>Give the <code>.fb4-window</code> elements a <code>width</code> of <code>30%</code>, <code>height</code> of <code>10%</code>, and <code>border-radius</code> of <code>50%</code>. These will make some circular windows for this building.</p>
+</li>
+<li><p>Fill in the windows with your secondary color for this building. Also add a <code>margin</code> of <code>10%</code> to give the windows some space.</p>
+</li>
+<li><p>The windows are stacked on top of each other on the rightmost purple building. Turn the building into a flexbox parent, and use the <code>flex-wrap</code> property to put the windows side by side, and push them down to a new row when they don’t fit.</p>
+</li>
+<li><p>This building is going to have another triangle on top. Give the top section a <code>border-top</code> of <code>5vh solid transparent</code>, and a <code>border-left</code> that is <code>8vw</code>, <code>solid</code>, and uses your building color variable as the color.</p>
+</li>
+<li><p>On to the next building! It’s the green one in the foreground. Give it a <code>repeating-linear-gradient</code> with your building color from <code>0%</code> to <code>5%</code>, and <code>transparent</code> from <code>5%</code> to <code>10%</code>.</p>
+</li>
+<li><p>Add another <code>repeating-linear-gradient</code> below the one you just added. Give it a <code>90deg</code> direction, use your building color from <code>0%</code> to <code>12%</code> and window color <code>12%</code> to <code>44%</code>. This will make a bunch of rectangle windows.</p>
+</li>
+<li><p>You don’t need the <code>background-color</code> for this building anymore so you can remove that property.</p>
+</li>
+<li><p>Finally! You made it to the last building! Add a repeating gradient to it with a <code>90deg</code> direction. Use the building color from <code>0%</code> to <code>10%</code> and <code>transparent</code> from <code>10%</code> to <code>30%</code>.</p>
+</li>
+<li><p>Add another repeating gradient to this building; make it the same as the one you just added, except don’t add the <code>90deg</code> direction and use your window color instead of the two <code>transparent</code> colors.</p>
+</li>
+<li><p>You can remove the <code>background-color</code> for this building now, since it isn’t needed.</p>
+</li>
+<li><p>Okay, the buildings are done. Go back to the <code>*</code> selector and remove the <code>border</code> you applied to everything at the beginning and the buildings will come together.</p>
+</li>
+<li><p>Add <code>sky</code> as a second class to the <code>.background-buildings</code> element. You are going to make a background for the skyline.</p>
+</li>
+<li><p>Give the <code>sky</code> class a <code>radial-gradient</code>. Use <code>#ffcf33</code> from <code>0%</code> to <code>20%</code>, <code>#ffff66</code> at <code>21%</code>, and <code>#bbeeff</code> at <code>100%</code>. This will add circular gradient to the background that will be your sun.</p>
+</li>
+<li><p>At the top of the sky gradient color list, where you would put a direction for the gradient; add <code>circle closest-corner at 15% 15%,</code>. This will move the start of the gradient to <code>15%</code> from the top and left. It will make it end at the <code>closest-corner</code> and it will maintain a <code>circle</code> shape. These are some keywords built into gradients to describe how it behaves.</p>
+</li>
+<li><p>A media query can be used to change styles based on certain conditions, and they look like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (condition) &#123;</span><br><span class="line"></span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>Add an empty media query at the bottom of your stylesheet with a condition of <code>max-width: 1000px</code>. Styles added in here will take effect when the document size is 1000px wide or less.</p>
+</li>
+<li><p>Copy and paste your whole <code>sky</code> class along with all of its properties and values into the media query. You are going to make another color scheme for the skyline that changes it from day to night.</p>
+<p>Note: You are going to need to scroll past the editable region to copy the class.</p>
+</li>
+<li><p>In the <code>sky</code> class of the media query, change the two <code>#ffcf33</code> color values to <code>#ccc</code>, the <code>#ffff66</code> to <code>#445</code>, and the <code>#bbeeff</code> to <code>#223</code>. Then you can resize your window to see the background change colors.</p>
+</li>
+<li><p>Add a <code>:root</code> selector to the top of your media query. Then redefine all four of the <code>--building-color</code> variables to use the value <code>#000</code> there.</p>
+</li>
+<li><p>Lastly, in the <code>:root</code> selector of the media query, redefine all four of the <code>--window-color</code> variables to use <code>#777</code>. When you’re done, resize the window and watch it go from day to night.</p>
+<p>Variables are primarily used with colors, and that’s how you used them here. But they can be given any value and used on any property. Your project looks great!</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>    </span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>City Skyline<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> /&gt;</span>   </span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;background-buildings sky&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb1 building-wrap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb1a bb1-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb1b bb1-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb1c bb1-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb1d&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb2&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb2a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb2b&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4 building-wrap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4b&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4c window-wrap&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;foreground-buildings&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb1 building-wrap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb1a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb1b&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb1c&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb2&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb2a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb2b window-wrap&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb2-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb2-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb2-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3 building-wrap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3a window-wrap&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3b&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb3b&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4b&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb4-window&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fb6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--building-color1</span>: <span class="number">#aa80ff</span>;</span><br><span class="line">  <span class="attr">--building-color2</span>: <span class="number">#66cc99</span>;</span><br><span class="line">  <span class="attr">--building-color3</span>: <span class="number">#cc6699</span>;</span><br><span class="line">  <span class="attr">--building-color4</span>: <span class="number">#538cc6</span>;</span><br><span class="line">  <span class="attr">--window-color1</span>: <span class="number">#bb99ff</span>;</span><br><span class="line">  <span class="attr">--window-color2</span>: <span class="number">#8cd9b3</span>;</span><br><span class="line">  <span class="attr">--window-color3</span>: <span class="number">#d98cb3</span>;</span><br><span class="line">  <span class="attr">--window-color4</span>: <span class="number">#8cb3d9</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.background-buildings</span>, <span class="selector-class">.foreground-buildings</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-end;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-evenly;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.building-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.window-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-evenly;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sky</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(</span><br><span class="line">      closest-corner circle at <span class="number">15%</span> <span class="number">15%</span>,</span><br><span class="line">      <span class="number">#ffcf33</span>,</span><br><span class="line">      <span class="number">#ffcf33</span> <span class="number">20%</span>,</span><br><span class="line">      <span class="number">#ffff66</span> <span class="number">21%</span>,</span><br><span class="line">      <span class="number">#bbeeff</span> <span class="number">100%</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* BACKGROUND BUILDINGS - &quot;bb&quot; stands for &quot;background building&quot; */</span></span><br><span class="line"><span class="selector-class">.bb1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">70%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb1a</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">70%</span>;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.bb1b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.bb1c</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">90%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb1d</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">70%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">      <span class="built_in">var</span>(--building-color1) <span class="number">50%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color1)</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb1-window</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">      <span class="built_in">var</span>(--building-color1),</span><br><span class="line">      <span class="built_in">var</span>(--window-color1)</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb2a</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">5vh</span> solid <span class="built_in">var</span>(--building-color2);</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">5vw</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">5vw</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb2b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="built_in">var</span>(--building-color2),</span><br><span class="line">      <span class="built_in">var</span>(--building-color2) <span class="number">6%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color2) <span class="number">6%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color2) <span class="number">9%</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">55%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="number">90deg</span>,</span><br><span class="line">      <span class="built_in">var</span>(--building-color3),</span><br><span class="line">      <span class="built_in">var</span>(--building-color3),</span><br><span class="line">      <span class="built_in">var</span>(--window-color3) <span class="number">15%</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">11%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">58%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb4a</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">3%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color4);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb4b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">5%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color4);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.bb4c</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">85%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color4);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bb4-window</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">18%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--window-color4);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FOREGROUND BUILDINGS - &quot;fb&quot; stands for &quot;foreground building&quot; */</span></span><br><span class="line"><span class="selector-class">.fb1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">60%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb1a</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">7vh</span> solid <span class="built_in">var</span>(--building-color4);</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">2vw</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">2vw</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb1b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color4);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.fb1c</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="number">90deg</span>,</span><br><span class="line">      <span class="built_in">var</span>(--building-color4),</span><br><span class="line">      <span class="built_in">var</span>(--building-color4) <span class="number">10%</span>,</span><br><span class="line">      transparent <span class="number">10%</span>,</span><br><span class="line">      transparent <span class="number">15%</span></span><br><span class="line">    ),</span><br><span class="line">    <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="built_in">var</span>(--building-color4),</span><br><span class="line">      <span class="built_in">var</span>(--building-color4) <span class="number">10%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color4) <span class="number">10%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color4) <span class="number">90%</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb2a</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">10vh</span> solid <span class="built_in">var</span>(--building-color3);</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">1vw</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">1vw</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb2b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">75%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb2-window</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">22%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--window-color3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">35%</span>;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.fb3a</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">15%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color1);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.fb3b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">35%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb3-window</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">25%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--window-color1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">45%</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">10%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb4a</span> &#123;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">5vh</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">8vw</span> solid <span class="built_in">var</span>(--building-color1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb4b</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">89%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--building-color1);</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb4-window</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">30%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--window-color1);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb5</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">33%</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="built_in">var</span>(--building-color2),</span><br><span class="line">      <span class="built_in">var</span>(--building-color2) <span class="number">5%</span>,</span><br><span class="line">      transparent <span class="number">5%</span>,</span><br><span class="line">      transparent <span class="number">10%</span></span><br><span class="line">    ),</span><br><span class="line">    <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="number">90deg</span>,</span><br><span class="line">      <span class="built_in">var</span>(--building-color2),</span><br><span class="line">      <span class="built_in">var</span>(--building-color2) <span class="number">12%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color2) <span class="number">12%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color2) <span class="number">44%</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fb6</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">9%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">38%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="number">90deg</span>,</span><br><span class="line">      <span class="built_in">var</span>(--building-color3),</span><br><span class="line">      <span class="built_in">var</span>(--building-color3) <span class="number">10%</span>,</span><br><span class="line">      transparent <span class="number">10%</span>,</span><br><span class="line">      transparent <span class="number">30%</span></span><br><span class="line">    ),</span><br><span class="line">    <span class="built_in">repeating-linear-gradient</span>(</span><br><span class="line">      <span class="built_in">var</span>(--building-color3),</span><br><span class="line">      <span class="built_in">var</span>(--building-color3) <span class="number">10%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color3) <span class="number">10%</span>,</span><br><span class="line">      <span class="built_in">var</span>(--window-color3) <span class="number">30%</span></span><br><span class="line">    );</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">1000px</span>) &#123; </span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--building-color1</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attr">--building-color2</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attr">--building-color3</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attr">--building-color4</span>: <span class="number">#000</span>;</span><br><span class="line">      <span class="attr">--window-color1</span>: <span class="number">#777</span>;</span><br><span class="line">  <span class="attr">--window-color2</span>: <span class="number">#777</span>;</span><br><span class="line">  <span class="attr">--window-color3</span>: <span class="number">#777</span>;</span><br><span class="line">  <span class="attr">--window-color4</span>: <span class="number">#777</span>;</span><br><span class="line">  &#125; </span><br><span class="line"> <span class="selector-class">.sky</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(</span><br><span class="line">        closest-corner circle at <span class="number">15%</span> <span class="number">15%</span>,</span><br><span class="line">        <span class="number">#ccc</span>,</span><br><span class="line">        <span class="number">#ccc</span> <span class="number">20%</span>,</span><br><span class="line">        <span class="number">#445</span> <span class="number">21%</span>,</span><br><span class="line">        <span class="number">#223</span> <span class="number">100%</span></span><br><span class="line">      );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%8C/" title="Responsive Web Dedign(十二)">http://moyun.com/responsive-web-dedign-十二/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/algorithm%E2%80%94%E2%80%94array/" rel="prev" title="Algorithm——Array">
+                  <i class="fa fa-chevron-left"></i> Algorithm——Array
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%8D%81%E4%B8%89/" rel="next" title="Responsive Web Dedign(十三)">
+                  Responsive Web Dedign(十三) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

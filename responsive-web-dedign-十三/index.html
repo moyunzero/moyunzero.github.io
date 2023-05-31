@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn CSS Grid by Building a Magazine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(十三)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%89/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn CSS Grid by Building a Magazine">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-28T07:36:56.043Z">
+<meta property="article:modified_time" content="2023-05-28T14:13:10.765Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%89/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%89/","path":"responsive-web-dedign-十三/","title":"Responsive Web Dedign(十三)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(十三) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-CSS-Grid-by-Building-a-Magazine"><span class="nav-text">Learn CSS Grid by Building a Magazine</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%85%AD/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-05</time>
+        <br>
+      Responsive Web Dedign(六)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B9%9D/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-09</time>
+        <br>
+      Responsive Web Dedign(九)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%83/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-06</time>
+        <br>
+      Responsive Web Dedign(七)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-11</time>
+        <br>
+      Responsive Web Dedign(十一)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E5%9B%9B/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-30</time>
+        <br>
+      Responsive Web Dedign(十四)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(十三) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(十三)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-28 15:36:56 / 修改时间：22:13:10" itemprop="dateCreated datePublished" datetime="2023-05-28T15:36:56+08:00">2023-05-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-CSS-Grid-by-Building-a-Magazine/" itemprop="url" rel="index"><span itemprop="name">Learn CSS Grid by Building a Magazine</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>29k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>26 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-CSS-Grid-by-Building-a-Magazine"><a href="#Learn-CSS-Grid-by-Building-a-Magazine" class="headerlink" title="Learn CSS Grid by Building a Magazine"></a>Learn CSS Grid by Building a Magazine</h4><span id="more"></span>
+
+<ol>
+<li><p>Begin with your standard HTML boilerplate. Add a <code>DOCTYPE</code> declaration, an <code>html</code> element specifying this page is in English, a <code>head</code> element, and a <code>body</code> element.</p>
+<p>Add a <code>&lt;meta&gt;</code> tag with the appropriate <code>charset</code> and a <code>&lt;meta&gt;</code> tag for mobile responsiveness within the <code>head</code> element.</p>
+</li>
+<li><p>Add a <code>title</code> element with the text <code>Magazine</code>, a <code>link</code> element for the <code>https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&amp;display=swap</code> font stylesheet, a <code>link</code> for the <code>https://use.fontawesome.com/releases/v5.8.2/css/all.css</code> FontAwesome stylesheet, and a <code>link</code> for your <code>./styles.css</code> stylesheet.</p>
+<p>Your font stylesheet will load three separate fonts: <code>Anton</code>, <code>Baskervville</code>, and <code>Raleway</code>.</p>
+</li>
+<li><p>Within your <code>body</code>, create a <code>main</code> element. Then in that element, create a <code>section</code> with a <code>class</code> set to <code>heading</code>.</p>
+</li>
+<li><p>Within your <code>.heading</code> element, create a <code>header</code> element with the <code>class</code> set to <code>hero</code>.</p>
+<p>In that element, create an <code>img</code> element with the <code>src</code> set to <code>https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png</code>, the <code>alt</code> set to <code>freecodecamp logo</code>, and the <code>class</code> set to <code>hero-img</code>.</p>
+<p>The <code>loading</code> attribute on an <code>img</code> element can be set to <code>lazy</code> to tell the browser not to fetch the image resource until it is needed (as in, when the user scrolls the image into view). As an additional benefit, lazy loaded elements will not load until the non-lazy elements are loaded - this means users with slow internet connections can view the content of your page without having to wait for the images to load.</p>
+<p>Give your new <code>img</code> element a <code>loading</code> attribute set to <code>lazy</code>.</p>
+</li>
+<li><p>After your <code>img</code> element, add an <code>h1</code> element with the <code>class</code> set to <code>hero-title</code> and the text set to <code>OUR NEW CURRICULUM</code>, followed by a <code>p</code> element with the <code>class</code> set to <code>hero-subtitle</code> and the text set to <code>Our efforts to restructure our curriculum with a more project-based focus</code>.</p>
+</li>
+<li><p>Your image currently takes up a lot of space. To better see what you are working on, add a <code>width</code> attribute to the <code>img</code> element, with a value of <code>400</code>.</p>
+<p>You will remove this later on when you have worked on the CSS.</p>
+</li>
+<li><p>After your <code>header</code> element, create a <code>div</code> with the <code>class</code> set to <code>author</code>.</p>
+<p>Within that <code>div</code>, create a <code>p</code> element with the <code>class</code> set to <code>author-name</code> and give it the text <code>By freeCodeCamp</code>. Wrap the <code>freeCodeCamp</code> portion in an <code>a</code> element with the <code>href</code> set to <code>https://freecodecamp.org</code>, and the <code>target</code> set to <code>_blank</code>.</p>
+<p>Below that, add a second <code>p</code> element with the class <code>publish-date</code> and the text <code>March 7, 2019</code>.</p>
+</li>
+<li><p>The <code>Referer</code> HTTP header contains information about the address or URL of a page that a user might be visiting from. This information can be used in analytics to track how many users from your page visit freecodecamp.org, for example. Setting the <code>rel</code> attribute to <code>noreferrer</code> omits this information from the HTTP request. Give your <code>a</code> element a <code>rel</code> attribute set to <code>noreferrer</code>.</p>
+</li>
+<li><p>Below your <code>.author</code> element, create a new <code>div</code> element with the class <code>social-icons</code>.</p>
+<p>Add five <code>a</code> elements within that new <code>div</code>, and give them the following <code>href</code> attributes.</p>
+<ul>
+<li>The first <code>a</code> element should have an <code>href</code> set to <code>https://www.facebook.com/freecodecamp</code>.</li>
+<li>The second <code>a</code> element should have an <code>href</code> set to <code>https://twitter.com/freecodecamp</code>.</li>
+<li>The third <code>a</code> element should have an <code>href</code> set to <code>https://instagram.com/freecodecamp</code>.</li>
+<li>The fourth <code>a</code> element should have an <code>href</code> set to <code>https://www.linkedin.com/school/free-code-camp</code>.</li>
+<li>The fifth <code>a</code> element should have an <code>href</code> set to <code>https://www.youtube.com/freecodecamp</code>.</li>
+</ul>
+</li>
+<li><p>Within each of your new <code>a</code> elements, add an <code>i</code> element and give them the following classes:</p>
+<ul>
+<li>Your first <code>i</code> element should have the class <code>fab fa-facebook-f</code></li>
+<li>Your second <code>i</code> element should have the class <code>fab fa-twitter</code></li>
+<li>Your third <code>i</code> element should have the class <code>fab fa-instagram</code></li>
+<li>Your fourth <code>i</code> element should have the class <code>fab fa-linkedin-in</code></li>
+<li>Your fifth <code>i</code> element should have the class <code>fab fa-youtube</code></li>
+</ul>
+</li>
+<li><p>Below your <code>.heading</code> element, create a new <code>section</code> element with the <code>class</code> set to <code>text</code>. Within that, create a <code>p</code> element with the <code>class</code> set to <code>first-paragraph</code> and the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you&#x27;ll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.</span><br></pre></td></tr></table></figure></li>
+<li><p>Create another <code>p</code> element below your <code>.first-paragraph</code> element, and give it the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">After years - years - of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! A picture of this! This is what makes time travel possible: the flux capacitor!</span><br></pre></td></tr></table></figure></li>
+<li><p>Add a third <code>p</code> element at the end of your <code>.text</code> element, and give it the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">It wasn&#x27;t as dramatic as Doc&#x27;s revelation in Back to the Future. It just occurred to me while I was going for a run. The revelation: the entire curriculum should be a series of projects. Instead of individual coding challenges, we&#x27;ll just have projects, each with their own seamless series of tests. Each test gives you just enough information to figure out how to get it to pass. (And you can view hints if that isn&#x27;t enough.)</span><br></pre></td></tr></table></figure></li>
+<li><p>After the three <code>p</code> elements within your <code>.text</code> element, create a <code>blockquote</code> element. Within that, add an <code>hr</code> element, a <code>p</code> element with the <code>class</code> set to <code>quote</code>, and a second <code>hr</code> element.</p>
+<p>Give the <code>.quote</code> element the text <code>The entire curriculum should be a series of projects</code>.</p>
+</li>
+<li><p>Below your <code>blockquote</code> element, add another <code>p</code> element with the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No more walls of explanatory text. No more walls of tests. Just one test at a time, as you build up a working project. Over the course of passing thousands of tests, you build up projects and your own understanding of coding fundamentals. There is no transition between lessons and projects, because the lessons themselves are baked into projects. And there&#x27;s plenty of repetition to help you retain everything because - hey - building projects in real life has plenty of repetition.</span><br></pre></td></tr></table></figure></li>
+<li><p>Create a fifth <code>p</code> element at the end of your <code>.text</code> element, and give it the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from &quot;reading mode&quot; to &quot;coding mode&quot;.</span><br></pre></td></tr></table></figure></li>
+<li><p>Create one final <code>p</code> element at the end of your <code>.text</code> element and give it the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Instead of a series of coding challenges, people will be in their code</span><br><span class="line">editor passing one test after another, quickly building up a project.</span><br><span class="line">People will get into a real flow state, similar to what they</span><br><span class="line">experience when they build the required projects at the end of each</span><br><span class="line">certification. They&#x27;ll get that sense of forward progress right from</span><br><span class="line">the beginning. And freeCodeCamp will be a much smoother experience.</span><br></pre></td></tr></table></figure></li>
+<li><p>Below your <code>.text</code> element, create a new <code>section</code> element and give it a <code>class</code> of <code>text text-with-images</code>. Within that, create an <code>article</code> element with a <code>class</code> set to <code>brief-history</code>, and an <code>aside</code> element with the <code>class</code> set to <code>image-wrapper</code>.</p>
+</li>
+<li><p>Within your <code>article</code> element, create an <code>h3</code> element with the <code>class</code> set to <code>list-title</code> and the text of <code>A Brief History</code>. Below that, create a <code>p</code> element with the text <code>Of the Curriculum</code>. Then create a <code>ul</code> element with the class <code>lists</code>.</p>
+</li>
+<li><p>Within your <code>ul</code> element, create six <code>li</code> elements. Add an <code>h4</code> element with a <code>class</code> set to <code>list-subtitle</code> and a <code>p</code> element to each of your <code>li</code> elements.</p>
+<p>Then give the <code>h4</code> and <code>p</code> elements the following text content, in order, with each <code>h4</code> using what’s on the left side of the colon, and each <code>p</code> using what’s on the right:</p>
+<ul>
+<li><code>V1 - 2014</code>: <code>We launched freeCodeCamp with a simple list of 15 resources, including Harvard&#39;s CS50 and Stanford&#39;s Database Class.</code></li>
+<li><code>V2 - 2015</code>: <code>We added interactive algorithm challenges.</code></li>
+<li><code>V3 - 2015</code>: <code>We added our own HTML+CSS challenges (before we&#39;d been relying on General Assembly&#39;s Dash course for these).</code></li>
+<li><code>V4 - 2016</code>: <code>We expanded the curriculum to 3 certifications, including Front End, Back End, and Data Visualization. They each had 10 required projects, but only the Front End section had its own challenges. For the other certs, we were still using external resources like Node School.</code></li>
+<li><code>V5 - 2017</code>: <code>We added the back end and data visualization challenges.</code></li>
+<li><code>V6 - 2018</code>: <code>We launched 6 new certifications to replace our old ones. This was the biggest curriculum improvement to date.</code></li>
+</ul>
+</li>
+<li><p>Within your <code>aside</code> element, create two <code>img</code> elements, a <code>blockquote</code> element, and a third <code>img</code> element. Give the <code>blockquote</code> element a <code>class</code> set to <code>image-quote</code>.</p>
+</li>
+<li><p>Within the <code>.image-wrapper</code> element, give your first <code>img</code> element a <code>src</code> of <code>https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png</code>, an <code>alt</code> of <code>image of the quote machine project</code>, a <code>class</code> of <code>image-1</code>, a <code>loading</code> attribute set to <code>lazy</code>, a <code>width</code> attribute of <code>600</code>, and a <code>height</code> attribute of <code>400</code>.</p>
+</li>
+<li><p>Within your <code>.image-wrapper</code> element, give the second <code>img</code> element a <code>src</code> of <code>https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png</code>, an <code>alt</code> of <code>image of a calculator project</code>, a <code>loading</code> attribute set to <code>lazy</code>, a <code>class</code> set to <code>image-2</code>, a <code>width</code> attribute set to <code>400</code>, and a <code>height</code> attribute set to <code>400</code>.</p>
+</li>
+<li><p>Within your <code>.image-wrapper</code> element, give your third <code>img</code> element a <code>src</code> of <code>https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg</code>, an <code>alt</code> of <code>four people working on code</code>, a <code>loading</code> attribute of <code>lazy</code>, a <code>class</code> set to <code>image-3</code>, a <code>width</code> attribute set to <code>600</code>, and a <code>height</code> attribute set to <code>400</code>.</p>
+</li>
+<li><p>Within your <code>.image-quote</code> element, nest an <code>hr</code> element, a <code>p</code> element and a second <code>hr</code> element. Give the <code>p</code> element a <code>class</code> set to <code>quote</code> and the text <code>The millions of people who are learning to code through freeCodeCamp will have an even better resource to help them learn these fundamentals.</code></p>
+</li>
+<li><p>To start your CSS, normalize the CSS rules by targeting all elements with <code>*</code>, including the <code>::before</code> and <code>::after</code> pseudo-selectors.</p>
+<p>Set the <code>padding</code> and <code>margin</code> properties both to <code>0</code> and set the <code>box-sizing</code> property to <code>border-box</code>.</p>
+</li>
+<li><p>Create an <code>html</code> selector and give it a <code>font-size</code> property set to <code>62.5%</code>. This will set the default font size for your web page to 10px (the browser default is 16px).</p>
+<p>This will make it easier for you to work with <code>rem</code> units later, as <code>2rem</code> would be 20px.</p>
+</li>
+<li><p>Create a <code>body</code> selector. Set the <code>font-family</code> property to <code>Baskervville</code>, with a fallback of <code>serif</code>. Set the <code>color</code> property to <code>linen</code> and the <code>background-color</code> property to <code>rgb(20, 30, 40)</code>.</p>
+</li>
+<li><p>Create an <code>h1</code> selector, and set the <code>font-family</code> property to <code>Anton</code> with the fallback of <code>sans-serif</code>.</p>
+</li>
+<li><p>Create an <code>h2, h3, h4, h5, h6</code> selector. Give it a <code>font-family</code> property set to <code>Raleway</code> with a fallback of <code>sans-serif</code>.</p>
+</li>
+<li><p>Create an <code>a</code> selector, and give it a <code>text-decoration</code> property set to <code>none</code> and a <code>color</code> property set to <code>linen</code>.</p>
+</li>
+<li><p>Now you are ready to start putting together the grid layout. CSS Grid offers a two-dimensional grid-based layout, allowing you to center items horizontally and vertically while still retaining control to do things like overlap elements.</p>
+<p>Begin by creating a <code>main</code> selector and giving it a <code>display</code> property set to <code>grid</code>.</p>
+</li>
+<li><p>Now you can style the layout of your grid. CSS Grid is similar to Flexbox in that it has a special property for both the parent and child elements.</p>
+<p>In this case, your parent element is the <code>main</code> element. Set the content to have a three-column layout by adding a <code>grid-template-columns</code> property with a value of <code>1fr 94rem 1fr</code>. This will create three columns where the middle column is <code>94rem</code> wide, and the first and last columns are both 1 fraction of the remaining space in the grid container.</p>
+</li>
+<li><p>Use the <code>minmax</code> function to make your columns responsive on any device. The <code>minmax</code> function takes two arguments, the first being the minimum value and the second being the maximum. These values could be a length, percentage, <code>fr</code>, or even a keyword like <code>max-content</code>.</p>
+<p>Wrap each of your already defined values of the <code>grid-template-columns</code> property in a <code>minmax</code> function, using each value as the second argument. The first argument should be <code>2rem</code>, <code>min-content</code>, and <code>2rem</code> respectively.</p>
+</li>
+<li><p>To add space between rows in the grid layout, you can use the <code>row-gap</code> property. Give the <code>main</code> selector a <code>row-gap</code> property of <code>3rem</code>.</p>
+</li>
+<li><p>Your magazine will have three primary sections. You already set the overall layout in the <code>main</code> rule, but you can adjust the placement in the child rules.</p>
+<p>One option is the <code>grid-column</code> property, which is shorthand for <code>grid-column-start</code> and <code>grid-column-end</code>. The <code>grid-column</code> property tells the grid item which grid line to start and end at.</p>
+<p>Create a <code>.heading</code> rule and set the <code>grid-column</code> property to <code>2 / 3</code>. This will tell the <code>.heading</code> element to start at grid line 2 and end at grid line 3.</p>
+</li>
+<li><p>Create a <code>.text</code> selector and give it a <code>grid-column</code> property set to <code>2 / 3</code>.</p>
+</li>
+<li><p>For additional control over the layout of your content, you can have a CSS Grid within a CSS Grid.</p>
+<p>Set the <code>display</code> property of your <code>.heading</code> selector to <code>grid</code>.</p>
+</li>
+<li><p>Now you can style the content of the <code>.heading</code> element with CSS Grid.</p>
+<p>The CSS <code>repeat()</code> function is used to repeat a value, rather than writing it out manually, and is helpful for grid layouts. For example, setting the <code>grid-template-columns</code> property to <code>repeat(20, 200px)</code> would create 20 columns each <code>200px</code> wide.</p>
+<p>Give your <code>.heading</code> element a <code>grid-template-columns</code> property set to <code>repeat(2, 1fr)</code> to create two columns of equal width.</p>
+</li>
+<li><p>Give your <code>.heading</code> selector a <code>row-gap</code> property set to <code>1.5rem</code>.</p>
+</li>
+<li><p>Remember that the <code>grid-column</code> property determines which columns an element starts and ends at. There may be times where you are unsure of how many columns your grid will have, but you want an element to stop at the last column. To do this, you can use <code>-1</code> for the end column.</p>
+<p>Create a <code>.hero</code> selector and give it a <code>grid-column</code> property set to <code>1 / -1</code>. This will tell the element to span the full width of the grid.</p>
+</li>
+<li><p>Give the <code>.hero</code> selector a <code>position</code> property set to <code>relative</code>.</p>
+</li>
+<li><p>You should remove the temporary <code>width</code> attribute before writing the CSS for your <code>.hero-img</code>.</p>
+</li>
+<li><p>Create an <code>img</code> selector and give it a <code>width</code> property set to <code>100%</code>, and an <code>object-fit</code> property set to <code>cover</code>.</p>
+<p>The <code>object-fit</code> property tells the browser how to position the element within its container. In this case, <code>cover</code> will set the image to fill the container, cropping as needed to avoid changing the aspect ratio.</p>
+</li>
+<li><p>Create a <code>.hero-title</code> selector and give it a <code>text-align</code> property set to <code>center</code>, a <code>color</code> property set to <code>orangered</code> and a <code>font-size</code> property set to <code>8rem</code>.</p>
+</li>
+<li><p>The subtitle also needs to be styled. Create a <code>.hero-subtitle</code> selector and give it a <code>font-size</code> property set to <code>2.4rem</code>, a <code>color</code> property set to <code>orangered</code>, and a <code>text-align</code> property set to <code>center</code>.</p>
+</li>
+<li><p>Create an <code>.author</code> selector and give it a <code>font-size</code> property set to <code>2rem</code> and a <code>font-family</code> property set to <code>Raleway</code> with a fallback of <code>sans-serif</code>.</p>
+</li>
+<li><p>Create a <code>.author-name a:hover</code> selector and give it a <code>background-color</code> property set to <code>#306203</code>.</p>
+<p>This will create a hover effect only for the <code>a</code> element within the <code>.author-name</code>, showing the original freeCodeCamp green in the background.</p>
+</li>
+<li><p>Create a <code>.publish-date</code> selector and give it a <code>color</code> property of <code>rgba(255, 255, 255, 0.5)</code>.</p>
+</li>
+<li><p>Create a <code>.social-icons</code> selector. Give it a <code>display</code> property set to <code>grid</code>, and a <code>font-size</code> property set to <code>3rem</code>.</p>
+</li>
+<li><p>The default settings for CSS Grid will create additional rows as needed, unlike Flexbox. Give the <code>.social-icons</code> selector a <code>grid-template-columns</code> property set to <code>repeat(5, 1fr)</code> to arrange the icons in a single row.</p>
+</li>
+<li><p>If you wanted to add more social icons, but keep them on the same row, you would need to update <code>grid-template-columns</code> to create additional columns. As an alternative, you can use the <code>grid-auto-flow</code> property.</p>
+<p>This property takes either <code>row</code> or <code>column</code> as the first value, with an optional second value of <code>dense</code>. <code>grid-auto-flow</code> uses an auto-placement algorithm to adjust the grid layout. Setting it to <code>column</code> will tell the algorithm to create new columns for content as needed. The <code>dense</code> value allows the algorithm to backtrack and fill holes in the grid with smaller items, which can result in items appearing out of order.</p>
+<p>For your <code>.social-icons</code> selector, set the <code>grid-auto-flow</code> property to <code>column</code>.</p>
+</li>
+<li><p>Now the auto-placement algorithm will kick in when you add a new icon element. However, the algorithm defaults the new column width to be <code>auto</code>, which will not match your current columns.</p>
+<p>You can override this with the <code>grid-auto-columns</code> property. Give the <code>.social-icons</code> selector a <code>grid-auto-columns</code> property set to <code>1fr</code>.</p>
+</li>
+<li><p>Much like Flexbox, with CSS Grid you can align the content of grid items with <code>align-items</code> and <code>justify-items</code>. <code>align-items</code> will align child elements along the column axis, and <code>justify-items</code> will align child elements along the row axis.</p>
+<p>Give the <code>.social-icons</code> selector an <code>align-items</code> property set to <code>center</code>.</p>
+</li>
+<li><p>Give the <code>.text</code> selector a <code>font-size</code> property set to <code>1.8rem</code> and a <code>letter-spacing</code> property set to <code>0.6px</code>.</p>
+</li>
+<li><p>Your <code>.text</code> element is not a CSS Grid, but you can create columns within an element without using Grid by using the <code>column-width</code> property.</p>
+<p>Give your <code>.text</code> selector a <code>column-width</code> property set to <code>25rem</code>.</p>
+</li>
+<li><p>Magazines often use justified text in their printed content to structure their layout and control the flow of their content. While this works in printed form, justified text on websites can be an accessibility concern, for example presenting challenges for folks with dyslexia.</p>
+<p>To make your project look like a printed magazine, give the <code>.text</code> selector a <code>text-align</code> property set to <code>justify</code>.</p>
+</li>
+<li><p>The <code>::first-letter</code> pseudo-selector allows you to target the first letter in the text content of an element.</p>
+<p>Create a <code>.first-paragraph::first-letter</code> selector and set the <code>font-size</code> property to <code>6rem</code>. Also give it a <code>color</code> property set to <code>orangered</code> to make it stand out.</p>
+</li>
+<li><p>The other text has been shifted out of place. Move it into position by giving the <code>.first-paragraph::first-letter</code> selector a <code>float</code> property set to <code>left</code> and a <code>margin-right</code> property set to <code>1rem</code>.</p>
+</li>
+<li><p>Create an <code>hr</code> selector, and give it a <code>margin</code> property set to <code>1.5rem 0</code>.</p>
+</li>
+<li><p>To give the <code>hr</code> a color, you need to adjust the <code>border</code> property. Give the <code>hr</code> selector a <code>border</code> property set to <code>1px solid rgba(120, 120, 120, 0.6)</code>.</p>
+</li>
+<li><p>Create a <code>.quote</code> selector. Give it a <code>color</code> property set to <code>#00beef</code>, a <code>font-size</code> property set to <code>2.4rem</code>, and a <code>text-align</code> property set to <code>center</code>.</p>
+</li>
+<li><p>To make the quote text stand out more, give the <code>.quote</code> selector a <code>font-family</code> property set to <code>Raleway</code> with a fallback of <code>sans-serif</code>.</p>
+</li>
+<li><p>A quote is not really a quote without proper quotation marks. You can add these with CSS pseudo selectors.</p>
+<p>Create a <code>.quote::before</code> selector and set the <code>content</code> property to <code>&quot;</code> with a space following it.</p>
+<p>Also, create a <code>.quote::after</code> selector and set the <code>content</code> property to <code>&quot;</code> with a space preceding it.</p>
+</li>
+<li><p>Now it’s time to style your third <code>section</code>. Note that it has the <code>text</code> and <code>text-with-images</code> values for the <code>class</code> attribute, which means it is already inheriting the styles from your <code>.text</code> rule.</p>
+<p>Create a <code>.text-with-images</code> selector and set the <code>display</code> property to <code>grid</code>.</p>
+</li>
+<li><p>You will need to have a column for text and a column for images. Give the <code>.text-with-images</code> selector a <code>grid-template-columns</code> property set to <code>1fr 2fr</code>. Also set the <code>column-gap</code> property to <code>3rem</code> to provide more spacing between the columns.</p>
+</li>
+<li><p>Give the <code>.text-with-images</code> selector a <code>margin-bottom</code> property set to <code>3rem</code>.</p>
+</li>
+<li><p>Create a <code>.lists</code> selector and set the <code>list-style-type</code> property to <code>none</code>. This will get rid of the bullet points on the list items.</p>
+</li>
+<li><p>Give the <code>.lists</code> selector a <code>margin-top</code> property set to <code>2rem</code>.</p>
+</li>
+<li><p>Create a <code>.lists li</code> rule to target the list items within your <code>.lists</code> element. Give it a <code>margin-bottom</code> property set to <code>1.5rem</code>.</p>
+</li>
+<li><p>Create a <code>.list-title, .list-subtitle</code> selector and set the <code>color</code> property to <code>#00beef</code>.</p>
+</li>
+<li><p>Time to style the last section of the magazine - the images.</p>
+<p>The images are wrapped with an <code>aside</code> element using the <code>image-wrapper</code> class, so create an <code>.image-wrapper</code> selector. Set the <code>display</code> property to <code>grid</code>.</p>
+</li>
+<li><p>The images should be within a two column, three row layout.</p>
+<p>Give the <code>.image-wrapper</code> selector a <code>grid-template-columns</code> property set to <code>2fr 1fr</code> and a <code>grid-template-rows</code> property set to <code>repeat(3, min-content)</code>. This will give our grid rows that adjust in height based on the content, but columns that remain a fixed width based on the container.</p>
+</li>
+<li><p>The <code>gap</code> property is a shorthand way to set the value of <code>column-gap</code> and <code>row-gap</code> at the same time. If given one value, it sets the <code>column-gap</code> and <code>row-gap</code> both to that value. If given two values, it sets the <code>row-gap</code> to the first value and the <code>column-gap</code> to the second.</p>
+<p>Give the <code>.image-wrapper</code> selector a <code>gap</code> property set to <code>2rem</code>.</p>
+</li>
+<li><p>The <code>place-items</code> property can be used to set the <code>align-items</code> and <code>justify-items</code> values at the same time. The <code>place-items</code> property takes one or two values. If one value is provided, it is used for both the <code>align-items</code> and <code>justify-items</code> properties. If two values are provided, the first value is used for the <code>align-items</code> property and the second value is used for the <code>justify-items</code> property.</p>
+<p>Give the <code>.image-wrapper</code> selector a <code>place-items</code> property set to <code>center</code>.</p>
+</li>
+<li><p>Create an <code>.image-1, .image-3</code> rule and give it a <code>grid-column</code> property set to <code>1 / -1</code>. This will allow the first and third images to span the full width of the grid.</p>
+</li>
+<li><p>Now that the magazine layout is finished, you need to make it responsive.</p>
+<p>Start with a <code>@media</code> query for <code>only screen</code> with a <code>max-width</code> of <code>720px</code>. Inside, create an <code>.image-wrapper</code> selector and give it a <code>grid-template-columns</code> property of <code>1fr</code>.</p>
+<p>This will collapse the three images into one column on smaller screens.</p>
+</li>
+<li><p>Create another <code>@media</code> query for <code>only screen</code> with a <code>max-width</code> of <code>600px</code>. Within, create a <code>.text-with-images</code> rule and give it a <code>grid-template-columns</code> property of <code>1fr</code>.</p>
+<p>This will collapse your bottom text area into a single column on smaller screens.</p>
+</li>
+<li><p>Create a third <code>@media</code> query for <code>only screen</code> with a <code>max-width</code> of <code>550px</code>. Within, create a <code>.hero-title</code> selector with a <code>font-size</code> set to <code>6rem</code>, a <code>.hero-subtitle, .author, .quote, .list-title</code> selector with a <code>font-size</code> set to <code>1.8rem</code>, a <code>.social-icons</code> selector with a <code>font-size</code> set to <code>2rem</code>, and a <code>.text</code> selector with a <code>font-size</code> set to <code>1.6rem</code>.</p>
+</li>
+<li><p>Create one final <code>@media</code> query for <code>only screen</code> with a <code>max-width</code> of <code>420px</code>. Within, create a <code>.hero-title</code> selector with a <code>font-size</code> property set to <code>4.5rem</code>.</p>
+<p>Congratulations! Your magazine is now complete.</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Magazine<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">      <span class="attr">href</span>=<span class="string">&quot;https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&amp;display=swap&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">      <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.8.2/css/all.css&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;heading&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;hero&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">alt</span>=<span class="string">&quot;freecodecamp logo&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">class</span>=<span class="string">&quot;hero-img&quot;</span></span></span><br><span class="line"><span class="tag">          /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;hero-title&quot;</span>&gt;</span>OUR NEW CURRICULUM<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;hero-subtitle&quot;</span>&gt;</span></span><br><span class="line">            Our efforts to restructure our curriculum with a more project-based</span><br><span class="line">            focus</span><br><span class="line">          <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;author-name&quot;</span>&gt;</span></span><br><span class="line">            By</span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://freecodecamp.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noreferrer&quot;</span></span></span><br><span class="line"><span class="tag">              &gt;</span>freeCodeCamp&lt;/a</span><br><span class="line">            &gt;</span><br><span class="line">          <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;publish-date&quot;</span>&gt;</span>March 7, 2019<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;social-icons&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.facebook.com/freecodecamp/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-facebook-f&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://twitter.com/freecodecamp/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-twitter&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://instagram.com/freecodecamp&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-instagram&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.linkedin.com/school/free-code-camp/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-linkedin-in&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.youtube.com/freecodecamp&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-youtube&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;first-paragraph&quot;</span>&gt;</span></span><br><span class="line">          Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you&#x27;ll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">          After years - years - of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! A picture of this! This is what makes time travel possible: the flux capacitor!</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">          It wasn&#x27;t as dramatic as Doc&#x27;s revelation in Back to the Future. It</span><br><span class="line">          just occurred to me while I was going for a run. The revelation: the entire curriculum should be a series of projects. Instead of individual coding challenges, we&#x27;ll just have projects, each with their own seamless series of tests. Each test gives you just enough information to figure out how to get it to pass. (And you can view hints if that isn&#x27;t enough.)</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;quote&quot;</span>&gt;</span></span><br><span class="line">            The entire curriculum should be a series of projects</span><br><span class="line">          <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">          No more walls of explanatory text. No more walls of tests. Just one</span><br><span class="line">          test at a time, as you build up a working project. Over the course of passing thousands of tests, you build up projects and your own understanding of coding fundamentals. There is no transition between lessons and projects, because the lessons themselves are baked into projects. And there&#x27;s plenty of repetition to help you retain everything because - hey - building projects in real life has plenty of repetition.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">          The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from &quot;reading mode&quot; to &quot;coding mode&quot;.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">          Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They&#x27;ll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;text text-with-images&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">&quot;brief-history&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;list-title&quot;</span>&gt;</span>A Brief History<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">p</span>&gt;</span>Of the Curriculum<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;lists&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;list-subtitle&quot;</span>&gt;</span>V1 - 2014<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                We launched freeCodeCamp with a simple list of 15 resources,</span><br><span class="line">                including Harvard&#x27;s CS50 and Stanford&#x27;s Database Class.</span><br><span class="line">              <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;list-subtitle&quot;</span>&gt;</span>V2 - 2015<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">p</span>&gt;</span>We added interactive algorithm challenges.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;list-subtitle&quot;</span>&gt;</span>V3 - 2015<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                We added our own HTML+CSS challenges (before we&#x27;d been relying on</span><br><span class="line">                General Assembly&#x27;s Dash course for these).</span><br><span class="line">              <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;list-subtitle&quot;</span>&gt;</span>V4 - 2016<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                We expanded the curriculum to 3 certifications, including Front</span><br><span class="line">                End, Back End, and Data Visualization. They each had 10 required</span><br><span class="line">                projects, but only the Front End section had its own challenges.</span><br><span class="line">                For the other certs, we were still using external resources like</span><br><span class="line">                Node School.</span><br><span class="line">              <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;list-subtitle&quot;</span>&gt;</span>V5 - 2017<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">p</span>&gt;</span>We added the back end and data visualization challenges.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;list-subtitle&quot;</span>&gt;</span>V6 - 2018<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                We launched 6 new certifications to replace our old ones. This was</span><br><span class="line">                the biggest curriculum improvement to date.</span><br><span class="line">              <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">&quot;image-wrapper&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">alt</span>=<span class="string">&quot;image of the quote machine project&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">class</span>=<span class="string">&quot;image-1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">width</span>=<span class="string">&quot;600&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">height</span>=<span class="string">&quot;400&quot;</span></span></span><br><span class="line"><span class="tag">          /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">alt</span>=<span class="string">&quot;image of a calculator project&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">class</span>=<span class="string">&quot;image-2&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">width</span>=<span class="string">&quot;400&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">height</span>=<span class="string">&quot;400&quot;</span></span></span><br><span class="line"><span class="tag">          /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">&quot;image-quote&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;quote&quot;</span>&gt;</span></span><br><span class="line">              The millions of people who are learning to code through freeCodeCamp</span><br><span class="line">              will have an even better resource to help them learn these</span><br><span class="line">              fundamentals.</span><br><span class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">alt</span>=<span class="string">&quot;four people working on code&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">loading</span>=<span class="string">&quot;lazy&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">class</span>=<span class="string">&quot;image-3&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">width</span>=<span class="string">&quot;600&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">height</span>=<span class="string">&quot;400&quot;</span></span></span><br><span class="line"><span class="tag">          /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br></pre></td><td class="code"><pre><span class="line">*,</span><br><span class="line"><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">62.5%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Baskervville&#x27;</span>, serif;</span><br><span class="line">  <span class="attribute">color</span>: linen;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Anton&#x27;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Raleway&#x27;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">color</span>: linen;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">minmax</span>(<span class="number">2rem</span>, <span class="number">1</span>fr) <span class="built_in">minmax</span>(min-content, <span class="number">94rem</span>) <span class="built_in">minmax</span>(<span class="number">2rem</span>, <span class="number">1</span>fr);</span><br><span class="line">  <span class="attribute">row-gap</span>: <span class="number">3rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">object-fit</span>: cover;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hr &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">1.5rem</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="built_in">rgba</span>(<span class="number">120</span>, <span class="number">120</span>, <span class="number">120</span>, <span class="number">0.6</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heading</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: <span class="number">2</span> / <span class="number">3</span>;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">2</span>, <span class="number">1</span>fr);</span><br><span class="line">  <span class="attribute">row-gap</span>: <span class="number">1.5rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: <span class="number">2</span> / <span class="number">3</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.8rem</span>;</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">0.6px</span>;</span><br><span class="line">  <span class="attribute">column-width</span>: <span class="number">25rem</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: justify;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hero</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: <span class="number">1</span> / -<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hero-title</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: orangered;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">8rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hero-subtitle</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2.4rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: orangered;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.author</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2rem</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Raleway&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.author-name</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#306203</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.publish-date</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.social-icons</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">3rem</span>;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">5</span>, <span class="number">1</span>fr);</span><br><span class="line">  <span class="attribute">grid-auto-flow</span>: column;</span><br><span class="line">  <span class="attribute">grid-auto-columns</span>: <span class="number">1</span>fr;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.first-paragraph</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">6rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: orangered;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.quote</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#00beef</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2.4rem</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Raleway&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.quote</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&quot; &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.quote</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27; &quot;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-with-images</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">2</span>fr;</span><br><span class="line">  <span class="attribute">column-gap</span>: <span class="number">3rem</span>;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">3rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.lists</span> &#123;</span><br><span class="line">  <span class="attribute">list-style-type</span>: none;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">2rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.lists</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">1.5rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.list-title</span>, <span class="selector-class">.list-subtitle</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#00beef</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.image-wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">2</span>fr <span class="number">1</span>fr;</span><br><span class="line">  <span class="attribute">grid-template-rows</span>: <span class="built_in">repeat</span>(<span class="number">3</span>, min-content);</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">2rem</span>;</span><br><span class="line">  place-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.image-1</span>, <span class="selector-class">.image-3</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: <span class="number">1</span> / -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">720px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.image-wrapper</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">600px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.text-with-images</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">550px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.hero-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">6rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-class">.hero-subtitle</span>,</span><br><span class="line">  <span class="selector-class">.author</span>,</span><br><span class="line">  <span class="selector-class">.quote</span>,</span><br><span class="line">  <span class="selector-class">.list-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.8rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-class">.social-icons</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">2rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.text</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.6rem</span>;</span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%B8%89/" title="Responsive Web Dedign(十三)">http://moyun.com/responsive-web-dedign-十三/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%8D%81%E4%BA%8C/" rel="prev" title="Responsive Web Dedign(十二)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(十二)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/project-exercise-%E2%80%94-product-landing-page/" rel="next" title="Project Exercise — Product Landing Page">
+                  Project Exercise — Product Landing Page <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

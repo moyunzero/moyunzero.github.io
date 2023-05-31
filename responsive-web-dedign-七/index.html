@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn Typography by Building a Nutrition Label">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(七)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E4%B8%83/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn Typography by Building a Nutrition Label">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-06T04:57:38.730Z">
+<meta property="article:modified_time" content="2023-05-07T07:56:11.029Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E4%B8%83/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E4%B8%83/","path":"responsive-web-dedign-七/","title":"Responsive Web Dedign(七)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(七) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-Typography-by-Building-a-Nutrition-Label"><span class="nav-text">Learn Typography by Building a Nutrition Label</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B9%9D/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-09</time>
+        <br>
+      Responsive Web Dedign(九)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%B8%89/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-28</time>
+        <br>
+      Responsive Web Dedign(十三)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%BA%8C/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-27</time>
+        <br>
+      Responsive Web Dedign(二)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-10</time>
+        <br>
+      Responsive Web Dedign(十)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%85%AD/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-05</time>
+        <br>
+      Responsive Web Dedign(六)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E4%B8%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(七) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(七)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-05-06 12:57:38" itemprop="dateCreated datePublished" datetime="2023-05-06T12:57:38+08:00">2023-05-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-07 15:56:11" itemprop="dateModified" datetime="2023-05-07T15:56:11+08:00">2023-05-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-Typography-by-Building-a-Nutrition-Label/" itemprop="url" rel="index"><span itemprop="name">Learn Typography by Building a Nutrition Label</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-Typography-by-Building-a-Nutrition-Label"><a href="#Learn-Typography-by-Building-a-Nutrition-Label" class="headerlink" title="Learn Typography by Building a Nutrition Label"></a>Learn Typography by Building a Nutrition Label</h4><span id="more"></span>
+
+<ol>
+<li><p>We’ve provided a basic HTML boilerplate for you.</p>
+<p>Create an <code>h1</code> element within your <code>body</code> element and give it the text <code>Nutrition Facts</code>.</p>
+</li>
+<li><p>Below your <code>h1</code> element, add a <code>p</code> element with the text <code>8 servings per container</code>.</p>
+</li>
+<li><p>Add a second <code>p</code> element with the text <code>Serving size 2/3 cup (55g)</code>.</p>
+</li>
+<li><p>Within your <code>head</code> element, add a <code>link</code> element with the <code>rel</code> attribute set to <code>stylesheet</code> and the <code>href</code> attribute set to <code>https://fonts.googleapis.com/css?family=Open+Sans:400,700,800</code>.</p>
+<p>This will import the <code>Open Sans</code> font family, with the font weight values <code>400</code>, <code>700</code>, and <code>800</code>.</p>
+<p>Also add a <code>link</code> element to link your <code>styles.css</code> file.</p>
+</li>
+<li><p>Create a <code>body</code> selector and give it a <code>font-family</code> set to <code>Open Sans</code> with a fallback of <code>sans-serif</code>.</p>
+<p>Remember that fonts with spaces in the name must be wrapped in quotes for CSS.</p>
+</li>
+<li><p>The font is a bit small. Create an <code>html</code> selector and set the font to have a size of <code>16px</code>.</p>
+</li>
+<li><p>Wrap your <code>h1</code> and <code>p</code> elements in a <code>div</code> element. Give that <code>div</code> a <code>class</code> attribute set to <code>label</code>.</p>
+</li>
+<li><p>Borders can be used to group and prioritize content.</p>
+<p>Create a <code>.label</code> selector and give it a <code>border</code> set to <code>2px solid black</code>.</p>
+</li>
+<li><p>Good use of white space can bring focus to the important elements of your page, and help guide your user’s eyes through your text.</p>
+<p>Give your <code>.label</code> selector a <code>width</code> property set to <code>270px</code>.</p>
+</li>
+<li><p>Give your <code>.label</code> selector a <code>margin</code> property set to <code>20px auto</code>, and a <code>padding</code> property set to <code>0 7px</code>.</p>
+</li>
+<li><p>If you inspect your <code>.label</code> element with your browser’s developer tools, you may notice that it’s actually 288 pixels wide instead of 270. This is because, by default, the browser includes the border and padding when determining an element’s size.</p>
+<p>To solve this, reset the box model by creating a <code>*</code> selector and giving it a <code>box-sizing</code> property of <code>border-box</code>.</p>
+</li>
+<li><p>Remember that the use of <code>h1</code>, <code>h2</code>, and similar tags determine the semantic structure of your HTML. However, you can adjust the CSS of these elements to control the visual flow and hierarchy.</p>
+<p>Create an <code>h1</code> rule and set the <code>font-weight</code> property to <code>800</code>. This will make your <code>h1</code> text bolder.</p>
+</li>
+<li><p>Give your <code>h1</code> selector a <code>text-align</code> property of <code>center</code>.</p>
+</li>
+<li><p>Fine-tune the placement of your <code>h1</code> by giving it a top and bottom margin of <code>-4px</code> and a left and right margin of <code>0</code>.</p>
+</li>
+<li><p>Create a <code>p</code> selector and remove all margins.</p>
+</li>
+<li><p>Lines can help separate and group important content, especially when space is limited.</p>
+<p>Create a <code>div</code> element below your <code>h1</code> element, and give it a <code>class</code> attribute set to <code>divider</code>.</p>
+</li>
+<li><p>Create a selector for your new <code>.divider</code> and set the <code>border-bottom</code> property to <code>1px solid #888989</code>. Also give it a top and bottom margin of <code>2px</code>. It should not have any left or right margin.</p>
+</li>
+<li><p>The <code>letter-spacing</code> property can be used to adjust the space between each character of text in an element.</p>
+<p>Give your <code>h1</code> selector a <code>letter-spacing</code> property set to <code>0.15px</code> to space them out a bit more.</p>
+</li>
+<li><p>Nutrition labels have a lot of bold text to draw attention to important information. Rather than targeting each element that needs to be bold, it is more efficient to use a class to apply the bold styling to every element.</p>
+<p>Give your second <code>p</code> element a <code>class</code> attribute set to <code>bold</code>.</p>
+</li>
+<li><p>Your new class does not have any styling yet. Create a <code>.bold</code> selector and give it a <code>font-weight</code> property set to <code>800</code> to make the text bold.</p>
+<p>Go ahead and remove the <code>font-weight</code> property from your <code>h1</code> selector as well.</p>
+</li>
+<li><p>Give your <code>h1</code> element a <code>class</code> attribute set to <code>bold</code>. This will make the text bold again.</p>
+</li>
+<li><p>Horizontal spacing between equally important elements can increase the readability of your text.</p>
+<p>Wrap the text <code>2/3 cup (55g)</code> in a <code>span</code> element.</p>
+</li>
+<li><p>Now we can add the horizontal spacing using <code>flex</code>. In your <code>p</code> selector, add a <code>display</code> property set to <code>flex</code> and a <code>justify-content</code> property set to <code>space-between</code>.</p>
+</li>
+<li><p>Wrap everything within the <code>.label</code> element in a new <code>header</code> element.</p>
+</li>
+<li><p>Now update your <code>h1</code> selector to be <code>header h1</code> to specifically target your <code>h1</code> element within your new <code>header</code>.</p>
+</li>
+<li><p>Create a new <code>div</code> element below your <code>header</code> element, and give it a <code>class</code> attribute set to <code>divider large</code>.</p>
+</li>
+<li><p>Create a new <code>.large</code> selector and give it a <code>height</code> property set to <code>10px</code>. Also create an <code>.large, .medium</code> selector and set the <code>background-color</code> property to <code>black</code>.</p>
+</li>
+<li><p>You may notice there is still a small border at the bottom of your <code>.large</code> element. To reset this, give your <code>.large, .medium</code> selector a <code>border</code> property set to <code>0</code>.</p>
+<p>Note: the <code>medium</code>(medium) class will be utilized in step 37 for the thinner bars of the nutrition label.</p>
+</li>
+<li><p>Create a new <code>div</code> below your <code>.large</code> element and give it a <code>class</code> attribute set to <code>calories-info</code>.</p>
+</li>
+<li><p>Within your <code>.calories-info</code> element, create a <code>div</code> element. Give that <code>div</code> element a <code>class</code> attribute set to <code>left-container</code>. Within the newly created <code>div</code> element, create a <code>h2</code> element with the text <code>Amount per serving</code>. Give the <code>h2</code> element a <code>class</code> attribute set to <code>bold small-text</code>.</p>
+</li>
+<li><p>The <code>rem</code> unit stands for <code>root em</code>, and is relative to the font size of the <code>html</code> element.</p>
+<p>Create a <code>.small-text</code> selector and set the <code>font-size</code> to <code>0.85rem</code>, which would calculate to roughly <code>13.6px</code> (remember that you set your <code>html</code> to have a <code>font-size</code> of <code>16px</code>).</p>
+</li>
+<li><p>Create a <code>.calories-info h2</code> selector and remove all margins.</p>
+</li>
+<li><p>Below your <code>.small-text</code> element, create a new <code>p</code> element with the text <code>Calories</code>. Also below the <code>.left-container</code> element, create a new <code>span</code> element with the text <code>230</code>.</p>
+</li>
+<li><p>Create a new <code>.calories-info</code> selector and give it a <code>display</code> property set to <code>flex</code>. Also give it a <code>justify-content</code> property set to <code>space-between</code> and <code>align-items</code> property set to <code>flex-end</code>.</p>
+</li>
+<li><p>Create a new <code>.left-container p</code> selector setting the top and bottom margin to <code>-5px</code>, and the left and right margin to <code>-2px</code>. Also set the <code>font-size</code> to <code>2em</code> and <code>font-weight</code> to <code>700</code>.</p>
+</li>
+<li><p>Create a <code>.calories-info span</code> selector, set its <code>font-size</code> to <code>2.4em</code> and <code>font-weight</code> to <code>700</code>.</p>
+</li>
+<li><p>Typography is often more art than science. You may have to tweak things like alignment until it looks correct.</p>
+<p>Give your <code>.calories-info span</code> selector a <code>margin</code> set to <code>-7px -2px</code>. This will shift your <code>230</code> text into place.</p>
+</li>
+<li><p>Below your <code>.calories-info</code> element, add a <code>div</code> with the <code>class</code> attribute set to <code>divider medium</code>.5</p>
+</li>
+<li><p>Create an <code>.medium</code> selector and give it a <code>height</code> property of <code>5px</code>.</p>
+</li>
+<li><p>Create a new <code>div</code> element below your <code>.medium</code> element. Give it a <code>class</code> attribute set to <code>daily-value small-text</code>. Within this new <code>div</code>, add a <code>p</code> element with the text <code>% Daily Value *</code>, and set the <code>class</code> attribute to <code>bold right</code>.</p>
+</li>
+<li><p>The text <code>* Daily Value %</code> should be aligned to the right. Create a <code>.right</code> selector and use the <code>justify-content</code> property to do it.</p>
+<blockquote>
+<p>采用justify-content:flex-end;</p>
+</blockquote>
+</li>
+<li><p>Use your existing <code>.divider</code> element as an example to add a new divider after the <code>p</code> element.</p>
+</li>
+<li><p>After your last <code>.divider</code> element, create a <code>p</code> element and give it the text <code>Total Fat 8g 10%</code>. Wrap the text <code>Total Fat</code> in a <code>span</code> element with the <code>class</code> of <code>bold</code>. Wrap the text <code>10%</code> in another <code>span</code> element with the <code>class</code> of <code>bold</code>. Finally, nest the <code>Total Fat</code> <code>span</code> element and the text <code>8g</code> in an additional <code>span</code> element for alignment.</p>
+</li>
+<li><p>Below your element with the <code>Total Fat</code> text, create a new <code>p</code> element with the text <code>Saturated Fat 1g 5%</code>. Wrap the <code>5%</code> in a <code>span</code> with the <code>class</code> attribute set to <code>bold</code>. In this case this is enough to align the percentage to <code>5%</code>.</p>
+</li>
+<li><p>This new <code>p</code> element will need to be indented. Give it a <code>class</code> set to <code>indent</code>.</p>
+</li>
+<li><p>Create a new <code>.indent</code> selector and give it a <code>margin-left</code> property set to <code>1em</code>.</p>
+</li>
+<li><p>Create a <code>.daily-value p</code> selector to target all of your <code>p</code> elements in the <code>daily-value</code> section. Give this new selector a <code>border-bottom</code> set to <code>1px solid #888989</code>.</p>
+</li>
+<li><p>The bottom borders under your <code>% Daily Value *</code> and <code>Saturated Fat 1g 5%</code> elements do not extend the full width of the label. Add <code>no-divider</code> to the <code>class</code> for these two elements.</p>
+</li>
+<li><p>The <code>:not</code> pseudo-selector can be used to select all elements that do not match the given CSS rule.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:not</span>(<span class="selector-id">#example</span>) &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The above selects all <code>div</code> elements without an <code>id</code> of <code>example</code>.</p>
+<p>Modify your <code>.daily-value p</code> selector to exclude the <code>.no-divider</code> elements.</p>
+</li>
+<li><p>Now you will have to add separate dividers below your <code>.no-divider</code> elements.</p>
+<p>Your first <code>.no-divider</code> element has a <code>.divider</code> after it. Create another <code>.divider</code> after your second <code>.no-divider</code> element.</p>
+</li>
+<li><p>After your last <code>.divider</code>, create another <code>p</code> element with the text <code>Trans Fat 0g</code>. Italicize the word <code>Trans</code> by wrapping it in an <code>i</code> element. Give the new <code>p</code> element the <code>class</code> attribute set to <code>indent no-divider</code>. Wrap <code>Trans Fat 0g</code> in a <code>span</code> element for alignment.</p>
+</li>
+<li><p>Create another <code>.divider</code> after your last <code>p</code> element.</p>
+</li>
+<li><p>After your last <code>.divider</code>, create a new <code>p</code> element with the text <code>Cholesterol 0mg 0%</code>. Wrap the text <code>Cholesterol</code> in a <code>span</code> element, and give that <code>span</code> element the <code>class</code> of <code>bold</code>. Wrap the text <code>0%</code> in another <code>span</code> element, with the <code>class</code> of <code>bold</code>. Finally, nest the <code>Cholesterol</code> <code>span</code> element and the text <code>0mg</code> in an additional <code>span</code> element for alignment.</p>
+</li>
+<li><p>Below your last <code>p</code> element, create another <code>p</code> element with the text <code>Sodium 160mg 7%</code>. Wrap the text <code>Sodium</code> in a <code>span</code> element with a <code>class</code> attribute set to <code>bold</code>. Wrap the <code>7%</code> text in another <code>span</code> element with the <code>class</code> set to <code>bold</code>. Also add an additional <code>span</code> element around <code>Sodium 160mg</code> for aligning it correctly.</p>
+</li>
+<li><p>Add another <code>p</code> element with the text <code>Total Carbohydrate 37g 13%</code>. Like before, use <code>span</code> elements to make the text <code>Total Carbohydrate</code> and <code>13%</code> bold. Also add an additional <code>span</code> element to wrap the <code>Total Carbohydrate 37g</code> text in a span element so to have it aligned to the left, and <code>13%</code> to the right.</p>
+</li>
+<li><p>Below your last <code>p</code> element, add another <code>p</code> element with the text <code>Dietary Fiber 4g</code>. Give the <code>p</code> element the <code>class</code> necessary to indent it and remove the dividing border. Then create a divider below that <code>p</code> element.</p>
+</li>
+<li><p>Create another <code>p</code> element after your last <code>.divider</code>, and give it the text <code>Total Sugars 12g</code>. Assign that <code>p</code> element the <code>class</code> values necessary to indent it and remove the bottom border. Then create another <code>.divider</code> below your new <code>p</code> element.</p>
+</li>
+<li><p>The advantage to creating these dividers is that you can apply specific classes to style them individually. Add <code>double-indent</code> to the <code>class</code> for your last <code>.divider</code>.</p>
+</li>
+<li><p>Create a <code>.double-indent</code> selector and give it a left margin of <code>2em</code>.</p>
+</li>
+<li><p>Below your <code>.double-indent</code> element, add a new <code>p</code> element with the text <code>Includes 10g Added Sugars 20%</code>. Your new <code>p</code> element should also be double indented, and have no bottom border. Use a <code>span</code> to make the <code>20%</code> bold and right aligned.</p>
+<p>Then create another divider after that <code>p</code> element.</p>
+</li>
+<li><p>After your last divider, create another <code>p</code> element with the text <code>Protein 3g</code>. Use the necessary classes to remove the bottom border, and a <code>span</code> to make the <code>Protein</code> bold.</p>
+<p>Following this element, create a large divider.</p>
+</li>
+<li><p>Create another <code>p</code> element below your large divider. Give the <code>p</code> element the text <code>Vitamin D 2mcg 10%</code>.</p>
+<p>The <code>p</code> element contains only text, you can wrap the percentage in a <code>span</code> element so that it is considered a separate entity from the rest of the text, and it’s moved to the right.</p>
+</li>
+<li><p>Create another <code>p</code> element, give it the text <code>Calcium 260mg 20%</code>. Align <code>20%</code> to the right. Below that, create a <code>p</code> element with the text <code>Iron 8mg 45%</code>, aligning the <code>45%</code> to the right.</p>
+</li>
+<li><p>Create the final <code>p</code> element for your <code>.daily-value</code> section. Give it the text <code>Potassium 235mg 6%</code>. Align the <code>6%</code> text to the right, and remove the bottom border of the <code>p</code> element.</p>
+</li>
+<li><p>Add a medium divider after your <code>.daily-value</code> element. Below that new divider, create a <code>p</code> element with the <code>class</code> attribute set to <code>note</code>.</p>
+<p>Give the <code>p</code> element the following text:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</span><br></pre></td></tr></table></figure></li>
+<li><p>Create a <code>.note</code> selector, and set the size of the font to <code>0.6rem</code>. Also set the top and bottom margins to <code>5px</code>, removing the left and right margins.</p>
+</li>
+<li><p>Give the <code>.note</code> selector a left and right padding of <code>8px</code>, removing the top and bottom padding. Also set the <code>text-indent</code> property to <code>-8px</code>.</p>
+<p>With these last changes, your nutrition label is complete!</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Nutrition Label<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;./styles.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;label&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Nutrition Facts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>8 servings per container<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Serving size <span class="tag">&lt;<span class="name">span</span>&gt;</span>2/3 cup (55g)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider large&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;calories-info&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;bold small-text&quot;</span>&gt;</span>Amount per serving<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Calories<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>230<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider medium&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;daily-value small-text&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;bold right no-divider&quot;</span>&gt;</span>% Daily Value *<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Total Fat<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 8g<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>10%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span>Saturated Fat 1g <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>5%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>Trans<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Fat 0g<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Cholesterol<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 0mg<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>0%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Sodium<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 160mg<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>7%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Total Carbohydrate<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 37g<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>13%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span>Dietary Fiber 4g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span>Total Sugars 12g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider double-indent&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;double-indent no-divider&quot;</span>&gt;</span>Includes 10g Added Sugars <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>20%<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;no-divider&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Protein<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 3g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider large&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Vitamin D 2mcg <span class="tag">&lt;<span class="name">span</span>&gt;</span>10%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Calcium 260mg <span class="tag">&lt;<span class="name">span</span>&gt;</span>20%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Iron 8mg <span class="tag">&lt;<span class="name">span</span>&gt;</span>45%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;no-divider&quot;</span>&gt;</span>Potassium 235mg <span class="tag">&lt;<span class="name">span</span>&gt;</span>6%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider medium&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;note&quot;</span>&gt;</span>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily</span><br><span class="line">      diet. 2,000 calories a day is used for general nutrition advice.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Open Sans&#x27;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.label</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid black;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">270px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">7px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">4px</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">0.15px</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.divider</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#888989</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">2px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bold</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">800</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.large</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.large</span>, <span class="selector-class">.medium</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.medium</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.small-text</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.85rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.calories-info</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.calories-info</span> <span class="selector-tag">h2</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left-container</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">5px</span> -<span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.calories-info</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">7px</span> -<span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2.4em</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.indent</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.double-indent</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.daily-value</span> <span class="selector-tag">p</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.no-divider</span>) &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#888989</span>;</span><br><span class="line">&#125;</span><br><span class="line">n-<span class="attribute">left</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.daily-value</span> <span class="selector-tag">p</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.no-divider</span>) &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#888989</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E4%B8%83/" title="Responsive Web Dedign(七)">http://moyun.com/responsive-web-dedign-七/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%85%AD/" rel="prev" title="Responsive Web Dedign(六)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(六)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%85%AB/" rel="next" title="Responsive Web Dedign(八)">
+                  Responsive Web Dedign(八) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

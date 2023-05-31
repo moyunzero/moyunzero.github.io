@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn Basic CSS by Buiding a Cafe Menu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(二)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E4%BA%8C/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn Basic CSS by Buiding a Cafe Menu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg">
+<meta property="og:image" content="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg">
+<meta property="article:published_time" content="2023-04-27T08:11:46.825Z">
+<meta property="article:modified_time" content="2023-04-27T09:18:38.174Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="伪选择器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E4%BA%8C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E4%BA%8C/","path":"responsive-web-dedign-二/","title":"Responsive Web Dedign(二)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(二) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-Basic-CSS-by-Buiding-a-Cafe-Menu"><span class="nav-text">Learn Basic CSS by Buiding a Cafe Menu</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">CAMPER CAFE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Coffee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Desserts</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%83/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-06</time>
+        <br>
+      Responsive Web Dedign(七)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%B8%89/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-28</time>
+        <br>
+      Responsive Web Dedign(十三)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(二) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(二)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-27 16:11:46 / 修改时间：17:18:38" itemprop="dateCreated datePublished" datetime="2023-04-27T16:11:46+08:00">2023-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-Basic-CSS-by-Buiding-a-Cafe-Menu/" itemprop="url" rel="index"><span itemprop="name">Learn Basic CSS by Buiding a Cafe Menu</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>17k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>16 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-Basic-CSS-by-Buiding-a-Cafe-Menu"><a href="#Learn-Basic-CSS-by-Buiding-a-Cafe-Menu" class="headerlink" title="Learn Basic CSS by Buiding a Cafe Menu"></a>Learn Basic CSS by Buiding a Cafe Menu</h4><span id="more"></span>
+
+<ol>
+<li><p>Add the tag, and an element with a attribute of .<code>&lt;!DOCTYPE html&gt;``html``lang``en</code></p>
+</li>
+<li><p>Add a <code>head</code> element within the <code>html</code> element, so you can add a <code>title</code> element. The <code>title</code> element’s text should be <code>Cafe Menu</code>.</p>
+</li>
+<li><p>The <code>title</code> is one of several elements that provide extra information not visible on the web page, but it is useful for search engines or how the page gets displayed.</p>
+<p>Inside the <code>head</code> element, nest a <code>meta</code> element with an attribute named <code>charset</code> set to the value <code>utf-8</code> to tell the browser how to encode characters for the page. Note that <code>meta</code> elements are self-closing.</p>
+</li>
+<li><p>To prepare to create some actual content, add a <code>body</code> element below the <code>head</code> element.</p>
+</li>
+<li><p>It’s time to add some menu content. Add a <code>main</code> element within the existing <code>body</code> element. It will eventually contain pricing information about coffee and desserts offered by the cafe.</p>
+</li>
+<li><p>The name of the cafe is <code>CAMPER CAFE</code>. Add an <code>h1</code> element within your <code>main</code> element. Give it the name of the cafe in capitalized letters to make it stand out.</p>
+</li>
+<li><p>To let visitors know the cafe was founded in 2020, add a <code>p</code> element below the <code>h1</code> element with the text <code>Est. 2020</code>.</p>
+</li>
+<li><p>There will be two sections on the menu, one for coffees and one for desserts. Add a <code>section</code> element within the <code>main</code> element so you have a place to put all the coffees available.</p>
+</li>
+<li><p>Create an <code>h2</code> element in the <code>section</code> element and give it the text <code>Coffee</code>.</p>
+</li>
+<li><p>Up until now, you have been limited regarding the presentation and appearance of the content you create. To start taking control, add a <code>style</code> element within the <code>head</code> element.</p>
+</li>
+<li><p>You can add style to an element by specifying it in the <code>style</code> element and setting a property for it like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element &#123;</span><br><span class="line"> property: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Center your <code>h1</code> element by setting its <code>text-align</code> property to the value <code>center</code>.</p>
+</li>
+<li><p>n the previous step, you used a type selector to style the <code>h1</code> element. Center the <code>h2</code> and <code>p</code> elements by adding a new type selector for each one to the existing <code>style</code> element.</p>
+</li>
+<li><p>You now have three type selectors with the exact same styling. You can add the same group of styles to many elements by creating a list of selectors. Each selector is separated with commas like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">selector1, selector2 &#123;</span><br><span class="line">  property: value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Delete the three existing type selectors and replace them with one selector list that centers the text for the <code>h1</code>, <code>h2</code>, and <code>p</code> elements.</p>
+</li>
+<li><p>You have styled three elements by writing CSS inside the <code>style</code> tags. This works, but since there will be many more styles, it’s best to put all the styles in a separate file and link to it.</p>
+<p>We have created a separate <code>styles.css</code> file for you and switched the editor view to that file. You can change between files with the tabs at the top of the editor.</p>
+<p>Start by rewriting the styles you have created into the <code>styles.css</code> file. Make sure to exclude the opening and closing <code>style</code> tags.</p>
+</li>
+<li><p>Now that you have the CSS in the <code>styles.css</code> file, go ahead and remove the <code>style</code> element and all its content. Once it is removed, the text that was centered will shift back to the left.</p>
+</li>
+<li><p>Now you need to link the <code>styles.css</code> file so the styles will be applied again. Nest a self-closing <code>link</code> element in the <code>head</code> element. Give it a <code>rel</code> attribute value <code>stylesheet</code> and an <code>href</code> attribute value of <code>styles.css</code>.</p>
+</li>
+<li><p>For the styling of the page to look similar on mobile as it does on a desktop or laptop, you need to add a <code>meta</code> element with a special <code>content</code> attribute.</p>
+<p>Add the following within the <code>head</code> element:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>The text is centered again so the link to the CSS file is working. Add another style to the file that changes the <code>background-color</code> property to <code>brown</code> for the <code>body</code> element.</p>
+</li>
+<li><p>That brown background makes it hard to read the text. Change the <code>body</code> element’s background color to be <code>burlywood</code> so it has some color but you are still be able to read the text.</p>
+</li>
+<li><p>The <code>div</code> element is used mainly for design layout purposes unlike the other content elements you have used so far. Add a <code>div</code> element inside the <code>body</code> element and then move all the other elements inside the new <code>div</code>.</p>
+</li>
+<li><p>The goal now is to make the <code>div</code> not take up the entire width of the page. The CSS <code>width</code> property is perfect for this. Create a new type selector in the style sheet that gives your <code>div</code> element a width of <code>300px</code>.</p>
+</li>
+<li><p>Comments in CSS look like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* comment here */</span></span><br></pre></td></tr></table></figure>
+
+<p>In your style sheet, comment out the line containing the <code>background-color</code> property and value, so you can see the effect of only styling <code>div</code> element. This will make the background white again.</p>
+</li>
+<li><p>Now use the existing <code>div</code> selector to set the background color of the <code>div</code> element to be <code>burlywood</code>.</p>
+</li>
+<li><p>Now it’s easy to see that the text is centered inside the <code>div</code> element. Currently, the width of the <code>div</code> element is specified in pixels (<code>px</code>). Change the <code>width</code> property’s value to be <code>80%</code>, to make it 80% the width of its parent element (<code>body</code>).</p>
+</li>
+<li><p>Next, you want to center the <code>div</code> horizontally. You can do this by setting its <code>margin-left</code> and <code>margin-right</code> properties to <code>auto</code>. Think of the margin as invisible space around an element. Using these two margin properties, center the <code>div</code> element within the <code>body</code> element.</p>
+</li>
+<li><p>So far you have been using type selectors to style elements. A class selector is defined by a name with a dot directly in front of it, like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class-name</span> &#123;</span><br><span class="line">  styles</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Change the existing <code>div</code> selector into a class selector by replacing <code>div</code> with a class named <code>menu</code>.</p>
+</li>
+<li><p>To apply the class’s styling to the <code>div</code> element, add a <code>class</code> attribute to the <code>div</code> element’s opening tag and set its value to <code>menu</code>.</p>
+</li>
+<li><p>Since the cafe’s main product for sale is coffee, you could use an image of coffee beans for the background of the page.</p>
+<p>Delete the comment and its contents inside the <code>body</code> type selector. Now add a <code>background-image</code> property and set its value to <code>url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)</code>.</p>
+</li>
+<li><p>It’s looking good. Time to start adding some menu items. Add an empty <code>article</code> element under the <code>Coffee</code> heading. It will contain a flavor and price of each coffee you currently offer.</p>
+</li>
+<li><p><code>article</code> elements commonly contain multiple elements that have related information. In this case, it will contain a coffee flavor and a price for that flavor. Nest two <code>p</code> elements inside your <code>article</code> element. The first one’s text should be <code>French Vanilla</code>, and the second’s text <code>3.00</code>.</p>
+</li>
+<li><p>Starting below the existing coffee/price pair, add the following coffee and prices using <code>article</code> elements with two nested <code>p</code> elements inside each. As before, the first <code>p</code> element’s text should contain the coffee flavor and the second <code>p</code> element’s text should contain the price.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Caramel Macchiato 3.75</span><br><span class="line">Pumpkin Spice 3.50</span><br><span class="line">Hazelnut 4.00</span><br><span class="line">Mocha 4.50</span><br></pre></td></tr></table></figure></li>
+<li><p>The flavors and prices are currently stacked on top of each other and centered with their respective <code>p</code> elements. It would be nice if the flavor was on the left and the price was on the right.</p>
+<p>Add the class name <code>flavor</code> to the <code>French Vanilla</code> <code>p</code> element.</p>
+</li>
+<li><p>Using your new <code>flavor</code> class as a selector, set the <code>text-align</code> property’s value to <code>left</code>.</p>
+</li>
+<li><p>Next, you want to align the price to the right. Add a class named <code>price</code> to your <code>p</code> element that has <code>3.00</code> as its text.</p>
+</li>
+<li><p>Now align the text to the <code>right</code> for the elements with the <code>price</code> class.</p>
+</li>
+<li><p>That is kind of what you want, but now it would be nice if the flavor and price were on the same line. <code>p</code> elements are block-level elements, so they take up the entire width of their parent element.</p>
+<p>To get them on the same line, you need to apply some styling to the <code>p</code> elements so they behave more like inline elements. To do that, start by adding a <code>class</code> attribute with the value <code>item</code> to the first <code>article</code> element under the <code>Coffee</code> heading.</p>
+</li>
+<li><p>The <code>p</code> elements are nested in an <code>article</code> element with the class attribute of <code>item</code>. You can style all the <code>p</code> elements nested anywhere in elements with a class named <code>item</code> like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> <span class="selector-tag">p</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>Using the above selector, add a <code>display</code> property with value <code>inline-block</code> so the <code>p</code> elements behave more like inline elements.</p>
+</li>
+<li><p>That’s closer, but the price didn’t stay over on the right. This is because <code>inline-block</code> elements only take up the width of their content. To spread them out, add a <code>width</code> property to the <code>flavor</code> and <code>price</code> class selectors that have a value of <code>50%</code> each.</p>
+</li>
+<li><p>Well that did not work. Styling the <code>p</code> elements as <code>inline-block</code> and placing them on separate lines in the code creates an extra space to the right of the first <code>p</code> element, causing the second one to shift to the next line. One way to fix this is to make each <code>p</code> element’s width a little less than <code>50%</code>.</p>
+<p>Change the <code>width</code> value to <code>49%</code> for each class to see what happens.</p>
+</li>
+<li><p>That worked, but there is still a little space on the right of the price.</p>
+<p>You could keep trying various percentages for the widths. Instead, use the back space key on your keyboard to move the <code>p</code> element with the class <code>price</code> next to the <code>p</code> element with the class <code>flavor</code> so that they are on the same line in the editor. Make sure there is no space between them.</p>
+</li>
+<li><p>Now go ahead and change both the <code>flavor</code> and <code>price</code> class’ widths to be <code>50%</code> again.</p>
+</li>
+<li><p>Now that you know it works, you can change the remaining <code>article</code> and <code>p</code> elements to match the first set. Start by adding the class <code>item</code> to the other <code>article</code> elements.</p>
+</li>
+<li><p>Next, position the other <code>p</code> elements to be on the same line with no space between them.</p>
+</li>
+<li><p>To complete the styling, add the applicable class names <code>flavor</code> and <code>price</code> to all the remaining <code>p</code> elements.</p>
+</li>
+<li><p>If you make the width of the page preview smaller, you will notice at some point, some of the text on the left starts wrapping around to the next line. This is because the width of the <code>p</code> elements on the left side can only take up <code>50%</code> of the space.</p>
+<p>Since you know the prices on the right have significantly fewer characters, change the <code>flavor</code> class <code>width</code> value to be <code>75%</code> and the <code>price</code> class <code>width</code> value to be <code>25%</code>.</p>
+</li>
+<li><p>You will come back to styling the menu in a few steps, but for now, go ahead and add a second <code>section</code> element below the first for displaying the desserts offered by the cafe.</p>
+</li>
+<li><p>Add an <code>h2</code> element in the new section and give it the text <code>Desserts</code>.</p>
+</li>
+<li><p>Add an empty <code>article</code> element under the <code>Desserts</code> heading. Give it a <code>class</code> attribute with the value <code>item</code>.</p>
+</li>
+<li><p>Nest two <code>p</code> elements inside your <code>article</code> element. The first one’s text should be <code>Donut</code>, and the second’s text <code>1.50</code>. Put both of them on the same line making sure there is no space between them.</p>
+</li>
+<li><p>For the two <code>p</code> elements you just added, add <code>dessert</code> as the value of the first <code>p</code> element’s <code>class</code> attribute and the value <code>price</code> as the second <code>p</code> elements <code>class</code> attribute.</p>
+</li>
+<li><p>Something does not look right. You added the correct <code>class</code> attribute value to the <code>p</code> element with <code>Donut</code> as its text, but you have not defined a selector for it.</p>
+<p>The CSS rule for the <code>flavor</code> class already sets the properties you want. Add the <code>dessert</code> class as an additional selector for this CSS rule.</p>
+</li>
+<li><p>Below the dessert you just added, add the rest of the desserts and prices using three more <code>article</code> elements, each with two nested <code>p</code> elements. Each element should have the correct dessert and price text, and all of them should have the correct classes.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Cherry Pie 2.75</span><br><span class="line">Cheesecake 3.00</span><br><span class="line">Cinnamon Roll 2.50</span><br></pre></td></tr></table></figure></li>
+<li><p>You can give your menu some space between the content and the sides with various <code>padding</code> properties.</p>
+<p>Give the <code>menu</code> class a <code>padding-left</code> and a <code>padding-right</code> with the same value <code>20px</code>.</p>
+</li>
+<li><p>That looks better. Now try to add the same <code>20px</code> padding to the top and bottom of the menu.</p>
+</li>
+<li><p>Since all 4 sides of the menu have the same internal spacing, go ahead and delete the four properties and use a single <code>padding</code> property with the value <code>20px</code>.</p>
+</li>
+<li><p>The current width of the menu will always take up 80% of the <code>body</code> element’s width. On a very wide screen, the coffee and dessert appear far apart from their prices.</p>
+<p>Add a <code>max-width</code> property to the <code>menu</code> class with a value of <code>500px</code> to prevent it from growing too wide.</p>
+</li>
+<li><p>You can change the <code>font-family</code> of text, to make it look different from the default font of your browser. Each browser has some common fonts available to it.</p>
+<p>Change all the text in your <code>body</code>, by adding a <code>font-family</code> property with the value <code>sans-serif</code>. This is a fairly common font that is very readable.</p>
+</li>
+<li><p>It is a bit boring for all the text to have the same <code>font-family</code>. You can still have the majority of the text <code>sans-serif</code> and make just the <code>h1</code> and <code>h2</code> elements different using a different selector.</p>
+<p>Style both the <code>h1</code> and the <code>h2</code> elements so that only these elements’ text use <code>Impact</code> font.</p>
+</li>
+<li><p>You can add a fallback value for the font-family by adding another font name separated by a comma. Fallbacks are used in instances where the initial is not found/available.</p>
+<p>Add the fallback font <code>serif</code> after the <code>Impact</code> font.</p>
+</li>
+<li><p>Make the <code>Est. 2020</code> text italicized by creating an <code>established</code> class selector and giving it the <code>font-style</code> property with the value <code>italic</code>.</p>
+</li>
+<li><p>Now apply the <code>established</code> class to the <code>Est. 2020</code> text.</p>
+</li>
+<li><p>The typography of heading elements (e.g. <code>h1</code>, <code>h2</code>) is set by default values of users’ browsers.</p>
+<p>Add two new type selectors (<code>h1</code> and <code>h2</code>). Use the <code>font-size</code> property for both, but use the value <code>40px</code> for the <code>h1</code> and <code>30px</code> for the <code>h2</code>.</p>
+</li>
+<li><p>Add a <code>footer</code> element below the <code>main</code> element, where you can add some additional information.</p>
+</li>
+<li><p>Inside the <code>footer</code>, add a <code>p</code> element. Then, nest an anchor (<code>a</code>) element in the <code>p</code> that links to <code>https://www.freecodecamp.org</code> and has the text <code>Visit our website</code>.</p>
+</li>
+<li><p>Add a second <code>p</code> element below the one with the link and give it the text <code>123 Free Code Camp Drive</code>.</p>
+</li>
+<li><p>You can use an <code>hr</code> element to display a divider between sections of different content.</p>
+<p>First, add an <code>hr</code> element between the <code>p</code> element with the class <code>established</code> and the first <code>section</code> element. Note that <code>hr</code> elements are self closing.</p>
+</li>
+<li><p>The default properties of an <code>hr</code> element will make it appear as a thin light grey line. You can change the height of the line by specifying a value for the <code>height</code> property.</p>
+<p>Change the height of the <code>hr</code> element to be <code>3px</code>.</p>
+</li>
+<li><p>Change the background color of the <code>hr</code> element to <code>brown</code> so it matches the color of the coffee beans.</p>
+</li>
+<li><p>Notice the grey color along the edges of the line. Those edges are known as borders. Each side of an element can have a different color or they can all be the same.</p>
+<p>Make all the edges of the <code>hr</code> element the same color as the background of it using the <code>border-color</code> property.</p>
+</li>
+<li><p>Notice how the thickness of the line looks bigger? The default value of a property named <code>border-width</code> is <code>1px</code> for all edges of <code>hr</code> elements. By changing the border to the same color as the background, the total height of the line is <code>5px</code> (<code>3px</code> plus the top and bottom border width of <code>1px</code>).</p>
+<p>Change the <code>height</code> property of the <code>hr</code> to be <code>2px</code>, so the total height of it becomes <code>4px</code>.</p>
+</li>
+<li><p>Go ahead and add another <code>hr</code> element between the <code>main</code> element and the <code>footer</code> element.</p>
+</li>
+<li><p>To create a little more room around the menu, add <code>20px</code> of space on the inside of the <code>body</code> element by using the <code>padding</code> property.</p>
+</li>
+<li><p>Focusing on the menu items and prices, there is a fairly large gap between each line.</p>
+<p>Target all the <code>p</code> elements nested in elements with the <code>class</code> named <code>item</code> and set their top and bottom margin to be <code>5px</code>.</p>
+</li>
+<li><p>Using the same style selector in the previous step, make the font size of the items and prices larger by using a value of <code>18px</code>.</p>
+</li>
+<li><p>Changing the <code>margin-bottom</code> to <code>5px</code> looks great. However, now the space between the <code>Cinnamon Roll</code> menu item and the second <code>hr</code> element does not match the space between the top <code>hr</code> element and the <code>Coffee</code> heading.</p>
+<p>Add some more space by creating a class named <code>bottom-line</code> using <code>25px</code> for the <code>margin-top</code> property.</p>
+</li>
+<li><p>Now add the <code>bottom-line</code> class to the second <code>hr</code> element so the styling is applied.</p>
+</li>
+<li><p>Next you are going to be styling the <code>footer</code> element. To keep the CSS organized, add a comment at the end of <code>styles.css</code> with the text <code>FOOTER</code>.</p>
+</li>
+<li><p>Moving down to the <code>footer</code> element, make all the text have a value of <code>14px</code> for the font size.</p>
+</li>
+<li><p>The default color of a link that has not yet been clicked on is typically blue. The default color of a link that has already been visited from a page is typically purple.</p>
+<p>To make the <code>footer</code> links the same color regardless if a link has been visited, use a type selector for the anchor element (<code>a</code>) and use the value <code>black</code> for the <code>color</code> property.</p>
+</li>
+<li><p>You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like <code>a:visited &#123; propertyName: propertyValue; &#125;</code>.</p>
+<p>Change the color of the footer <code>Visit our website</code> link to be <code>grey</code> when a user has visited the link.</p>
+</li>
+<li><p>You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like <code>a:hover &#123; propertyName: propertyValue; &#125;</code>.</p>
+<p>Change the color of the footer <code>Visit our website</code> link to be <code>brown</code> when a user hovers over it.</p>
+</li>
+<li><p>You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like <code>a:active &#123; propertyName: propertyValue; &#125;</code>.</p>
+<p>Change the color of the footer <code>Visit our website</code> link to be <code>white</code> when clicked on.</p>
+</li>
+<li><p>To keep with the same color theme you have already been using (black and brown), change the color for when the link is visited to <code>black</code> and use <code>brown</code> for when the link is actually clicked.</p>
+</li>
+<li><p>The menu text <code>CAMPER CAFE</code> has a different space from the top than the address’s space at the bottom of the menu. This is due to the browser having some default top margin for the <code>h1</code> element.</p>
+<p>Change the top margin of the <code>h1</code> element to <code>0</code> to remove all the top margin.</p>
+</li>
+<li><p>To remove some of the vertical space between the <code>h1</code> element and the text <code>Est. 2020</code>, change the bottom margin of the <code>h1</code> to <code>15px</code>.</p>
+</li>
+<li><p>Now the top spacing looks good. The space below the address at the bottom of the menu is a little bigger than the space at the top of the menu and the <code>h1</code> element.</p>
+<p>To decrease the default margin space below the address <code>p</code> element, create a class selector named <code>address</code> and use the value <code>5px</code> for the <code>margin-bottom</code> property.</p>
+</li>
+<li><p>Now apply the <code>address</code> class to the <code>p</code> element containing the street address <code>123 Free Code Camp Drive</code>.</p>
+</li>
+<li><p>The menu looks good, but other than the coffee beans background image, it is mainly just text.</p>
+<p>Under the <code>Coffee</code> heading, add an image using the url <code>https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg</code>. Give the image an <code>alt</code> value of <code>coffee icon</code>.</p>
+</li>
+<li><p>The image you added is not centered horizontally like the <code>Coffee</code> heading above it. <code>img</code> elements are “like” inline elements.</p>
+<p>To make the image behave like heading elements (which are block-level), create an <code>img</code> type selector and use the value <code>block</code> for the <code>display</code> property and use the applicable <code>margin-left</code> and <code>margin-right</code> values to center it horizontally.</p>
+</li>
+<li><p>Add one last image under the <code>Desserts</code> heading using the url <code>https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg</code>. Give the image an <code>alt</code> value of <code>pie icon</code>.</p>
+</li>
+<li><p>It would be nice if the vertical space between the <code>h2</code> elements and their associated icons was smaller. The <code>h2</code> elements have default top and bottom margin space, so you could change the bottom margin of the <code>h2</code> elements to say <code>0</code> or another number.</p>
+<p>There is an easier way, simply add a negative top margin to the <code>img</code> elements to pull them up from their current positions. Negative values are created using a <code>-</code> in front of the value. To complete this project, go ahead and use a negative top margin of <code>25px</code> in the <code>img</code> type selector.</p>
+</li>
+<li><p>```html</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="menu">
+      <main>
+        <h1>CAMPER CAFE</h1>
+        <p class="established">Est. 2020</p>
+        <hr>
+        <section>
+          <h2>Coffee</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
+          <article class="item">
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+        <section>
+          <h2>Desserts</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon">
+          <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          </article>
+        </section>
+      </main>
+      <hr class="bottom-line">
+      <footer>
+        <p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org">Visit our website</a></p>
+        <p class="address">123 Free Code Camp Drive</p>
+      </footer>
+    </div>
+  </body>
+</html>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```css</span><br><span class="line">body &#123;</span><br><span class="line">  /*background-color: burlywood;*/</span><br><span class="line">  background-image:url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)</span><br><span class="line">  font-family:sans-serif;</span><br><span class="line">  padding:20px;</span><br><span class="line">&#125;</span><br><span class="line">.menu&#123;</span><br><span class="line">  width:80%;</span><br><span class="line">  background-color: burlywood;</span><br><span class="line">  margin-left:auto;</span><br><span class="line">  margin-right:auto;</span><br><span class="line"> /* padding-left:20px;</span><br><span class="line">  padding-right:20px;</span><br><span class="line">  padding-top: 20px;</span><br><span class="line">  padding-bottom: 20px;*/</span><br><span class="line">  padding:20px;</span><br><span class="line">  max-width:500px;</span><br><span class="line">&#125;</span><br><span class="line">hr&#123;</span><br><span class="line">  height:2px;</span><br><span class="line">  background-color:brown;</span><br><span class="line">  border-color:brown;</span><br><span class="line">&#125;</span><br><span class="line">.bottom-line&#123;</span><br><span class="line">  margin-top:25px;</span><br><span class="line">&#125;</span><br><span class="line">h1&#123;</span><br><span class="line">  font-size:40px;</span><br><span class="line">  margin-top:0px;</span><br><span class="line">  margin-bottom:15px;</span><br><span class="line">&#125;</span><br><span class="line">h2&#123;</span><br><span class="line">  font-size:30px;</span><br><span class="line">&#125;</span><br><span class="line">h1,</span><br><span class="line">h2,</span><br><span class="line">p &#123;</span><br><span class="line">  text-align:center;</span><br><span class="line">&#125;</span><br><span class="line">h1,</span><br><span class="line">h2&#123;</span><br><span class="line">  font-family: Impact,serif;;</span><br><span class="line">&#125;</span><br><span class="line">.flavor,</span><br><span class="line">.dessert &#123;</span><br><span class="line">  text-align: left;</span><br><span class="line">  width:75%;</span><br><span class="line">&#125;</span><br><span class="line">.price &#123;</span><br><span class="line">  text-align: right;</span><br><span class="line">  width:25%;</span><br><span class="line">&#125;</span><br><span class="line">.item p&#123;</span><br><span class="line">  display:inline-block;</span><br><span class="line">  margin-top:5px;</span><br><span class="line">  margin-bottom:5px;</span><br><span class="line">  font-size:18px;</span><br><span class="line">&#125; </span><br><span class="line">.established&#123;</span><br><span class="line">  font-style:italic;</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">  display:block;</span><br><span class="line">  margin-left:auto;</span><br><span class="line">  margin-right:auto;</span><br><span class="line">  margin-top:-25px;</span><br><span class="line">&#125;</span><br><span class="line">/* FOOTER */</span><br><span class="line">footer&#123;</span><br><span class="line">  font-size:14px;</span><br><span class="line">&#125; </span><br><span class="line">a&#123;</span><br><span class="line">  color:black;</span><br><span class="line">&#125; </span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br><span class="line">a:active &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br><span class="line">.address&#123;</span><br><span class="line">  margin-bottom:5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p> </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E4%BA%8C/" title="Responsive Web Dedign(二)">http://moyun.com/responsive-web-dedign-二/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/%E4%BC%AA%E9%80%89%E6%8B%A9%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 伪选择器</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E4%B8%80/" rel="prev" title="Responsive Web Dedign(一)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(一)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/" rel="next" title="">
+                   <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

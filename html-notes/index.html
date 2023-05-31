@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="HTML1. HTML概念HTML(HyperText Markup Language,超文本标记语言)是一种用来告知浏览器如何组织页面的标记语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML notes">
+<meta property="og:url" content="http://moyun.com/html-notes/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="HTML1. HTML概念HTML(HyperText Markup Language,超文本标记语言)是一种用来告知浏览器如何组织页面的标记语言">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-26T13:24:28.393Z">
+<meta property="article:modified_time" content="2023-05-29T02:27:09.544Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/html-notes/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/html-notes/","path":"html-notes/","title":"HTML notes"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTML notes | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HTML%E6%A6%82%E5%BF%B5"><span class="nav-text">1. HTML概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HTML%E5%85%83%E7%B4%A0"><span class="nav-text">2. HTML元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%85%83%E7%B4%A0"><span class="nav-text">2.1 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-p-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;p&gt; 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-h-gt-%E6%A0%87%E9%A2%98%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;h&gt; 标题元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-ul-gt-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="nav-text">&lt;ul&gt; 无序列表标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-ol-gt-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="nav-text">&lt;ol&gt; 有序列表标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-dl-gt-%E6%8F%8F%E8%BF%B0%E5%88%97%E8%A1%A8"><span class="nav-text">&lt;dl&gt;描述列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-img-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;img&gt; 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-figure-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;figure&gt; 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-video-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;video&gt; 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-audio-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;audio&gt; 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-iframe-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;iframe&gt; 元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-table-gt-%E8%A1%A8%E6%A0%BC%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;table&gt; 表格元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83%E5%85%83%E7%B4%A0"><span class="nav-text">强调元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%B1%A1%E5%85%83%E7%B4%A0"><span class="nav-text">表象元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8D%A2%E8%A1%8C%E5%92%8C%E6%B0%B4%E5%B9%B3%E5%88%86%E5%89%B2%E7%BA%BF"><span class="nav-text">换行和水平分割线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%A9%E7%95%A5%E8%AF%AD"><span class="nav-text">缩略语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-address-gt-%E6%A0%87%E8%AE%B0%E8%81%94%E7%B3%BB%E5%85%83%E7%B4%A0"><span class="nav-text">&lt;address&gt; 标记联系元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87%E5%85%83%E7%B4%A0"><span class="nav-text">上下标元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%95%E7%A4%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BB%A3%E7%A0%81"><span class="nav-text">展示计算机代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-time-gt-%E6%A0%87%E8%AE%B0%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F"><span class="nav-text">&lt;time&gt; 标记时间日期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%B5%8C%E5%A5%97%E5%85%83%E7%B4%A0"><span class="nav-text">2.2 嵌套元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="nav-text">2.3 块级元素和内联元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0"><span class="nav-text">块级元素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-text">特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E6%B3%95"><span class="nav-text">用法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%88%97%E8%A1%A8"><span class="nav-text">元素列表</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="nav-text">内联元素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="nav-text">特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%88%97%E8%A1%A8-1"><span class="nav-text">元素列表</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E4%B8%8E%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E7%9A%84%E5%85%B3%E9%94%AE%E5%8C%BA%E5%88%AB"><span class="nav-text">块级元素与行内元素的关键区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E7%A9%BA%E5%85%83%E7%B4%A0"><span class="nav-text">2.4 空元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%B1%9E%E6%80%A7"><span class="nav-text">3. 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%B1%9E%E6%80%A7"><span class="nav-text">布尔属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="nav-text">4. HTML文档结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1HTML%E5%A4%B4%E9%83%A8"><span class="nav-text">4.1HTML头部</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E9%A2%98"><span class="nav-text">标题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE-lt-meta-gt-%E5%85%83%E7%B4%A0"><span class="nav-text">元数据&lt;meta&gt; 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="nav-text">指定文档中的字符编码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%BD%9C%E8%80%85%E5%92%8C%E6%8F%8F%E8%BF%B0"><span class="nav-text">添加作者和描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87"><span class="nav-text">自定义图标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%BA%94%E7%94%A8CSS%E5%92%8CJS"><span class="nav-text">4.2 应用CSS和JS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E8%AE%BE%E7%BD%AE%E4%B8%BB%E8%AF%AD%E8%A8%80"><span class="nav-text">4.3 设置主语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-text">文档的基本组成部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML%E6%9E%84%E5%BB%BA%E5%86%85%E5%AE%B9"><span class="nav-text">HTML构建内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-text">5. 特殊字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-HTML%E6%B3%A8%E9%87%8A"><span class="nav-text">6. HTML注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-text">7. 超链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E9%93%BE%E6%8E%A5%E8%A7%A3%E6%9E%90"><span class="nav-text">7.1 链接解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%97%E7%BA%A7%E9%93%BE%E6%8E%A5"><span class="nav-text">块级链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5"><span class="nav-text">图片链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#title%E5%B1%9E%E6%80%A7%E6%B7%BB%E5%8A%A0%E6%94%AF%E6%8C%81%E4%BF%A1%E6%81%AF"><span class="nav-text">title属性添加支持信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6%EF%BC%88URL%EF%BC%89%E4%B8%8E%E8%B7%AF%E5%BE%84%EF%BC%88path%EF%BC%89"><span class="nav-text">7.2 统一资源定位符（URL）与路径（path）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9URL%E5%92%8C%E7%9B%B8%E5%AF%B9URL"><span class="nav-text">绝对URL和相对URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E7%89%87%E6%AE%B5"><span class="nav-text">文档片段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8download%E5%B1%9E%E6%80%A7%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="nav-text">使用download属性下载链接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E9%93%BE%E6%8E%A5"><span class="nav-text">7.3 电子邮件链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-text">指定详细信息</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%BC%95%E7%94%A8"><span class="nav-text">8. 引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%97%E5%BC%95%E7%94%A8"><span class="nav-text">块引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%BC%95%E7%94%A8"><span class="nav-text">行内引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E6%96%87"><span class="nav-text">引文</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/html-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTML notes | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML notes
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-05-26 21:24:28" itemprop="dateCreated datePublished" datetime="2023-05-26T21:24:28+08:00">2023-05-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-29 10:27:09" itemprop="dateModified" datetime="2023-05-29T10:27:09+08:00">2023-05-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Frontend-Notes/" itemprop="url" rel="index"><span itemprop="name">Frontend Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Frontend-Notes/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="1-HTML概念"><a href="#1-HTML概念" class="headerlink" title="1. HTML概念"></a>1. HTML概念</h2><p>HTML(HyperText Markup Language,超文本标记语言)是一种用来告知浏览器如何组织页面的标记语言</p>
+<span id="more"></span>
+
+<blockquote>
+<p>HTML标签不区分大小写</p>
+</blockquote>
+<h2 id="2-HTML元素"><a href="#2-HTML元素" class="headerlink" title="2. HTML元素"></a>2. HTML元素</h2><p>由开始标签、内容、结束标签构成一个整体</p>
+<ul>
+<li><p>开始标签（Opening tag）：包含元素的名称，被&lt;&gt;包裹。开头标签标志着元素开始或开始生效的地方</p>
+</li>
+<li><p>内容（Content）：元素的内容</p>
+</li>
+<li><p>结束标签（Closing tag）：与开始标签相似，只是其在元素名之前包含一个/。这标志着该元素的结束</p>
+</li>
+</ul>
+<h3 id="2-1-元素"><a href="#2-1-元素" class="headerlink" title="2.1 元素"></a>2.1 元素</h3><h4 id="lt-p-gt-元素"><a href="#lt-p-gt-元素" class="headerlink" title="&lt;p&gt; 元素"></a><code>&lt;p&gt;</code> 元素</h4><ul>
+<li>定义段落<code>&lt;p&gt;&lt;/p&gt;</code></li>
+</ul>
+<h4 id="lt-h-gt-标题元素"><a href="#lt-h-gt-标题元素" class="headerlink" title="&lt;h&gt; 标题元素"></a><code>&lt;h&gt;</code> 标题元素</h4><ul>
+<li><p>每个标题（Heading）都必须被包裹在一个标题元素中</p>
+</li>
+<li><p><code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>:共六种标题元素标签，每个元素代表文档中不同级别的内容</p>
+</li>
+<li><p><code>&lt;h1&gt;</code> 也是一个语义元素，塌缩包裹的文本具有“页面上的顶级标题”的作用。</p>
+</li>
+<li><p>注意</p>
+<ul>
+<li><p>最好只对每个页面使用一次 <code>&lt;h1&gt;</code>——这是顶级标题，所有其他标题位于层次结构中的下方。</p>
+</li>
+<li><p>请确保在层次结构中以正确的顺序使用标题。不要使用 <code>&lt;h3&gt;</code> 来表示副标题，后面再跟 <code>&lt;h2&gt;</code> 来表示二级副标题——这是没有意义的，会导致奇怪的结果。</p>
+</li>
+<li><p>在现有的六个标题层次中，除非觉得有必要，否则应该争取每页使用不超过三个。有很多层次的文件（例如，深层次的标题层次）会变得笨重，难以浏览。在这种情况下，如果可能的话，建议将内容分散到多个页面。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="lt-ul-gt-无序列表标签"><a href="#lt-ul-gt-无序列表标签" class="headerlink" title="&lt;ul&gt; 无序列表标签"></a><code>&lt;ul&gt;</code> 无序列表标签</h4><ul>
+<li><p><code>&lt;ul&gt;&lt;/ul&gt;</code>包裹所需要的清单项目</p>
+</li>
+<li><p><code>&lt;li&gt;&lt;/li&gt;</code> 把每个列出的项目单独包裹起来</p>
+</li>
+</ul>
+<h4 id="lt-ol-gt-有序列表标签"><a href="#lt-ol-gt-有序列表标签" class="headerlink" title="&lt;ol&gt; 有序列表标签"></a><code>&lt;ol&gt;</code> 有序列表标签</h4><p>需要按照项目的顺序列出来</p>
+<ul>
+<li>结构与无序列表相同，但需要用<code>&lt;ol&gt;</code> 元素包裹所有项目</li>
+</ul>
+<blockquote>
+<p>列表之间可以嵌套</p>
+</blockquote>
+<h4 id="lt-dl-gt-描述列表"><a href="#lt-dl-gt-描述列表" class="headerlink" title="&lt;dl&gt;描述列表"></a><code>&lt;dl&gt;</code>描述列表</h4><p>使用闭合标签<code>&lt;dl&gt;</code> ，此外，每一项都用 <code>&lt;dt&gt;</code> 元素闭合，每个描述都用 <code>&lt;dd&gt;</code> 元素闭合</p>
+<ul>
+<li><p>浏览器的默认样式会在描述列表的术语及其定义之间产生缩进</p>
+</li>
+<li><p>单个术语可以同时有多个描述</p>
+</li>
+</ul>
+<h4 id="lt-img-gt-元素"><a href="#lt-img-gt-元素" class="headerlink" title="&lt;img&gt; 元素"></a><code>&lt;img&gt;</code> 元素</h4><p>是一个空元素，</p>
+<ul>
+<li>需要src使其生效，<code>src</code> 属性包含了图片的路径。</li>
+</ul>
+<blockquote>
+<p><code>&lt;img src=&quot;&quot;&gt;</code> </p>
+</blockquote>
+<ul>
+<li><p><code>alt</code> 对图片进行描述，用于图片无法显示或不能被看到的情况</p>
+</li>
+<li><p><code>title</code> 鼠标放置图片上显示信息</p>
+</li>
+<li><p>可通过<code>width</code>和<code>height</code>元素设置宽高，尽量使用CSS调整图片尺寸</p>
+</li>
+<li><p><code>srcset</code> 定义了浏览器可选择的图片设置及每个图片的大小，每张图片信息的设置要用逗号分隔。</p>
+<p>每个设置为</p>
+<ul>
+<li><p>一个文件名</p>
+</li>
+<li><p>一个空格</p>
+</li>
+<li><p>图片的固有宽度</p>
+</li>
+</ul>
+</li>
+<li><p><code>sizes</code> 定义了一组媒体条件并且指明当前某些媒体条件为真时，最佳尺寸是多少</p>
+</li>
+</ul>
+<h4 id="lt-figure-gt-元素"><a href="#lt-figure-gt-元素" class="headerlink" title="&lt;figure&gt; 元素"></a><code>&lt;figure&gt;</code> 元素</h4><p>为元素提供语义容器，在标题和图片之间建立关联 —— <code>&lt;figcaption&gt;</code>    </p>
+<p>该元素中不一定要是图片，可以是一个独立内容单元</p>
+<ul>
+<li><p>用简洁、易懂的方式表达意图</p>
+</li>
+<li><p>可以置于页面线性流的某处</p>
+</li>
+<li><p>为主要内容提供重要的补充说明</p>
+</li>
+<li><p>可以是图片、代码、音频、方程等</p>
+</li>
+</ul>
+<h4 id="lt-video-gt-元素"><a href="#lt-video-gt-元素" class="headerlink" title="&lt;video&gt; 元素"></a><code>&lt;video&gt;</code> 元素</h4><p>嵌入一段视频</p>
+<p>属性</p>
+<ul>
+<li><p><code>src</code> 指向想要嵌入的视频资源地址</p>
+</li>
+<li><p><code>control</code> 控制视频的回放功能， 可用其来包含浏览器提供的控件页面</p>
+</li>
+<li><p>标签中内容：也称为后备内容，当浏览器不支持该标签时，就会显示该内容</p>
+</li>
+<li><p><code>autoplay</code> 会使视频内容立即播放</p>
+</li>
+<li><p><code>loop</code> 循环播放</p>
+</li>
+<li><p><code>muted</code> 媒体播放时，默认关闭声音</p>
+</li>
+<li><p><code>poster</code> 指向一个图像的URL，这个图像会在视频播放前显示，通常用于预览或广告</p>
+</li>
+<li><p><code>preload</code> 被用来缓冲较大的文件</p>
+<ul>
+<li><p><code>none</code> 不缓冲</p>
+</li>
+<li><p><code>auto</code> 页面加载后缓存媒体文件</p>
+</li>
+<li><p><code>metadata</code> 仅缓冲文件的元数据</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="lt-audio-gt-元素"><a href="#lt-audio-gt-元素" class="headerlink" title="&lt;audio&gt; 元素"></a><code>&lt;audio&gt;</code> 元素</h4><p>同<code>video</code> 元素</p>
+<p>注意：</p>
+<ul>
+<li><p>不支持<code>width/height</code>属性</p>
+</li>
+<li><p>不支持<code>poster</code>属性</p>
+</li>
+</ul>
+<h4 id="lt-iframe-gt-元素"><a href="#lt-iframe-gt-元素" class="headerlink" title="&lt;iframe&gt; 元素"></a><code>&lt;iframe&gt;</code> 元素</h4><p>可以将其他Web文档嵌入到当前的文档中。</p>
+<p>基本要素</p>
+<ul>
+<li><p><code>allowfullscreen</code> 可以通过全屏API设置为全屏模式</p>
+</li>
+<li><p><code>frameborder</code> 如设置为1，则会在此框架和其他框架之间绘制边框，默认行为；0删除边框</p>
+</li>
+<li><p><code>src</code> 与<code>&lt;video&gt;</code>元素表示文档中的图像，指向要嵌入文档的URL路径</p>
+</li>
+<li><p><code>sandbox</code> 提高安全性设置</p>
+</li>
+</ul>
+<h4 id="lt-table-gt-表格元素"><a href="#lt-table-gt-表格元素" class="headerlink" title="&lt;table&gt; 表格元素"></a><code>&lt;table&gt;</code> 表格元素</h4><p><code>&lt;table&gt;&lt;/table&gt;</code></p>
+<ul>
+<li><p><code>&lt;tr&gt;</code> 元素（table row）</p>
+</li>
+<li><p>在表格中最小的内容容器是单元格，通过<code>&lt;td&gt;</code> 元素创建（table data）</p>
+</li>
+<li><p><code>&lt;th&gt;</code> 元素添加标题</p>
+</li>
+<li><p>属性 <code>colspan</code>,<code>rowspan</code> 可以控制单元格宽高</p>
+</li>
+<li><p><code>&lt;caption&gt;</code> 元素可以为表格添加标题，放在<code>&lt;table&gt;</code> 标签的下面</p>
+</li>
+</ul>
+<p>采用<code>&lt;thead&gt;</code>,<code>&lt;tfoot&gt;</code>,<code>&lt;tbody&gt;</code>使表格结构更明确</p>
+<ul>
+<li><p><code>&lt;thead&gt;</code> 必须包住表格中作为表头的部分，一般是第一行，往往都是每列的标题</p>
+<ul>
+<li>若使用<code>&lt;col&gt;/&lt;colground&gt;</code> 元素，那么<code>&lt;thead&gt;</code> 元素需要在其下面</li>
+</ul>
+</li>
+<li><p><code>&lt;tfoot&gt;</code> 元素需要包住表格中作为表脚的部分，一般是最后一行，往往是对前面所有行的总结</p>
+</li>
+<li><p><code>&lt;tbody&gt;</code> 元素需要包住表格内容中不再表头或表尾的其他部分</p>
+</li>
+</ul>
+<h4 id="强调元素"><a href="#强调元素" class="headerlink" title="强调元素"></a>强调元素</h4><ol>
+<li><p><code>&lt;em&gt;</code> 内容呈粗斜体</p>
+</li>
+<li><p><code>&lt;strong&gt;</code> 内容呈粗体</p>
+</li>
+</ol>
+<h4 id="表象元素"><a href="#表象元素" class="headerlink" title="表象元素"></a>表象元素</h4><ul>
+<li><p><code>&lt;i&gt;</code> 被用来传达传统上用斜体表达的意义：外国文字，分类名称，技术术语，一种思想……</p>
+</li>
+<li><p><code>&lt;b&gt;</code>被用来传达传统上用粗体表达的意义：关键字，产品名称，引导句……</p>
+</li>
+<li><p><code>&lt;u&gt;</code>被用来传达传统上用下划线表达的意义：专有名词，拼写错误……</p>
+</li>
+</ul>
+<h4 id="换行和水平分割线"><a href="#换行和水平分割线" class="headerlink" title="换行和水平分割线"></a>换行和水平分割线</h4><p><code>&lt;br&gt;</code>：换行元素，可在段落中进行换行；唯一能够生成多个短行结构的元素</p>
+<p><code>&lt;hr&gt;</code> ：主题性中断元素，在文档中生成一条水平分割线，表示文本中主题的变化</p>
+<h4 id="缩略语"><a href="#缩略语" class="headerlink" title="缩略语"></a>缩略语</h4><p><code>&lt;abbr&gt;</code> 常被用来包裹一个缩略语或缩写，并且提供缩写的解释。</p>
+<p>如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 <code>title</code> 属性的值</p>
+<h4 id="lt-address-gt-标记联系元素"><a href="#lt-address-gt-标记联系元素" class="headerlink" title="&lt;address&gt; 标记联系元素"></a><code>&lt;address&gt;</code> 标记联系元素</h4><p>仅仅包含联系方式，其中可以包含更复杂的标记和其他形式的联系方式</p>
+<blockquote>
+<p> <code>&lt;address&gt;</code>元素只能用于提供最近的 <code>&lt;article&gt;</code>)或<code>&lt;body&gt;</code>元素所含文件的联系信息。在一个网站的页脚使用它来包括整个网站的联系信息，或者在一篇文章里面使用它来包括作者的联系信息，这都是正确的，但不能用来标记与该页面内容无关的地址列表。</p>
+</blockquote>
+<h4 id="上下标元素"><a href="#上下标元素" class="headerlink" title="上下标元素"></a>上下标元素</h4><ul>
+<li><p><code>&lt;sup&gt;</code></p>
+</li>
+<li><p><code>&lt;sub&gt;</code> </p>
+</li>
+</ul>
+<h4 id="展示计算机代码"><a href="#展示计算机代码" class="headerlink" title="展示计算机代码"></a>展示计算机代码</h4><ul>
+<li><p><code>&lt;code&gt;</code> 用于标记计算机通用代码</p>
+</li>
+<li><p><code>&lt;pre&gt;</code> 用于保留空白字符（通常用于代码块）——如果文本中使用了缩进或多余的空白，浏览器将忽略它，你将不会在呈现的页面上看到它。但是，如果你将文本包含在 <code>&lt;pre&gt;&lt;/pre&gt;</code> 标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。</p>
+</li>
+<li><p><code>&lt;var&gt;</code> 用于标记具体变量名。</p>
+</li>
+<li><p><code>&lt;kbd&gt;</code> 用于标记输入电脑的键盘（或其他类型）输入。</p>
+</li>
+<li><p><code>&lt;samp&gt;</code> 用于标记计算机程序的输出。</p>
+</li>
+</ul>
+<h4 id="lt-time-gt-标记时间日期"><a href="#lt-time-gt-标记时间日期" class="headerlink" title="&lt;time&gt; 标记时间日期"></a><code>&lt;time&gt;</code> 标记时间日期</h4><p>支持将时间和日期标记为可供机器识别的格式</p>
+<h3 id="2-2-嵌套元素"><a href="#2-2-嵌套元素" class="headerlink" title="2.2 嵌套元素"></a>2.2 嵌套元素</h3><p>    可以将元素放到其他元素之中，保证所有元素都正确的打开和关闭。</p>
+<h3 id="2-3-块级元素和内联元素"><a href="#2-3-块级元素和内联元素" class="headerlink" title="2.3 块级元素和内联元素"></a>2.3 块级元素和内联元素</h3><h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ul>
+<li><p>在页面中以块的形式展现</p>
+</li>
+<li><p>占据其父元素（容器）的整个水平空间，垂直空间等于其内容的高度</p>
+</li>
+<li><p>独占一行</p>
+<ul>
+<li><p>一个块级元素出现在它前面内容的新行上</p>
+</li>
+<li><p>任何跟在块级元素后面的内容也会出现在新的行上</p>
+</li>
+</ul>
+</li>
+<li><p>块级元素通常是页面上的结构元素</p>
+</li>
+<li><p>一个块级元素不会嵌套在一个内联元素里面</p>
+</li>
+<li><p>一个块级元素可能嵌套在另一个块级元素里面</p>
+</li>
+</ul>
+<h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul>
+<li>块级元素只能出现在<code>&lt;body&gt;</code>元素内</li>
+</ul>
+<h5 id="元素列表"><a href="#元素列表" class="headerlink" title="元素列表"></a>元素列表</h5><p><code>&lt;address&gt;</code></p>
+<ul>
+<li>联系方式信息</li>
+</ul>
+<p><code>&lt;article&gt;</code></p>
+<ul>
+<li> 文章内容</li>
+</ul>
+<p><code>&lt;aside&gt;</code></p>
+<ul>
+<li>伴随内容</li>
+</ul>
+<p><code>&lt;blockquote&gt;</code></p>
+<ul>
+<li>块引用</li>
+</ul>
+<p><code>&lt;dd&gt;</code></p>
+<ul>
+<li>定义列表中定义条目描述</li>
+</ul>
+<p><code>&lt;div&gt;</code></p>
+<ul>
+<li>文档分区</li>
+</ul>
+<p><code>&lt;dl&gt;</code></p>
+<ul>
+<li>定义列表</li>
+</ul>
+<p><code>&lt;fieldset&gt;</code></p>
+<ul>
+<li>表单元素分组</li>
+</ul>
+<p><code>&lt;figcaption&gt;</code></p>
+<ul>
+<li>图文信息组标题</li>
+</ul>
+<p><code>&lt;figure&gt;</code></p>
+<ul>
+<li>图文信息组</li>
+</ul>
+<p><code>&lt;footer&gt;</code></p>
+<ul>
+<li>区段尾或页尾</li>
+</ul>
+<p><code>&lt;form&gt;</code></p>
+<ul>
+<li>表单</li>
+</ul>
+<p><code>h1</code>-<code>h6</code></p>
+<ul>
+<li>标题级别 1-6</li>
+</ul>
+<p><code>&lt;header&gt;</code></p>
+<ul>
+<li>区段头或页头</li>
+</ul>
+<p><code>&lt;hgroup&gt;</code></p>
+<ul>
+<li>标题组</li>
+</ul>
+<p><code>&lt;hr&gt;</code></p>
+<ul>
+<li>水平分割线</li>
+</ul>
+<p><code>&lt;ol&gt;</code></p>
+<ul>
+<li>有序列表</li>
+</ul>
+<p><code>&lt;p&gt;</code></p>
+<ul>
+<li>行</li>
+</ul>
+<p><code>&lt;pre&gt;</code></p>
+<ul>
+<li>预格式化文本</li>
+</ul>
+<p><code>&lt;section&gt;</code></p>
+<ul>
+<li>一个页面区段</li>
+</ul>
+<p><code>&lt;table&gt;</code></p>
+<ul>
+<li>表格</li>
+</ul>
+<p><code>&lt;ul&gt;</code></p>
+<ul>
+<li>无序列表</li>
+</ul>
+<h4 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h4><h5 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h5><ul>
+<li><p>通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或一组内容</p>
+</li>
+<li><p>内联元素不会导致文本换行</p>
+</li>
+<li><p>通常与文本一起使用</p>
+</li>
+</ul>
+<h5 id="元素列表-1"><a href="#元素列表-1" class="headerlink" title="元素列表"></a>元素列表</h5><ul>
+<li>b, big, i, small, tt</li>
+<li>abbr, acronym, cite, code, dfn, em, kbd,<br>strong, samp, var</li>
+<li><a href="#superlink">a</a>, bdo, br, img, map, object, q, script,<br>span, sub, sup</li>
+<li>button, input, label, select, textarea</li>
+</ul>
+<h4 id="块级元素与行内元素的关键区别"><a href="#块级元素与行内元素的关键区别" class="headerlink" title="块级元素与行内元素的关键区别"></a>块级元素与行内元素的关键区别</h4><ul>
+<li><p>格式</p>
+<ul>
+<li><p>默认情况下，块级元素会新起一行</p>
+</li>
+<li><p>默认情况下，行内元素不会以新行开始</p>
+</li>
+</ul>
+</li>
+<li><p>内容模型</p>
+<ul>
+<li><p>一般块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更“大型”的结构</p>
+</li>
+<li><p>一般行内元素只能包含数据和其他行内元素</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-空元素"><a href="#2-4-空元素" class="headerlink" title="2.4 空元素"></a>2.4 空元素</h3><p>    一些元素只有一个表亲啊，通常用来在此元素所在位置插入/嵌入一些东西，这些元素被称为空元素</p>
+<h2 id="3-属性"><a href="#3-属性" class="headerlink" title="3. 属性"></a>3. 属性</h2><p>    元素拥有属性，属性包含元素的额外信息，这些信息不会出现在实际的内容中</p>
+<p>    属性必须包含</p>
+<ul>
+<li><p>一个空格：在属性和元素名称之间。如果一个元素具有多个属性，则每个属性之间必须用空格分隔</p>
+</li>
+<li><p>属性名称，后面添加等号=</p>
+</li>
+<li><p>一个属性值，由一对引号引起来</p>
+</li>
+</ul>
+<h4 id="布尔属性"><a href="#布尔属性" class="headerlink" title="布尔属性"></a>布尔属性</h4><p>    布尔属性只能有一个值，这个值一般与属性名称相同</p>
+<h2 id="4-HTML文档结构"><a href="#4-HTML文档结构" class="headerlink" title="4. HTML文档结构"></a>4. HTML文档结构</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我的测试站点<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是我的页面<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p><code>&lt;!DOCTYPE html&gt;</code>声明文档类型。</p>
+</li>
+<li><p><code>&lt;html&gt;&lt;/html&gt;</code> :这个元素包裹了页面中所有内容，有时被称为根元素</p>
+</li>
+<li><p><code>&lt;head&gt;&lt;/head&gt;</code> :这个元素是一个容器，包含了所有想包含在HTML页面中但不在HTML页面中显示的内容。这些内容包括了关键字、页面描述、CSS样式、字符集声明等。</p>
+</li>
+<li><p><code>&lt;meta&gt;</code>:这个元素代表了不能由其他HTML元相关元素表示的元数据。</p>
+</li>
+<li><p><code>&lt;title&gt;&lt;/title&gt;</code> :设置了页面的标题，即出现在该页面加载的浏览器标签中的内容</p>
+</li>
+<li><p><code>&lt;body&gt;&lt;/body&gt;</code> :包含了你访问页面时所有显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。</p>
+</li>
+</ol>
+<h3 id="4-1HTML头部"><a href="#4-1HTML头部" class="headerlink" title="4.1HTML头部"></a>4.1HTML头部</h3><p>    HTML头部包含HTML <code>&lt;head&gt;</code> 元素的内容，与<code>&lt;body&gt;</code> 元素内容不同，页面在浏览器加载后它的内容不会显示，它的作用是保存页面的一些元数据。</p>
+<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>    采用<code>&lt;title&gt;</code> 元素为文档添加标题</p>
+<ul>
+<li><p><code>&lt;h1&gt;</code> (en-US)元素在页面加载完毕时显示在页面中，通常只出现一次，用来标记页面内容的标题（故事名称、新闻摘要等等）。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/title"><code>&lt;title&gt;</code></a> 元素是一项元数据，用于表示整个 HTML 文档的标题（而不是文档内容）。</p>
+</li>
+</ul>
+<h4 id="元数据-lt-meta-gt-元素"><a href="#元数据-lt-meta-gt-元素" class="headerlink" title="元数据&lt;meta&gt; 元素"></a>元数据<code>&lt;meta&gt;</code> 元素</h4><p>    元数据就是描述数据的数据</p>
+<h5 id="指定文档中的字符编码"><a href="#指定文档中的字符编码" class="headerlink" title="指定文档中的字符编码"></a>指定文档中的字符编码</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=&quot;utf-8&quot; /&gt; </span><br></pre></td></tr></table></figure>
+
+<p>    用改元素指定了文档中被允许使用的字符集，<code>&lt;utf-8&gt;</code> 是一个通用的字符集，包含了任何人类语言中的大部分的字符，意味着web页面可以显示任意的语言。</p>
+<blockquote>
+<p> 一些浏览器（比如 Chrome）会自动修正错误的编码，所以根据你所使用的浏览器不同，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 <code>utf-8</code>，来避免在其他浏览器中可能出现的问题。</p>
+</blockquote>
+<h5 id="添加作者和描述"><a href="#添加作者和描述" class="headerlink" title="添加作者和描述"></a>添加作者和描述</h5><p>    <code>&lt;meta&gt;</code> 元素包含了<code>name</code> 和 <code>content</code> 属性</p>
+<ul>
+<li><code>name</code> 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。</li>
+<li><code>content</code> 指定了实际的元数据内容。</li>
+</ul>
+<h5 id="自定义图标"><a href="#自定义图标" class="headerlink" title="自定义图标"></a>自定义图标</h5><p>    可在元数据中添加对自定义图标的引用，最常见的用例为favicon</p>
+<p>    页面添加网页图标的方式有：</p>
+<ol>
+<li><p>将其保存在与网站的索引页面相同的目录中，以 <code>.ico</code> 格式保存（大多数浏览器支持更通用的格式，如 <code>.gif</code> 或 <code>.png</code>）</p>
+</li>
+<li><p>将以下行添加到 HTML 的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> 块中以引用它：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="4-2-应用CSS和JS"><a href="#4-2-应用CSS和JS" class="headerlink" title="4.2 应用CSS和JS"></a>4.2 应用CSS和JS</h3><p>    采用<code>&lt;link&gt;</code> 元素和 <code>&lt;script&gt;</code> 元素</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> 元素经常位于文档的头部，它有 2 个属性，<code>rel=&quot;stylesheet&quot;</code> 表明这是文档的样式表，而 <code>href</code> 包含了样式表文件的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;my-css-file.css&quot; /&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> 元素也应当放在文档的头部，并包含 <code>src</code> 属性来指向需要加载的 JavaScript 文件路径，同时最好加上 <code>defer</code> 以告诉浏览器在解析完成 HTML 后再加载 JavaScript。这样可以确保在加载脚本之前浏览器已经解析了所有的 HTML 内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;my-js-file.js&quot; defer&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p> <code>&lt;script&gt;</code> 元素看起来像一个空元素，但它并不是，因此需要一个结束标记。还可以选择将脚本放入 <code>&lt;script&gt;</code> 元素中，而不是指向外部脚本文件。</p>
+</blockquote>
+<h3 id="4-3-设置主语言"><a href="#4-3-设置主语言" class="headerlink" title="4.3 设置主语言"></a>4.3 设置主语言</h3><p>    通过添加lang属性到HTML标签</p>
+<h3 id="文档的基本组成部分"><a href="#文档的基本组成部分" class="headerlink" title="文档的基本组成部分"></a>文档的基本组成部分</h3><ul>
+<li><p>页眉</p>
+<ul>
+<li>通常横跨于整个页面顶部有一个大标题 和/或 一个标志。这是网站的主要一般信息，通常存在于所有网页。</li>
+</ul>
+</li>
+<li><p>导航栏</p>
+<ul>
+<li>指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致。</li>
+</ul>
+</li>
+<li><p>主内容</p>
+<ul>
+<li>中心的大部分区域是当前网页大多数的独有内容，例如视频、文章、地图、新闻等。这些内容是网站的一部分，且会因页面而异。</li>
+</ul>
+</li>
+<li><p>侧边栏</p>
+<ul>
+<li>一些外围信息、链接、引用、广告等。通常与主内容相关（例如一个新闻页面上，侧边栏可能包含作者信息或相关文章链接），还可能存在其他的重复元素，如辅助导航系统。</li>
+</ul>
+</li>
+<li><p>页脚</p>
+<ul>
+<li>横跨页面底部的狭长区域。和标题一样，页脚是放置公共信息（比如版权声明或联系方式）的，一般使用较小字体，且通常为次要内容。</li>
+</ul>
+</li>
+</ul>
+<h4 id="HTML构建内容"><a href="#HTML构建内容" class="headerlink" title="HTML构建内容"></a>HTML构建内容</h4><p>为了实现语义化标记，HTML 提供了明确这些区段的专用标签，如：</p>
+<ul>
+<li><p><code>&lt;header&gt;</code>：页眉。</p>
+<blockquote>
+<p>简介形式的内容。如果它是 <code>&lt;body&gt;</code>的子元素，那么就是网站的全局页眉。如果它是<code>&lt;article&gt;</code>或<code>&lt;section&gt;</code>的子元素，那么它是这些部分特有的页眉</p>
+</blockquote>
+</li>
+<li><p><code>&lt;nav&gt;</code>：导航栏。</p>
+</li>
+<li><p><code>&lt;main&gt;</code>：主内容。主内容中还可以有各种子内容区段，可用<code>&lt;article&gt;</code> 和<code>&lt;div&gt;</code>等元素表示。</p>
+<blockquote>
+<p>存放每个页面独有的内容。每个页面上只能用一次 <code>&lt;main&gt;</code>，且直接位于<code>&lt;body&gt;</code>中。最好不要把它嵌套进其他元素。</p>
+</blockquote>
+</li>
+<li><p><code>&lt;aside&gt;</code>：侧边栏，经常嵌套在<code>&lt;main&gt;</code> 中。</p>
+</li>
+<li><p><code>&lt;footer&gt;</code>：页脚。</p>
+</li>
+<li><p><code>&lt;section&gt;</code> 与 <code>&lt;article&gt;</code> 类似，但 <code>&lt;section&gt;</code> 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 标题作为开头；也可以把一篇 <code>&lt;article&gt;</code> 分成若干部分并分别置于不同的 <code>&lt;section&gt;</code> 中，也可以把一个区段 <code>&lt;section&gt;</code> 分成若干部分并分别置于不同的 <code>&lt;article&gt;</code> 中，取决于上下文。</p>
+</li>
+<li><p><code>&lt;span&gt;</code>是一个内联的（inline）无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。</p>
+</li>
+<li><p><code>&lt;div&gt;</code>是一个块级无语义元素，应仅用于找不到更好的块级元素时，或者不想增加特定的意义时。</p>
+</li>
+</ul>
+<h2 id="5-特殊字符"><a href="#5-特殊字符" class="headerlink" title="5. 特殊字符"></a>5. 特殊字符</h2><p>    在HTML中，特殊字符需要防止被浏览器视为代码。</p>
+<p>    使用字符引用——表示字符的特殊编码，每个字符引用以符号&amp;开始，以分号；结束。</p>
+<blockquote>
+<p>只要HTML的字符编码设置为UTF-8，就不需要为任何其他字符使用实体引用</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>原义字符</th>
+<th>等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;</td>
+<td><code>&amp;lt;</code></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td><code>&amp;gt;</code></td>
+</tr>
+<tr>
+<td>“</td>
+<td><code>&amp;quot;</code></td>
+</tr>
+<tr>
+<td>‘</td>
+<td><code>&amp;apos;</code></td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td><code>&amp;amp;</code></td>
+</tr>
+</tbody></table>
+<h2 id="6-HTML注释"><a href="#6-HTML注释" class="headerlink" title="6. HTML注释"></a>6. HTML注释</h2><p>    HTML拥有在代码中写注释的机制，为了将HTML中的一段内容置为注释，需要用<code>&lt;!--</code>和<code>--&gt;</code>包裹起来</p>
+<h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7. 超链接"></a>7. 超链接</h2><p id="superlink">超链接</p>使文档连接到任何其他文档（或其他资源），可链接到文档的指定部分。
+
+<p>几乎任何网络内容都可以转换为链接，点击超链接将使网络浏览器转到另一个网址（URL）</p>
+<blockquote>
+<p>URL 可以指向 HTML 文件、文本文件、图像、文本文档、视频和音频文件以及可以在网络上保存的任何其他内容。如果浏览器不知道如何显示或处理文件，它会询问你是否要打开文件（需要选择合适的本地应用来打开或处理文件）或下载文件（以后处理它）。</p>
+</blockquote>
+<h3 id="7-1-链接解析"><a href="#7-1-链接解析" class="headerlink" title="7.1 链接解析"></a>7.1 链接解析</h3><p>通过将文本或其他内容包裹在 <code>&lt;a&gt;</code> 元素内，并给其一个包含网址的 <code>href</code> 属性(也称为超文本引用或目标)来创建一个基本链接。</p>
+<h4 id="块级链接"><a href="#块级链接" class="headerlink" title="块级链接"></a>块级链接</h4><p>将其包裹在锚点元素 <code>&lt;a&gt;</code> 内</p>
+<h4 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h4><p>使用 <code>&lt;a&gt;</code> 元素来包裹要引用图片的 <code>&lt;img&gt;</code> 元素</p>
+<h4 id="title属性添加支持信息"><a href="#title属性添加支持信息" class="headerlink" title="title属性添加支持信息"></a>title属性添加支持信息</h4><p>链接中可添加<code>title</code>属性，包含关于链接的补充信息，当鼠标指针悬停在链接上时，标题将作为提示信息出现</p>
+<h3 id="7-2-统一资源定位符（URL）与路径（path）"><a href="#7-2-统一资源定位符（URL）与路径（path）" class="headerlink" title="7.2 统一资源定位符（URL）与路径（path）"></a>7.2 统一资源定位符（URL）与路径（path）</h3><p>统一资源定位符（Uniform Resource Locator，URL）是一个定义了在网络上的位置的一个文本字符串</p>
+<p>URL使用路径查找文件</p>
+<ul>
+<li><p>指向当前目录，只需要指定想要链接的文件名</p>
+</li>
+<li><p>指向子目录，需要采用层级向下的方式链接文件名</p>
+</li>
+<li><p>指向上级目录，需要采用../的方式逐级查找</p>
+</li>
+</ul>
+<blockquote>
+<p>如果需要，你可以将这些功能的多个实例组合成复杂的 URL。例如 <code>../../../complex/path/to/my/file.html</code>。</p>
+</blockquote>
+<h4 id="绝对URL和相对URL"><a href="#绝对URL和相对URL" class="headerlink" title="绝对URL和相对URL"></a>绝对URL和相对URL</h4><p>绝对URL（绝对链接）</p>
+<ul>
+<li><p>指向由其Web上的绝对位置定义的位置，包括协议和域名。</p>
+</li>
+<li><p>不管绝对URL在哪使用，它总指向确定的相同位置。</p>
+</li>
+</ul>
+<p>相对URL（相对链接）</p>
+<ul>
+<li><p>指向与链接的文件相关的位置</p>
+</li>
+<li><p>一个相对的URL将指向不同的位置，这取决于引用文件的实际位置</p>
+</li>
+</ul>
+<h4 id="文档片段"><a href="#文档片段" class="headerlink" title="文档片段"></a>文档片段</h4><p>超链接除了可以链接到文档外，也可以连接到HTML文档的特定部分（也被称为文档片段）</p>
+<p>必须给要链接到的元素分配一个id属性</p>
+<h4 id="使用download属性下载链接"><a href="#使用download属性下载链接" class="headerlink" title="使用download属性下载链接"></a>使用download属性下载链接</h4><p>当链接到要下载的资源而不是在浏览器中打开时，使用<code>download</code>属性来提供一个默认保存文件名。</p>
+<h3 id="7-3-电子邮件链接"><a href="#7-3-电子邮件链接" class="headerlink" title="7.3 电子邮件链接"></a>7.3 电子邮件链接</h3><p>当点击一个链接或按钮时，可能会开启新的邮件的发送而不是链接到一个资源或页面，需要采用<code>&lt;a&gt;</code>元素和<code>mailto:</code>URL协议实现</p>
+<p>其最基本和最常用的使用形式为一个指明收件人电子邮件地址的 <code>mailto:</code> 链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;mailto:nowhere@mozilla.org&quot;&gt;向 nowhere 发邮件&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>电子邮件的地址是可选的</li>
+</ul>
+<h4 id="指定详细信息"><a href="#指定详细信息" class="headerlink" title="指定详细信息"></a>指定详细信息</h4><p>除了电子邮件地址，你还可以提供其他信息。事实上，任何标准的邮件头字段可以被添加到你提供的 <code>mailto</code> URL 中。其中最常用的是主题（subject）、抄送（cc）和主体（body）（这不是一个真正的标头字段，但允许你为新邮件指定一个简短的内容消息）。每个字段及其值被指定为查询项。</p>
+<p>下面是一个包含 cc、bcc、主题和主体的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a</span><br><span class="line">  href=&quot;mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The%20body%20of%20the%20email&quot;&gt;</span><br><span class="line">  发送含有 cc、bcc、主题和主体的邮件</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>每个字段的值必须使用 URL 编码，即使用百分号转义的非打印字符（不可见字符如制表符、换行符、分页符）和空格。同时注意使用问号（<code>?</code>）来分隔主 URL 与参数值，以及使用 &amp; 符来分隔 <code>mailto:</code> URL 中的各个参数。这是标准的 URL 查询标记方法。</p>
+</blockquote>
+<h2 id="8-引用"><a href="#8-引用" class="headerlink" title="8. 引用"></a>8. 引用</h2><p>HTML存在用于标记引用的特性</p>
+<h3 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h3><p>如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 [<code>&lt;blockquote&gt;</code>]元素包裹起来表示，并且在 <code>cite</code>属性里用 URL 来指向引用的资源。</p>
+<h3 id="行内引用"><a href="#行内引用" class="headerlink" title="行内引用"></a>行内引用</h3><p>除了使用 <code>&lt;q&gt;</code> 元素以外，行内元素用同样的方式工作</p>
+<h3 id="引文"><a href="#引文" class="headerlink" title="引文"></a>引文</h3><p><code>cite</code> 属性需要配合JS、CSS，否则浏览器无法显示cite的内容</p>
+<p>引文默认的字体样式为斜体</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/html-notes/" title="HTML notes">http://moyun.com/html-notes/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/project-exercise-%E2%80%94-build-a-technical-documentation-page/" rel="prev" title="Project Exercise — Build a Technical Documentation Page">
+                  <i class="fa fa-chevron-left"></i> Project Exercise — Build a Technical Documentation Page
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/algorithm%E2%80%94%E2%80%94array/" rel="next" title="Algorithm——Array">
+                  Algorithm——Array <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

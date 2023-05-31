@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn HTML Forms by Building a Registration Form">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(四)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E5%9B%9B/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn HTML Forms by Building a Registration Form">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-29T13:52:35.429Z">
+<meta property="article:modified_time" content="2023-04-29T13:55:42.948Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E5%9B%9B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E5%9B%9B/","path":"responsive-web-dedign-四/","title":"Responsive Web Dedign(四)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(四) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-HTML-Forms-by-Building-a-Registration-Form"><span class="nav-text">Learn HTML Forms by Building a Registration Form</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/project-exercise-%E2%80%94-survey-form/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-01</time>
+        <br>
+      Project Exercise — Survey Form
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-26</time>
+        <br>
+      Responsive Web Dedign(一)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%85%AB/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-07</time>
+        <br>
+      Responsive Web Dedign(八)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/project-exercise-%E2%80%94-product-landing-page/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-29</time>
+        <br>
+      Project Exercise — Product Landing Page
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%83/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-06</time>
+        <br>
+      Responsive Web Dedign(七)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E5%9B%9B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(四) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(四)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-29 21:52:35 / 修改时间：21:55:42" itemprop="dateCreated datePublished" datetime="2023-04-29T21:52:35+08:00">2023-04-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-HTML-Forms-by-Building-a-Registration-Form/" itemprop="url" rel="index"><span itemprop="name">Learn HTML Forms by Building a Registration Form</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>16k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-HTML-Forms-by-Building-a-Registration-Form"><a href="#Learn-HTML-Forms-by-Building-a-Registration-Form" class="headerlink" title="Learn HTML Forms by Building a Registration Form"></a>Learn HTML Forms by Building a Registration Form</h4><span id="more"></span>
+
+<ol>
+<li><p>Welcome to the Registration Form project! Start by adding the declaration at the top of the document so the browser knows what type of document it’s reading.<code>!DOCTYPE html</code></p>
+</li>
+<li><p>Below the <code>DOCTYPE</code>, add an <code>html</code> element with a <code>lang</code> attribute set to <code>en</code>, so that you have a place to start putting some code.</p>
+</li>
+<li><p>Next, add opening and closing <code>head</code> and <code>body</code> tags within the <code>html</code> element.</p>
+</li>
+<li><p>Add a <code>title</code> and a <code>meta</code> element to the <code>head</code>. Give your project a title of <code>Registration Form</code>, and give a <code>charset</code> attribute with a value of <code>UTF-8</code> to your <code>meta</code> element.</p>
+</li>
+<li><p>Nest a self-closing <code>link</code> element within the <code>head</code> element. Give it a <code>rel</code> attribute with value of <code>stylesheet</code> and an <code>href</code> attribute with a value of <code>styles.css</code>.</p>
+</li>
+<li><p>Within the <code>body</code>, provide a heading context for the content, by adding an <code>h1</code> with the text <code>Registration Form</code>.</p>
+</li>
+<li><p>Below the heading, use the following text within a paragraph element to encourage users to register:</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please fill out this form with the required information</span><br></pre></td></tr></table></figure></li>
+<li><p>The <code>vh</code> unit stands for viewport height, and is relative to 1% of the <code>height</code> of the viewport.</p>
+<p>It is time to spruce the project up with some CSS. Begin by giving the <code>body</code> a <code>width</code> of <code>100%</code>, and a <code>height</code> of <code>100vh</code>.</p>
+</li>
+<li><p>Now, get rid of the horizontal scroll-bar, by setting the <code>body</code> default <code>margin</code> added by some browsers to <code>0</code>.</p>
+</li>
+<li><p>That is better. Now, make the background easy on the eyes, by changing the <code>body</code> <code>background-color</code> to <code>#1b1b32</code>. Then, to see the text, change the <code>color</code> to <code>#f5f6f7</code>.</p>
+</li>
+<li><p>As suggested by the title, you are creating a form. So, after the <code>p</code> element, insert a <code>form</code> with an <code>action</code> attribute targeting <code>https://register-demo.freecodecamp.org</code>.</p>
+</li>
+<li><p>The <code>method</code> attribute specifies how to send form-data to the URL specified in the <code>action</code> attribute. The form-data can be sent via a <code>GET</code> request as URL parameters (with <code>method=&quot;get&quot;</code>) or via a <code>POST</code> request as data in the request body (with <code>method=&quot;post&quot;</code>).</p>
+<p>Set the <code>method</code> attribute to send your form data via a <code>POST</code> request.</p>
+</li>
+<li><p>As the form will have three distinct sections, add three <code>fieldset</code> elements within the <code>form</code> element.</p>
+</li>
+<li><p>The first <code>fieldset</code> will hold name, email, and password fields. Start by adding four <code>label</code> elements to the first <code>fieldset</code>.</p>
+</li>
+<li><p>Add the following text to the <code>label</code> elements:</p>
+<ul>
+<li><code>Enter Your First Name:</code></li>
+<li><code>Enter Your Last Name:</code></li>
+<li><code>Enter Your Email:</code></li>
+<li><code>Create a New Password:</code></li>
+</ul>
+</li>
+<li><p>The <code>rem</code> unit stands for root <code>em</code>, and is relative to the font size of the <code>html</code> element.</p>
+<p>As <code>label</code> elements are inline by default, they are all displayed side by side on the same line, making their text hard to read. To make them appear on separate lines, add <code>display: block</code> to the <code>label</code> element, and add a <code>margin</code> of <code>0.5rem 0</code>, to separate them from each other.</p>
+</li>
+<li><p>Nest an <code>input</code> element within each <code>label</code>. Be sure to add each <code>input</code> after the <code>label</code> text, and include a space after the colon.</p>
+</li>
+<li><p>Following accessibility best practices, link the <code>input</code> elements and the <code>label</code> elements together using the <code>for</code> attribute.</p>
+<p>Use <code>first-name</code>, <code>last-name</code>, <code>email</code>, and <code>new-password</code> as values for the respective <code>id</code> attributes.</p>
+</li>
+<li><p>Specifying the <code>type</code> attribute of a form element is important for the browser to know what kind of data it should expect. If the <code>type</code> is not specified, the browser will default to <code>text</code>.</p>
+<p>Give the first two <code>input</code> elements a <code>type</code> attribute of <code>text</code>, the third a <code>type</code> attribute of <code>email</code>, and the fourth a <code>type</code> attribute of <code>password</code>.</p>
+<p>The <code>email</code> type only allows emails with a <code>@</code> and a <code>.</code> in the domain. The <code>password</code> type obscures the input, and warns if the site does not use HTTPS.</p>
+</li>
+<li><p>The first <code>input</code> element with a <code>type</code> of <code>submit</code> is automatically set to submit its nearest parent <code>form</code> element.</p>
+<p>To handle the form submission, after the last <code>fieldset</code> element add an <code>input</code> element with the <code>type</code> attribute set to <code>submit</code> and the <code>value</code> attribute set to <code>Submit</code>.</p>
+</li>
+<li><p>At this point, you should be able to submit the form. However, you might notice not much happens.</p>
+<p>To make the form more interactive, add the <code>required</code> attribute to the <code>input</code> elements in the first <code>fieldset</code>.</p>
+<p>Now, if you try to submit the form without filling in the required fields, you will see an error message.</p>
+</li>
+<li><p>Certain <code>type</code> attribute values come with built-in form validation. For example, <code>type=&quot;email&quot;</code> requires that the value be a valid email address.</p>
+<p>Add custom validation to the password <code>input</code> element, by adding a <code>minlength</code> attribute with a value of <code>8</code>. Doing so prevents inputs of less than 8 characters being submitted.</p>
+</li>
+<li><p>With <code>type=&quot;password&quot;</code> you can use the <code>pattern</code> attribute to define a regular expression that the password must match to be considered valid.</p>
+<p>Add a <code>pattern</code> attribute to the password <code>input</code> element to require the input match: <code>[a-z0-5]&#123;8,&#125;</code></p>
+<p>The above is a regular expression which matches eight or more lowercase letters or the digits <code>0</code> to <code>5</code>. Then, remove the <code>minlength</code> attribute, and try it out.</p>
+</li>
+<li><p>Let us go to the next part of the registration form. This section will ask for the type of account the user is opening, and will confirm the user has read the terms and conditions.</p>
+<p>Start by adding three <code>label</code> elements to the second <code>fieldset</code>.</p>
+</li>
+<li><p>Users will be allowed to choose either a <code>Personal Account</code> or <code>Business Account</code>.</p>
+<p>To do this, within each of the first two <code>label</code> elements, add one <code>input</code> element with <code>type=&quot;radio&quot;</code>.</p>
+</li>
+<li><p>For the terms and conditions, add an <code>input</code> with a <code>type</code> of <code>checkbox</code> to the third <code>label</code> element. Make this <code>input</code> element <code>required</code> because users should not sign up without reading the terms and conditions.</p>
+</li>
+<li><p>Within each corresponding <code>label</code> element, and immediately after the <code>input</code> element, add a space and add the following text:</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Personal Account</span><br><span class="line">Business Account</span><br><span class="line">I accept the terms and conditions</span><br></pre></td></tr></table></figure></li>
+<li><p>You only want one radio input to be selectable at a time. However, the form does not know the radio inputs are related.</p>
+<p>To relate the radio inputs, give them the same <code>name</code> attribute with a value of <code>account-type</code>. Now, it is not possible to select both radio inputs at the same time.</p>
+</li>
+<li><p>Follow accessibility best practices by linking the <code>input</code> elements and the <code>label</code> elements in the second <code>fieldset</code>.</p>
+<p>Use <code>personal-account</code>, <code>business-account</code>, and <code>terms-and-conditions</code> as values for the respective <code>id</code> attributes.</p>
+</li>
+<li><p>To finish this <code>fieldset</code> off, link the text <code>terms and conditions</code> in the third <code>label</code> to the following location:</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.freecodecamp.org/news/terms-of-service/</span><br></pre></td></tr></table></figure></li>
+<li><p>Moving on to the final <code>fieldset</code>. What if you wanted to allow a user to upload a profile picture?</p>
+<p>Well, the <code>input</code> type <code>file</code> allows just that. Add a <code>label</code> with the text <code>Upload a profile picture:</code> , and nest an <code>input</code> accepting a file upload.</p>
+</li>
+<li><p>Add another <code>label</code> after the first, with the text <code>Input your age (years):</code> . Then, nest an <code>input</code> with the <code>type</code> of <code>number</code>.</p>
+<p>Next, add a <code>min</code> attribute to the <code>input</code> with a value of <code>13</code> because users under the age of 13 should not register. Also, users probably will not be over the age of 120; add a <code>max</code> attribute with a value of <code>120</code>.</p>
+<p>Now, if someone tries to submit the form with values outside of the range, a warning will appear, and the form will not submit. Give it a try.</p>
+</li>
+<li><p>Adding a dropdown to the form is easy with the <code>select</code> element. The <code>select</code> element is a container for a group of <code>option</code> elements, and the <code>option</code> element acts as a label for each dropdown option. Both elements require closing tags.</p>
+<p>Start by adding a <code>select</code> element below the two <code>label</code> elements. Then nest 5 <code>option</code> elements within the <code>select</code> element.</p>
+</li>
+<li><p>Nest the <code>select</code> element (with its <code>option</code> elements) within a <code>label</code> element with the text <code>How did you hear about us?</code>. The text should come before the <code>select</code> element.</p>
+</li>
+<li><p>The dropdown options are currently empty. To give them content, add the following text to each subsequent <code>option</code> element:</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(select one)</span><br><span class="line">freeCodeCamp News</span><br><span class="line">freeCodeCamp YouTube Channel</span><br><span class="line">freeCodeCamp Forum</span><br><span class="line">Other</span><br></pre></td></tr></table></figure></li>
+<li><p>Submitting the form with an option selected would not send a useful value to the server. As such, each <code>option</code> needs to be given a <code>value</code> attribute. Without which, the text content of the <code>option</code> will be submitted to the server.</p>
+<p>Give the first <code>option</code> a <code>value</code> of <code>&quot;&quot;</code>, and the subsequent <code>option</code> elements <code>value</code> attributes from <code>1</code> to <code>4</code>.</p>
+</li>
+<li><p>The <code>textarea</code> element acts like an <code>input</code> element of type <code>text</code>, but comes with the added benefit of being able to receive multi-line text, and an initial number of text rows and columns.</p>
+<p>Users will be able to register with a bio. Add a <code>label</code> with the text <code>Provide a bio:</code> at the end of the <code>fieldset</code>. Add a <code>textarea</code> element inside the <code>label</code> element. Note that the <code>textarea</code> requires a closing tag.</p>
+</li>
+<li><p>Link the applicable form elements and their <code>label</code> elements together.</p>
+<p>Use <code>profile-picture</code>, <code>age</code>, <code>referrer</code>, and <code>bio</code> as values for the respective <code>id</code> attributes.</p>
+</li>
+<li><p>The <code>textarea</code> appears too small. To give it an initial size, you can add the <code>rows</code> and <code>cols</code> attributes.</p>
+<p>Add an initial size of <code>3</code> rows and <code>30</code> columns.</p>
+</li>
+<li><p>To give Campers an idea of what to put in their bio, the <code>placeholder</code> attribute is used. The <code>placeholder</code> accepts a text value, which is displayed until the user starts typing.</p>
+<p>Give the <code>textarea</code> a <code>placeholder</code> of <code>I like coding on the beach...</code>.</p>
+</li>
+<li><p>With form submissions, it is useful, and good practice, to provide each submittable element with a <code>name</code> attribute. This attribute is used to identify the element in the form submission.</p>
+<p>Give each submittable element a unique <code>name</code> attribute of your choosing, except for the two <code>radio</code> inputs.</p>
+</li>
+<li><p>The HTML for the registration form is finished. Now, you can spruce it up a bit.</p>
+<p>Start by changing the font to <code>Tahoma</code>, and the font size to <code>16px</code> in the <code>body</code>.</p>
+</li>
+<li><p>Center the <code>h1</code> and <code>p</code> elements by giving them a <code>margin</code> of <code>1em auto</code>. Then, align their text in the <code>center</code> as well.</p>
+</li>
+<li><p>Center the <code>form</code> element, by giving it a <code>margin</code> of <code>0 auto</code>. Then, fix its size to a maximum width of <code>500px</code>, and a minimum width of <code>300px</code>. In between that range, allow it to have a <code>width</code> of <code>60vw</code>.</p>
+</li>
+<li><p>During development, it is useful to see the <code>fieldset</code> default borders. However, they make the content appear too separated.</p>
+<p>Remove the <code>border</code>, and add <code>2rem</code> of padding only to the top and bottom of each <code>fieldset</code>. Be sure to remove the <code>padding</code> from the left and right.</p>
+</li>
+<li><p>To give the <code>fieldset</code> elements a bit of separation, select them and give them a <code>border-bottom</code> of <code>3px solid #3b3b4f</code>.</p>
+</li>
+<li><p>The border of the last <code>fieldset</code> element looks a little out of place. You can select the last element of a specific type using the <code>last-of-type</code> CSS pseudo-class, like this:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:last-of-type</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>That will select the last <code>p</code> element. Create a new selector that targets the last <code>fieldset</code> element and set its <code>border-bottom</code> to <code>none</code>.</p>
+</li>
+<li><p>It would be nicer to have the <code>label</code> text appear above the form elements.</p>
+<p>Select all <code>input</code>, <code>textarea</code>, and <code>select</code> elements, and make them take up the full width of their parent elements.</p>
+<p>Also, add <code>10px</code> of <code>margin</code> to the top of the selected elements. Set the other margins to <code>0</code>.</p>
+</li>
+<li><p>For the second <code>fieldset</code>, you want the <code>input</code> and <code>label</code> text to appear on the same line.</p>
+<p>Start, by giving the <code>input</code> elements in the second <code>fieldset</code> a class of <code>inline</code>.</p>
+</li>
+<li><p>Select only the <code>.inline</code> elements, and give them <code>width</code> of <code>unset</code>. This will remove the earlier rule which set all the <code>input</code> elements to <code>width: 100%</code>.</p>
+</li>
+<li><p>Add some space between the <code>.inline</code> elements and the <code>label</code> text, by giving a right <code>margin</code> of <code>0.5em</code>. Also, set all the other margin to <code>0</code>.</p>
+</li>
+<li><p>If you look close enough, you will notice the <code>.inline</code> elements are too high on the line.</p>
+<p>To combat this, set the <code>vertical-align</code> property to <code>middle</code>.</p>
+</li>
+<li><p>To make the <code>input</code> and <code>textarea</code> elements blend in with the background theme, set their <code>background-color</code> to <code>#0a0a23</code>. Then, give them a <code>1px</code>, <code>solid</code> border with a color of <code>#0a0a23</code>.</p>
+</li>
+<li><p>Currently, if you type in the <code>input</code> or <code>textarea</code> elements, you will not be able to see the text. Also, their height is too small to be easy to use.</p>
+<p>Fix this, by setting the <code>color</code> to <code>#ffffff</code>, and setting their <code>min-height</code> to <code>2em</code>.</p>
+</li>
+<li><p>You want the <code>select</code> element to remain with a white background, but now it is not getting the same <code>min-height</code> as the <code>input</code> and <code>textarea</code> elements.</p>
+<p>Move the <code>min-height</code> property and value so that all three element types have the same <code>min-height</code> value, and the <code>select</code> element still has a white background.</p>
+</li>
+<li><p>To style the submit button, you can use an <em>attribute</em> selector, which selects an element based on the given attribute value. Here is an example:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[name=<span class="string">&quot;password&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<p>The above selects <code>input</code> elements with a <code>name</code> attribute value of <code>password</code>.</p>
+<p>Now, use the attribute selector to style the submit button with a <code>display</code> of <code>block</code>, and a <code>width</code> of <code>60%</code>.</p>
+</li>
+<li><p>With a <code>display</code> of <code>block</code> the submit button sits flush against the left edge of its parent.</p>
+<p>Use the same technique used to center the <code>form</code> to center the submit button.</p>
+</li>
+<li><p>To make the submit button look more in line with the rest of the form, give it the same <code>height</code> as the other fields (<code>2em</code>). Also, increase the <code>font-size</code> to <code>1.1rem</code>.</p>
+</li>
+<li><p>To make the submit button appear more distinct, give it a <code>background-color</code> of <code>#3b3b4f</code>, and a <code>border-color</code> of <code>white</code>.</p>
+</li>
+<li><p>Lastly, for the submit button, you want to separate it from the <code>fieldset</code> above, and adjust its width to never be below <code>300px</code>.</p>
+<p>Change the <code>margin</code> property to include <code>1em</code> on the top and bottom, while leaving the right and left margins set to <code>auto</code>. Then set the width as described above.</p>
+</li>
+<li><p>Most browsers inject their own default CSS properties and values for different elements. If you look closely, you might be able to notice the file <code>input</code> is smaller than the other text <code>input</code> elements. By default, a <code>padding</code> of <code>1px 2px</code> is given to <code>input</code> elements you can type in.</p>
+<p>Using another attribute selector, style the <code>input</code> with a <code>type</code> of <code>file</code> to be the same padding as the other <code>input</code> elements.</p>
+</li>
+<li><p>Speaking of <code>padding</code>, the submit button is sitting at the bottom of the <code>form</code> element. Add <code>2em</code> of <code>padding</code> only to the bottom of the <code>form</code>.</p>
+</li>
+<li><p>Last, but not least, change the text color of the <code>terms and conditions</code> link to <code>#dfdfe2</code>.</p>
+<p>Well done! You have completed the final part of the <em>Registration Form</em> practice project.</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+<li><p>5</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Registration Form<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Registration Form<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Please fill out this form with the required information<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">action</span>=<span class="string">&#x27;https://register-demo.freecodecamp.org&#x27;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;first-name&quot;</span>&gt;</span>Enter Your First Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;first-name&quot;</span> <span class="attr">name</span>=<span class="string">&quot;first-name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;last-name&quot;</span>&gt;</span>Enter Your Last Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;last-name&quot;</span> <span class="attr">name</span>=<span class="string">&quot;last-name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;email&quot;</span>&gt;</span>Enter Your Email: <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;new-password&quot;</span>&gt;</span>Create a New Password: <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;new-password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;new-password&quot;</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;[a-z0-5]&#123;8,&#125;&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;personal-account&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;personal-account&quot;</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;account-type&quot;</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span> /&gt;</span> Personal Account<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;business-account&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;business-account&quot;</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;account-type&quot;</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span> /&gt;</span> Business Account<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;terms-and-conditions&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;terms-and-conditions&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">required</span> <span class="attr">name</span>=<span class="string">&quot;terms-and-conditions&quot;</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span> /&gt;</span> I accept the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.freecodecamp.org/news/terms-of-service/&quot;</span>&gt;</span>terms and conditions<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;profile-picture&quot;</span>&gt;</span>Upload a profile picture: <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;profile-picture&quot;</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;file&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;age&quot;</span>&gt;</span>Input your age (years): <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;age&quot;</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span> <span class="attr">min</span>=<span class="string">&quot;13&quot;</span> <span class="attr">max</span>=<span class="string">&quot;120&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;referrer&quot;</span>&gt;</span>How did you hear about us?</span><br><span class="line">          <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>(select one)<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>freeCodeCamp News<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span>freeCodeCamp YouTube Channel<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span>&gt;</span>freeCodeCamp Forum<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;4&quot;</span>&gt;</span>Other<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;bio&quot;</span>&gt;</span>Provide a bio:</span><br><span class="line">          <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">&quot;bio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;bio&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;3&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;30&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;I like coding on the beach...&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#f5f6f7</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Tahoma;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">1em</span> auto;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">form</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">60vw</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto; </span><br><span class="line">  <span class="attribute">padding-bottom</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">fieldset</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">2rem</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#3b3b4f</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">fieldset</span><span class="selector-pseudo">:last-of-type</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">label</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0.5rem</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span>,</span><br><span class="line"><span class="selector-tag">textarea</span>,</span><br><span class="line">select &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span>, <span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#0a0a23</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#0a0a23</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.inline</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: unset;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0.5em</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;submit&quot;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#3b3b4f</span>;</span><br><span class="line">  <span class="attribute">border-color</span>: white;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">1em</span> auto;</span><br><span class="line">  <span class="attribute">min-width</span>:<span class="number">300px</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;file&quot;</span>]</span>&#123;</span><br><span class="line">  <span class="attribute">padding</span>:<span class="number">1px</span> <span class="number">2px</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#dfdfe2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E5%9B%9B/" title="Responsive Web Dedign(四)">http://moyun.com/responsive-web-dedign-四/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E4%B8%89/" rel="prev" title="Responsive Web Dedign(三)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(三)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/project-exercise-%E2%80%94-survey-form/" rel="next" title="Project Exercise — Survey Form">
+                  Project Exercise — Survey Form <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

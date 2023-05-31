@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn HTML by Building a Cat Photo App">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(一)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E4%B8%80/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn HTML by Building a Cat Photo App">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg">
+<meta property="og:image" content="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg">
+<meta property="og:image" content="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg">
+<meta property="article:published_time" content="2023-04-26T13:04:23.769Z">
+<meta property="article:modified_time" content="2023-05-03T02:34:31.679Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E4%B8%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E4%B8%80/","path":"responsive-web-dedign-一/","title":"Responsive Web Dedign(一)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(一) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-HTML-by-Building-a-Cat-Photo-App"><span class="nav-text">Learn HTML by Building a Cat Photo App</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text"> CatPhotoApp </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"> Cat Photos </span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Cat Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Things cats love:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Top 3 things cats hate:</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%9B%9B/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-29</time>
+        <br>
+      Responsive Web Dedign(四)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/project-exercise-%E2%80%94-survey-form/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-01</time>
+        <br>
+      Project Exercise — Survey Form
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%85%AB/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-07</time>
+        <br>
+      Responsive Web Dedign(八)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/project-exercise-%E2%80%94-product-landing-page/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-29</time>
+        <br>
+      Project Exercise — Product Landing Page
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%85%AD/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-05</time>
+        <br>
+      Responsive Web Dedign(六)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(一) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(一)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-26 21:04:23" itemprop="dateCreated datePublished" datetime="2023-04-26T21:04:23+08:00">2023-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-03 10:34:31" itemprop="dateModified" datetime="2023-05-03T10:34:31+08:00">2023-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-HTML-by-Building-a-Cat-Photo-App/" itemprop="url" rel="index"><span itemprop="name">Learn HTML by Building a Cat Photo App</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>17k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>15 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-HTML-by-Building-a-Cat-Photo-App"><a href="#Learn-HTML-by-Building-a-Cat-Photo-App" class="headerlink" title="Learn HTML by Building a Cat Photo App"></a>Learn HTML by Building a Cat Photo App</h4><span id="more"></span>
+
+<ol>
+<li><p>The <code>h1</code> through <code>h6</code> heading elements are used to signify the importance of content below them. The lower the number, the higher the importance, so <code>h2</code> elements have less importance than <code>h1</code> elements. Only use one <code>h1</code> element per page and place lower importance headings below higher importance headings.</p>
+</li>
+<li><p>The <code>p</code> element is used to create a paragraph of text on websites. Create a <code>p</code> element below your <code>h2</code> element and give it the following text:<code>See more cat photos in our gallery</code></p>
+</li>
+<li><p>Commenting allows you to leave messages without affecting the browser display. It also allows you to make code inactive. A comment in HTML starts with <code>&lt;!--</code>, contains any number of lines of text, and ends with <code>--&gt;</code>. For example, the comment <code>&lt;!-- TODO: Remove h1 --&gt;</code> contains the text <code>TODO: Remove h1</code>.</p>
+</li>
+<li><p>HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility.</p>
+<p>Identify the main section of this page by adding a <code>&lt;main&gt;</code> opening tag before the <code>h1</code> element, and a <code>&lt;/main&gt;</code> closing tag after the <code>p</code> element.</p>
+</li>
+<li><p>In the previous step, you put the <code>h1</code>, <code>h2</code>, comment, and <code>p</code> elements inside the <code>main</code> element. This is called <em>nesting</em>. Nested elements should be placed two spaces further to the right of the element they are nested in. This spacing is called indentation and it is used to make HTML easier to read.</p>
+</li>
+<li><p>You can add images to your website by using the <code>img</code> element. <code>img</code> elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a self-closing tag.</p>
+</li>
+<li><p>HTML attributes are special words used inside the opening tag of an element to control the element’s behavior. The <code>src</code> attribute in an <code>img</code> element specifies the image’s URL (where the image is located).</p>
+<p>Here is an example of an <code>img</code> element with a <code>src</code> attribute pointing to the freeCodeCamp logo:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/platform/universal/fcc_secondary.svg&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>All <code>img</code> elements should have an <code>alt</code> attribute. The <code>alt</code> attribute’s text is used for screen readers to improve accessibility and is displayed if the image fails to load. For example, <code>&lt;img src=&quot;cat.jpg&quot; alt=&quot;A cat&quot;&gt;</code> has an <code>alt</code> attribute with the text <code>A cat</code>.</p>
+</li>
+<li><p>You can link to another page with the anchor (<code>a</code>) element. For example, <code>&lt;a href=&#39;https://freecodecamp.org&#39;&gt;&lt;/a&gt;</code> would link to <code>freecodecamp.org</code>.</p>
+</li>
+<li><p>A link’s text must be placed between the opening and closing tags of an anchor (<code>a</code>) element. For example, <code>&lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;click here to go to freeCodeCamp.org&lt;/a&gt;</code> is a link with the text <code>click here to go to freeCodeCamp.org</code>.</p>
+</li>
+<li><p>In the previous step you turned the words <code>link to cat pictures</code> into a link by placing them between opening and closing anchor (<code>a</code>) tags. You can do the same to words inside of an element, such as a <code>p</code> element.</p>
+</li>
+<li><p>In the previous step you turned the words <code>link to cat pictures</code> into a link by placing them between opening and closing anchor (<code>a</code>) tags. You can do the same to words inside of an element, such as a <code>p</code> element.</p>
+</li>
+<li><p>Add a <code>target</code> attribute with the value <code>_blank</code> to the anchor (<code>a</code>) element’s opening tag, so that the link opens in a new tab.</p>
+</li>
+<li><p>In previous steps you used an anchor element to turn text into a link. Other types of content can also be turned into a link by wrapping it in anchor tags.</p>
+<p>Turn the image into a link by surrounding it with necessary element tags. Use <code>https://freecatphotoapp.com</code> as the anchor’s <code>href</code> attribute value.</p>
+</li>
+<li><p>Before adding any new content, you should make use of a <code>section</code> element to separate the cat photos content from the future content.</p>
+<p>Take your <code>h2</code>, comment, <code>p</code>, and anchor (<code>a</code>) elements and nest them in a <code>section</code> element.</p>
+</li>
+<li><p>It is time to add a new section. Add a second <code>section</code> element below the existing <code>section</code> element.</p>
+</li>
+<li><p>Within the second <code>section</code> element, add a new <code>h2</code> element with the text <code>Cat Lists</code>.</p>
+</li>
+<li><p>When you add a lower rank heading element to the page, it’s implied that you’re starting a new subsection.</p>
+<p>After the last <code>h2</code> element of the second <code>section</code> element, add an <code>h3</code> element with this text:<code>Things cats love:</code></p>
+</li>
+<li><p>After the <code>h3</code> element with the <code>Things cats love:</code> text, add an unordered list (<code>ul</code>) element. Note that nothing will be displayed at this point.</p>
+</li>
+<li><p>Use list item (<code>li</code>) elements to create items in a list. Here is an example of list items in an unordered list:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>milk<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>cheese<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>After the unordered list, add a new image with an <code>src</code> attribute value set to:</p>
+<p><code>https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg</code></p>
+<p>And its <code>alt</code> attribute value to:<code>A slice of lasagna on a plate.</code></p>
+</li>
+<li><p>The <code>figure</code> element represents self-contained content and will allow you to associate an image with a caption.Nest the image you just added within a <code>figure</code> element.</p>
+</li>
+<li><p>A figure caption (<code>figcaption</code>) element is used to add a caption to describe the image contained within the <code>figure</code> element. For example, <code>&lt;figcaption&gt;A cute cat&lt;/figcaption&gt;</code> adds the caption <code>A cute cat</code>.</p>
+<p>After the image nested in the <code>figure</code> element, add a <code>figcaption</code> element with text set to:<code>Cats love lasagna.</code></p>
+</li>
+<li><p>Emphasize the word <code>love</code> in the <code>figcaption</code> element by wrapping it in an emphasis <code>em</code> element.</p>
+</li>
+<li><p>After the <code>figure</code> element, add another <code>h3</code> element with the text:<code>Top 3 things cats hate:</code></p>
+</li>
+<li><p>The code for an ordered list (<code>ol</code>) is similar to an unordered list, but list items in an ordered list are numbered when displayed.</p>
+<p>After the second <code>section</code> element’s last <code>h3</code> element, add an ordered list with these three list items:<code>flea treatment</code> <code>thunder</code> <code>other cats</code></p>
+</li>
+<li><p>After the ordered list, add another <code>figure</code> element.</p>
+</li>
+<li><p>Inside the <code>figure</code> element you just added, nest an <code>img</code> element with a <code>src</code> attribute set to <code>https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg</code>.</p>
+</li>
+<li><p>To improve accessibility of the image you added, add an <code>alt</code> attribute with the text:<code>Five cats looking around a field.</code></p>
+</li>
+<li><p>After the last <code>img</code> element, add a <code>figcaption</code> element with the text <code>Cats hate other cats.</code></p>
+</li>
+<li><p>The <code>strong</code> element is used to indicate that some text is of strong importance or urgent.In the <code>figcaption</code> you just added, indicate that <code>hate</code> is of strong importance by wrapping it in a <code>strong</code> element.</p>
+</li>
+<li><p>It is time to add a new section. Add a third <code>section</code> element below the second <code>section</code> element.</p>
+</li>
+<li><p>Inside the third <code>section</code> element, add an <code>h2</code> element with the text:<code>Cat Form</code></p>
+</li>
+<li><p>Now you will add a web form to collect information from users.</p>
+<p>After the <code>Cat Form</code> heading, add a <code>form</code> element.</p>
+</li>
+<li><p>The <code>action</code> attribute indicates where form data should be sent. For example, <code>&lt;form action=&quot;/submit-url&quot;&gt;&lt;/form&gt;</code> tells the browser that the form data should be sent to the path <code>/submit-url</code>.</p>
+<p>Add an <code>action</code> attribute with the value <code>https://freecatphotoapp.com/submit-cat-photo</code> to the <code>form</code> element.</p>
+</li>
+<li><p>The <code>input</code> element allows you several ways to collect data from a web form. Like <code>img</code> elements, <code>input</code> elements are self-closing and do not need closing tags.Nest an <code>input</code> element in the <code>form</code> element.</p>
+</li>
+<li><p>There are many kinds of inputs you can create using the <code>type</code> attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.</p>
+<p>Create a text field to get text input from a user by adding the <code>type</code> attribute with the value <code>text</code> to the <code>input</code> element.</p>
+</li>
+<li><p>In order for a form’s data to be accessed by the location specified in the <code>action</code> attribute, you must give the text field a <code>name</code> attribute and assign it a value to represent the data being submitted. For example, you could use the following syntax for an email address text field: <code>&lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;</code>.</p>
+<p>Add the <code>name</code> attribute with the value <code>catphotourl</code> to your text field.</p>
+</li>
+<li><p>Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, <code>&lt;input type=&quot;text&quot; placeholder=&quot;Email address&quot;&gt;</code>.Add the placeholder text <code>cat photo URL</code> to your <code>input</code> element.</p>
+</li>
+<li><p>To prevent a user from submitting your form when required information is missing, you need to add the <code>required</code> attribute to an <code>input</code> element. There’s no need to set a value to the <code>required</code> attribute. Instead, just add the word <code>required</code> to the <code>input</code> element, making sure there is space between it and other attributes.</p>
+</li>
+<li><p>Use the <code>button</code> element to create a clickable button. For example, <code>&lt;button&gt;Click Here&lt;/button&gt;</code> creates a button with the text <code>Click Here</code>.</p>
+<p>Add a <code>button</code> element with the text <code>Submit</code> below the <code>input</code> element. The default behavior of clicking a form button without any attributes submits the form to the location specified in the form’s <code>action</code> attribute.</p>
+</li>
+<li><p>Even though you added your button below the text input, they appear next to each other on the page. That’s because both <code>input</code> and <code>button</code> elements are inline elements, which don’t appear on new lines.</p>
+<p>The button you added will submit the form by default. However, relying on default behavior may cause confusion. Add the <code>type</code> attribute with the value <code>submit</code> to the <code>button</code> to make it clear that it is a submit button.</p>
+</li>
+<li><p>You can use radio buttons for questions where you want only one answer out of multiple options.</p>
+<p>Here is an example of a radio button with the option of <code>cat</code>: <code>&lt;input type=&quot;radio&quot;&gt; cat</code>. Remember that <code>input</code> elements are self-closing.</p>
+<p>Before the text input, add a radio button with the option set as:<code>Indoor</code></p>
+</li>
+<li><p><code>label</code> elements are used to help associate the text for an <code>input</code> element with the <code>input</code> element itself (especially for assistive technologies like screen readers). For example, <code>&lt;label&gt;&lt;input type=&quot;radio&quot;&gt; cat&lt;/label&gt;</code> makes it so clicking the word <code>cat</code> also selects the corresponding radio button.</p>
+<p>Nest your <code>radio</code> button inside a <code>label</code> element.</p>
+</li>
+<li><p>The <code>id</code> attribute is used to identify specific HTML elements. Each <code>id</code> attribute’s value must be unique from all other <code>id</code> values for the entire page.</p>
+<p>Add an <code>id</code> attribute with the value <code>indoor</code> to the radio button. When elements have multiple attributes, the order of the attributes doesn’t matter.</p>
+</li>
+<li><p>Create another radio button below the first one. Nest it inside a <code>label</code> element with <code>Outdoor</code> as the <code>label</code> text. Give the radio button an <code>id</code> attribute with <code>outdoor</code> as the value.</p>
+</li>
+<li><p>Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a <code>name</code> attribute with the same value.</p>
+<p>Add the <code>name</code> attribute with the value <code>indoor-outdoor</code> to both radio buttons.</p>
+</li>
+<li><p>If you select the <code>Indoor</code> radio button and submit the form, the form data for the button is based on its <code>name</code> and <code>value</code> attributes. Since your radio buttons do not have a <code>value</code> attribute, the form data will include <code>indoor-outdoor=on</code>, which is not useful when you have multiple buttons.</p>
+<p>Add a <code>value</code> attribute to both radio buttons. For convenience, set the button’s <code>value</code> attribute to the same value as its <code>id</code> attribute.</p>
+</li>
+<li><p>The <code>fieldset</code> element is used to group related inputs and labels together in a web form. <code>fieldset</code> elements are block-level elements, meaning that they appear on a new line.</p>
+<p>Nest the <code>Indoor</code> and <code>Outdoor</code> radio buttons within a <code>fieldset</code> element, and don’t forget to indent the radio buttons.</p>
+</li>
+<li><p>The <code>legend</code> element acts as a caption for the content in the <code>fieldset</code> element. It gives users context about what they should enter into that part of the form.</p>
+<p>Add a <code>legend</code> element with the text <code>Is your cat an indoor or outdoor cat?</code> above both of the radio buttons.</p>
+</li>
+<li><p>Next, you are going to add some new form <code>input</code> elements, so add another <code>fieldset</code> element directly below the current <code>fieldset</code> element.</p>
+</li>
+<li><p>Add a <code>legend</code> element with the text <code>What&#39;s your cat&#39;s personality?</code> inside the second <code>fieldset</code> element.</p>
+</li>
+<li><p>Forms commonly use checkboxes for questions that may have more than one answer. For example, here’s a checkbox with the option of <code>tacos</code>: <code>&lt;input type=&quot;checkbox&quot;&gt; tacos</code>.</p>
+<p>Under the <code>legend</code> element you just added, add an <code>input</code> with its <code>type</code> attribute set to <code>checkbox</code> and give it the option of:<code>Loving</code></p>
+</li>
+<li><p>Add an <code>id</code> attribute with the value <code>loving</code> to the checkbox input.</p>
+</li>
+<li><p>There’s another way to associate an <code>input</code> element’s text with the element itself. You can nest the text within a <code>label</code> element and add a <code>for</code> attribute with the same value as the <code>input</code> element’s <code>id</code> attribute.</p>
+<p>Associate the text <code>Loving</code> with the checkbox by nesting only the text <code>Loving</code> in a <code>label</code> element and giving it an appropriate <code>for</code> attribute.</p>
+</li>
+<li><p>Add the <code>name</code> attribute with the value <code>personality</code> to the checkbox <code>input</code> element.</p>
+<p>While you won’t notice this in the browser, doing this makes it easier for a server to process your web form, especially when there are multiple checkboxes.</p>
+</li>
+<li><p>Add another checkbox after the one you just added. The <code>id</code> attribute value should be <code>lazy</code> and the <code>name</code> attribute value should be the same as the last checkbox.</p>
+<p>Also add a <code>label</code> element to the right of the new checkbox with the text <code>Lazy</code>. Make sure to associate the <code>label</code> element with the new checkbox using the <code>for</code> attribute.</p>
+</li>
+<li><p>Add a final checkbox after the previous one with an <code>id</code> attribute value of <code>energetic</code>. The <code>name</code> attribute should be the same as the previous checkbox.</p>
+<p>Also add a <code>label</code> element to the right of the new checkbox with text <code>Energetic</code>. Make sure to associate the <code>label</code> element with the new checkbox.</p>
+</li>
+<li><p>Like radio buttons, form data for selected checkboxes are <code>name</code> / <code>value</code> attribute pairs. While the <code>value</code> attribute is optional, it’s best practice to include it with any checkboxes or radio buttons on the page.</p>
+<p>Add a <code>value</code> attribute to each checkbox. For convenience, set each checkbox’s <code>value</code> attribute to the same value as its <code>id</code> attribute.</p>
+</li>
+<li><p>In order to make a checkbox checked or radio button selected by default, you need to add the <code>checked</code> attribute to it. There’s no need to set a value to the <code>checked</code> attribute. Instead, just add the word <code>checked</code> to the <code>input</code> element, making sure there is space between it and other attributes.</p>
+<p>Make the first radio button and the first checkbox selected by default.</p>
+</li>
+<li><p>Now you will add a footer section to the page.</p>
+<p>After the <code>main</code> element, add a <code>footer</code> element.</p>
+</li>
+<li><p>Nest a <code>p</code> element with the text <code>No Copyright - freeCodeCamp.org</code> within the <code>footer</code> element.</p>
+</li>
+<li><p>Make the text <code>freeCodeCamp.org</code> into a link by enclosing it in an anchor (<code>a</code>) element. The <code>href</code> attribute should be set to <code>https://www.freecodecamp.org</code>.</p>
+</li>
+<li><p>Notice that everything you’ve added to the page so far is inside the <code>body</code> element. All page content elements that should be rendered to the page go inside the <code>body</code> element. However, other important information goes inside the <code>head</code> element.</p>
+<p>Add a <code>head</code> element above the <code>body</code> element.</p>
+</li>
+<li><p>The <code>title</code> element determines what browsers show in the title bar or tab for the page.</p>
+<p>Add a <code>title</code> element within the <code>head</code> element using the text below:</p>
+<p><code>CatPhotoApp</code></p>
+</li>
+<li><p>Notice that the entire contents of the page are nested within an <code>html</code> element. All other elements must be descendants of this <code>html</code> element.</p>
+<p>Add the <code>lang</code> attribute with the value <code>en</code> to the opening <code>html</code> tag to specify that the language of the page is English.</p>
+</li>
+<li><p>All pages should begin with <code>&lt;!DOCTYPE html&gt;</code>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications.</p>
+<p>Add this declaration as the first line of the code.</p>
+</li>
+<li><p>You can set browser behavior by adding self-closing <code>meta</code> elements in the <code>head</code>. Here’s an example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">attribute</span>=<span class="string">&quot;value&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Tell the browser to parse the markup into multiple languages by creating a <code>meta</code> element as a child of the <code>head</code> element. Set its <code>charset</code> attribute to <code>UTF-8</code>.</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">        &lt;title&gt;CatPhotoApp&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;main&gt;</span><br><span class="line">            &lt;h1&gt; CatPhotoApp &lt;/h1&gt;</span><br><span class="line">            &lt;section&gt;</span><br><span class="line">                &lt;h2&gt; Cat Photos &lt;/h2&gt;</span><br><span class="line">                &lt;!-- TODO: Add link to cat photos --&gt;</span><br><span class="line">                &lt;p&gt;See more &lt;a href=&quot;https://freecatphotoapp.com&quot; target=&quot;_blank&quot;&gt;cat photos&lt;/a&gt; in our gallery.&lt;/p&gt;</span><br><span class="line">                &lt;!-- 删除a链接： &lt;a href=&quot;https://freecatphotoapp.com&quot;&gt;link to cat pictures&lt;/a&gt;--&gt;</span><br><span class="line">                &lt;a href=&quot;https://freecatphotoapp.com&quot;&gt;</span><br><span class="line">                    &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A cute orange cat lying on its back.&quot;&gt;</span><br><span class="line">                &lt;/a&gt;</span><br><span class="line">            &lt;/section&gt;</span><br><span class="line">            &lt;section&gt;</span><br><span class="line">                &lt;h2&gt;Cat Lists&lt;/h2&gt;</span><br><span class="line">                &lt;h3&gt;Things cats love:&lt;/h3&gt;   </span><br><span class="line">                &lt;ul&gt;         </span><br><span class="line">                    &lt;li&gt;cat nip&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;laser pointers&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;lasagna&lt;/li&gt;</span><br><span class="line">                &lt;/ul&gt;</span><br><span class="line">                &lt;figure&gt;</span><br><span class="line">                    &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;     </span><br><span class="line">                    &lt;figcaption&gt;Cats &lt;em&gt;love&lt;/em&gt; lasagna.&lt;/figcaption&gt;</span><br><span class="line">                &lt;/figure&gt;</span><br><span class="line">                &lt;h3&gt;Top 3 things cats hate:&lt;/h3&gt;</span><br><span class="line">                &lt;ol&gt;</span><br><span class="line">                    &lt;li&gt;flea treatment&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;thunder&lt;/li&gt;</span><br><span class="line">                    &lt;li&gt;other cats&lt;/li&gt;</span><br><span class="line">                &lt;/ol&gt;</span><br><span class="line">                &lt;figure&gt;</span><br><span class="line">                    &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg&quot; alt=&quot;Five cats looking around a field.&quot;&gt;</span><br><span class="line">                    &lt;figcaption&gt;Cats  &lt;strong&gt; hate &lt;/strong&gt; other cats.&lt;/figcaption&gt; </span><br><span class="line">                &lt;/figure&gt;</span><br><span class="line">            &lt;/section&gt;</span><br><span class="line">            &lt;section&gt;</span><br><span class="line">                &lt;form action=&quot;https://freecatphotoapp.com/submit-cat-photo&quot;&gt;</span><br><span class="line">                      &lt;fieldset&gt; </span><br><span class="line">                          &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;   </span><br><span class="line">                          &lt;label&gt;&lt;input id=&quot;indoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot; value=&quot;indoor&quot; checked&gt; Indoor&lt;/label&gt;</span><br><span class="line">                          &lt;label&gt;&lt;input id=&quot;outdoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot; value=&quot;outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line">                      &lt;/fieldset&gt;</span><br><span class="line">                      &lt;fieldset&gt;</span><br><span class="line">                          &lt;legend&gt;What&#x27;s your cat&#x27;s personality?&lt;/legend&gt;</span><br><span class="line">                          &lt;input id=&quot;loving&quot; type=&quot;checkbox&quot; name=&quot;personality&quot; value=&quot;loving&quot; checked&gt; &lt;label for=&quot;loving&quot;&gt;Loving&lt;/label&gt;</span><br><span class="line">                          &lt;input id=&quot;lazy&quot; type=&quot;checkbox&quot; name=&quot;personality&quot; value=&quot;lazy&quot;&gt; &lt;label for=&quot;lazy&quot;&gt;Lazy&lt;/label&gt;</span><br><span class="line">                          &lt;input id=&quot;energetic&quot; type=&quot;checkbox&quot; name=&quot;personality&quot; value=&quot;energetic&quot;&gt; &lt;label for=&quot;energetic&quot;&gt; Energetic&lt;/label&gt;</span><br><span class="line">                      &lt;/fieldset&gt;</span><br><span class="line">                      &lt;input type=&quot;text&quot; name=&quot;catphotourl&quot; placeholder=&quot;cat photo URL&quot; required&gt;</span><br><span class="line">                      &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</span><br><span class="line">                &lt;/form&gt;</span><br><span class="line">            &lt;/section&gt;</span><br><span class="line">        &lt;/main&gt;</span><br><span class="line">        &lt;footer&gt;</span><br><span class="line">             &lt;p&gt;No Copyright - &lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;freeCodeCamp.org&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">        &lt;/footer&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">&lt;/html&gt;                     </span><br></pre></td></tr></table></figure>
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CatPhotoApp</title>
+    </head>
+    <body>
+        <main>
+            <h1> CatPhotoApp </h1>
+            <section>
+                <h2> Cat Photos </h2>
+                <!-- TODO: Add link to cat photos -->
+                <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+                <!-- 删除a链接： <a target="_blank" rel="noopener" href="https://freecatphotoapp.com">link to cat pictures</a>-->
+                <a target="_blank" rel="noopener" href="https://freecatphotoapp.com">
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+                </a>
+            </section>
+            <section>
+                <h2>Cat Lists</h2>
+                <h3>Things cats love:</h3>   
+                <ul>         
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">     
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                </figure>
+                <h3>Top 3 things cats hate:</h3>
+                <ol>
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                    <figcaption>Cats  <strong> hate </strong> other cats.</figcaption> 
+                </figure>
+            </section>
+            <section>
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                      <fieldset> 
+                          <legend>Is your cat an indoor or outdoor cat?</legend>   
+                          <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+                          <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+                      </fieldset>
+                      <fieldset>
+                          <legend>What's your cat's personality?</legend>
+                          <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+                          <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                          <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic"> Energetic</label>
+                      </fieldset>
+                      <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                      <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+             <p>No Copyright - <a target="_blank" rel="noopener" href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+        </footer>
+    <body>
+<html>
+</html></body></body></html>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E4%B8%80/" title="Responsive Web Dedign(一)">http://moyun.com/responsive-web-dedign-一/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E4%BA%8C/" rel="next" title="Responsive Web Dedign(二)">
+                  Responsive Web Dedign(二) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

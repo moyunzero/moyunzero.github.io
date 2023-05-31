@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn CSS Colors by Building a Set of Colored Markers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(三)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E4%B8%89/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn CSS Colors by Building a Set of Colored Markers">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-28T06:48:56.721Z">
+<meta property="article:modified_time" content="2023-04-30T02:37:52.400Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="CSS,color">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E4%B8%89/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E4%B8%89/","path":"responsive-web-dedign-三/","title":"Responsive Web Dedign(三)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(三) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-CSS-Colors-by-Building-a-Set-of-Colored-Markers"><span class="nav-text">Learn CSS Colors by Building a Set of Colored Markers</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%BA%8C/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-27</time>
+        <br>
+      Responsive Web Dedign(十二)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%BA%94/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-03</time>
+        <br>
+      Responsive Web Dedign(五)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E5%9B%9B/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-30</time>
+        <br>
+      Responsive Web Dedign(十四)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-10</time>
+        <br>
+      Responsive Web Dedign(十)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(三) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(三)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-28 14:48:56" itemprop="dateCreated datePublished" datetime="2023-04-28T14:48:56+08:00">2023-04-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-30 10:37:52" itemprop="dateModified" datetime="2023-04-30T10:37:52+08:00">2023-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-CSS-Colors-by-Building-a-Set-of-Colored-Markers/" itemprop="url" rel="index"><span itemprop="name">Learn CSS Colors by Building a Set of Colored Markers</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>26k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>23 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-CSS-Colors-by-Building-a-Set-of-Colored-Markers"><a href="#Learn-CSS-Colors-by-Building-a-Set-of-Colored-Markers" class="headerlink" title="Learn CSS Colors by Building a Set of Colored Markers"></a>Learn CSS Colors by Building a Set of Colored Markers</h4><span id="more"></span>
+
+<ol>
+<li><p>As you’ve seen in the previous projects, webpages should start with a <code>DOCTYPE html</code> declaration, followed by an <code>html</code> element.</p>
+<p>Add a <code>DOCTYPE html</code> declaration at the top of the document, and an <code>html</code> element after that. Give the <code>html</code> element a <code>lang</code> attribute with <code>en</code> as its value.</p>
+</li>
+<li><p>Nest a <code>head</code> element within the <code>html</code> element. Just after the <code>head</code> element, add a <code>body</code> element.</p>
+</li>
+<li><p>Remember that the <code>title</code> element gives search engines extra information about the page. It also displays the content of that <code>title</code> element in two more ways:</p>
+<ul>
+<li>in the title bar when the page is open</li>
+<li>in the browser tab for the page when you hover on it. Even if that tab is not active, once you hover on the tab, the <code>title</code> text is displayed.</li>
+</ul>
+<p>Within the <code>head</code> element, nest a <code>title</code> element with the text <code>Colored Markers</code>.</p>
+</li>
+<li><p>To tell browsers how to encode characters on your page, set the <code>charset</code> to <code>utf-8</code>. <code>utf-8</code> is a universal character set that includes almost every character from all human languages.</p>
+<p>Inside the <code>head</code> element, nest a <code>meta</code> element with the attribute <code>charset</code> set to <code>utf-8</code>. Remember that <code>meta</code> elements are self-closing, and do not need a closing tag.</p>
+</li>
+<li><p>You can have multiple self-closing <code>meta</code> elements on a web page. What distinguishes one <code>meta</code> element from the other is the attribute. You should add a new meta element for each attribute you want to specify.</p>
+<p>Add another self-closing <code>meta</code> element within the <code>head</code>. Give it a <code>name</code> attribute set to <code>viewport</code> and a <code>content</code> attribute set to <code>width=device-width, initial-scale=1.0</code> so your page looks the same on all devices.</p>
+</li>
+<li><p>Now you’re ready to start adding content to the page.</p>
+<p>Within the <code>body</code>, nest an <code>h1</code> element with the text <code>CSS Color Markers</code>.</p>
+</li>
+<li><p>In this project you’ll work with an external CSS file to style the page. We’ve already created a <code>styles.css</code> file for you. But before you can use it, you’ll need to link it to the page.</p>
+<p>Nest a <code>link</code> element within the <code>head</code> element. Give it a <code>rel</code> attribute set to <code>stylesheet</code> and an <code>href</code> attribute set to <code>styles.css</code>.</p>
+</li>
+<li><p>Now that your external CSS file is set up, you can start styling the page.</p>
+<p>As a reminder, here’s how to target a paragraph element and align it to the right:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Create a new CSS rule that targets the <code>h1</code> element, and set its <code>text-align</code> property to <code>center</code>.</p>
+</li>
+<li><p>Now you’ll add some elements that you’ll eventually style into color markers.</p>
+<p>First, within the <code>body</code> element, add a <code>div</code> element and set its <code>class</code> attribute to <code>container</code>. Make sure the <code>div</code> element is below the <code>h1</code> element.</p>
+</li>
+<li><p>Next, within the <code>div</code> element, add another <code>div</code> element and give it a class of <code>marker</code>.</p>
+</li>
+<li><p>It’s time to add some color to the marker. Remember that one way to add color to an element is to use a color keyword like <code>black</code>, <code>cyan</code>, or <code>yellow</code>.</p>
+<p>As a reminder, here’s how to target the class <code>freecodecamp</code>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.freecodecamp</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Create a new CSS rule that targets the class <code>marker</code>, and set its <code>background-color</code> property to <code>red</code>.</p>
+<p><strong>Note:</strong> You will not see any changes after adding the CSS.</p>
+</li>
+<li><p>The background color was applied, but since the marker <code>div</code> element has no content in it, it doesn’t have any height by default.</p>
+<p>In your <code>.marker</code> CSS rule, set the <code>height</code> property to <code>25px</code> and the <code>width</code> property to <code>200px</code></p>
+</li>
+<li><p>Your marker would look better if it was centered on the page. An easy way to do that is with the <code>margin</code> shorthand property.</p>
+<p>In the last project, you set the margin area of elements separately with properties like <code>margin-top</code> and <code>margin-left</code>. The <code>margin</code> shorthand property makes it easy to set multiple margin areas at the same time.</p>
+<p>To center your marker on the page, set its <code>margin</code> property to <code>auto</code>. This sets <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code> all to <code>auto</code>.</p>
+</li>
+<li><p>Now that you’ve got one marker centered with color, it’s time to add the other markers.</p>
+<p>In the <code>container</code> <code>div</code>, add two more <code>div</code> elements and give them each a class of <code>marker</code>.</p>
+</li>
+<li><p>While you have three separate marker <code>div</code> elements, they look like one big rectangle. You should add some space between them to make it easier to see each element.</p>
+<p>When the shorthand <code>margin</code> property has two values, it sets <code>margin-top</code> and <code>margin-bottom</code> to the first value, and <code>margin-left</code> and <code>margin-right</code> to the second value.</p>
+<p>In your <code>.marker</code> CSS rule, set the <code>margin</code> property to <code>10px auto</code>.</p>
+</li>
+<li><p>To give the markers different colors, you will need to add a unique class to each one. Multiple classes can be added to an element by listing them in the <code>class</code> attribute and separating them with a space. For example, the following adds both the <code>animal</code> and <code>dog</code> classes to a <code>div</code> element.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;animal dog&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>If you add multiple classes to an HTML element, the styles of the first classes you list may be overridden by later classes.</p>
+<p>To begin, add the class <code>one</code> to the first marker <code>div</code> element.</p>
+</li>
+<li><p>Next, remove the <code>background-color</code> property and its value from the <code>.marker</code> CSS rule.</p>
+</li>
+<li><p>Then, create a new CSS rule that targets the class <code>one</code> and set its <code>background-color</code> property to <code>red</code>.</p>
+</li>
+<li><p>Add the class <code>two</code> to the second marker <code>div</code>, and add the class <code>three</code> to the third marker <code>div</code>.</p>
+</li>
+<li><p>Create a CSS rule that targets the class <code>two</code> and set its <code>background-color</code> property to <code>green</code>.</p>
+<p>Also, create a separate CSS rule that targets the class <code>three</code> and set its <code>background-color</code> to <code>blue</code>.</p>
+</li>
+<li><p>There are two main color models: the additive RGB (red, green, blue) model used in electronic devices, and the subtractive CMYK (cyan, magenta, yellow, black) model used in print.</p>
+<p>In this project, you’ll work with the RGB model. This means that colors begin as black, and change as different levels of red, green, and blue are introduced. An easy way to see this is with the CSS <code>rgb</code> function.</p>
+<p>Create a new CSS rule that targets the class <code>container</code> and set its <code>background-color</code> to black with <code>rgb(0, 0, 0)</code>.</p>
+</li>
+<li><p>A function is a piece of code that can take an input and perform a specific action. The CSS <code>rgb</code> function accepts values, or arguments, for red, green, and blue, and produces a color:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rgb(red, green, blue);</span><br></pre></td></tr></table></figure>
+
+<p>Each red, green, and blue value is a number from <code>0</code> to <code>255</code>. <code>0</code> means that there’s 0% of that color, and is black. <code>255</code> means that there’s 100% of that color.</p>
+<p>In the <code>.one</code> CSS rule, replace the color keyword <code>red</code> with the <code>rgb</code> function. For the <code>rgb</code> function, set the value for red to <code>255</code>, the value for green to <code>0</code>, and the value for blue to <code>0</code>.</p>
+</li>
+<li><p>Notice that the <code>background-color</code> for your marker is still red. This is because you set the red value of the <code>rgb</code> function to the max of <code>255</code>, or 100% red, and set both the green and blue values to <code>0</code>.</p>
+<p>Now use the <code>rgb</code> function to set the other colors.</p>
+<p>In the <code>.two</code> CSS rule, use the <code>rgb</code> function to set the <code>background-color</code> to the max value for green, and <code>0</code> for the other values. And in the <code>.three</code> CSS rule, use the <code>rgb</code> function to set the <code>background-color</code> to the max value for blue, and <code>0</code> for the other values.</p>
+</li>
+<li><p>While the red and blue markers look the same, the green one is much lighter than it was before. This is because the <code>green</code> color keyword is actually a darker shade, and is about halfway between black and the maximum value for green.</p>
+<p>In the <code>.two</code> CSS rule, set the green value in the <code>rgb</code> function to <code>127</code> to lower its intensity.</p>
+</li>
+<li><p>Now add a little more vertical space between your markers and the edge of the <code>container</code> element they’re in.</p>
+<p>In the <code>.container</code> CSS rule, use the shorthand <code>padding</code> property to add <code>10px</code> of top and bottom padding, and set the left and right padding to <code>0</code>. This works similarly to the shorthand <code>margin</code> property you used earlier.</p>
+</li>
+<li><p>In the additive RGB color model, primary colors are colors that, when combined, create pure white. But for this to happen, each color needs to be at its highest intensity.</p>
+<p>Before you combine colors, set your green marker back to pure green. For the <code>rgb</code> function in the <code>.two</code> CSS rule, set green back to the max value of <code>255</code>.</p>
+</li>
+<li><p>Now that you have the primary RGB colors, it’s time to combine them.</p>
+<p>For the <code>rgb</code> function in the <code>.container</code> rule, set the red, green, and blue values to the max of <code>255</code>.</p>
+</li>
+<li><p>Secondary colors are the colors you get when you combine primary colors. You might have noticed some secondary colors in the last step as you changed the red, green, and blue values.</p>
+<p>To create the first secondary color, yellow, update the <code>rgb</code> function in the <code>.one</code> CSS rule to combine pure red and pure green.</p>
+</li>
+<li><p>To create the next secondary color, cyan, update the <code>rgb</code> function in the <code>.two</code> CSS rule to combine pure green and pure blue.</p>
+</li>
+<li><p>To create the final secondary color, magenta, update the <code>rgb</code> function in the <code>.three</code> CSS rule to combine pure blue and pure red.</p>
+</li>
+<li><p>Now that you’re familiar with secondary colors, you’ll learn how to create tertiary colors. Tertiary colors are created by combining a primary with a nearby secondary color.</p>
+<p>To create the tertiary color orange, update the <code>rgb</code> function in the <code>.one</code> CSS rule so that red is at the max value, and set green to <code>127</code>.</p>
+</li>
+<li><p>Notice that, to create orange, you had to increase the intensity of red and decrease the intensity of the green <code>rgb</code> values. This is because orange is the combination of red and yellow, and falls between the two colors on the color wheel.</p>
+<p>To create the tertiary color spring green, combine cyan with green. Update the <code>rgb</code> function in the <code>.two</code> CSS rule so that green is at the max value, and set blue to <code>127</code>.</p>
+</li>
+<li><p>And to create the tertiary color violet, combine magenta with blue. Update the <code>rgb</code> function in the <code>.three</code> CSS rule so that blue is at the max value, and set red to <code>127</code>.</p>
+</li>
+<li><p>There are three more tertiary colors: chartreuse green (green + yellow), azure (blue + cyan), and rose (red + magenta).</p>
+<p>To create chartreuse green, update the <code>rgb</code> function in the <code>.one</code> CSS rule so that red is at <code>127</code>, and set green to the max value.</p>
+<p>For azure, update the <code>rgb</code> function in the <code>.two</code> CSS rule so that green is at <code>127</code> and blue is at the max value.</p>
+<p>And for rose, which is sometimes called bright pink, update the <code>rgb</code> function in the <code>.three</code> CSS rule so that blue is at <code>127</code> and red is at the max value.</p>
+</li>
+<li><p>Now that you’ve gone through all the primary, secondary, and tertiary colors on a color wheel, it’ll be easier to understand other color theory concepts and how they impact design.</p>
+<p>First, in the CSS rules <code>.one</code>, <code>.two</code>, and <code>.three</code>, adjust the values in the <code>rgb</code> function so that the <code>background-color</code> of each element is set to pure black. Remember that the <code>rgb</code> function uses the additive color model, where colors start as black and change as the values of red, green, and blue increase.</p>
+</li>
+<li><p>A color wheel is a circle where similar colors, or hues, are near each other, and different ones are further apart. For example, pure red is between the hues rose and orange.</p>
+<p>Two colors that are opposite from each other on the color wheel are called complementary colors. If two complementary colors are combined, they produce gray. But when they are placed side-by-side, these colors produce strong visual contrast and appear brighter.</p>
+<p>In the <code>rgb</code> function for the <code>.one</code> CSS rule, set the red value to the max of <code>255</code> to produce pure red. In the <code>rgb</code> function for <code>.two</code> CSS rule, set the values for green and blue to the max of <code>255</code> to produce cyan.</p>
+</li>
+<li><p>Notice that the red and cyan colors are very bright right next to each other. This contrast can be distracting if it’s overused on a website, and can make text hard to read if it’s placed on a complementary-colored background.</p>
+<p>It’s better practice to choose one color as the dominant color, and use its complementary color as an accent to bring attention to certain content on the page.</p>
+<p>First, in the <code>h1</code> rule, use the <code>rgb</code> function to set its <code>background-color</code> to cyan.</p>
+</li>
+<li><p>Next, in the <code>.one</code> CSS rule, use the <code>rgb</code> function to set the <code>background-color</code> to black. And in the <code>.two</code> CSS rule, use the <code>rgb</code> function to set the <code>background-color</code> to red.</p>
+</li>
+<li><p>Notice how your eyes are naturally drawn to the red color in the center? When designing a site, you can use this effect to draw attention to important headings, buttons, or links.</p>
+<p>There are several other important color combinations outside of complementary colors, but you’ll learn those a bit later.</p>
+<p>For now, use the <code>rgb</code> function in the <code>.two</code> CSS rule to set the <code>background-color</code> to black.</p>
+</li>
+<li><p>And in the <code>h1</code> CSS rule, remove the <code>background-color</code> property and value to go back to the default white color.</p>
+</li>
+<li><p>Now it’s time to add other details to the markers, starting with the first one.</p>
+<p>In the first marker <code>div</code> element, change the class <code>one</code> to <code>red</code>.</p>
+</li>
+<li><p>Update the <code>.one</code> CSS rule to target the new <code>red</code> class.</p>
+</li>
+<li><p>And update the <code>rgb</code> function in the <code>.red</code> CSS rule so that the red value is at the max.</p>
+</li>
+<li><p>Next, change the class <code>two</code> to <code>green</code> in the second marker <code>div</code>, and the class <code>three</code> to <code>blue</code> in the third marker <code>div</code>.</p>
+</li>
+<li><p>Update the CSS class selector <code>.two</code> so it targets the new <code>green</code> class. And update the <code>.three</code> class selector so it targets the new <code>blue</code> class.</p>
+</li>
+<li><p>A very common way to apply color to an element with CSS is with hexadecimal or hex values. While hex values sound complicated, they’re really just another form of RGB values.</p>
+<p>Hex color values start with a <code>#</code> character and take six characters from 0-9 and A-F. The first pair of characters represent red, the second pair represent green, and the third pair represent blue. For example, <code>#4B5320</code>.</p>
+<p>In the <code>.green</code> class selector, set the <code>background-color</code> property to a hex color code with the values <code>00</code> for red, <code>FF</code> for green, and <code>00</code> blue.</p>
+</li>
+<li><p>You may already be familiar with decimal, or base 10 values, which go from 0 - 9. Hexadecimal, or base 16 values, go from 0 - 9, then A - F:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, A, B, C, D, E, F</span><br></pre></td></tr></table></figure>
+
+<p>With hex colors, <code>00</code> is 0% of that color, and <code>FF</code> is 100%. So <code>#00FF00</code> translates to 0% red, 100% green, and 0% blue, and is the same as <code>rgb(0, 255, 0)</code>.</p>
+<p>Lower the intensity of green by setting the green value of the hex color to <code>7F</code>.</p>
+</li>
+<li><p>The HSL color model, or hue, saturation, and lightness, is another way to represent colors.</p>
+<p>The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.</p>
+<p>If you imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.</p>
+<p>Saturation is the intensity of a color from 0%, or gray, to 100% for pure color. You must add the percent sign <code>%</code> to the saturation and lightness values.</p>
+<p>Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.</p>
+<p>In the <code>.blue</code> CSS rule, use the <code>hsl</code> function to change the <code>background-color</code> property to pure blue. Set the hue to <code>240</code>, the saturation to <code>100%</code>, and the lightness to <code>50%</code>.</p>
+</li>
+<li><p>You’ve learned a few ways to set flat colors in CSS, but you can also use a color transition, or gradient, on an element.</p>
+<p>A gradient is when one color transitions into another. The CSS <code>linear-gradient</code> function lets you control the direction of the transition along a line, and which colors are used.</p>
+<p>One thing to remember is that the <code>linear-gradient</code> function actually creates an <code>image</code> element, and is usually paired with the <code>background</code> property which can accept an image as a value.</p>
+<p>In the <code>.red</code> CSS rule, change the <code>background-color</code> property to <code>background</code>.</p>
+</li>
+<li><p>The <code>linear-gradient</code> function is very flexible – here is the basic syntax you’ll use in this tutorial:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linear-gradient(gradientDirection, color1, color2, ...);</span><br></pre></td></tr></table></figure>
+
+<p><code>gradientDirection</code> is the direction of the line used for the transition. <code>color1</code> and <code>color2</code> are color arguments, which are the colors that will be used in the transition itself. These can be any type of color, including color keywords, hex, <code>rgb</code>, or <code>hsl</code>.</p>
+<p>Now you’ll apply a red-to-green gradient along a 90 degree line to the first marker.</p>
+<p>First, in the <code>.red</code> CSS rule, set the <code>background</code> property to <code>linear-gradient()</code>, and pass it the value <code>90deg</code> as the <code>gradientDirection</code>.</p>
+</li>
+<li><p>You’ll use the <code>rgb</code> function for the colors of this gradient.</p>
+<p>In the <code>linear-gradient</code> function, use the <code>rgb</code> function to set the first color argument to pure red.</p>
+</li>
+<li><p>You won’t see gradient yet because the <code>linear-gradient</code> function needs at least two color arguments to work.</p>
+<p>In the same <code>linear-gradient</code> function, use the <code>rgb</code> function to set the second color argument to pure green.</p>
+</li>
+<li><p>As you can see, the <code>linear-gradient</code> function produced a smooth red-green gradient. While the <code>linear-gradient</code> function needs a minimum of two color arguments to work, it can accept many color arguments.</p>
+<p>Use the <code>rgb</code> function to add pure blue as the third color argument to the <code>linear-gradient</code> function.</p>
+</li>
+<li><p>Color-stops allow you to fine-tune where colors are placed along the gradient line. They are a length unit like <code>px</code> or percentages that follow a color in the <code>linear-gradient</code> function.</p>
+<p>For example, in this red-black gradient, the transition from red to black takes place at the 90% point along the gradient line, so red takes up most of the available space:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linear-gradient(<span class="number">90deg</span>, red <span class="number">90%</span>, black);</span><br></pre></td></tr></table></figure>
+
+<p>In the <code>linear-gradient</code> function, add a <code>75%</code> color stop after the first red color argument. Do not add color stops to the other colors arguments.</p>
+</li>
+<li><p>Now that you know the basics of how the <code>linear-gradient</code> function and color-stops work, you can use them to make the markers look more realistic.</p>
+<p>In the <code>linear-gradient</code> function, set <code>gradientDirection</code> to <code>180deg</code>.</p>
+</li>
+<li><p>Next, set the color-stop for red to <code>0%</code>, the color-stop for green to <code>50%</code>, and the color-stop for blue to <code>100%</code>.</p>
+</li>
+<li><p>Now that the color-stops are set, you’ll apply different shades of red to each color argument in the <code>linear-gradient</code> function. The shades on the top and bottom edges of the marker will be darker, while the one in the middle will be lighter, as if there’s a light above it.</p>
+<p>For the first color argument, which is currently pure red, update the <code>rgb</code> function so the value for red is <code>122</code>, the value for green is <code>74</code>, and the value for blue is <code>14</code>.</p>
+</li>
+<li><p>Now modify the second color argument in the <code>linear-gradient</code> function, which is currently pure green.</p>
+<p>Update the <code>rgb</code> function so the value for red is <code>245</code>, the value of green is <code>62</code>, and the value of blue is <code>113</code>.</p>
+</li>
+<li><p>Finally, modify the third color argument in the <code>linear-gradient</code> function, which is currently pure blue.</p>
+<p>Update the <code>rgb</code> function so the value for red is <code>162</code>, the value of green is <code>27</code>, and the value of blue is <code>27</code>.</p>
+</li>
+<li><p>The red marker is looking much more realistic. Now you’ll do the same for the green marker, using a combination of the <code>linear-gradient</code> function and hex colors.</p>
+<p>In the <code>.green</code> CSS rule, change the <code>background-color</code> property to <code>background</code>.</p>
+</li>
+<li><p>For this marker, you’ll use hex color codes for your gradient.</p>
+<p>Use the <code>linear-gradient</code> function and set <code>gradientDirection</code> to <code>180deg</code>. And for the first color argument, use a hex color code with the values <code>55</code> for red, <code>68</code> for green, and <code>0D</code> for blue.</p>
+</li>
+<li><p>For the second color argument, use a hex color code with the values <code>71</code> for red, <code>F5</code> for green, and <code>3E</code> for blue.</p>
+</li>
+<li><p>That’s looking better, but the bottom edge of the green marker needs to be darker to add a little more dimension.</p>
+<p>In the same <code>linear-gradient</code> function, add a hex color code with the values <code>11</code> for red, <code>6C</code> for green, and <code>31</code> for blue as the third color argument.</p>
+</li>
+<li><p>Even without the color-stops, you might have noticed that the colors for the green marker transition at the same points as the red marker. The first color is at the start (0%), the second is in the middle (50%), and the last is at the end (100%) of the gradient line.</p>
+<p>The <code>linear-gradient</code> function automatically calculates these values for you, and places colors evenly along the gradient line by default.</p>
+<p>In the <code>.red</code> CSS rule, remove the three color stops from the <code>linear-gradient</code> function to clean up your code a bit.</p>
+</li>
+<li><p>If no <code>gradientDirection</code> argument is provided to the <code>linear-gradient</code> function, it arranges colors from top to bottom, or along a 180 degree line, by default.</p>
+<p>Clean up your code a little more by removing the <code>gradientDirection</code> argument from both <code>linear-gradient</code> functions.</p>
+</li>
+<li><p>Now you’ll apply a gradient to the blue marker, this time using the <code>hsl</code> function as color arguments.</p>
+<p>In the <code>.blue</code> CSS rule, change the <code>background-color</code> property to <code>background</code>.</p>
+</li>
+<li><p>Use the <code>linear-gradient</code> function, and pass in the <code>hsl</code> function with the values <code>186</code> for hue, <code>76%</code> for saturation, and <code>16%</code> for lightness as the first color argument.</p>
+</li>
+<li><p>As the second color argument, pass in the <code>hsl</code> function with the values <code>223</code> for hue, <code>90%</code> for saturation, and <code>60%</code> for lightness.</p>
+</li>
+<li><p>And as the third color argument, pass in the <code>hsl</code> function with the values <code>240</code> for hue, <code>56%</code> for saturation, and <code>42%</code> for lightness.</p>
+</li>
+<li><p>Now that the markers have the correct colors, it’s time to build the marker sleeves. Start with the red marker.</p>
+<p>Inside the red marker <code>div</code> element, create a new <code>div</code> element and give it a class of <code>sleeve</code>.</p>
+</li>
+<li><p>Create a new CSS rule that targets the class <code>sleeve</code>. Set the <code>width</code> property to <code>110px</code>, and the <code>height</code> property to <code>25px</code>.</p>
+</li>
+<li><p>To make the marker look more realistic, give the sleeve a transparent white color.</p>
+<p>First, set the sleeve element’s <code>background-color</code> to <code>white</code>.</p>
+</li>
+<li><p>Opacity describes how opaque, or non-transparent, something is. For example, a solid wall is opaque, and no light can pass through. But a drinking glass is much more transparent, and you can see through the glass to the other side.</p>
+<p>With the CSS <code>opacity</code> property, you can control how opaque or transparent an element is. With the value <code>0</code>, or 0%, the element will be completely transparent, and at <code>1.0</code>, or 100%, the element will be completely opaque like it is by default.</p>
+<p>In the <code>.sleeve</code> CSS rule, set the <code>opacity</code> property to <code>0.5</code>.</p>
+</li>
+<li><p>Another way to set the opacity for an element is with the alpha channel. Similar to the <code>opacity</code> property, the alpha channel controls how transparent or opaque a color is.</p>
+<p>You’ve already set sleeve’s opacity with a named color and the <code>opacity</code> property, but you can add an alpha channel to the other CSS color properties.</p>
+<p>Inside the <code>.sleeve</code> rule, remove the <code>opacity</code> property and value.</p>
+</li>
+<li><p>You’re already familiar with using the <code>rgb</code> function to set colors. To add an alpha channel to an <code>rgb</code> color, use the <code>rgba</code> function instead.</p>
+<p>The <code>rgba</code> function works just like the <code>rgb</code> function, but takes one more number from <code>0</code> to <code>1.0</code> for the alpha channel:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rgba(redValue, greenValue, blueValue, alphaValue);</span><br></pre></td></tr></table></figure>
+
+<p>You can also use an alpha channel with <code>hsl</code> and <code>hex</code> colors. You will see how to do that soon.</p>
+<p>In the <code>.sleeve</code> rule, use the <code>rgba</code> function to set the <code>background-color</code> property to pure white with 50% opacity.</p>
+</li>
+<li><p>Your sleeve is looking good, but it would look even better if it was positioned more toward the right side of the marker. One way to do that is to add another element before the sleeve to push it to the right.</p>
+<p>Add a new <code>div</code> with the class <code>cap</code> before the sleeve <code>div</code> element.</p>
+</li>
+<li><p>Create a new CSS rule to target the class <code>cap</code>. In the new rule, set the <code>width</code> property to <code>60px</code>, and the <code>height</code> to <code>25px</code>.</p>
+</li>
+<li><p>It looks like your sleeve disappeared, but don’t worry – it’s still there. What happened is that your new cap <code>div</code> is taking up the entire width of the marker, and is pushing the sleeve down to the next line.</p>
+<p>This is because the default <code>display</code> property for <code>div</code> elements is <code>block</code>. So when two <code>block</code> elements are next to each other, they stack like actual blocks. For example, your marker elements are all stacked on top of each other.</p>
+<p>To position two <code>div</code> elements on the same line, set their <code>display</code> properties to <code>inline-block</code>.</p>
+<p>Create a new rule to target both the <code>cap</code> and <code>sleeve</code> classes, and set <code>display</code> to <code>inline-block</code>.</p>
+</li>
+<li><p>In the last project, you learned a little bit about borders and the <code>border-color</code> property.</p>
+<p>All HTML elements have borders, though they’re usually set to <code>none</code> by default. With CSS, you can control all aspects of an element’s border, and set the border on all sides, or just one side at a time. For a border to be visible, you need to set its width and style.</p>
+<p>In the <code>.sleeve</code> CSS rule, add the <code>border-left-width</code> property with the value <code>10px</code>.</p>
+</li>
+<li><p>Borders have several styles to choose from. You can make your border a solid line, but you can also use a dashed or dotted line if you prefer. Solid border lines are probably the most common.</p>
+<p>In the <code>.sleeve</code> CSS rule, add the <code>border-left-style</code> property with the value <code>solid</code>.</p>
+</li>
+<li><p>Your border should be visible now. If no color is set, black is used by default.</p>
+<p>But to make your code more readable, it’s better to set the border color explicitly.</p>
+<p>In the <code>.sleeve</code> CSS rule, add the <code>border-left-color</code> property with the value <code>black</code>.</p>
+</li>
+<li><p>The <code>border-left</code> shorthand property lets you to set the left border’s width, style, and color at the same time.</p>
+<p>Here is the syntax:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-left</span>: width style color;</span><br></pre></td></tr></table></figure>
+
+<p>In the <code>.sleeve</code> CSS rule, replace the <code>border-left-width</code>, <code>border-left-style</code>, and <code>border-left-color</code> properties with the <code>border-left</code> shorthand property. The values for the width, style, and color of the left border should be the same.</p>
+</li>
+<li><p>Your marker is looking good. But to make it look even more realistic, you can change the border style to double solid borders.</p>
+<p>For the <code>border-left</code> shorthand property, change the border style value from <code>solid</code> to <code>double</code>.</p>
+</li>
+<li><p>The black color of your border looks pretty harsh against the more transparent sleeve. You can use an alpha channel to lower the opacity of the black border.</p>
+<p>For the <code>border-left</code> shorthand property, use the <code>rgba</code> function to set the color value to pure black with 75% opacity.</p>
+</li>
+<li><p>Awesome. Your red marker is looking good. Now all you need to do is add the caps and sleeves to your other markers.</p>
+<p>Add a cap and sleeve to both the green and blue markers. You can just copy the <code>div</code> elements from the red marker and paste them into the other two markers.</p>
+</li>
+<li><p>The last thing you’ll do is add a slight shadow to each marker to make them look even more realistic.</p>
+<p>The <code>box-shadow</code> property lets you apply one or more shadows around an element. Here is basic syntax:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: offsetX offsetY color;</span><br></pre></td></tr></table></figure>
+
+<p>Here’s how the <code>offsetX</code> and <code>offsetY</code> values work:</p>
+<ul>
+<li>both <code>offsetX</code> and <code>offsetY</code> accept number values in <code>px</code> and other CSS units</li>
+<li>a positive <code>offsetX</code> value moves the shadow right and a negative value moves it left</li>
+<li>a positive <code>offsetY</code> value moves the shadow down and a negative value moves it up</li>
+<li>if you want a value of zero (<code>0</code>) for any or both <code>offsetX</code> and <code>offsetY</code>, you don’t need to add a unit. Every browser understands that zero means no change.</li>
+</ul>
+<p>The height and width of the shadow is determined by the height and width of the element it’s applied to. You can also use an optional <code>spreadRadius</code> value to spread out the reach of the shadow. More on that later.</p>
+<p>Start by adding a simple shadow to the red marker.</p>
+<p>In the <code>.red</code> CSS rule, add the <code>box-shadow</code> property with the values <code>5px</code> for <code>offsetX</code>, <code>5px</code> for <code>offsetY</code>, and <code>red</code> for <code>color</code>.</p>
+</li>
+<li><p>As you can see, you added a simple red shadow around your marker that’s 5 pixels to the right, and 5 pixels down.</p>
+<p>But what if you wanted to position your shadow on the opposite side? You can do that by using negative values for <code>offsetX</code> and <code>offsetY</code>.</p>
+<p>Update the values for the <code>box-shadow</code> property, and set <code>offsetX</code> to <code>-5px</code>, and <code>offsetY</code> to <code>-5px</code>.</p>
+</li>
+<li><p>Notice that the edges of the shadow are sharp. This is because there is an optional <code>blurRadius</code> value for the <code>box-shadow</code> property:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: offsetX offsetY blurRadius color;</span><br></pre></td></tr></table></figure>
+
+<p>If a <code>blurRadius</code> value isn’t included, it defaults to <code>0</code> and produces sharp edges. The higher the value of <code>blurRadius</code>, the greater the blurring effect is.</p>
+<p>In the <code>.green</code> CSS rule, add the <code>box-shadow</code> property with the values <code>5px</code> for <code>offsetX</code>, <code>5px</code> for <code>offsetY</code>, <code>5px</code> for <code>blurRadius</code>, and <code>green</code> for <code>color</code>.</p>
+</li>
+<li><p>But what if you wanted to expand the shadow out further? You can do that with the optional <code>spreadRadius</code> value:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: offsetX offsetY blurRadius spreadRadius color;</span><br></pre></td></tr></table></figure>
+
+<p>Like <code>blurRadius</code>, <code>spreadRadius</code> defaults to <code>0</code> if it isn’t included.</p>
+<p>Practice by adding a 5 pixel shadow directly around the blue marker.</p>
+<p>In the <code>.blue</code> CSS rule, add the <code>box-shadow</code> property with the values <code>0</code> for <code>offsetX</code>, <code>0</code> for <code>offsetY</code>, <code>0</code> for <code>blurRadius</code>, <code>5px</code> for <code>spreadRadius</code>, and <code>blue</code> for <code>color</code>.</p>
+</li>
+<li><p>Now that you’re familiar with the <code>box-shadow</code> property you can finalize the shadows, starting with the one for the red marker.</p>
+<p>In the <code>.red</code> CSS rule, update the values for the <code>box-shadow</code> property so <code>offsetX</code> is <code>0</code>,<code>offsetY</code> is <code>0</code>, <code>blurRadius</code> is <code>20px</code>, <code>spreadRadius</code> is <code>0</code>, and <code>color</code> is <code>red</code>. Remember that you don’t need to add units to a zero value.</p>
+</li>
+<li><p>Next, update the <code>color</code> value of the red marker’s <code>box-shadow</code> property.</p>
+<p>Replace the named color with the <code>rgba</code> function. Use the values <code>83</code> for red, <code>14</code> for green, <code>14</code> for blue and <code>0.8</code> for the alpha channel.</p>
+</li>
+<li><p>The shadows for your green and blue markers will have the same position, blur, and spread. The only difference will be the colors.</p>
+<p>In the <code>.green</code> and <code>.blue</code> CSS rules, update the values for the <code>box-shadow</code> properties so <code>offsetX</code> is <code>0</code>,<code>offsetY</code> is <code>0</code>, <code>blurRadius</code> is <code>20px</code>, and <code>spreadRadius</code> is <code>0</code>. Leave the colors as <code>green</code> and <code>blue</code> for now.</p>
+</li>
+<li><p>For the green marker’s <code>box-shadow</code> property, replace the named color with a hex color code. Use the values <code>3B</code> for red, <code>7E</code> for green, <code>20</code> for blue, and <code>CC</code> for the alpha channel.</p>
+</li>
+<li><p>Finally, for the blue marker’s <code>box-shadow</code> property, replace the named color with the <code>hsla</code> function. Use the values <code>223</code> for hue, <code>59%</code> for saturation, <code>31%</code> for lightness, and <code>0.8</code> for the alpha channel.</p>
+<p>And with that, your set of colored markers is complete! Well done.</p>
+</li>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Colored Markers<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>CSS Color Markers<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;marker red&quot;</span>&gt;</span> </span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sleeve&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;marker green&quot;</span>&gt;</span> </span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sleeve&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;marker blue&quot;</span>&gt;</span>               </span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sleeve&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">             </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>:center; </span><br><span class="line">  <span class="comment">/*background-color:rgb(0,255,255);*/</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>); </span><br><span class="line">  <span class="attribute">padding</span>:<span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.marker</span> &#123;</span><br><span class="line">  <span class="comment">/* background-color:red;*/</span> </span><br><span class="line">  <span class="attribute">height</span>:<span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>; </span><br><span class="line">  <span class="attribute">margin</span>:<span class="number">10px</span> auto;</span><br><span class="line">&#125;  </span><br><span class="line"><span class="selector-class">.cap</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">60px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.sleeve</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">110px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>);</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">10px</span> double <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.75</span>);</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.cap</span>,</span><br><span class="line"><span class="selector-class">.sleeve</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>:inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.red</span>&#123;</span><br><span class="line">  <span class="comment">/*background-color:rgb(255,127,0);*/</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="built_in">rgb</span>(<span class="number">122</span>, <span class="number">74</span>, <span class="number">14</span>), <span class="built_in">rgb</span>(<span class="number">245</span>, <span class="number">62</span>, <span class="number">113</span>), <span class="built_in">rgb</span>(<span class="number">162</span>, <span class="number">27</span>, <span class="number">27</span>));</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">83</span>, <span class="number">14</span>, <span class="number">14</span>, <span class="number">0.8</span>);</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.green</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">180deg</span>, <span class="number">#55680D</span>, <span class="number">#71F53E</span>,<span class="number">#116C31</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">#3B7E20CC</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.blue</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="built_in">hsl</span>(<span class="number">186</span>, <span class="number">76%</span>, <span class="number">16%</span>), <span class="built_in">hsl</span>(<span class="number">223</span>, <span class="number">90%</span>, <span class="number">60%</span>),<span class="built_in">hsl</span>(<span class="number">240</span>, <span class="number">56%</span>, <span class="number">42%</span>));</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">hsla</span>(<span class="number">223</span>,<span class="number">59%</span>,<span class="number">31%</span>,<span class="number">0.8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E4%B8%89/" title="Responsive Web Dedign(三)">http://moyun.com/responsive-web-dedign-三/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/CSS-color/" rel="tag"><i class="fa fa-tag"></i> CSS,color</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/" rel="prev" title="">
+                  <i class="fa fa-chevron-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%9B%9B/" rel="next" title="Responsive Web Dedign(四)">
+                  Responsive Web Dedign(四) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

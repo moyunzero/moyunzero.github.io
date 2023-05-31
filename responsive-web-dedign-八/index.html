@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn Accessibility by Building a Quiz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(八)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E5%85%AB/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn Accessibility by Building a Quiz">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-07T07:46:56.042Z">
+<meta property="article:modified_time" content="2023-05-07T07:57:02.143Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E5%85%AB/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E5%85%AB/","path":"responsive-web-dedign-八/","title":"Responsive Web Dedign(八)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(八) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-Accessibility-by-Building-a-Quiz"><span class="nav-text">Learn Accessibility by Building a Quiz</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%9B%9B/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-29</time>
+        <br>
+      Responsive Web Dedign(四)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-26</time>
+        <br>
+      Responsive Web Dedign(一)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/project-exercise-%E2%80%94-survey-form/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-01</time>
+        <br>
+      Project Exercise — Survey Form
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%83/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-06</time>
+        <br>
+      Responsive Web Dedign(七)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/project-exercise-%E2%80%94-product-landing-page/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-29</time>
+        <br>
+      Project Exercise — Product Landing Page
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E5%85%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(八) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(八)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-07 15:46:56 / 修改时间：15:57:02" itemprop="dateCreated datePublished" datetime="2023-05-07T15:46:56+08:00">2023-05-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-Accessibility-by-Building-a-Quiz/" itemprop="url" rel="index"><span itemprop="name">Learn Accessibility by Building a Quiz</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>20k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>19 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-Accessibility-by-Building-a-Quiz"><a href="#Learn-Accessibility-by-Building-a-Quiz" class="headerlink" title="Learn Accessibility by Building a Quiz"></a>Learn Accessibility by Building a Quiz</h4><span id="more"></span>
+
+<ol>
+<li><p>Welcome to the first part of the Accessibility Quiz. As you are becoming a seasoned HTML and CSS developer, we have started you off with the basic boilerplate.</p>
+<p>Start this accessibility journey by providing a <code>lang</code> attribute to your <code>html</code> element. This will assist screen readers in identifying the language of the page.</p>
+</li>
+<li><p>You may be familiar with the <code>meta</code> element already; it is used to specify information about the page, such as the title, description, keywords, and author.</p>
+<p>Give your page a <code>meta</code> element with an appropriate <code>charset</code> value.</p>
+<p>The <code>charset</code> attribute specifies the character encoding of the page, and, nowadays, <code>UTF-8</code> is the only encoding supported by most browsers.</p>
+</li>
+<li><p>Continuing with the <code>meta</code> elements, a <code>viewport</code> definition tells the browser how to render the page. Including one betters visual accessibility on mobile, and improves <em>SEO</em> (search engine optimization).</p>
+<p>Add a <code>viewport</code> definition with a <code>content</code> attribute detailing the <code>width</code> and <code>initial-scale</code> of the page.</p>
+<blockquote>
+<p> <code> &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code> </p>
+</blockquote>
+</li>
+<li><p>Another important <code>meta</code> element for accessibility and SEO is the <code>description</code> definition. The value of the <code>content</code> attribute is used by search engines to provide a description of your page.</p>
+<p>Add a <code>meta</code> element with the <code>name</code> attribute set to <code>description</code>, and give it a useful <code>content</code> attribute.</p>
+</li>
+<li><p>Lastly in the <code>head</code>, the <code>title</code> element is useful for screen readers to understand the content of a page. Furthermore, it is an important part of <em>SEO</em>.</p>
+<p>Give your page a <code>title</code> that is descriptive and concise.</p>
+</li>
+<li><p>Navigation is a core part of accessibility, and screen readers rely on you to provide the structure of your page. This is accomplished with semantic HTML elements.</p>
+<p>Add a <code>header</code> and a <code>main</code> element to your page.</p>
+<p>The <code>header</code> element will be used to introduce the page, as well as provide a navigation menu.</p>
+<p>The <code>main</code> element will contain the core content of your page.</p>
+</li>
+<li><p>Within the <code>header</code>, provide context about the page by nesting one <code>img</code>, <code>h1</code>, and <code>nav</code> element.</p>
+<p>The <code>img</code> should point to <code>https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg</code>, and have an <code>id</code> of <code>logo</code>.</p>
+<p>The <code>h1</code> should contain the text <code>HTML/CSS Quiz</code>.</p>
+</li>
+<li><p>A useful property of an <em>SVG</em> (scalable vector graphics) is that it contains a <code>path</code> attribute which allows the image to be scaled without affecting the resolution of the resultant image.</p>
+<p>Currently, the <code>img</code> is assuming its default size, which is too large. Correctly, scale the image using it’s <code>id</code> as a selector, and setting the <code>width</code> to <code>max(100px, 18vw)</code>.</p>
+</li>
+<li><p>As described in the <a target="_blank" rel="noopener" href="https://design-style-guide.freecodecamp.org/">freeCodeCamp Style Guide</a>, the logo should retain an aspect ratio of <code>35 / 4</code>, and have padding around the text.</p>
+<p>First, change the <code>background-color</code> to <code>#0a0a23</code> so you can see the logo. Then, use the <code>aspect-ratio</code> property to set the desired aspect ratio to <code>35 / 4</code>. Finally, add a <code>padding</code> of <code>0.4rem</code> all around.</p>
+</li>
+<li><p>Make the <code>header</code> take up the full width of its parent container, set its <code>height</code> to <code>50px</code>, and set the <code>background-color</code> to <code>#1b1b32</code>. Then, set the <code>display</code> to use <em>Flexbox</em>.</p>
+</li>
+<li><p>Change the <code>h1</code> font color to <code>#f1be32</code>, and set the font size to <code>min(5vw, 1.2em)</code>.</p>
+</li>
+<li><p>To enable navigation on the page, add an unordered list with the following three list items:</p>
+<ul>
+<li><code>INFO</code></li>
+<li><code>HTML</code></li>
+<li><code>CSS</code></li>
+</ul>
+<p>The list items text should be wrapped in anchor tags.</p>
+<blockquote>
+<p><code>&lt;li&gt;</code> 中内容需要用a标签进行嵌套</p>
+</blockquote>
+</li>
+<li><p>Target unordered list elements within <code>nav</code> elements, and use <em>Flexbox</em> to evenly space the children.</p>
+</li>
+<li><p>As this is a quiz, you will need a form for users to submit answers. You can semantically separate the content within the form using <code>section</code> elements.</p>
+<p>Within the <code>main</code> element, create a form with three nested <code>section</code> elements. Then, make the form submit to <code>https://freecodecamp.org/practice-project/accessibility-quiz</code>, using the correct method.</p>
+</li>
+<li><p>To increase the page accessibility, the <code>role</code> attribute can be used to indicate the purpose behind an element on the page to assistive technologies. The <code>role</code> attribute is a part of the <em>Web Accessibility Initiative</em> (WAI), and accepts preset values.</p>
+<p>Give each of the <code>section</code> elements the <code>region</code> role.</p>
+</li>
+<li><p>Every <code>region</code> role requires a label, which helps screen reader users understand the purpose of the region. One method for adding a label is to add a heading element inside the region and then reference it with the <code>aria-labelledby</code> attribute.</p>
+<p>Add the following <code>aria-labelledby</code> attributes to the <code>section</code> elements:</p>
+<ul>
+<li><code>student-info</code></li>
+<li><code>html-questions</code></li>
+<li><code>css-questions</code></li>
+</ul>
+<p>Then, within each <code>section</code> element, nest one <code>h2</code> element with an <code>id</code> matching the corresponding <code>aria-labelledby</code> attribute. Give each <code>h2</code> suitable text content.</p>
+</li>
+<li><p>Typeface plays an important role in the accessibility of a page. Some fonts are easier to read than others, and this is especially true on low-resolution screens.</p>
+<p>Change the font for both the <code>h1</code> and <code>h2</code> elements to <code>Verdana</code>, and use another web-safe font in the sans-serif family as a fallback.</p>
+<p>Also, add a <code>border-bottom</code> of <code>4px solid #dfdfe2</code> to <code>h2</code> elements to make the sections distinct.</p>
+</li>
+<li><p>To be able to navigate within the page, give each anchor element an <code>href</code> corresponding to the <code>id</code> of the <code>h2</code> elements.</p>
+</li>
+<li><p>Filling out the content of the quiz, below <code>#student-info</code>, add three <code>div</code> elements with a <code>class</code> of <code>info</code>.</p>
+<p>Then, within each <code>div</code> nest one <code>label</code> element, and one <code>input</code> element.</p>
+</li>
+<li><p>It is important to link each <code>input</code> to the corresponding <code>label</code> element. This provides assistive technology users with a visual reference to the input.</p>
+<p>This is done by giving the <code>label</code> a <code>for</code> attribute, which contains the <code>id</code> of the <code>input</code>.</p>
+<p>This section will take a student’s name, email address, and date of birth. Give the <code>label</code> elements appropriate <code>for</code> attributes, as well as text content. Then, link the <code>input</code> elements to the corresponding <code>label</code> elements.</p>
+</li>
+<li><p>Keeping in mind best-practices for form inputs, give each <code>input</code> an appropriate <code>type</code> and <code>name</code> attribute. Then, give the first <code>input</code> a <code>placeholder</code> attribute.</p>
+</li>
+<li><p>Even though you added a <code>placeholder</code> to the first <code>input</code> element in the previous lesson, this is actually not a best-practice for accessibility; too often, users confuse the placeholder text with an actual input value - they think there is already a value in the input.</p>
+<p>Remove the placeholder text from the first <code>input</code> element, relying on the <code>label</code> being the best-practice.</p>
+</li>
+<li><p>Arguably, <code>D.O.B.</code> is not descriptive enough. This is especially true for visually impaired users. One way to get around such an issue, without having to add visible text to the label, is to add text only a screen reader can read.</p>
+<p>Append a <code>span</code> element with a class of <code>sr-only</code> to the current text content of the third <code>label</code> element.</p>
+</li>
+<li><p>Within the <code>span</code> element, add the text <code>(Date of Birth)</code>.</p>
+</li>
+<li><p>The <code>.sr-only</code> text is still visible. There is a common pattern to visually hide text for only screen readers to read.</p>
+<p>This pattern is to set the following CSS properties:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">1px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">margin</span>: -<span class="number">1px</span>;</span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br><span class="line"><span class="attribute">border</span>: <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Use the above to define the <code>sr-only</code> class.</p>
+</li>
+<li><p>Within the second <code>section</code> element, add two <code>div</code> elements with a class of <code>question-block</code>.</p>
+<p>Then, within each <code>div.question-block</code> element, add one <code>p</code> element with text of incrementing numbers, starting at <code>1</code>, and one <code>fieldset</code> element with a class of <code>question</code>.</p>
+</li>
+<li><p>Each <code>fieldset</code> will contain a true/false question.</p>
+<p>Within each <code>fieldset</code>, nest one <code>legend</code> element, and one <code>ul</code> element with two options.</p>
+</li>
+<li><p>Give each <code>fieldset</code> an adequate <code>name</code> attribute. Then, give both unordered lists a <code>class</code> of <code>answers-list</code>.</p>
+<p>Finally, use the <code>legend</code> to caption the content of the <code>fieldset</code> by placing a true/false question as the text content.</p>
+</li>
+<li><p>To provide the functionality of the true/false questions, we need a set of inputs which do not allow both to be selected at the same time.</p>
+<p>Within each list element, nest one <code>label</code> element, and within each <code>label</code> element, nest one <code>input</code> element with the appropriate <code>type</code>.</p>
+</li>
+<li><p>Add an <code>id</code> to all of your radio <code>input</code>s so you can link your labels to them. Give the first one an <code>id</code> of <code>q1-a1</code>. Give the rest of them <code>id</code>s of <code>q1-a2</code>, <code>q2-a1</code>, and <code>q2-a2</code>, respectively.</p>
+</li>
+<li><p>Although not required for <code>label</code> elements with a nested <code>input</code>, it is still best-practice to explicitly link a <code>label</code> with its corresponding <code>input</code> element.</p>
+<p>Now, add a <code>for</code> attribute to each of your four <code>label</code>s that links the <code>label</code> to its corresponding radio <code>input</code>.</p>
+</li>
+<li><p>Give the <code>label</code> elements text such that the <code>input</code> comes before the text. Then, give the <code>input</code> elements a <code>value</code> matching the text.</p>
+<p>The text should either be <code>True</code> or <code>False</code>.</p>
+</li>
+<li><p>If you click on the radio inputs, you might notice both inputs within the same true/false fieldset can be selected at the same time.</p>
+<p>Group the relevant inputs together such that only one input from a pair can be selected at a time.</p>
+</li>
+<li><p>To prevent unnecessary repetition, target the <code>before</code> pseudo-element of the <code>p</code> element, and give it a <code>content</code> property of <code>&quot;Question #&quot;</code>.</p>
+</li>
+<li><p>The final section of this quiz will contain a dropdown, and a text box.</p>
+<p>Begin by nesting a <code>div</code> with a <code>class</code> of <code>formrow</code>, and nest four <code>div</code> elements inside of it, alternating their <code>class</code> attributes with <code>question-block</code> and <code>answer</code>.</p>
+</li>
+<li><p>Within the <code>div.question-block</code> elements, nest one <code>label</code> element, and give the <code>label</code> elements text content</p>
+</li>
+<li><p>Within the first <code>div.answer</code> element, nest one required <code>select</code> element with three <code>option</code> elements.</p>
+<p>Give the first <code>option</code> element a <code>value</code> of <code>&quot;&quot;</code>, and the text <code>Select an option</code>. Give the second <code>option</code> element a <code>value</code> of <code>yes</code>, and the text <code>Yes</code>. Give the third <code>option</code> element a <code>value</code> of <code>no</code>, and the text <code>No</code>.</p>
+</li>
+<li><p>Link the first <code>label</code> element to the <code>select</code> element, and give the <code>select</code> element a <code>name</code> attribute.</p>
+</li>
+<li><p>Nest one <code>textarea</code> element within the second <code>div.answer</code> element, and set the number of rows and columns it has.</p>
+<p>Then, give the <code>textarea</code> placeholder text describing an example answer.</p>
+</li>
+<li><p>As with the other <code>input</code> and <code>label</code> elements, link the <code>textarea</code> to its corresponding <code>label</code> element, and give it a <code>name</code> attribute.</p>
+</li>
+<li><p>Do not forget to give your <code>form</code> a submit button with the text <code>Send</code>.</p>
+</li>
+<li><p>Two final semantic HTML elements for this project are the <code>footer</code> and <code>address</code> elements. The <code>footer</code> element is a container for a collection of content that is related to the page, and the <code>address</code> element is a container for contact information for the author of the page.</p>
+<p>After the <code>main</code> element, add one <code>footer</code> element, and nest one <code>address</code> element within it.</p>
+</li>
+<li><p>Within the <code>address</code> element, add the following:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">freeCodeCamp<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">San Francisco<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">California<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">USA</span><br></pre></td></tr></table></figure></li>
+<li><p>The <code>address</code> element does not have to contain a physical geographical location. It can be used to provide a link to the subject.</p>
+<p>Wrap a link around the text <code>freeCodeCamp</code>, and set its location to <code>https://freecodecamp.org</code>.</p>
+</li>
+<li><p>Back to styling the page. Select the list elements within the navigation bar, and give them the following styles:</p>
+</li>
+<li><p>On the topic of visual accessibility, contrast between elements is a key factor. For example, the contrast between the text and the background of a heading should be at least 4.5:1.</p>
+<p>Change the font color of all the anchor elements within the list elements to something with a contrast ratio of at least 7:1.</p>
+</li>
+<li><p>To make the navigation buttons look more like typical buttons, remove the underline from the anchor tags.</p>
+<p>Then, create a new selector targeting the navigation list elements so that when the cursor hovers over them, the background color and text color are switched, and the cursor becomes a pointer.</p>
+</li>
+<li><p>Tidy up the <code>header</code>, by using <em>Flexbox</em> to put space between the children, and vertically center them.</p>
+<p>Then, fix the <code>header</code> to the top of the viewport.</p>
+</li>
+<li><p>When the screen width is small, the <code>h1</code> does not wrap its text content how it should. Align the text for the <code>h1</code> element in the center.</p>
+<p>Then, give the <code>main</code> padding such that the <code>Student Info</code> section header can be fully seen.</p>
+</li>
+<li><p>On small screens, the unordered list in the navigation bar overflows the right side of the screen.</p>
+<p>Fix this by using <em>Flexbox</em> to wrap the <code>ul</code> content. Then, set the following CSS properties to correctly align the text:</p>
+</li>
+<li><p>Set the width of the <code>section</code> elements to <code>80%</code> of their parent container. Then, use margins to center the <code>section</code> elements, adding <code>10px</code> to the bottom margin.</p>
+<p>Also, ensure the <code>section</code> elements cannot be larger than <code>600px</code> in width.</p>
+</li>
+<li><p>Replace the top margin of the <code>h2</code> elements with <code>60px</code> of top padding.</p>
+</li>
+<li><p>Add padding to the top and left of the <code>.info</code> elements, and set the other values to <code>0</code>.</p>
+</li>
+<li><p>Give the <code>.formrow</code> elements top margin, and left and right padding. The other padding values should be <code>0</code>.</p>
+<p>Then, increase the font size for all <code>input</code> elements.</p>
+</li>
+<li><p>To make the first section look more inline, target only the <code>input</code> elements within <code>.info</code> elements, and set their <code>width</code> to <code>50%</code>, and left-align their text.</p>
+</li>
+<li><p>Target all <code>label</code> elements within <code>.info</code> elements, and set their <code>width</code> to <code>10%</code>, and make it so they do not take up less than <code>55px</code>.</p>
+</li>
+<li><p>To align the input boxes with each other, create a new ruleset that targets all <code>input</code> and <code>label</code> elements within an <code>.info</code> element and set the <code>display</code> property to <code>inline-block</code>.</p>
+<p>Also, align the <code>label</code> element’s text to the right.</p>
+</li>
+<li><p>To neaten the <code>.question-block</code> elements, set the following CSS properties:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-align</span>: left;</span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line"><span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="attribute">padding-top</span>: <span class="number">5px</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>Make the paragraph elements appear as a higher priority, with the following CSS properties:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line"><span class="attribute">padding-left</span>: <span class="number">15px</span>;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>It is useful to see the default border around the <code>fieldset</code> elements, during development. However, it might not be the style you want.</p>
+<p>Remove the border and bottom padding on the <code>.question</code> elements.</p>
+</li>
+<li><p>Remove the default styling for the list items of <code>.answers-list</code>, and remove the unordered list padding.</p>
+</li>
+<li><p>Give the submit button a freeCodeCamp-style design, with the following CSS properties:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">40px</span> auto;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">23px</span>;</span><br><span class="line"><span class="attribute">background</span>: <span class="number">#d0d0d5</span>;</span><br><span class="line"><span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#3b3b4f</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>Set the <code>footer</code> background color to <code>#2a2a40</code>, and use <em>Flexbox</em> to horizontally center the text.</p>
+</li>
+<li><p>Now, we cannot read the text. Target the <code>footer</code> and the anchor element within to set the font color to a color of adequate contrast ratio.5</p>
+</li>
+<li><p>Horizontally center all the text within the <code>address</code> element, and add some padding.</p>
+</li>
+<li><p>Clicking on the navigation links should jump the viewport to the relevant section. However, this jumping can be disorienting for some users.</p>
+<p>Select all elements, and set the <code>scroll-behavior</code> to <code>smooth</code>.</p>
+</li>
+<li><p>Certain types of motion-based animations can cause discomfort for some users. In particular, people with vestibular disorders have sensitivity to certain motion triggers.</p>
+<p>The <code>@media</code> at-rule has a media feature called <code>prefers-reduced-motion</code> to set CSS based on the user’s preferences. It can take one of the following values:</p>
+<ul>
+<li><code>reduce</code></li>
+<li><code>no-preference</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">feature</span>: value) &#123;</span><br><span class="line">  selector &#123;</span><br><span class="line">    styles</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Wrap the style rule that sets <code>scroll-behavior: smooth</code> within an <code>@media</code> at-rule with the media feature <code>prefers-reduced-motion</code> having <code>no-preference</code> set as the value.</p>
+</li>
+<li><p>Finally, the navigation accessibility can be improved by providing keyboard shortcuts.</p>
+<p>The <code>accesskey</code> attribute accepts a space-separated list of access keys. For example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;s&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Give each of the navigation links a single-letter access key.</p>
+<p><em>Note: It is not always advised to use access keys, but they can be useful</em></p>
+<p>Well done. You have completed the <em>Accessibility Quiz</em> practice project.</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;freeCodeCamp Accessibility Quiz practice project&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Accessibility Quiz<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">&quot;logo&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>HTML/CSS Quiz<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">nav</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#student-info&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;i&quot;</span>&gt;</span>INFO<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#html-questions&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;h&quot;</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#css-questions&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;c&quot;</span>&gt;</span>CSS<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span> </span><br><span class="line">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">action</span>=<span class="string">&quot;https://freecodecamp.org/practice-project/accessibility-quiz&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">role</span>=<span class="string">&quot;region&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;student-info&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;student-info&quot;</span>&gt;</span>Student Info<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;student-name&quot;</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;student-name&quot;</span> <span class="attr">id</span>=<span class="string">&quot;student-name&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;student-email&quot;</span>&gt;</span>Email:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;student-email&quot;</span> <span class="attr">id</span>=<span class="string">&quot;student-email&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;birth-date&quot;</span>&gt;</span>D.O.B.<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>(Date of Birth)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;date&quot;</span> <span class="attr">name</span>=<span class="string">&quot;birth-date&quot;</span> <span class="attr">id</span>=<span class="string">&quot;birth-date&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">role</span>=<span class="string">&quot;region&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;html-questions&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;html-questions&quot;</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">fieldset</span> <span class="attr">class</span>=<span class="string">&quot;question&quot;</span> <span class="attr">name</span>=<span class="string">&quot;html-question-one&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">legend</span>&gt;</span></span><br><span class="line">                The legend element represents a caption for the content of its</span><br><span class="line">                parent fieldset element</span><br><span class="line">              <span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;answers-list&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q1-a1&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q1-a1&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">                    True</span><br><span class="line">                  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q1-a2&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q1-a2&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">                    False</span><br><span class="line">                  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">fieldset</span> <span class="attr">class</span>=<span class="string">&quot;question&quot;</span> <span class="attr">name</span>=<span class="string">&quot;html-question-two&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">legend</span>&gt;</span></span><br><span class="line">                A label element nesting an input element is required to have a</span><br><span class="line">                for attribute with the same value as the input&#x27;s id</span><br><span class="line">              <span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;answers-list&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q2-a1&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q2-a1&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">                    True</span><br><span class="line">                  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q2-a2&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q2-a2&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">                    False</span><br><span class="line">                  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">role</span>=<span class="string">&quot;region&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;css-questions&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;css-questions&quot;</span>&gt;</span>CSS<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;formrow&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;customer&quot;</span>&gt;</span>Are you a frontend developer?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;answer&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;customer&quot;</span> <span class="attr">id</span>=<span class="string">&quot;customer&quot;</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>Select an option<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;yes&quot;</span>&gt;</span>Yes<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;no&quot;</span>&gt;</span>No<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;css-questions&quot;</span>&gt;</span>Do you have any questions:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;answer&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">&quot;css-questions&quot;</span> <span class="attr">name</span>=<span class="string">&quot;css-questions&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;5&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;24&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Who is flexbox...&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>Send<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">address</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://freecodecamp.org&quot;</span>&gt;</span>freeCodeCamp<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">        San Francisco<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">        California<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">        USA</span><br><span class="line">      <span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-reduced-motion</span>: no-preference) &#123;</span><br><span class="line">  * &#123;</span><br><span class="line">    scroll-behavior: smooth;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f5f6f7</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Helvetica;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#logo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">max</span>(<span class="number">100px</span>, <span class="number">18vw</span>);</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#0a0a23</span>;</span><br><span class="line">  aspect-ratio: <span class="number">35</span> / <span class="number">4</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.4rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#f1be32</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">min</span>(<span class="number">5vw</span>, <span class="number">1.2em</span>);</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nav</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nav</span> &gt; <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-evenly;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">padding-inline-start</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin-block</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nav</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#dfdfe2</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0.2rem</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.2rem</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nav</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#dfdfe2</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span> &gt; <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: inherit;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">  <span class="attribute">padding-top</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">section</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto <span class="number">10px</span> auto;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">600px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Verdana, Tahoma;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">4px</span> solid <span class="number">#dfdfe2</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.info</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.formrow</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">label</span>, <span class="selector-class">.info</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">label</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">55px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.question-block</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;Question #&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.question</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">padding-bottom</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.answers-list</span> &#123;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">40px</span> auto;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">23px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#d0d0d5</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#3b3b4f</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">footer</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#2a2a40</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">footer</span>,</span><br><span class="line"><span class="selector-tag">footer</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#dfdfe2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">address</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.3em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sr-only</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E5%85%AB/" title="Responsive Web Dedign(八)">http://moyun.com/responsive-web-dedign-八/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E4%B8%83/" rel="prev" title="Responsive Web Dedign(七)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(七)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/project-exercise-%E2%80%94-a-tribute-page/" rel="next" title="Project Exercise — a Tribute Page">
+                  Project Exercise — a Tribute Page <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

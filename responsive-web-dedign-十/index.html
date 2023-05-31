@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Responsive Web Dedign Learn Intermediate CSS by Building a Picasso Painting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Web Dedign(十)">
+<meta property="og:url" content="http://moyun.com/responsive-web-dedign-%E5%8D%81/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Responsive Web Dedign Learn Intermediate CSS by Building a Picasso Painting">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-10T02:39:44.815Z">
+<meta property="article:modified_time" content="2023-05-10T02:41:46.223Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="HTML5">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/responsive-web-dedign-%E5%8D%81/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/responsive-web-dedign-%E5%8D%81/","path":"responsive-web-dedign-十/","title":"Responsive Web Dedign(十)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Responsive Web Dedign(十) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Responsive-Web-Dedign"><span class="nav-text">freeCodeCamp —- Responsive Web Dedign</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learn-Intermediate-CSS-by-Building-a-Picasso-Painting"><span class="nav-text">Learn Intermediate CSS by Building a Picasso Painting</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-11</time>
+        <br>
+      Responsive Web Dedign(十一)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B9%9D/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-09</time>
+        <br>
+      Responsive Web Dedign(九)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E5%8D%81%E4%BA%94/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-31</time>
+        <br>
+      Responsive Web Dedign(十五)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%BA%94/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-03</time>
+        <br>
+      Responsive Web Dedign(五)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/responsive-web-dedign-%E4%B8%83/" rel="bookmark">
+        <time class="popular-posts-time">2023-05-06</time>
+        <br>
+      Responsive Web Dedign(七)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/responsive-web-dedign-%E5%8D%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Responsive Web Dedign(十) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Responsive Web Dedign(十)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-10 10:39:44 / 修改时间：10:41:46" itemprop="dateCreated datePublished" datetime="2023-05-10T10:39:44+08:00">2023-05-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/" itemprop="url" rel="index"><span itemprop="name">Responsive Web Dedign</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Responsive-Web-Dedign/Learn-Intermediate-CSS-by-Building-a-Picasso-Painting/" itemprop="url" rel="index"><span itemprop="name">Learn Intermediate CSS by Building a Picasso Painting</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>18k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>17 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Responsive-Web-Dedign"><a href="#freeCodeCamp-—-Responsive-Web-Dedign" class="headerlink" title="freeCodeCamp —- Responsive Web Dedign"></a>freeCodeCamp —- Responsive Web Dedign</h1><hr>
+<h4 id="Learn-Intermediate-CSS-by-Building-a-Picasso-Painting"><a href="#Learn-Intermediate-CSS-by-Building-a-Picasso-Painting" class="headerlink" title="Learn Intermediate CSS by Building a Picasso Painting"></a>Learn Intermediate CSS by Building a Picasso Painting</h4><span id="more"></span>
+
+<ol>
+<li><p>Start by setting up your HTML structure. Add a <code>&lt;!DOCTYPE&gt;</code> declaration and an <code>html</code> element with a <code>lang</code> attribute set to <code>en</code>. Within the <code>html</code> element, add a <code>head</code> element and a <code>body</code> element.</p>
+</li>
+<li><p>Within your <code>head</code> element, add a <code>meta</code> tag with the <code>charset</code> attribute set to <code>utf-8</code>. Also add a <code>title</code> element with the text <code>Picasso Painting</code>.</p>
+</li>
+<li><p>Go ahead and link your CSS file now, even though you have not written any CSS yet.</p>
+<p>Add a <code>link</code> element with a <code>rel</code> of <code>stylesheet</code> and an <code>href</code> of <code>styles.css</code>.</p>
+</li>
+<li><p>FontAwesome is a library of SVG-powered icons, many of which are freely available to use. You will be using some of these icons in this project, so you will need to link the external stylesheet to your HTML.</p>
+<p>Add a <code>link</code> element with a <code>rel</code> of <code>stylesheet</code> and an <code>href</code> of <code>https://use.fontawesome.com/releases/v5.8.2/css/all.css</code>.</p>
+</li>
+<li><p>To get your painting started, give your <code>body</code> element a <code>background-color</code> of <code>rgb(184, 132, 46)</code>.</p>
+</li>
+<li><p>Within your body tag, add a <code>div</code> element. Give it an <code>id</code> of <code>back-wall</code>.</p>
+</li>
+<li><p>Use an id selector to give the element with the id <code>back-wall</code> a <code>background-color</code> of <code>#8B4513</code>.</p>
+</li>
+<li><p>Give the <code>#back-wall</code> element a <code>width</code> of <code>100%</code> and a <code>height</code> of <code>60%</code>.</p>
+</li>
+<li><p>Typically, HTML is rendered in a top-down manner. Elements at the top of the code are positioned at the top of the page. However, many times you may want to move the elements to different positions. You can do this with the <code>position</code> property.</p>
+<p>Set the <code>position</code> property for the <code>#back-wall</code> element to <code>absolute</code>. An <code>absolute</code> position takes the element out of that top-down document flow and allows you to adjust it relative to its container.</p>
+<p>When an element is manually positioned, you can shift its layout with <code>top</code>, <code>left</code>, <code>right</code>, and <code>bottom</code>. Set the <code>#back-wall</code> element to have a <code>top</code> value of <code>0</code>, and a <code>left</code> value of <code>0</code>.</p>
+</li>
+<li><p>The <code>z-index</code> property is used to create “layers” for your HTML elements. If you are familiar with image editing tools, you may have worked with layers before. This is a similar concept.</p>
+<p>Elements with a higher <code>z-index</code> value will appear to be layered on top of elements with a lower <code>z-index</code> value. This can be combined with the positioning in the previous lesson to create unique effects.</p>
+<p>Since the <code>back-wall</code> element will need to appear “behind” the other elements you will be creating, give the <code>back-wall</code> element a <code>z-index</code> of <code>-1</code>.</p>
+</li>
+<li><p>Below your <code>#back-wall</code> element, create a <code>div</code> with a <code>class</code> of <code>characters</code>. This is where you will be creating your painting’s characters.</p>
+</li>
+<li><p>Inside that <code>.characters</code> element, create another <code>div</code> with an <code>id</code> of <code>offwhite-character</code>.</p>
+</li>
+<li><p>Create four <code>div</code> elements inside your <code>offwhite-character</code> element. Give those <code>div</code> elements the following <code>id</code> values, in order: <code>white-hat</code>, <code>black-mask</code>, <code>gray-instrument</code>, <code>tan-table</code>.</p>
+</li>
+<li><p>This character needs eyes. Create two <code>div</code> elements in the <code>#black-mask</code> element. Give them the classes <code>eyes left</code> and <code>eyes right</code>, in that order.</p>
+</li>
+<li><p>Create some “dots” for the instrument. Add five <code>div</code> elements within your <code>#gray-instrument</code> element. Set the <code>class</code> of each to <code>black-dot</code>.</p>
+</li>
+<li><p>Using an id selector, create a rule for the element with the id <code>offwhite-character</code>. Give it a <code>width</code> of <code>300px</code>, a <code>height</code> of <code>550px</code>, and a <code>background-color</code> of <code>GhostWhite</code>.</p>
+</li>
+<li><p>Move the <code>#offwhite-character</code> into place by giving it a <code>position</code> of <code>absolute</code>, a <code>top</code> value of <code>20%</code>, and a <code>left</code> value of <code>17.5%</code>.</p>
+</li>
+<li><p>Using an id selector, style the element with the id <code>white-hat</code>. Give it a <code>width</code> and <code>height</code> of <code>0</code>, and a <code>border-style</code> of <code>solid</code>.</p>
+</li>
+<li><p>That does not look quite right. Set a <code>border-width</code> of <code>0 120px 140px 180px</code> to size the hat properly.</p>
+</li>
+<li><p>Now you have a large box. Give it a <code>border-top-color</code>, <code>border-right-color</code>, and <code>border-left-color</code> of <code>transparent</code>. Set the <code>border-bottom-color</code> to <code>GhostWhite</code>. This will make it look more like a hat.</p>
+</li>
+<li><p>Give the hat a <code>position</code> of <code>absolute</code>, a <code>top</code> value of <code>-140px</code>, and a <code>left</code> value of <code>0</code>.</p>
+</li>
+<li><p>Using an id selector, create a rule for the element with the id <code>black-mask</code>. Give it a <code>width</code> of <code>100%</code>, a <code>height</code> of <code>50px</code>, and a <code>background-color</code> of <code>rgb(45, 31, 19)</code>.</p>
+</li>
+<li><p>Give the mask a <code>position</code> of <code>absolute</code>, and a <code>top</code> and <code>left</code> value of <code>0</code>.</p>
+</li>
+<li><p>To ensure you can see the mask, give it a <code>z-index</code> of <code>1</code>.</p>
+</li>
+<li><p>Using an id selector, give the element with the id <code>gray-instrument</code> a <code>width</code> of <code>15%</code>, a <code>height</code> of <code>40%</code>, and a <code>background-color</code> of <code>rgb(167, 162, 117)</code>.</p>
+</li>
+<li><p>Now move it into place with a <code>position</code> of <code>absolute</code>, a <code>top</code> value of <code>50px</code>, and a <code>left</code> value of <code>125px</code>.</p>
+</li>
+<li><p>Set the <code>z-index</code> to <code>1</code>.</p>
+</li>
+<li><p>Use a class selector to create a rule for the elements with <code>black-dot</code> class. Set the <code>width</code> to <code>10px</code>, the <code>height</code> to <code>10px</code>, and the <code>background-color</code> to <code>rgb(45, 31, 19)</code>.</p>
+</li>
+<li><p>These dots are just a little too square. Give the <code>black-dot</code> class a <code>border-radius</code> of <code>50%</code> to fix it.</p>
+</li>
+<li><p>These dots are just a little too square. Give the <code>black-dot</code> class a <code>border-radius</code> of <code>50%</code> to fix it.</p>
+</li>
+<li><p>Use an id selector to style the element with the id <code>tan-table</code>. Give it a <code>width</code> of <code>450px</code>, a <code>height</code> of <code>140px</code>, and a <code>background-color</code> of <code>#D2691E</code>.</p>
+</li>
+<li><p>Move the table into place by giving it a <code>position</code> of <code>absolute</code>, a <code>top</code> value of <code>275px</code>, and a <code>left</code> value of <code>15px</code>.</p>
+</li>
+<li><p>Give the table a <code>z-index</code> of <code>1</code>.</p>
+</li>
+<li><p>After your <code>div#offwhite-character</code> element, add a <code>div</code> with the <code>id</code> of <code>black-character</code>.</p>
+</li>
+<li><p>Within your new <code>#black-character</code> element, add three <code>div</code> elements with the following <code>id</code> values, in order: <code>black-hat</code>, <code>gray-mask</code>, <code>white-paper</code>.</p>
+</li>
+<li><p>The mask needs eyes. Within your <code>#gray-mask</code> element, add two <code>div</code> elements. The first should have the <code>class</code> set to <code>eyes left</code>, and the second should have the <code>class</code> set to <code>eyes right</code>.</p>
+</li>
+<li><p>Time to use some FontAwesome icons.</p>
+<p>The <code>i</code> element is used for idiomatic text, or text that is separate from the “normal” text content. This could be for <em>italic</em> text, such as scientific terms, or for icons like those provided by FontAwesome.</p>
+<p>Within your <code>#white-paper</code> element, add four <code>i</code> elements. Give them all a <code>class</code> value of <code>fas fa-music</code>.</p>
+<p>This special class is how FontAwesome determines which icon to load. <code>fas</code> indicates the category of icons (FontAwesome Solid, here), while <code>fa-music</code> selects the specific icon.</p>
+</li>
+<li><p>Use an id selector to create a rule for the element with the id <code>black-character</code>. Set the <code>width</code> to <code>300px</code>, the <code>height</code> to <code>500px</code>, and the <code>background-color</code> to <code>rgb(45, 31, 19)</code>.</p>
+</li>
+<li><p>Move the <code>#black-character</code> element into place by setting the <code>position</code> to <code>absolute</code>, the <code>top</code> to <code>30%</code>, and the <code>left</code> to <code>59%</code>.</p>
+</li>
+<li><p>Use an id selector to create a rule for the element with the id <code>black-hat</code>. Give it a <code>width</code> of <code>0</code>, a <code>height</code> of <code>0</code>, and a <code>border-style</code> of <code>solid</code>.</p>
+</li>
+<li><p>Set the <code>border-width</code> of the <code>#black-hat</code> to <code>150px 0 0 300px</code>.</p>
+</li>
+<li><p>Just like with your <code>#white-hat</code>, you should style the border for the <code>#black-hat</code> element. Give it a <code>border-top-color</code>, <code>border-right-color</code>, and <code>border-bottom-color</code> of <code>transparent</code>. Set the <code>border-left-color</code> to <code>rgb(45, 31, 19)</code>.</p>
+</li>
+<li><p>Now position the <code>#black-hat</code> element. Give it a <code>position</code> of <code>absolute</code>, with a <code>top</code> of <code>-150px</code> and a <code>left</code> of <code>0</code>.</p>
+</li>
+<li><p>Using an id selector, style the element with the id <code>gray-mask</code>. Give it a <code>width</code> of <code>150px</code>, a <code>height</code> of <code>150px</code>, and a <code>background-color</code> of <code>rgb(167, 162, 117)</code>.</p>
+</li>
+<li><p>Position the <code>#gray-mask</code> element by setting <code>position</code> to <code>absolute</code>, the <code>top</code> to <code>-10px</code>, and the <code>left</code> to <code>70px</code>.</p>
+</li>
+<li><p>Using an id selector, create a rule for the id <code>white-paper</code>. Set the <code>width</code> to <code>400px</code>, the <code>height</code> to <code>100px</code>, and the <code>background-color</code> to <code>GhostWhite</code>.</p>
+</li>
+<li><p>Give the <code>#white-paper</code> a <code>position</code> of <code>absolute</code>, a <code>top</code> of <code>250px</code>, and a <code>left</code> of <code>-150px</code> to move it into place.</p>
+</li>
+<li><p>Set the <code>z-index</code> of the <code>#white-paper</code> element to <code>1</code>.</p>
+</li>
+<li><p>FontAwesome icons come with their own styling to define the icon. However, you can still set the styling yourself as well, to change things like the color and size. For now, use a class selector to target the icons with the class <code>fa-music</code>. Set the <code>display</code> to <code>inline-block</code>, the <code>margin-top</code> to <code>8%</code>, and the <code>margin-left</code> to <code>13%</code>.</p>
+</li>
+<li><p>Below your <code>#black-character</code> element, add two new <code>div</code> elements. These will be the shawl. Give both of them a <code>class</code> of <code>blue</code>. Then give the first one an <code>id</code> of <code>blue-left</code>, and the second an <code>id</code> of <code>blue-right</code>.</p>
+</li>
+<li><p>Use a class selector to target the new elements with the class <code>blue</code>. Set the <code>background-color</code> to <code>#1E90FF</code>.</p>
+</li>
+<li><p>Select the element with the id <code>blue-left</code> using an id selector. Give it a <code>width</code> of <code>500px</code> and a <code>height</code> of <code>300px</code>.</p>
+</li>
+<li><p>Now set the <code>position</code> to <code>absolute</code>, the <code>top</code> to <code>20%</code>, and the <code>left</code> to <code>20%</code>.</p>
+</li>
+<li><p>Next, target the element with the id <code>blue-right</code> using an id selector. Set the <code>width</code> to <code>400px</code> and the <code>height</code> to <code>300px</code>.</p>
+</li>
+<li><p>Give the <code>#blue-right</code> element the correct positioning with <code>position</code> set to <code>absolute</code>, <code>top</code> set to <code>50%</code>, and <code>left</code> set to <code>40%</code>.</p>
+</li>
+<li><p>Below your <code>.blue</code> elements, add another <code>div</code>. Give it the <code>id</code> value of <code>orange-character</code>.</p>
+</li>
+<li><p>Within that <code>#orange-character</code> element, add four <code>div</code> elements. Give them the <code>id</code> values of <code>black-round-hat</code>, <code>eyes-div</code>, <code>triangles</code>, and <code>guitar</code>, in order.</p>
+</li>
+<li><p>The <code>#eyes-div</code> element should hold some eyes. Add two <code>div</code> elements inside. Give the first a <code>class</code> of <code>eyes left</code>, and give the second a <code>class</code> of <code>eyes right</code>.</p>
+</li>
+<li><p>Within the <code>#triangles</code> div, you will need to add the elements that will become your triangles. Create thirty <code>div</code> elements and give each of them the class <code>triangle</code>.</p>
+</li>
+<li><p>Within the <code>#guitar</code> element, create three <code>div</code> elements. Give the first two a <code>class</code> value of <code>guitar</code>. Then give the first an <code>id</code> of <code>guitar-left</code>, and the second an <code>id</code> of <code>guitar-right</code>. Add an <code>id</code> to the third <code>div</code> with the value <code>guitar-neck</code>.</p>
+<p>The third <code>div</code> should not have the <code>guitar</code> class.</p>
+</li>
+<li><p>Use another FontAwesome icon for your <code>.guitar</code>. Inside both the <code>#guitar-left</code> and <code>#guitar-right</code> elements, add an <code>i</code> element and give it a <code>class</code> of <code>fas fa-bars</code>.</p>
+</li>
+<li><p>Select your <code>orange-character</code> element with an id selector. Give it a <code>width</code> of <code>250px</code>, a <code>height</code> of <code>550px</code>, and a <code>background-color</code> of <code>rgb(240, 78, 42)</code>.</p>
+</li>
+<li><p>Give the <code>#orange-character</code> element a <code>position</code> of <code>absolute</code>, a <code>top</code> of <code>25%</code>, and a <code>left</code> of <code>40%</code>.</p>
+</li>
+<li><p>Give the <code>#orange-character</code> element a <code>position</code> of <code>absolute</code>, a <code>top</code> of <code>25%</code>, and a <code>left</code> of <code>40%</code>.</p>
+</li>
+<li><p>The <code>#black-round-hat</code> element should probably be round. Give it a <code>border-radius</code> of <code>50%</code> to fix this.</p>
+</li>
+<li><p>Move the <code>#black-round-hat</code> element into place with a <code>position</code> of <code>absolute</code>, a <code>top</code> of <code>-100px</code>, and a <code>left</code> of <code>5px</code>.</p>
+</li>
+<li><p>Put the <code>#black-round-hat</code> element on the correct layer with a <code>z-index</code> of <code>-1</code>.</p>
+</li>
+<li><p>Use an id selector to create a rule for the element with the id <code>eyes-div</code>. Set the <code>width</code> to <code>180px</code> and the <code>height</code> to <code>50px</code>.</p>
+</li>
+<li><p>Now move the <code>#eyes-div</code> element into position with <code>position</code> set to <code>absolute</code>, <code>top</code> set to <code>-40px</code>, and <code>left</code> set to <code>20px</code>.</p>
+</li>
+<li><p>Give the <code>#eyes-div</code> element a <code>z-index</code> of <code>3</code>.</p>
+</li>
+<li><p>Target the element with the id <code>triangles</code> using an id selector. Set the <code>width</code> to <code>250px</code> and the <code>height</code> to <code>550px</code>.</p>
+</li>
+<li><p>Create a class selector for the elements with the <code>triangle</code> class. Set the <code>width</code> to <code>0</code> and the <code>height</code> to <code>0</code>.</p>
+</li>
+<li><p>Style the border of your <code>.triangle</code> elements. Set the <code>border-style</code> to <code>solid</code> and the <code>border-width</code> to <code>42px 45px 45px 0</code>.</p>
+</li>
+<li><p>Give your <code>.triangle</code> elements the correct color. Set the <code>border-top-color</code>, <code>border-bottom-color</code>, and <code>border-left-color</code> to <code>transparent</code>. Set the <code>border-right-color</code> to <code>Gold</code>.</p>
+</li>
+<li><p>Adjust the layout of the <code>.triangle</code> elements with a <code>display</code> of <code>inline-block</code>.</p>
+</li>
+<li><p>Now use an id selector for <code>guitar</code>. Set the <code>width</code> to <code>100%</code>, and the <code>height</code> to <code>100px</code>.</p>
+</li>
+<li><p>In the same <code>#guitar</code> selector, set the <code>position</code> to <code>absolute</code>, the <code>top</code> to <code>120px</code>, and the <code>left</code> to <code>0px</code>.</p>
+</li>
+<li><p>Give the <code>#guitar</code> rule a <code>z-index</code> of <code>3</code>.</p>
+</li>
+<li><p>Now use a class selector to target <code>guitar</code>. This will style the two “halves” of your guitar. Set the <code>width</code> to <code>150px</code>, the <code>height</code> to <code>120px</code>, the <code>background-color</code> to <code>Goldenrod</code>, and the <code>border-radius</code> to <code>50%</code>.</p>
+</li>
+<li><p>Select the <code>id</code> with value <code>guitar-left</code>, and set the <code>position</code> to <code>absolute</code> and the <code>left</code> to <code>0px</code>.</p>
+</li>
+<li><p>Select the <code>id</code> with value <code>guitar-right</code>, and also set <code>position</code> to <code>absolute</code>. This time, set <code>left</code> to <code>100px</code>.</p>
+</li>
+<li><p>Now you need to move the bar icons into place. Create a class selector for the <code>fa-bars</code> class. Set the <code>display</code> to <code>block</code>, the <code>margin-top</code> to <code>30%</code>, and the <code>margin-left</code> to <code>40%</code>.</p>
+</li>
+<li><p>Use an id selector to create a rule for the id <code>guitar-neck</code>. Set the <code>width</code> to <code>200px</code>, the <code>height</code> to <code>30px</code>, and the <code>background-color</code> to <code>#D2691E</code>.</p>
+</li>
+<li><p>Now move the <code>#guitar-neck</code> element with a <code>position</code> of <code>absolute</code>, a <code>top</code> value of <code>45px</code>, and a <code>left</code> value of <code>200px</code>.</p>
+</li>
+<li><p>Give the <code>#guitar-neck</code> element a <code>z-index</code> of <code>3</code>.</p>
+</li>
+<li><p>Time to style the elements with the <code>eyes</code> class. Use a class selector to set the <code>width</code> to <code>35px</code>, the <code>height</code> to <code>20px</code>, the <code>background-color</code> to <code>#8B4513</code>, and the <code>border-radius</code> to <code>20px 50%</code>.</p>
+</li>
+<li><p>Target the <code>class</code> with value <code>right</code> and set the <code>position</code> to <code>absolute</code>, <code>top</code> to <code>15px</code>, and <code>right</code> to <code>30px</code>.</p>
+</li>
+<li><p>For the <code>class</code> with value <code>left</code>, create the selector and set the <code>position</code> to <code>absolute</code>, the <code>top</code> to <code>15px</code>, and the <code>left</code> to <code>30px</code>.</p>
+</li>
+<li><p>One last step. The FontAwesome icons are a little too small. Target all of them with a class selector for <code>fas</code>, and set the <code>font-size</code> to <code>30px</code>.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Picasso Painting<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./styles.css&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.8.2/css/all.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;back-wall&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;characters&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;offwhite-character&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;white-hat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;black-mask&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;eyes left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;eyes right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gray-instrument&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;black-dot&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;black-dot&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;black-dot&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;black-dot&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;black-dot&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;tan-table&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;black-character&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;black-hat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gray-mask&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;eyes left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;eyes right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;white-paper&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-music&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-music&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-music&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-music&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">id</span>=<span class="string">&quot;blue-left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">id</span>=<span class="string">&quot;blue-right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;orange-character&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;black-round-hat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;eyes-div&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;eyes left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;eyes right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;triangles&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;triangle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;guitar&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;guitar&quot;</span> <span class="attr">id</span>=<span class="string">&quot;guitar-left&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-bars&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;guitar&quot;</span> <span class="attr">id</span>=<span class="string">&quot;guitar-right&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-bars&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;guitar-neck&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">184</span>, <span class="number">132</span>, <span class="number">46</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#back-wall</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#8B4513</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#offwhite-character</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">550px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: GhostWhite;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">20%</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">17.5%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#white-hat</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: solid;</span><br><span class="line">  <span class="attribute">border-width</span>: <span class="number">0</span> <span class="number">120px</span> <span class="number">140px</span> <span class="number">180px</span>;</span><br><span class="line">  <span class="attribute">border-top-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-right-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-bottom-color</span>: GhostWhite;</span><br><span class="line">  <span class="attribute">border-left-color</span>: transparent;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">140px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#black-mask</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">45</span>, <span class="number">31</span>, <span class="number">19</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#gray-instrument</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">15%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">167</span>, <span class="number">162</span>, <span class="number">117</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">125px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.black-dot</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">45</span>, <span class="number">31</span>, <span class="number">19</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">65%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#tan-table</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">450px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">140px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#D2691E</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">275px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#black-character</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">45</span>, <span class="number">31</span>, <span class="number">19</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">30%</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">59%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#black-hat</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: solid;</span><br><span class="line">  <span class="attribute">border-width</span>: <span class="number">150px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">border-top-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-right-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-bottom-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-left-color</span>: <span class="built_in">rgb</span>(<span class="number">45</span>, <span class="number">31</span>, <span class="number">19</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#gray-mask</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">167</span>, <span class="number">162</span>, <span class="number">117</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">70px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#white-paper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: GhostWhite;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">250px</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fa-music</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">8%</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">13%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.blue</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#1E90FF</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#blue-left</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">20%</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">20%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#blue-right</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">40%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#orange-character</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">550px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">240</span>, <span class="number">78</span>, <span class="number">42</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">25%</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">40%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#black-round-hat</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">180px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">45</span>, <span class="number">31</span>, <span class="number">19</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#eyes-div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">180px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#triangles</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">550px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.triangle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: solid;</span><br><span class="line">  <span class="attribute">border-width</span>: <span class="number">42px</span> <span class="number">45px</span> <span class="number">45px</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-top-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-right-color</span>: Gold; <span class="comment">/* yellow */</span></span><br><span class="line">  <span class="attribute">border-bottom-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-left-color</span>: transparent;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#guitar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">120px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.guitar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">120px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: Goldenrod;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#guitar-left</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#guitar-right</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fa-bars</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">30%</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">40%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#guitar-neck</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#D2691E</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">45px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.eyes</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">35px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#8B4513</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">20px</span> <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">30px</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.fas</span>&#123;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>真丑啊！！！ </p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/responsive-web-dedign-%E5%8D%81/" title="Responsive Web Dedign(十)">http://moyun.com/responsive-web-dedign-十/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+              <a href="/tags/CSS3/" rel="tag"><i class="fa fa-tag"></i> CSS3</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E4%B9%9D/" rel="prev" title="Responsive Web Dedign(九)">
+                  <i class="fa fa-chevron-left"></i> Responsive Web Dedign(九)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/responsive-web-dedign-%E5%8D%81%E4%B8%80/" rel="next" title="Responsive Web Dedign(十一)">
+                  Responsive Web Dedign(十一) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">303k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>
