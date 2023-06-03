@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-02T13:46:18.677Z</updated>
+  <updated>2023-06-03T05:56:24.470Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -17,20 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript Algorithms and Data Structures(一)</title>
+    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/"/>
+    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/</id>
+    <published>2023-06-03T05:54:45.650Z</published>
+    <updated>2023-06-03T05:56:24.470Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Algorithm——LinkedList</title>
     <link href="http://moyun.com/algorithm%E2%80%94%E2%80%94linkedlist/"/>
     <id>http://moyun.com/algorithm%E2%80%94%E2%80%94linkedlist/</id>
     <published>2023-06-02T13:25:53.437Z</published>
-    <updated>2023-06-02T13:46:18.677Z</updated>
+    <updated>2023-06-03T05:55:18.911Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;链表&quot;&gt;&lt;a href=&quot;#链表&quot; class=&quot;headerlink&quot; title=&quot;链表&quot;&gt;&lt;/a&gt;链表&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;链表&quot;&gt;&lt;a href=&quot;#链表&quot; class=&quot;headerlink&quot; title=&quot;链表&quot;&gt;&lt;/a&gt;链表&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot; title=&quot;1.理论基础&quot;&gt;&lt;/a&gt;1.理论基础&lt;/h2&gt;&lt;p&gt;链表是一种通过指针串联在一起的线性结构，每一个节点由两部构成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一个是数据域&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一个是指针域（存放指向下一个节点的指针）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后一个节点的指针域指向null（空指针）&lt;/p&gt;
+&lt;p&gt;链表的入口节点称为链表的头节点（head）&lt;/p&gt;</summary>
     
     
     
@@ -562,32 +593,6 @@
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Responsive Web Dedign(四)</title>
-    <link href="http://moyun.com/responsive-web-dedign-%E5%9B%9B/"/>
-    <id>http://moyun.com/responsive-web-dedign-%E5%9B%9B/</id>
-    <published>2023-04-29T13:52:35.429Z</published>
-    <updated>2023-06-01T03:26:43.426Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Learn-HTML-Forms-by-Building-a-Registration-Form&quot;&gt;&lt;a href=&quot;#Learn-HTML-Forms-by-Building-a-Registration-Form&quot; class=&quot;headerlink&quot; title=&quot;Learn HTML Forms by Building a Registration Form&quot;&gt;&lt;/a&gt;Learn HTML Forms by Building a Registration Form&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
     
   </entry>
   
