@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-03T05:56:24.470Z</updated>
+  <updated>2023-06-04T14:06:32.473Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -17,20 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript Algorithms and Data Structures(二)</title>
+    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/"/>
+    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/</id>
+    <published>2023-06-04T14:05:32.842Z</published>
+    <updated>2023-06-04T14:06:32.473Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;1-比较-var-和-let-关键字的作用域&quot;&gt;&lt;a href=&quot;#1-比较-var-和-let-关键字的作用域&quot; class=&quot;headerlink&quot; title=&quot;1.比较 var 和 let 关键字的作用域&quot;&gt;&lt;/a&gt;1.比较 &lt;code&gt;var&lt;/code&gt; 和 &lt;code&gt;let&lt;/code&gt; 关键字的作用域&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;var&lt;/code&gt; 关键字声明变量时，它是&lt;strong&gt;全局声明&lt;/strong&gt;的，如果在函数&lt;strong&gt;内部&lt;/strong&gt;声明则是&lt;strong&gt;局部声明&lt;/strong&gt;的。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;let&lt;/code&gt; 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 &lt;code&gt;let&lt;/code&gt; 关键字声明变量时，其&lt;strong&gt;作用域&lt;/strong&gt; &lt;strong&gt;仅&lt;/strong&gt;限于该代码块、语句或表达式。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript Algorithms and Data Structures(一)</title>
     <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/"/>
     <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/</id>
     <published>2023-06-03T05:54:45.650Z</published>
-    <updated>2023-06-03T05:56:24.470Z</updated>
+    <updated>2023-06-04T14:05:59.627Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
+&lt;h4 id=&quot;Basic-JavaScript&quot;&gt;&lt;a href=&quot;#Basic-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;Basic JavaScript&quot;&gt;&lt;/a&gt;Basic JavaScript&lt;/h4&gt;&lt;h5 id=&quot;1-添加注释&quot;&gt;&lt;a href=&quot;#1-添加注释&quot; class=&quot;headerlink&quot; title=&quot;1. 添加注释&quot;&gt;&lt;/a&gt;1. 添加注释&lt;/h5&gt;&lt;p&gt;被注释的代码块在 JavaScript 之中是不会执行的。 在代码中写注释，是一个可以让你自己和以后的其他人理解代码作用的好方法。&lt;/p&gt;</summary>
     
     
     
@@ -559,40 +579,6 @@
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project Exercise — Survey Form</title>
-    <link href="http://moyun.com/project-exercise-%E2%80%94-survey-form/"/>
-    <id>http://moyun.com/project-exercise-%E2%80%94-survey-form/</id>
-    <published>2023-05-01T07:41:01.978Z</published>
-    <updated>2023-06-01T03:29:36.246Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Survey-Form-——-Test&quot;&gt;&lt;a href=&quot;#Survey-Form-——-Test&quot; class=&quot;headerlink&quot; title=&quot;Survey Form —— Test&quot;&gt;&lt;/a&gt;Survey Form —— Test&lt;/h4&gt;&lt;h5 id=&quot;Objective&quot;&gt;&lt;a href=&quot;#Objective&quot; class=&quot;headerlink&quot; title=&quot;Objective:&quot;&gt;&lt;/a&gt;&lt;strong&gt;Objective:&lt;/strong&gt;&lt;/h5&gt;&lt;blockquote&gt;
-&lt;p&gt;Build an app that is functionally similar to &lt;a href=&quot;https://survey-form.freecodecamp.rocks/&quot;&gt;https://survey-form.freecodecamp.rocks&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Project Exercise" scheme="http://moyun.com/categories/Project-Exercise/"/>
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Primary Program" scheme="http://moyun.com/categories/Project-Exercise/Primary-Program/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
   </entry>
   

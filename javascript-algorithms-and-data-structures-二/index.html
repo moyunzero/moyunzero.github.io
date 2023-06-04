@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures ES61.比较 var 和 let 关键字的作用域使用 var 关键字声明变量时，它是全局声明的，如果在函数内部声明则是局部声明的。 let 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 let 关键字声明变量时，其作用域 仅限于该代码块、语句或表达式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Algorithms and Data Structures(二)">
+<meta property="og:url" content="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures ES61.比较 var 和 let 关键字的作用域使用 var 关键字声明变量时，它是全局声明的，如果在函数内部声明则是局部声明的。 let 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 let 关键字声明变量时，其作用域 仅限于该代码块、语句或表达式。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-04T14:05:32.842Z">
+<meta property="article:modified_time" content="2023-06-04T14:06:32.473Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/","path":"javascript-algorithms-and-data-structures-二/","title":"JavaScript Algorithms and Data Structures(二)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript Algorithms and Data Structures(二) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-JavaScript-Algorithms-and-Data-Structures"><span class="nav-text">freeCodeCamp —- JavaScript Algorithms and Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%AF%94%E8%BE%83-var-%E5%92%8C-let-%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">1.比较 var 和 let 关键字的作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%94%B9%E5%8F%98%E4%B8%80%E4%B8%AA%E7%94%A8-const-%E5%A3%B0%E6%98%8E%E7%9A%84%E6%95%B0%E7%BB%84"><span class="nav-text">2. 改变一个用 const 声明的数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%98%B2%E6%AD%A2%E5%AF%B9%E8%B1%A1%E6%94%B9%E5%8F%98"><span class="nav-text">3. 防止对象改变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%BC%96%E5%86%99%E7%AE%80%E6%B4%81%E7%9A%84%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-text">4. 使用箭头函数编写简洁的匿名函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%BC%96%E5%86%99%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="nav-text">5. 编写带参数的箭头函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E8%AE%BE%E7%BD%AE%E5%87%BD%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-text">6. 设置函数的默认参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%B0%86-rest-%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%B8%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"><span class="nav-text">7. 将 rest 操作符与函数参数一起使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BD%BF%E7%94%A8-spread-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%B1%95%E5%BC%80%E6%95%B0%E7%BB%84%E9%A1%B9"><span class="nav-text">8. 使用 spread 运算符展开数组项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E6%9D%A5%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%80%BC"><span class="nav-text">9. 使用解构赋值来获取对象的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E4%BB%8E%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%88%86%E9%85%8D%E5%8F%98%E9%87%8F"><span class="nav-text">10. 使用解构赋值从对象中分配变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E4%BB%8E%E5%B5%8C%E5%A5%97%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%88%86%E9%85%8D%E5%8F%98%E9%87%8F"><span class="nav-text">11. 使用解构赋值从嵌套对象中分配变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%86%E9%85%8D%E5%8F%98%E9%87%8F"><span class="nav-text">12. 使用解构赋值从数组中分配变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E9%80%9A%E8%BF%87-rest-%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%84"><span class="nav-text">13. 通过 rest 参数解构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E5%B0%86%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-text">14. 使用解构赋值将对象作为函数的参数传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%9D%BF%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">15. 使用模板字面量创建字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E4%BD%BF%E7%94%A8%E7%AE%80%E5%8D%95%E5%AD%97%E6%AE%B5%E7%BC%96%E5%86%99%E7%AE%80%E6%B4%81%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-text">16. 使用简单字段编写简洁的对象字面量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E7%94%A8-ES6-%E7%BC%96%E5%86%99%E7%AE%80%E6%B4%81%E7%9A%84%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-text">17. 用 ES6 编写简洁的函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E4%BD%BF%E7%94%A8-class-%E8%AF%AD%E6%B3%95%E5%AE%9A%E4%B9%89%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-text">18. 使用 class 语法定义构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E4%BD%BF%E7%94%A8-getter-%E5%92%8C-setter-%E6%9D%A5%E6%8E%A7%E5%88%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="nav-text">19. 使用 getter 和 setter 来控制对象的访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%E8%84%9A%E6%9C%AC"><span class="nav-text">20. 创建一个模块脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E7%94%A8-export-%E6%9D%A5%E9%87%8D%E7%94%A8%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-text">21. 用 export 来重用代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E9%80%9A%E8%BF%87-import-%E5%A4%8D%E7%94%A8-JavaScript-%E4%BB%A3%E7%A0%81"><span class="nav-text">22. 通过 import 复用 JavaScript 代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E7%94%A8-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BC%E5%85%A5%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9"><span class="nav-text">23. 用 * 从文件中导入所有内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E7%94%A8-export-default-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%BB%98%E8%AE%A4%E5%AF%BC%E5%87%BA"><span class="nav-text">24. 用 export default 创建一个默认导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-%E5%AF%BC%E5%85%A5%E4%B8%80%E4%B8%AA%E9%BB%98%E8%AE%A4%E7%9A%84%E5%AF%BC%E5%87%BA"><span class="nav-text">25. 导入一个默认的导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-JavaScript-Promise"><span class="nav-text">26. 创建一个 JavaScript Promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-%E9%80%9A%E8%BF%87-resolve-%E5%92%8C-reject-%E5%AE%8C%E6%88%90-Promise"><span class="nav-text">27. 通过 resolve 和 reject 完成 Promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28-%E7%94%A8-then-%E5%A4%84%E7%90%86-Promise-%E5%AE%8C%E6%88%90%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">28. 用 then 处理 Promise 完成的情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-%E4%BD%BF%E7%94%A8-catch-%E5%A4%84%E7%90%86-Promise-%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-text">29. 使用 catch 处理 Promise 失败的情况</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript Algorithms and Data Structures(二) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript Algorithms and Data Structures(二)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-04 22:05:32 / 修改时间：22:06:32" itemprop="dateCreated datePublished" datetime="2023-06-04T22:05:32+08:00">2023-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="1-比较-var-和-let-关键字的作用域"><a href="#1-比较-var-和-let-关键字的作用域" class="headerlink" title="1.比较 var 和 let 关键字的作用域"></a>1.比较 <code>var</code> 和 <code>let</code> 关键字的作用域</h3><p>使用 <code>var</code> 关键字声明变量时，它是<strong>全局声明</strong>的，如果在函数<strong>内部</strong>声明则是<strong>局部声明</strong>的。</p>
+<p><code>let</code> 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 <code>let</code> 关键字声明变量时，其<strong>作用域</strong> <strong>仅</strong>限于该代码块、语句或表达式。</p>
+<span id="more"></span>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numArray = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  numArray.<span class="title function_">push</span>(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(numArray);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br></pre></td></tr></table></figure>
+
+<p>此处控制台将显示值 <code>[0, 1, 2]</code> 和 <code>3</code>。</p>
+<p>使用 <code>var</code> 关键字，<code>i</code> 是全局声明的。 所以当 <code>i++</code> 被执行时，它会更新全局变量。 此代码类似于以下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numArray = [];</span><br><span class="line"><span class="keyword">var</span> i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  numArray.<span class="title function_">push</span>(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(numArray);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br></pre></td></tr></table></figure>
+
+<p>此处控制台将显示值 <code>[0, 1, 2]</code> 和 <code>3</code>。</p>
+<p>如果你创建一个函数，将它存储起来，稍后在使用 <code>i</code> 变量的 <code>for</code> 循环中使用。这么做可能会出现问题。 这是因为存储的函数将始终引用更新后的全局 <code>i</code> 变量的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> printNumTwo;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i === <span class="number">2</span>) &#123;</span><br><span class="line">    printNumTwo = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">printNumTwo</span>());</span><br></pre></td></tr></table></figure>
+
+<p>此处控制台将显示值 <code>3</code>。</p>
+<p>可以看到，<code>printNumTwo()</code> 打印了 3 而不是 2。 这是因为赋值给 <code>i</code> 的值已经更新，<code>printNumTwo()</code> 返回全局的 <code>i</code>，而不是在 for 循环中创建函数时 <code>i</code> 的值。 <code>let</code> 关键字就不会出现这种现象：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> printNumTwo;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i === <span class="number">2</span>) &#123;</span><br><span class="line">    printNumTwo = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">printNumTwo</span>());</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br></pre></td></tr></table></figure>
+
+<p>在这里控制台将显示值 <code>2</code> 和一个错误提示 <code>i is not defined</code>。</p>
+<p><code>i</code> 未定义，因为它没有在全局范围内声明。 它只在 <code>for</code> 循环语句中被声明。 <code>printNumTwo()</code> 返回了正确的值，因为 <code>let</code> 关键字创建了三个具有唯一值（0、1 和 2）的不同 <code>i</code> 变量在循环语句中。</p>
+<h3 id="2-改变一个用-const-声明的数组"><a href="#2-改变一个用-const-声明的数组" class="headerlink" title="2. 改变一个用 const 声明的数组"></a>2. 改变一个用 const 声明的数组</h3><p><code>const</code> 声明在现代 JavaScript 中有很多用例。</p>
+<p>默认情况下，一些开发人员更喜欢使用 <code>const</code> 分配所有变量，除非他们知道需要重新分配值。 只有在这种情况下，他们才使用 <code>let</code>。</p>
+<p>但是，重要的是要了解使用 <code>const</code> 分配给变量的对象（包括数组和函数）仍然是可变的。 使用 <code>const</code> 声明只能防止变量标识符的重新分配。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> s = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line">s = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">s[<span class="number">2</span>] = <span class="number">45</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s);</span><br></pre></td></tr></table></figure>
+
+<p><code>s = [1, 2, 3]</code> 将导致错误。 注释掉该行后，<code>console.log</code> 将显示值 <code>[5, 6, 45]</code>。</p>
+<p>如你所见，你可以改变对象 <code>[5, 6, 7]</code> 本身，变量 <code>s</code> 仍将指向更改后的数组 <code>[5, 6, 45]</code>。 像所有数组一样，<code>s</code> 中的数组元素是可变的，但是因为使用了 <code>const</code>，所以不能使用变量标识符 <code>s</code> 来指向一个使用赋值运算符的不同数组。</p>
+<h3 id="3-防止对象改变"><a href="#3-防止对象改变" class="headerlink" title="3. 防止对象改变"></a>3. 防止对象改变</h3><p>为了确保数据不被改变，JavaScript 提供了一个函数 <code>Object.freeze</code>。</p>
+<p>任何更改对象的尝试都将被拒绝，如果脚本在严格模式下运行，将抛出错误。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>:<span class="string">&quot;FreeCodeCamp&quot;</span>,</span><br><span class="line">  <span class="attr">review</span>:<span class="string">&quot;Awesome&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">freeze</span>(obj);</span><br><span class="line">obj.<span class="property">review</span> = <span class="string">&quot;bad&quot;</span>;</span><br><span class="line">obj.<span class="property">newProp</span> = <span class="string">&quot;Test&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj); </span><br></pre></td></tr></table></figure>
+
+<p><code>obj.review</code> 和 <code>obj.newProp</code> 赋值将导致错误，因为我们的编辑器默认在严格模式下运行，控制台将显示值 <code>&#123; name: &quot;FreeCodeCamp&quot;, review: &quot;Awesome&quot; &#125;</code>。</p>
+<h3 id="4-使用箭头函数编写简洁的匿名函数"><a href="#4-使用箭头函数编写简洁的匿名函数" class="headerlink" title="4. 使用箭头函数编写简洁的匿名函数"></a>4. 使用箭头函数编写简洁的匿名函数</h3><p>在 JavaScript 里，我们会经常遇到不需要给函数命名的情况，尤其是在需要将一个函数作为参数传给另外一个函数的时候。 这时，我们会创建匿名函数。 因为这些函数不会在其他地方复用，所以我们不需要给它们命名。</p>
+<p>这种情况下，我们通常会使用以下语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myFunc = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> myVar = <span class="string">&quot;value&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> myVar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ES6 提供了其他写匿名函数的方式的语法糖。 你可以使用<strong>箭头函数</strong>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">myFunc</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> myVar = <span class="string">&quot;value&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> myVar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当不需要函数体，只返回一个值的时候，箭头函数允许你省略 <code>return</code> 关键字和外面的大括号。 这样就可以将一个简单的函数简化成一个单行语句。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">myFunc</span> = (<span class="params"></span>) =&gt; <span class="string">&quot;value&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码默认会返回字符串 <code>value</code>。</p>
+<h3 id="5-编写带参数的箭头函数"><a href="#5-编写带参数的箭头函数" class="headerlink" title="5. 编写带参数的箭头函数"></a>5. 编写带参数的箭头函数</h3><p>和一般的函数一样，你也可以给箭头函数传递参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">doubler</span> = (<span class="params">item</span>) =&gt; item * <span class="number">2</span>;</span><br><span class="line"><span class="title function_">doubler</span>(<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>doubler(4)</code> 将返回 <code>8</code>。</p>
+<p>如果箭头函数只有一个参数，则可以省略参数外面的括号。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">doubler</span> = item =&gt; item * <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>可以给箭头函数传递多个参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">multiplier</span> = (<span class="params">item, multi</span>) =&gt; item * multi;</span><br><span class="line"><span class="title function_">multiplier</span>(<span class="number">4</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>multiplier(4, 2)</code> 将返回 <code>8</code>。</p>
+<h3 id="6-设置函数的默认参数"><a href="#6-设置函数的默认参数" class="headerlink" title="6. 设置函数的默认参数"></a>6. 设置函数的默认参数</h3><p>ES6 里允许给函数传入默认参数，来构建更加灵活的函数。</p>
+<p>请看以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">greeting</span> = (<span class="params">name = <span class="string">&quot;Anonymous&quot;</span></span>) =&gt; <span class="string">&quot;Hello &quot;</span> + name;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">greeting</span>(<span class="string">&quot;John&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">greeting</span>());</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示字符串 <code>Hello John</code> 和 <code>Hello Anonymous</code>。</p>
+<p>默认参数会在参数没有被指定（值为 undefined）的时候起作用。 在上面的例子中，参数 <code>name</code> 会在没有得到新的值的时候，默认使用值 <code>Anonymous</code>。 你还可以给多个参数赋予默认值。</p>
+<h3 id="7-将-rest-操作符与函数参数一起使用"><a href="#7-将-rest-操作符与函数参数一起使用" class="headerlink" title="7. 将 rest 操作符与函数参数一起使用"></a>7. 将 <code>rest</code> 操作符与函数参数一起使用</h3><p>ES6 推出了用于函数参数的 <code>rest</code> 操作符帮助我们创建更加灵活的函数。 <code>rest</code> 操作符可以用于创建有一个变量来接受多个参数的函数。 这些参数被储存在一个可以在函数内部读取的数组中。</p>
+<p>请看以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">howMany</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;You have passed &quot;</span> + args.<span class="property">length</span> + <span class="string">&quot; arguments.&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">howMany</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">howMany</span>(<span class="string">&quot;string&quot;</span>, <span class="literal">null</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], &#123; &#125;));</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示字符串 <code>You have passed 3 arguments.</code> 和 <code>You have passed 4 arguments.</code>。</p>
+<p>rest 参数使我们不需要使用 <code>arguments</code> 对象，允许我们对传递给函数 <code>howMany</code> 的参数数组使用数组方法。</p>
+<h3 id="8-使用-spread-运算符展开数组项"><a href="#8-使用-spread-运算符展开数组项" class="headerlink" title="8. 使用 spread 运算符展开数组项"></a>8. 使用 <code>spread</code> 运算符展开数组项</h3><p>ES6 引入了展开操作符，可以展开数组以及需要多个参数或元素的表达式。</p>
+<p>下面的 ES5 代码使用了 <code>apply()</code> 来计算数组的最大值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">6</span>, <span class="number">89</span>, <span class="number">3</span>, <span class="number">45</span>];</span><br><span class="line"><span class="keyword">var</span> maximus = <span class="title class_">Math</span>.<span class="property">max</span>.<span class="title function_">apply</span>(<span class="literal">null</span>, arr);</span><br></pre></td></tr></table></figure>
+
+<p><code>maximus</code> 的值为 <code>89</code>。</p>
+<p>我们必须使用 <code>Math.max.apply(null, arr)</code>，因为 <code>Math.max(arr)</code> 返回 <code>NaN</code>。 <code>Math.max()</code> 函数中需要传入的是一系列由逗号分隔的参数，而不是一个数组。 展开操作符可以提升代码的可读性，使代码易于维护。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">6</span>, <span class="number">89</span>, <span class="number">3</span>, <span class="number">45</span>];</span><br><span class="line"><span class="keyword">const</span> maximus = <span class="title class_">Math</span>.<span class="title function_">max</span>(...arr);</span><br></pre></td></tr></table></figure>
+
+<p><code>maximus</code> 的值应该是 <code>89</code>。</p>
+<p><code>...arr</code> 返回一个解压的数组。 In other words, it spreads the array. 然而，展开操作符只能够在函数的参数中或者数组中使用。 For example:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> spreaded = [...arr];</span><br></pre></td></tr></table></figure>
+
+<p>However, the following code will not work:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> spreaded = ...arr;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-使用解构赋值来获取对象的值"><a href="#9-使用解构赋值来获取对象的值" class="headerlink" title="9. 使用解构赋值来获取对象的值"></a>9. 使用解构赋值来获取对象的值</h3><p>解构赋值是 ES6 引入的新语法，用来从数组和对象中提取值，并优雅地对变量进行赋值。</p>
+<p>有如下 ES5 代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;John Doe&#x27;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> name = user.<span class="property">name</span>;</span><br><span class="line"><span class="keyword">const</span> age = user.<span class="property">age</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>name</code> 的值应该是字符串 <code>John Doe</code>， <code>age</code> 的值应该是数字 <code>34</code>。</p>
+<p>下面是使用 ES6 解构赋值语句，实现相同效果：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = user;</span><br></pre></td></tr></table></figure>
+
+<p>同样，<code>name</code> 的值应该是字符串 <code>John Doe</code>， <code>age</code> 的值应该是数字 <code>34</code>。</p>
+<p>在这里，自动创建 <code>name</code> 和 <code>age</code> 变量，并将 <code>user</code> 对象相应属性的值赋值给它们。 这个方法简洁多了。</p>
+<p>你可以从对象中提取尽可能多或很少的值。</p>
+<h3 id="10-使用解构赋值从对象中分配变量"><a href="#10-使用解构赋值从对象中分配变量" class="headerlink" title="10. 使用解构赋值从对象中分配变量"></a>10. 使用解构赋值从对象中分配变量</h3><p>可以给解构的值赋予一个新的变量名， 通过在赋值的时候将新的变量名放在冒号后面来实现。</p>
+<p>还是以上个例子的对象来举例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;John Doe&#x27;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这是指定新的变量名的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">name</span>: userName, <span class="attr">age</span>: userAge &#125; = user;</span><br></pre></td></tr></table></figure>
+
+<p>你可以这么理解这段代码：获取 <code>user.name</code> 的值，将它赋给一个新的变量 <code>userName</code>，等等。 <code>userName</code> 的值将是字符串 <code>John Doe</code>，<code>userAge</code> 的值将是数字 <code>34</code></p>
+<h3 id="11-使用解构赋值从嵌套对象中分配变量"><a href="#11-使用解构赋值从嵌套对象中分配变量" class="headerlink" title="11. 使用解构赋值从嵌套对象中分配变量"></a>11. 使用解构赋值从嵌套对象中分配变量</h3><p>使用与前面的例子中类似的对象：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123;</span><br><span class="line">  <span class="attr">johnDoe</span>: &#123; </span><br><span class="line">    <span class="attr">age</span>: <span class="number">34</span>,</span><br><span class="line">    <span class="attr">email</span>: <span class="string">&#x27;johnDoe@freeCodeCamp.com&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这是解构对象的属性值赋值给具有相同名字的变量：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">johnDoe</span>: &#123; age, email &#125;&#125; = user;</span><br></pre></td></tr></table></figure>
+
+<p>这是将对象的属性值赋值给具有不同名字的变量：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">johnDoe</span>: &#123; <span class="attr">age</span>: userAge, <span class="attr">email</span>: userEmail &#125;&#125; = user;</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-使用解构赋值从数组中分配变量"><a href="#12-使用解构赋值从数组中分配变量" class="headerlink" title="12. 使用解构赋值从数组中分配变量"></a>12. 使用解构赋值从数组中分配变量</h3><p>在 ES6 里面，解构数组可以如同解构对象一样简单。</p>
+<p>与数组解构不同，数组的扩展运算会将数组里的所有内容分解成一个由逗号分隔的列表。 所以，你不能选择哪个元素来给变量赋值。</p>
+<p>而对数组进行解构却可以让我们做到这一点：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a, b);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示 <code>a</code> 和 <code>b</code> 的值为 <code>1, 2</code>。</p>
+<p>数组的第一个值被赋值给变量 <code>a</code>，数组的第二个值被赋值给变量 <code>b</code>。 我们甚至能在数组解构中使用逗号分隔符，来获取任意一个想要的值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b,,, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a, b, c);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示 <code>a</code>、<code>b</code> 和 <code>c</code> 的值为 <code>1, 2, 5</code>。</p>
+<h3 id="13-通过-rest-参数解构"><a href="#13-通过-rest-参数解构" class="headerlink" title="13. 通过 rest 参数解构"></a>13. 通过 rest 参数解构</h3><p>在解构数组的某些情况下，我们可能希望将剩下的元素放进另一个数组里面。</p>
+<p>以下代码的结果与使用 <code>Array.prototype.slice()</code> 类似：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, ...arr] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a, b);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示 <code>1, 2</code> 和 <code>[3, 4, 5, 7]</code>。</p>
+<p>变量 <code>a</code> 和 <code>b</code> 分别接收数组的第一个和第二个值。 之后，因为 rest 语法，<code>arr</code> 以数组形式接收了剩余的值。 rest 参数只能对数组列表最后的元素起作用。 这意味着你不能使用 rest 语法来省略原数组最后一个元素、截取中间的元素作为子数组。</p>
+<h3 id="14-使用解构赋值将对象作为函数的参数传递"><a href="#14-使用解构赋值将对象作为函数的参数传递" class="headerlink" title="14. 使用解构赋值将对象作为函数的参数传递"></a>14. 使用解构赋值将对象作为函数的参数传递</h3><p>在某些情况下，你可以在函数的参数里直接解构对象。</p>
+<p>请看以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">profileUpdate</span> = (<span class="params">profileData</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; name, age, nationality, location &#125; = profileData;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的操作解构了传给函数的对象。 这样的操作也可以直接在参数里完成：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">profileUpdate</span> = (<span class="params">&#123; name, age, nationality, location &#125;</span>) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当 <code>profileData</code> 被传递到上面的函数时，从函数参数中解构出值以在函数内使用。</p>
+<h3 id="15-使用模板字面量创建字符串"><a href="#15-使用模板字面量创建字符串" class="headerlink" title="15. 使用模板字面量创建字符串"></a>15. 使用模板字面量创建字符串</h3><p>模板字符串是 ES6 的另外一项新的功能。 这是一种可以轻松构建复杂字符串的方法。</p>
+<p>模板字符串可以使用多行字符串和字符串插值功能。</p>
+<p>请看以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Zodiac Hasbro&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">56</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> greeting = <span class="string">`Hello, my name is <span class="subst">$&#123;person.name&#125;</span>!I am <span class="subst">$&#123;person.age&#125;</span> years old.`</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(greeting);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示字符串 <code>Hello, my name is Zodiac Hasbro!</code> 和 <code>I am 56 years old.</code>。</p>
+<p>这里发生了许多事情。 首先，这个例子使用反引号（<code>`</code>），而不是引号（<code>&#39;</code> 或者 <code>&quot;</code>）将字符串括起来。 其次，注意代码和输出中的字符串都是多行的。 不需要在字符串中插入 <code>\n</code>。 上面使用的 <code>$&#123;variable&#125;</code> 语法是一个占位符。 这样一来，你将不再需要使用 <code>+</code> 运算符来连接字符串。 当需要在字符串里增加变量的时候，你只需要在变量的外面括上 <code>$&#123;</code> 和 <code>&#125;</code>，并将其放在模板字符串里就可以了。 同样，你可以在字符串中包含其他表达式，例如 <code>$&#123;a + b&#125;</code>。 这个新的方式使你可以更灵活地创建复杂的字符串。</p>
+<h3 id="16-使用简单字段编写简洁的对象字面量声明"><a href="#16-使用简单字段编写简洁的对象字面量声明" class="headerlink" title="16. 使用简单字段编写简洁的对象字面量声明"></a>16. 使用简单字段编写简洁的对象字面量声明</h3><p>ES6 添加了一些很棒的功能，用于更方便地定义对象。</p>
+<p>请看以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">getMousePosition</span> = (<span class="params">x, y</span>) =&gt; (&#123;</span><br><span class="line">  <span class="attr">x</span>: x,</span><br><span class="line">  <span class="attr">y</span>: y</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>getMousePosition</code> 简单的函数，返回拥有两个属性的对象。 ES6 提供了一个语法糖，消除了类似 <code>x: x</code> 这种冗余的写法。 你可以只写一次 <code>x</code>，解释器会自动将其转换成 <code>x: x</code>（或效果相同的内容）。 下面是使用这种语法重写的同样的函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">getMousePosition</span> = (<span class="params">x, y</span>) =&gt; (&#123; x, y &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="17-用-ES6-编写简洁的函数声明"><a href="#17-用-ES6-编写简洁的函数声明" class="headerlink" title="17. 用 ES6 编写简洁的函数声明"></a>17. 用 ES6 编写简洁的函数声明</h3><p>在 ES5 中，当我们需要在对象中定义一个函数的时候，必须像这样使用 <code>function</code> 关键字：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Taylor&quot;</span>,</span><br><span class="line">  <span class="attr">sayHello</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`Hello! My name is <span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>.`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>用 ES6 的语法在对象中定义函数的时候，可以删除 <code>function</code> 关键词和冒号。 请看以下例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Taylor&quot;</span>,</span><br><span class="line">  <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`Hello! My name is <span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>.`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="18-使用-class-语法定义构造函数"><a href="#18-使用-class-语法定义构造函数" class="headerlink" title="18. 使用 class 语法定义构造函数"></a>18. 使用 class 语法定义构造函数</h3><p>ES6 提供了一个新的创建对象的语法，使用关键字 class。</p>
+<p>在 ES5 里面，我们通过定义一个函数 <code>constructor</code> 来创建一个对象，然后使用 <code>new</code> 关键字来实例化对象。</p>
+<p>在 ES6 里，<code>class</code> 声明有一个 <code>constructor</code> 方法，与 <code>new</code> 关键字一起被调用。 如果 <code>constructor</code> 方法没有明确定义，那么它就被含蓄地定义为没有参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Explicit constructor</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpaceShuttle</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">targetPlanet</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">targetPlanet</span> = targetPlanet;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">takeOff</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;To &quot;</span> + <span class="variable language_">this</span>.<span class="property">targetPlanet</span> + <span class="string">&quot;!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Implicit constructor </span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Rocket</span> &#123;</span><br><span class="line">  <span class="title function_">launch</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;To the moon!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> zeus = <span class="keyword">new</span> <span class="title class_">SpaceShuttle</span>(<span class="string">&#x27;Jupiter&#x27;</span>);</span><br><span class="line"><span class="comment">// prints To Jupiter! in console</span></span><br><span class="line">zeus.<span class="title function_">takeOff</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> atlas = <span class="keyword">new</span> <span class="title class_">Rocket</span>();</span><br><span class="line"><span class="comment">// prints To the moon! in console</span></span><br><span class="line">atlas.<span class="title function_">launch</span>();</span><br></pre></td></tr></table></figure>
+
+<p>应该注意 <code>class</code> 关键字声明了一个新的函数，里面添加了一个构造函数。 当用 <code>new</code> 创建一个新的对象时，构造函数会被调用。</p>
+<p><strong>注意：</strong>首字母大写驼峰命名法 UpperCamelCase 是 ES6 class 命名的惯例，就像上面的 <code>SpaceShuttle</code>。</p>
+<p><code>constructor</code> 方法是一个特殊方法，用于创建和初始化 class 创建的对象。 在 JavaScript 算法和数据结构认证的面向对象编程章节里会更深入介绍它。</p>
+<h3 id="19-使用-getter-和-setter-来控制对象的访问"><a href="#19-使用-getter-和-setter-来控制对象的访问" class="headerlink" title="19. 使用 getter 和 setter 来控制对象的访问"></a>19. 使用 getter 和 setter 来控制对象的访问</h3><p>你可以从对象中获得一个值，也可以给对象的属性赋值。</p>
+<p>这些操作通常被称为 getters 以及 setters。</p>
+<p>Getter 函数的作用是可以让对象返回一个私有变量，而不需要直接去访问私有变量。</p>
+<p>Setter 函数的作用是可以基于传进的参数来修改对象中私有变量。 这些修改可以是计算，或者是直接替换之前的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Book</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">author</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_author</span> = author;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// getter</span></span><br><span class="line">  <span class="keyword">get</span> <span class="title function_">writer</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">_author</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// setter</span></span><br><span class="line">  <span class="keyword">set</span> <span class="title function_">writer</span>(<span class="params">updatedAuthor</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_author</span> = updatedAuthor;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> novel = <span class="keyword">new</span> <span class="title class_">Book</span>(<span class="string">&#x27;anonymous&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(novel.<span class="property">writer</span>);</span><br><span class="line">novel.<span class="property">writer</span> = <span class="string">&#x27;newAuthor&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(novel.<span class="property">writer</span>);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示字符串 <code>anonymous</code> 和 <code>newAuthor</code>。</p>
+<p>请注意用于调用 getter 和 setter 的语法。 它们甚至看起来不像是函数。 getter 和 setter 非常重要，因为它们隐藏了内部的实现细节。</p>
+<p><strong>注意：</strong> 通常会在私有变量前添加下划线（<code>_</code>）。 然而，这种做法本身并不是将变量变成私有的。</p>
+<h3 id="20-创建一个模块脚本"><a href="#20-创建一个模块脚本" class="headerlink" title="20. 创建一个模块脚本"></a>20. 创建一个模块脚本</h3><p>起初，JavaScript 几乎只在 HTML web 扮演一个很小的角色。 今天，一切不同了，很多网站几乎全是用 JavaScript 所写。 为了让 JavaScript 更模块化、更整洁以及更易于维护，ES6 引入了在多个 JavaScript 文件之间共享代码的机制。 它可以导出文件的一部分供其它文件使用，然后在需要它的地方按需导入。 为了使用这一功能， 需要在 HTML 文档里创建一个 <code>type</code> 为 <code>module</code> 的脚本。 例子如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;filename.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用了 <code>module</code> 类型的脚本可以使用 <code>import</code> 和 <code>export</code> 特性</p>
+<h3 id="21-用-export-来重用代码块"><a href="#21-用-export-来重用代码块" class="headerlink" title="21. 用 export 来重用代码块"></a>21. 用 export 来重用代码块</h3><p>假设有一个文件 <code>math_functions.js</code>，该文件包含了数学运算相关的一些函数。 其中一个存储在变量 <code>add</code> 里，该函数接受两个数字作为参数返回它们的和。 你想在几个不同的 JavaScript 文件中使用这个函数。 要实现这个目的，就需要 <code>export</code> 它。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params">x, y</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面是导出单个函数常用方法，还可以这样导出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params">x, y</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; add &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>导出变量和函数后，就可以在其它文件里导入使用从而避免了代码冗余。 重复第一个例子的代码可以导出多个对象或函数，在第二个例子里面的导出语句中添加更多值也可以导出多项，例子如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123; add, subtract &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="22-通过-import-复用-JavaScript-代码"><a href="#22-通过-import-复用-JavaScript-代码" class="headerlink" title="22. 通过 import 复用 JavaScript 代码"></a>22. 通过 import 复用 JavaScript 代码</h3><p><code>import</code> 可以导入文件或模块的一部分。 在之前的课程里，例子从 <code>math_functions.js</code> 文件里导出了 <code>add</code>。 下面看一下如何在其它文件导入它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; add &#125; <span class="keyword">from</span> <span class="string">&#x27;./math_functions.js&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>在这里，<code>import</code> 会在 <code>math_functions.js</code> 里找到 <code>add</code>，只导入这个函数，忽略剩余的部分。 <code>./</code> 告诉程序在当前文件的相同目录寻找 <code>math_functions.js</code> 文件。 用这种方式导入时，相对路径（<code>./</code>）和文件扩展名（<code>.js</code>）都是必需的。</p>
+<p>通过在 <code>import</code> 语句里添加项目，可以从文件里导入多个项目，如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; add, subtract &#125; <span class="keyword">from</span> <span class="string">&#x27;./math_functions.js&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="23-用-从文件中导入所有内容"><a href="#23-用-从文件中导入所有内容" class="headerlink" title="23. 用 * 从文件中导入所有内容"></a>23. 用 * 从文件中导入所有内容</h3><p>假设你有一个文件，你希望将其所有内容导入到当前文件中。 可以用 <code>import * as</code> 语法来实现。 下面是一个从同目录下的 <code>math_functions.js</code> 文件中导入所有内容的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> myMathModule <span class="keyword">from</span> <span class="string">&quot;./math_functions.js&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>上面的 <code>import</code> 语句会创建一个叫作 <code>myMathModule</code> 的对象。 这只是一个变量名，可以随便命名。 对象包含 <code>math_functions.js</code> 文件里的所有导出，可以像访问对象的属性那样访问里面的函数。 下面是使用导入的 <code>add</code> 和 <code>subtract</code> 函数的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myMathModule.<span class="title function_">add</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">myMathModule.<span class="title function_">subtract</span>(<span class="number">5</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="24-用-export-default-创建一个默认导出"><a href="#24-用-export-default-创建一个默认导出" class="headerlink" title="24. 用 export default 创建一个默认导出"></a>24. 用 export default 创建一个默认导出</h3><p>在 <code>export</code> 的课程中，你学习了命名导出语法， 这可以在其他文件中引用一些函数或者变量。</p>
+<p>还需要了解另外一种被称为默认导出的 <code>export</code> 的语法。 在文件中只有一个值需要导出的时候，通常会使用这种语法。 它也常常用于给文件或者模块创建返回值。</p>
+<p>下面是使用 <code>export default</code> 的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一个是命名函数，第二个是匿名函数。</p>
+<p><code>export default</code> 用于为模块或文件声明一个返回值，在每个文件或者模块中应当只默认导出一个值。 此外，你不能将 <code>export default</code> 与 <code>var</code>、<code>let</code> 或 <code>const</code> 同时使用。</p>
+<h3 id="25-导入一个默认的导出"><a href="#25-导入一个默认的导出" class="headerlink" title="25. 导入一个默认的导出"></a>25. 导入一个默认的导出</h3><p>需要一种 <code>import</code> 的语法来导入默认的导出。 在下面的例子里，<code>add</code> 是 <code>math_functions.js</code> 文件的默认导出。 以下是如何导入它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> add <span class="keyword">from</span> <span class="string">&quot;./math_functions.js&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这个语法有一处特别的地方， 被导入的 <code>add</code> 值没有被花括号（<code>&#123;&#125;</code>）所包围。 <code>add</code> 只是一个变量的名字，对应 <code>math_functions.js</code> 文件的任何默认导出值。 在导入默认导出时，可以使用任何名字。</p>
+<h3 id="26-创建一个-JavaScript-Promise"><a href="#26-创建一个-JavaScript-Promise" class="headerlink" title="26. 创建一个 JavaScript Promise"></a>26. 创建一个 JavaScript Promise</h3><p>Promise 是异步编程的一种解决方案 - 它在未来的某时会生成一个值。 任务完成，分执行成功和执行失败两种情况。 <code>Promise</code> 是构造器函数，需要通过 <code>new</code> 关键字来创建。 构造器参数是一个函数，该函数有两个参数 - <code>resolve</code> 和 <code>reject</code>。 通过它们来判断 promise 的执行结果。 用法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myPromise = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="27-通过-resolve-和-reject-完成-Promise"><a href="#27-通过-resolve-和-reject-完成-Promise" class="headerlink" title="27. 通过 resolve 和 reject 完成 Promise"></a>27. 通过 resolve 和 reject 完成 Promise</h3><p>Promise 有三个状态：<code>pending</code>、<code>fulfilled</code> 和 <code>rejected</code>。 上一个挑战里创建的 promise 一直阻塞在 <code>pending</code> 状态里，因为没有调用 promise 的完成方法。 Promise 提供的 <code>resolve</code> 和 <code>reject</code> 参数就是用来结束 promise 的。 Promise 成功时调用 <code>resolve</code>，promise 执行失败时调用 <code>reject</code>， 如下文所述，这些方法需要有一个参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myPromise = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(condition here) &#123;</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="string">&quot;Promise was fulfilled&quot;</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">reject</span>(<span class="string">&quot;Promise was rejected&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上面的示例使用字符串作为这些函数的参数，但参数实际上可以是任何格式。 通常，它可能是一个包含数据的对象，你可以将它放在网站或其他地方。</p>
+<h3 id="28-用-then-处理-Promise-完成的情况"><a href="#28-用-then-处理-Promise-完成的情况" class="headerlink" title="28. 用 then 处理 Promise 完成的情况"></a>28. 用 then 处理 Promise 完成的情况</h3><p>当程序需要花费未知的时间才能完成时（比如一些异步操作），一般是服务器请求，promise 很有用。 服务器请求会花费一些时间，当结束时，需要根据服务器的响应执行一些操作。 这可以用 <code>then</code> 方法来实现， 当 promise 完成 <code>resolve</code> 时会触发 <code>then</code> 方法。 例子如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myPromise.<span class="title function_">then</span>(<span class="function"><span class="params">result</span> =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>result</code> 即传入 <code>resolve</code> 方法的参数。</p>
+<h3 id="29-使用-catch-处理-Promise-失败的情况"><a href="#29-使用-catch-处理-Promise-失败的情况" class="headerlink" title="29. 使用 catch 处理 Promise 失败的情况"></a>29. 使用 catch 处理 Promise 失败的情况</h3><p>当 promise 失败时会调用 <code>catch</code> 方法。 当 promise 的 <code>reject</code> 方法执行时会直接调用。 用法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myPromise.<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>error</code> 是传入 <code>reject</code> 方法的参数。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/" title="JavaScript Algorithms and Data Structures(二)">http://moyun.com/javascript-algorithms-and-data-structures-二/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/javascript-algorithms-and-data-structures-%E4%B8%80/" rel="prev" title="JavaScript Algorithms and Data Structures(一)">
+                  <i class="fa fa-chevron-left"></i> JavaScript Algorithms and Data Structures(一)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">349k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:18</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>
