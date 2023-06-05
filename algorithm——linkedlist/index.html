@@ -21,25 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="链表1.理论基础链表是一种通过指针串联在一起的线性结构，每一个节点由两部构成  一个是数据域  一个是指针域（存放指向下一个节点的指针）   最后一个节点的指针域指向null（空指针） 链表的入口节点称为链表的头节点（head）">
+    <meta name="description" content="链表1.理论基础链表是一种通过指针串联在一起的线性结构，每一个节点由两部构成  一个是数据域  一个是指针域（存放指向下一个节点的指针）   最后一个节点的指针域指向null（空指针） 链表的入口节点称为链表的头节点（head）   1.1 链表的类型 单链表  指针域只能指向节点的下一个节点   双链表  每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点  双链表既可以向前查询也可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm——LinkedList">
 <meta property="og:url" content="http://moyun.com/algorithm%E2%80%94%E2%80%94linkedlist/index.html">
 <meta property="og:site_name" content="MoYun">
-<meta property="og:description" content="链表1.理论基础链表是一种通过指针串联在一起的线性结构，每一个节点由两部构成  一个是数据域  一个是指针域（存放指向下一个节点的指针）   最后一个节点的指针域指向null（空指针） 链表的入口节点称为链表的头节点（head）">
+<meta property="og:description" content="链表1.理论基础链表是一种通过指针串联在一起的线性结构，每一个节点由两部构成  一个是数据域  一个是指针域（存放指向下一个节点的指针）   最后一个节点的指针域指向null（空指针） 链表的入口节点称为链表的头节点（head）   1.1 链表的类型 单链表  指针域只能指向节点的下一个节点   双链表  每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点  双链表既可以向前查询也可">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://moyun.com/images/2023-05-30-11-19-15-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-05-30-11-23-09-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-05-30-11-24-37-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-06-01-13-54-52-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-06-01-13-56-12-image.png">
-<meta property="og:image" content="http://moyun.com/algorithm%E2%80%94%E2%80%94linkedlist/dell/Documents/img/2023-06-01-13-57-15-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-06-01-13-57-15-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-06-01-14-03-45-image.png">
 <meta property="og:image" content="http://moyun.com/images/2023-06-01-14-08-23-image.png">
 <meta property="og:image" content="https://code-thinking-1253855093.file.myqcloud.com/pics/20210218090901207.png">
+<meta property="og:image" content="http://moyun.com/images/2023-06-05-13-33-26-image.png">
+<meta property="og:image" content="http://moyun.com/images/2023-06-05-13-46-09-image.png">
+<meta property="og:image" content="http://moyun.com/images/2023-06-05-13-51-29-image.png">
+<meta property="og:image" content="http://moyun.com/images/2023-06-05-14-17-10-image.png">
 <meta property="article:published_time" content="2023-06-02T13:25:53.437Z">
-<meta property="article:modified_time" content="2023-06-03T05:55:18.911Z">
+<meta property="article:modified_time" content="2023-06-05T07:08:48.855Z">
 <meta property="article:author" content="墨韵">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="Algorithm">
@@ -155,7 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="nav-text">1.理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E9%93%BE%E8%A1%A8%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">1.1 链表的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E9%93%BE%E8%A1%A8%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">1.2 链表的存储方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E9%93%BE%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-text">1.3 链表操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="nav-text">2. 移除链表元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8"><span class="nav-text">3.设计链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-text">4.翻转链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="nav-text">1.理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E9%93%BE%E8%A1%A8%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">1.1 链表的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E9%93%BE%E8%A1%A8%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">1.2 链表的存储方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E9%93%BE%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="nav-text">1.3 链表操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="nav-text">2. 移除链表元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8"><span class="nav-text">3.设计链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-text">4.翻转链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E4%BF%A9%E4%BF%A9%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9"><span class="nav-text">5. 俩俩交换链表中的节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-text">6. 删除链表的倒数第N个节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-4"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4"><span class="nav-text">7. 链表相交</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-5"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-5"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II"><span class="nav-text">8. 环形链表II</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-6"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-6"><span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -170,7 +173,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archive/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -256,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-03 13:55:18" itemprop="dateModified" datetime="2023-06-03T13:55:18+08:00">2023-06-03</time>
+      <time title="修改时间：2023-06-05 15:08:48" itemprop="dateModified" datetime="2023-06-05T15:08:48+08:00">2023-06-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,14 +289,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>6k</span>
+      <span>11k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>10 分钟</span>
     </span>
 </div>
 
@@ -313,7 +316,6 @@
 </ul>
 <p>最后一个节点的指针域指向null（空指针）</p>
 <p>链表的入口节点称为链表的头节点（head）</p>
-<span id="more"></span>
 <p><img src="/images/2023-05-30-11-19-15-image.png"></p>
 <hr>
 <h3 id="1-1-链表的类型"><a href="#1-1-链表的类型" class="headerlink" title="1.1 链表的类型"></a>1.1 链表的类型</h3><ul>
@@ -351,7 +353,6 @@
 <p><img src="/images/2023-06-01-13-56-12-image.png"></p>
 <p>可以看出链表的增添和删除都是O(1)操作，也不会影响到其他节点。</p>
 <p>但是要注意，要是删除第五个节点，需要从头节点查找到第四个节点通过next指针进行删除操作，查找的时间复杂度是O(n)。</p>
-<p><img src="/algorithm%E2%80%94%E2%80%94linkedlist/dell\Documents\img\2023-06-01-13-57-15-image.png"></p>
 <p><img src="/images/2023-06-01-13-57-15-image.png"></p>
 <hr>
 <p><strong>链表定义</strong></p>
@@ -423,16 +424,106 @@
 <p>接下来，就是循环走如下代码逻辑了，继续移动pre和cur指针。</p>
 <p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
 <h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><p><strong>双指针法</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.<span class="property">next</span>) <span class="keyword">return</span> head;</span><br><span class="line">    <span class="keyword">let</span> temp = <span class="literal">null</span>, pre = <span class="literal">null</span>, cur = head;</span><br><span class="line">    <span class="keyword">while</span>(cur) &#123;</span><br><span class="line">        temp = cur.<span class="property">next</span>;</span><br><span class="line">        cur.<span class="property">next</span> = pre;</span><br><span class="line">        pre = cur;</span><br><span class="line">        cur = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// temp = cur = null;</span></span><br><span class="line">    <span class="keyword">return</span> pre;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.<span class="property">next</span>) <span class="keyword">return</span> head;</span><br><span class="line">    <span class="keyword">let</span> temp = <span class="literal">null</span>, pre = <span class="literal">null</span>, cur = head;</span><br><span class="line">    <span class="keyword">while</span>(cur) &#123;</span><br><span class="line">        temp = cur.<span class="property">next</span>;</span><br><span class="line">        cur.<span class="property">next</span> = pre;</span><br><span class="line">        pre = cur;</span><br><span class="line">        cur = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// temp = cur = null;</span></span><br><span class="line">    <span class="keyword">return</span> pre;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <hr>
 <p><strong>递归法</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reverse = <span class="keyword">function</span>(<span class="params">pre, head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head) <span class="keyword">return</span> pre;</span><br><span class="line">    <span class="keyword">const</span> temp = head.<span class="property">next</span>;</span><br><span class="line">    head.<span class="property">next</span> = pre;</span><br><span class="line">    pre = head</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">reverse</span>(pre, temp);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reverseList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">reverse</span>(<span class="literal">null</span>, head);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+<h2 id="5-俩俩交换链表中的节点"><a href="#5-俩俩交换链表中的节点" class="headerlink" title="5. 俩俩交换链表中的节点"></a>5. 俩俩交换链表中的节点</h2><p>24.给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p>
+<p><img src="/images/2023-06-05-13-33-26-image.png"></p>
+<div class="tabs" id="test24"><ul class="nav-tabs"><li class="tab active"><a href="#test24-1">示例1</a></li><li class="tab"><a href="#test24-2">示例2</a></li><li class="tab"><a href="#test24-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test24-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2,3,4]</span><br><span class="line">输出：[2,1,4,3]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test24-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = []</span><br><span class="line">输出：[]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test24-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1]</span><br><span class="line">输出：[1]</span><br></pre></td></tr></table></figure></div></div></div>
 
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><ul>
+<li><p>设置虚拟头结点 dummy，因为真实头结点要换人，设置了 dummy 后，dummy.next 就能找到头结点。</p>
+</li>
+<li><p>开启 while 循环，一对结点的交换有三个指针要改变，见下图。</p>
+<p><img src="/images/2023-06-05-13-46-09-image.png"></p>
+</li>
+<li><p>指针推进，准备交换下一对结点。</p>
+</li>
+<li><p>最后返回 dummy.next 。</p>
+</li>
+</ul>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> swapPairs = <span class="keyword">function</span> (<span class="params">head</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> ret = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>, head), temp = ret;</span><br><span class="line">  <span class="keyword">while</span> (temp.<span class="property">next</span> &amp;&amp; temp.<span class="property">next</span>.<span class="property">next</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> cur = temp.<span class="property">next</span>.<span class="property">next</span>, pre = temp.<span class="property">next</span>;</span><br><span class="line">    pre.<span class="property">next</span> = cur.<span class="property">next</span>;</span><br><span class="line">    cur.<span class="property">next</span> = pre;</span><br><span class="line">    temp.<span class="property">next</span> = cur;</span><br><span class="line">    temp = pre;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ret.<span class="property">next</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<hr>
+<h2 id="6-删除链表的倒数第N个节点"><a href="#6-删除链表的倒数第N个节点" class="headerlink" title="6. 删除链表的倒数第N个节点"></a>6. 删除链表的倒数第N个节点</h2><p>给你一个链表，删除链表的倒数第 <code>n</code> 个结点，并且返回链表的头结点。</p>
+<p><img src="/images/2023-06-05-13-51-29-image.png"></p>
+<div class="tabs" id="test6"><ul class="nav-tabs"><li class="tab active"><a href="#test6-1">示例1</a></li><li class="tab"><a href="#test6-2">示例2</a></li><li class="tab"><a href="#test6-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test6-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2,3,4,5], n = 2</span><br><span class="line">输出：[1,2,3,5]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test6-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1], n = 1</span><br><span class="line">输出：[]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test6-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], n = 1</span><br><span class="line">输出：[1]</span><br></pre></td></tr></table></figure></div></div></div>
 
+<h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><ul>
+<li><p>使用虚拟头结点</p>
+</li>
+<li><p>定义fast指针和slow指针，初始值为虚拟头结点</p>
+</li>
+<li><p>fast首先走n + 1步 ，为什么是n+1呢，因为只有这样同时移动的时候slow才能指向删除节点的上一个节点（方便做删除操作）</p>
+</li>
+<li><p>fast和slow同时移动，直到fast指向末尾</p>
+</li>
+<li><p>删除slow指向的下一个节点</p>
+</li>
+</ul>
+<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> removeNthFromEnd = <span class="keyword">function</span>(<span class="params">head, n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> ret = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>, head),</span><br><span class="line">        slow = fast = ret;</span><br><span class="line">    <span class="keyword">while</span>(n--) fast = fast.<span class="property">next</span>;</span><br><span class="line">    <span class="keyword">while</span> (fast.<span class="property">next</span> !== <span class="literal">null</span>) &#123;</span><br><span class="line">        fast = fast.<span class="property">next</span>; </span><br><span class="line">        slow = slow.<span class="property">next</span></span><br><span class="line">    &#125;;</span><br><span class="line">    slow.<span class="property">next</span> = slow.<span class="property">next</span>.<span class="property">next</span>;</span><br><span class="line">    <span class="keyword">return</span> ret.<span class="property">next</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-链表相交"><a href="#7-链表相交" class="headerlink" title="7. 链表相交"></a>7. 链表相交</h2><p>160.给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。</p>
+<p>图示两个链表在节点 c1 开始相交：</p>
+<p><img src="/images/2023-06-05-14-17-10-image.png"></p>
+<p>题目数据 保证 <code>整个链式结构中不存在环</code>。</p>
+<p>注意，函数返回结果后，链表必须 保持其原始结构 。</p>
+<div class="tabs" id="test160"><ul class="nav-tabs"><li class="tab active"><a href="#test160-1">示例1</a></li><li class="tab"><a href="#test160-2">示例2</a></li><li class="tab"><a href="#test160-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test160-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3</span><br><span class="line">输出：Intersected at &#x27;8&#x27;</span><br><span class="line">解释：相交节点的值为 8 （注意，如果两个链表相交则不能为 0）。</span><br><span class="line">从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。</span><br><span class="line">在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test160-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1</span><br><span class="line">输出：Intersected at &#x27;2&#x27;</span><br><span class="line">解释：相交节点的值为 2 （注意，如果两个链表相交则不能为 0）。</span><br><span class="line">从各自的表头开始算起，链表 A 为 [0,9,1,2,4]，链表 B 为 [3,2,4]。</span><br><span class="line">在 A 中，相交节点前有 3 个节点；在 B 中，相交节点前有 1 个节点。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test160-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2</span><br><span class="line">输出：null</span><br><span class="line">解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。</span><br><span class="line">由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。</span><br><span class="line">这两个链表不相交，因此返回 null 。</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h3><p>双指针法，只有当链表headA和headB都不为空时，两个链表采可能相交</p>
+<ul>
+<li><p>首先判断两链表是否为空，如果其中至少有一个链表为空，则一定不相交，返回null</p>
+</li>
+<li><p>当两链表都不为空时，创建连个指针pA和pB，初始时分别指向两个链表的头节点headA和headB，然后将两个指针依次遍历两个链表的每个节点</p>
+<ul>
+<li><p>每步操作需要同时更新指针pA和pB</p>
+</li>
+<li><p>如果指针pA不为空，则将其移到下一个节点，指针pB同样</p>
+</li>
+<li><p>如果指针pA为空，则将指针pA移到链表headB的头节点，指针pB则相反</p>
+</li>
+<li><p>当指针pA和pB指向同一个节点或者都为空时，返回他们所指向的节点或null</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.next = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">headA</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">headB</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="keyword">function</span>(<span class="params">headA, headB</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (headA === <span class="literal">null</span> || headB === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> pA = headA, pB = headB;</span><br><span class="line">    <span class="keyword">while</span> (pA !== pB) &#123;</span><br><span class="line">        pA = pA === <span class="literal">null</span> ? headB : pA.<span class="property">next</span>;</span><br><span class="line">        pB = pB === <span class="literal">null</span> ? headA : pB.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pA;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-环形链表II"><a href="#8-环形链表II" class="headerlink" title="8. 环形链表II"></a>8. 环形链表II</h2><p>142.给定一个链表的头节点  head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
+<p>如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。</p>
+<p>不允许修改 链表。</p>
+<div class="tabs" id="test142"><ul class="nav-tabs"><li class="tab active"><a href="#test142-1">示例1</a></li><li class="tab"><a href="#test142-2">示例2</a></li><li class="tab"><a href="#test142-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test142-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：返回索引为 1 的链表节点</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test142-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], pos = 0</span><br><span class="line">输出：返回索引为 0 的链表节点</span><br><span class="line">解释：链表中有一个环，其尾部连接到第一个节点。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test142-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1], pos = -1</span><br><span class="line">输出：返回 null</span><br><span class="line">解释：链表中没有环。</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h3><ul>
+<li><p>判断是否有环</p>
+<ul>
+<li>可以使用快慢指针法，分别定义 fast 和 slow 指针，从头结点出发，fast指针每次移动两个节点，slow指针每次移动一个节点，如果 fast 和 slow指针在途中相遇 ，说明这个链表有环。</li>
+</ul>
+</li>
+<li><p>判断环的入口</p>
+<ul>
+<li><p>假设从头结点到环形入口节点 的节点数为x。 环形入口节点到 fast指针与slow指针相遇节点 节点数为y。 从相遇节点 再到环形入口节点节点数为 z。</p>
+</li>
+<li><p>那么相遇时： slow指针走过的节点数为: <code>x + y</code>， fast指针走过的节点数：<code>x + y + n (y + z)</code>，n为fast指针在环内走了n圈才遇到slow指针， （y+z）为 一圈内节点的个数A。</p>
+<p>因为fast指针是一步走两个节点，slow指针一步走一个节点， 所以 fast指针走过的节点数 = slow指针走过的节点数 * 2：</p>
+<p><code>(x + y) * 2 = x + y + n (y + z)</code></p>
+<p>两边消掉一个（x+y）: <code>x + y = n (y + z)</code></p>
+<p>因为要找环形的入口，那么要求的是x，因为x表示 头结点到 环形入口节点的的距离。</p>
+<p>所以要求x ，将x单独放在左面：<code>x = n (y + z) - y</code> ,</p>
+<p>再从n(y+z)中提出一个 （y+z）来，整理公式之后为如下公式：<code>x = (n - 1) (y + z) + z</code> 注意这里n一定是大于等于1的，因为 fast指针至少要多走一圈才能相遇slow指针。</p>
+<p>这个公式说明什么呢？</p>
+<p>先拿n为1的情况来举例，意味着fast指针在环形里转了一圈之后，就遇到了 slow指针了。</p>
+<p>当 n为1的时候，公式就化解为 <code>x = z</code>，</p>
+<p>这就意味着，<strong>从头结点出发一个指针，从相遇节点 也出发一个指针，这两个指针每次只走一个节点， 那么当这两个指针相遇的时候就是 环形入口的节点</strong>。</p>
+<p>也就是在相遇节点处，定义一个指针index1，在头结点处定一个指针index2。</p>
+<p>让index1和index2同时移动，每次移动一个节点， 那么他们相遇的地方就是 环形入口的节点。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.next = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> detectCycle = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.<span class="property">next</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">let</span> slow =head.<span class="property">next</span>, fast = head.<span class="property">next</span>.<span class="property">next</span>;</span><br><span class="line">    <span class="keyword">while</span>(fast &amp;&amp; fast.<span class="property">next</span> &amp;&amp; fast!== slow) &#123;</span><br><span class="line">        slow = slow.<span class="property">next</span>;</span><br><span class="line">        fast = fast.<span class="property">next</span>.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!fast || !fast.<span class="property">next</span> ) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    slow = head;</span><br><span class="line">    <span class="keyword">while</span> (fast !== slow) &#123;</span><br><span class="line">        slow = slow.<span class="property">next</span>;</span><br><span class="line">        fast = fast.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -521,14 +612,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">349k</span>
+    <span title="站点总字数">364k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:18</span>
+    <span title="站点阅读时长">5:31</span>
   </span>
 </div>
 <div class="busuanzi-count">
