@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures 基础数据结构1.使用数组存储不同类型的数据以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（nu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Algorithms and Data Structures(五)">
+<meta property="og:url" content="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures 基础数据结构1.使用数组存储不同类型的数据以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（nu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-08T12:57:24.011Z">
+<meta property="article:modified_time" content="2023-06-08T12:58:16.797Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/","path":"javascript-algorithms-and-data-structures-五/","title":"JavaScript Algorithms and Data Structures(五)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript Algorithms and Data Structures(五) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-JavaScript-Algorithms-and-Data-Structures"><span class="nav-text">freeCodeCamp —- JavaScript Algorithms and Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">基础数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E5%AD%98%E5%82%A8%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-text">1.使用数组存储不同类型的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%8B%AC%E5%8F%B7%E8%AE%BF%E9%97%AE%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-text">2. 使用方括号访问数组的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8-push-%E5%92%8C-unshift-%E4%B8%BA%E6%95%B0%E7%BB%84%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="nav-text">3. 使用 push() 和 unshift() 为数组添加元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8-pop-%E5%92%8C-shift-%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="nav-text">4.使用 pop() 和 shift() 从数组中删除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E4%BD%BF%E7%94%A8-splice-%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="nav-text">5.使用 splice() 删除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E4%BD%BF%E7%94%A8-splice-%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="nav-text">6. 使用 splice() 添加元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E4%BD%BF%E7%94%A8-slice-%E5%A4%8D%E5%88%B6%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="nav-text">7. 使用 slice() 复制数组元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BD%BF%E7%94%A8%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6%E5%A4%8D%E5%88%B6%E6%95%B0%E7%BB%84"><span class="nav-text">8. 使用展开运算符复制数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E4%BD%BF%E7%94%A8%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6%E5%90%88%E5%B9%B6%E6%95%B0%E7%BB%84"><span class="nav-text">9. 使用展开运算符合并数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E4%BD%BF%E7%94%A8-indexOf-%E6%A3%80%E6%9F%A5%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="nav-text">10.使用 indexOf() 检查元素是否存在</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E4%BD%BF%E7%94%A8-for-%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%85%A8%E9%83%A8%E5%85%83%E7%B4%A0"><span class="nav-text">11. 使用 for 循环遍历数组中的全部元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%88%9B%E5%BB%BA%E5%A4%8D%E6%9D%82%E7%9A%84%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-text">12. 创建复杂的多维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E5%B0%86%E9%94%AE%E5%80%BC%E5%AF%B9%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%AF%B9%E8%B1%A1%E4%B8%AD"><span class="nav-text">13. 将键值对添加到对象中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E6%94%B9%E5%B5%8C%E5%A5%97%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-text">14. 改嵌套在对象中的对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%8B%AC%E5%8F%B7%E8%AE%BF%E9%97%AE%E5%B1%9E%E6%80%A7%E5%90%8D%E7%A7%B0"><span class="nav-text">15. 使用方括号访问属性名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E4%BD%BF%E7%94%A8-delete-%E5%85%B3%E9%94%AE%E5%AD%97%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-text">16. 使用 delete 关键字删除对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E6%A3%80%E6%9F%A5%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%85%B7%E6%9C%89%E6%9F%90%E4%B8%AA%E5%B1%9E%E6%80%A7"><span class="nav-text">17. 检查对象是否具有某个属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E4%BD%BF%E7%94%A8-for%E2%80%A6in-%E8%AF%AD%E5%8F%A5%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1"><span class="nav-text">18. 使用 for…in 语句遍历对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E4%BD%BF%E7%94%A8-Object-keys-%E7%94%9F%E6%88%90%E7%94%B1%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%80%E6%9C%89%E5%B1%9E%E6%80%A7%E7%BB%84%E6%88%90%E7%9A%84%E6%95%B0%E7%BB%84"><span class="nav-text">19. 使用 Object.keys() 生成由对象的所有属性组成的数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text"></span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/javascript-algorithms-and-data-structures-%E5%9B%9B/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-06</time>
+        <br>
+      JavaScript Algorithms and Data Structures(四)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/javascript-algorithms-and-data-structures-%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-03</time>
+        <br>
+      JavaScript Algorithms and Data Structures(一)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript Algorithms and Data Structures(五) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript Algorithms and Data Structures(五)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-08 20:57:24 / 修改时间：20:58:16" itemprop="dateCreated datePublished" datetime="2023-06-08T20:57:24+08:00">2023-06-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
+<h2 id="基础数据结构"><a href="#基础数据结构" class="headerlink" title="基础数据结构"></a>基础数据结构</h2><h3 id="1-使用数组存储不同类型的数据"><a href="#1-使用数组存储不同类型的数据" class="headerlink" title="1.使用数组存储不同类型的数据"></a>1.使用数组存储不同类型的数据</h3><p>以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（numbers）以及 JavaScript 中的其他数据类型</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> simpleArray = [<span class="string">&#x27;one&#x27;</span>, <span class="number">2</span>, <span class="string">&#x27;three&#x27;</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">undefined</span>, <span class="literal">null</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(simpleArray.<span class="property">length</span>);</span><br></pre></td></tr></table></figure>
+
+<p>调用 <code>console.log</code> 显示 <code>7</code>。</p>
+<p>所有数组都有一个表示长度的属性，我们可以通过 <code>Array.length</code> 来访问它。 下面是一个关于数组的更复杂的例子。 这是一个多维数组 （multi-dimensional Array），或者说是一个包含了其他数组的数组。 可以注意到，在它的内部还包含了 JavaScript 中的对象（objects）结构。 我们会在后面的小节中讨论该数据结构，但现在你只需要知道数组能够存储复杂的对象类型数据。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> complexArray = [</span><br><span class="line">  [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">one</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">two</span>: <span class="number">2</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">three</span>: <span class="number">3</span>,</span><br><span class="line">      <span class="attr">four</span>: <span class="number">4</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">a</span>: <span class="string">&quot;a&quot;</span>,</span><br><span class="line">      <span class="attr">b</span>: <span class="string">&quot;b&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">c</span>: <span class="string">&quot;c&quot;</span>,</span><br><span class="line">      <span class="attr">d</span>: <span class="string">&quot;d&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-使用方括号访问数组的元素"><a href="#2-使用方括号访问数组的元素" class="headerlink" title="2. 使用方括号访问数组的元素"></a>2. 使用方括号访问数组的元素</h3><p>所有数据结构的基本特性是，它们不仅可以存储数据，还可以让我们按需访问存放在其中的数据。 我们已经学习了如何创建数组，现在让我们来学习如何访问数组中的数据。</p>
+<p>我们先定义一个包含 3 个元素的数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ourArray = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br></pre></td></tr></table></figure>
+
+<p>在数组中，内部的每个元素都有一个与之对应的索引（index）。 索引既是该元素在数组中的位置，也是我们访问该元素的引用。 需要注意的是，JavaScript 数组的索引是从 0 开始的（这种从 0 开始的规则叫做 zero-indexed），即数组的第一个元素是在数组中的<em><strong>第 0 个</strong></em>位置，而不是第 1 个位置。 要从数组中获取一个元素，我们可以在数组字面量后面加一个用方括号括起来的索引。不过习惯上，我们会通过表示数组的变量名来访问，而不是直接通过字面量。 这种从数组中读取元素的方式叫做方括号表示法（bracket notation）。 如果我们要从数组 <code>ourArray</code> 中取出数据 <code>a</code> 并将其赋值给另一个变量，可以这样写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ourVariable = ourArray[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<p>现在，变量 <code>ourVariable</code> 的值也为 <code>a</code>。</p>
+<p>通过索引，我们不仅可以获取某个元素值，还可以用类似的写法来<em>设置</em>一个索引位置的元素值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ourArray[<span class="number">1</span>] = <span class="string">&quot;not b anymore&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>在上面的代码中，我们用方括号表示法把索引为 1 的元素从 <code>b</code> 改成了 <code>not b anymore</code>。 现在 <code>ourArray</code> 的值是 <code>[&quot;a&quot;, &quot;not b anymore&quot;, &quot;c&quot;]</code>。</p>
+<h3 id="3-使用-push-和-unshift-为数组添加元素"><a href="#3-使用-push-和-unshift-为数组添加元素" class="headerlink" title="3. 使用 push() 和 unshift() 为数组添加元素"></a>3. 使用 push() 和 unshift() 为数组添加元素</h3><p>数组的长度与数组能包含的数据类型一样，都是不固定的。 数组可以包含任意数量的元素，可以不限次数地往数组中添加元素或者从中移除元素。 总之，数组是可变的（mutable）。 在本挑战中，我们要学习两种修改数组的方法：<code>Array.push()</code> 和 <code>Array.unshift()</code>。</p>
+<p>这两个方法都接收一个或多个元素作为参数，并会将参数中的元素添加到该数组中。 <code>push()</code> 方法会将元素插入到数组的末尾，而 <code>unshift()</code> 方法会将元素插入到数组的开头。 请看以下例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> twentyThree = <span class="string">&#x27;XXIII&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> romanNumerals = [<span class="string">&#x27;XXI&#x27;</span>, <span class="string">&#x27;XXII&#x27;</span>];</span><br><span class="line"></span><br><span class="line">romanNumerals.<span class="title function_">unshift</span>(<span class="string">&#x27;XIX&#x27;</span>, <span class="string">&#x27;XX&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>romanNumerals</code> 的值就变成了 <code>[&#39;XIX&#39;, &#39;XX&#39;, &#39;XXI&#39;, &#39;XXII&#39;]</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">romanNumerals.<span class="title function_">push</span>(twentyThree);</span><br></pre></td></tr></table></figure>
+
+<p><code>romanNumerals</code> 的值现在就变成了 <code>[&#39;XIX&#39;, &#39;XX&#39;, &#39;XXI&#39;, &#39;XXII&#39;, &#39;XXIII&#39;]</code>。 请注意这里，我们也可以使用变量作为参数，这让我们在动态修改数组数据时更加灵活。</p>
+<h3 id="4-使用-pop-和-shift-从数组中删除元素"><a href="#4-使用-pop-和-shift-从数组中删除元素" class="headerlink" title="4.使用 pop() 和 shift() 从数组中删除元素"></a>4.使用 pop() 和 shift() 从数组中删除元素</h3><p><code>push()</code> 和 <code>unshift()</code> 都有一个与它们作用相反的函数：<code>pop()</code> 和 <code>shift()</code>。 与插入元素相反，<code>pop()</code> 会从数组的末尾<em>移除</em>一个元素，而 <code>shift()</code> 会从数组的开头移除一个元素。 <code>pop()</code> 和 <code>shift()</code> 与 <code>push()</code> 和 <code>unshift()</code> 的关键区别在于，用于删除元素的方法不接收参数，而且每次只能删除数组中的一个元素。</p>
+<p>让我们来看以下的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> greetings = [<span class="string">&#x27;whats up?&#x27;</span>, <span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;see ya!&#x27;</span>];</span><br><span class="line"></span><br><span class="line">greetings.<span class="title function_">pop</span>();</span><br></pre></td></tr></table></figure>
+
+<p><code>greetings</code> 值为 <code>[&#39;whats up?&#39;, &#39;hello&#39;]</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greetings.<span class="title function_">shift</span>();</span><br></pre></td></tr></table></figure>
+
+<p><code>greetings</code> 值为 <code>[&#39;hello&#39;]</code>。</p>
+<p>这些用于删除数组元素的方法会返回被删除的元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> popped = greetings.<span class="title function_">pop</span>();</span><br></pre></td></tr></table></figure>
+
+<p><code>greetings</code> 值为 <code>[]</code>，<code>popped</code> 值为 <code>hello</code>。</p>
+<h3 id="5-使用-splice-删除元素"><a href="#5-使用-splice-删除元素" class="headerlink" title="5.使用 splice() 删除元素"></a>5.使用 splice() 删除元素</h3><p>使用 <code>splice()</code> 方法， <code>splice()</code> 可以让我们从数组中的任意位置<strong>连续删除任意数量的元素</strong>。</p>
+<p><code>splice()</code> 最多可以接受 3 个参数，但现在我们先关注前两个。 <code>splice()</code> 的前两个参数是整数，表示数组中调用 <code>splice()</code> 的项的索引或位置。 别忘了，数组的索引是<em>从 0 开始的</em>，所以我们要用 <code>0</code> 来表示数组中的第一个元素。 <code>splice()</code> 的第一个参数代表从数组中的哪个索引开始移除元素，而第二个参数表示要从数组中的这个位置开始删除多少个元素。 例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="string">&#x27;today&#x27;</span>, <span class="string">&#x27;was&#x27;</span>, <span class="string">&#x27;not&#x27;</span>, <span class="string">&#x27;so&#x27;</span>, <span class="string">&#x27;great&#x27;</span>];</span><br><span class="line"></span><br><span class="line">array.<span class="title function_">splice</span>(<span class="number">2</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里我们移除 2 个元素，首先是第三个元素（索引为 2）。 <code>array</code> 会有值 <code>[&#39;today&#39;, &#39;was&#39;, &#39;great&#39;]</code>。</p>
+<p><code>splice()</code> 不仅会修改调用该方法的数组，还会返回一个包含被移除元素的数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;am&#x27;</span>, <span class="string">&#x27;feeling&#x27;</span>, <span class="string">&#x27;really&#x27;</span>, <span class="string">&#x27;happy&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> newArray = array.<span class="title function_">splice</span>(<span class="number">3</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>newArray</code> 值为 <code>[&#39;really&#39;, &#39;happy&#39;]</code>。</p>
+<h3 id="6-使用-splice-添加元素"><a href="#6-使用-splice-添加元素" class="headerlink" title="6. 使用 splice() 添加元素"></a>6. 使用 splice() 添加元素</h3><p> <code>splice()</code> 方法最多可以接收 3 个参数, 第三个参数可以是一个或多个元素，这些元素会被添加到数组中。 这样，我们能够便捷地将数组中的一个或多个连续元素换成其他的元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">12</span>, <span class="number">15</span>];</span><br><span class="line"><span class="keyword">const</span> startIndex = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> amountToDelete = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">numbers.<span class="title function_">splice</span>(startIndex, amountToDelete, <span class="number">13</span>, <span class="number">14</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(numbers);</span><br></pre></td></tr></table></figure>
+
+<p>第二个 <code>12</code> 已被删除，我们在同一索引处添加 <code>13</code> 和 <code>14</code>。 <code>numbers</code> 数组现在将会是 <code>[ 10, 11, 12, 13, 14, 15 ]</code>。</p>
+<p>在上面的代码中，数组一开始包含了若干数字。 接着，我们调用 <code>splice()</code> 方法，索引为 (3) 的地方开始删除元素，删除的元素数量是 (1)。然后，(13, 14) 是在删除位置插入的元素。 可以在 <code>amountToDelete</code> 后面传入任意数量的元素（以逗号分隔），每个都会被插入到数组中。</p>
+<h3 id="7-使用-slice-复制数组元素"><a href="#7-使用-slice-复制数组元素" class="headerlink" title="7. 使用 slice() 复制数组元素"></a>7. 使用 slice() 复制数组元素</h3><p>接下来我们要介绍 <code>slice()</code> 方法。 <code>slice()</code> 不会修改数组，而是会复制，或者说<em>提取（extract）</em>给定数量的元素到一个新数组。 <code>slice()</code> 只接收 2 个输入参数：第一个是开始提取元素的位置（索引），第二个是提取元素的结束位置（索引）。 提取的元素中不包括第二个参数所对应的元素。 如下示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> weatherConditions = [<span class="string">&#x27;rain&#x27;</span>, <span class="string">&#x27;snow&#x27;</span>, <span class="string">&#x27;sleet&#x27;</span>, <span class="string">&#x27;hail&#x27;</span>, <span class="string">&#x27;clear&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> todaysWeather = weatherConditions.<span class="title function_">slice</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>todaysWeather</code> 值为 <code>[&#39;snow&#39;, &#39;sleet&#39;]</code>，<code>weatherConditions</code> 值仍然为 <code>[&#39;rain&#39;, &#39;snow&#39;, &#39;sleet&#39;, &#39;hail&#39;, &#39;clear&#39;]</code>。</p>
+<p>在上面的代码中，我们从一个数组中提取了一些元素，并用这些元素创建了一个新数组。</p>
+<h3 id="8-使用展开运算符复制数组"><a href="#8-使用展开运算符复制数组" class="headerlink" title="8. 使用展开运算符复制数组"></a>8. 使用展开运算符复制数组</h3><p><code>slice()</code> 可以让我们从一个数组中选择一些元素来复制到新数组中，而 ES6 中又引入了一个简洁且可读性强的语法：展开运算符（spread operator），它能让我们方便地复制数组中的<em>所有</em>元素。 展开语法写出来是这样：<code>...</code></p>
+<p>我们可以用展开运算符来复制数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> thisArray = [<span class="literal">true</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">false</span>, <span class="literal">null</span>];</span><br><span class="line"><span class="keyword">let</span> thatArray = [...thisArray];</span><br></pre></td></tr></table></figure>
+
+<p><code>thatArray</code> 等于 <code>[true, true, undefined, false, null]</code>。 <code>thisArray</code> 保持不变， <code>thatArray</code> 包含与 <code>thisArray</code> 相同的元素。</p>
+<h3 id="9-使用展开运算符合并数组"><a href="#9-使用展开运算符合并数组" class="headerlink" title="9. 使用展开运算符合并数组"></a>9. 使用展开运算符合并数组</h3><p>展开语法（spread）的另一个重要用途是合并数组，或者将某个数组的所有元素插入到另一个数组的任意位置。 我们也可以使用 ES5 的语法连接两个数组，但只能让它们首尾相接。 而展开语法可以让这样的操作变得极其简单：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> thisArray = [<span class="string">&#x27;sage&#x27;</span>, <span class="string">&#x27;rosemary&#x27;</span>, <span class="string">&#x27;parsley&#x27;</span>, <span class="string">&#x27;thyme&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> thatArray = [<span class="string">&#x27;basil&#x27;</span>, <span class="string">&#x27;cilantro&#x27;</span>, ...thisArray, <span class="string">&#x27;coriander&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
+<p><code>thatArray</code> 会有值 <code>[&#39;basil&#39;, &#39;cilantro&#39;, &#39;sage&#39;, &#39;rosemary&#39;, &#39;parsley&#39;, &#39;thyme&#39;, &#39;coriander&#39;]</code></p>
+<p>使用展开语法，我们就可以很方便的实现一个用传统方法会写得很复杂且冗长的操作。</p>
+<h3 id="10-使用-indexOf-检查元素是否存在"><a href="#10-使用-indexOf-检查元素是否存在" class="headerlink" title="10.使用 indexOf() 检查元素是否存在"></a>10.使用 indexOf() 检查元素是否存在</h3><p>由于数组随时都可以修改或发生 <em>mutated</em>，我们很难保证某个数据始终处于数组中的特定位置，甚至不能保证该元素是否还存在于该数组中。 好消息是，JavaScript 为我们提供了内置方法 <code>indexOf()</code>。 这个方法让我们可以方便地检查某个元素是否存在于数组中。 <code>indexOf()</code> 方法接受一个元素作为输入参数，并返回该元素在数组中的位置（索引）；若该元素不存在于数组中则返回 <code>-1</code>。</p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fruits = [<span class="string">&#x27;apples&#x27;</span>, <span class="string">&#x27;pears&#x27;</span>, <span class="string">&#x27;oranges&#x27;</span>, <span class="string">&#x27;peaches&#x27;</span>, <span class="string">&#x27;pears&#x27;</span>];</span><br><span class="line"></span><br><span class="line">fruits.<span class="title function_">indexOf</span>(<span class="string">&#x27;dates&#x27;</span>);</span><br><span class="line">fruits.<span class="title function_">indexOf</span>(<span class="string">&#x27;oranges&#x27;</span>);</span><br><span class="line">fruits.<span class="title function_">indexOf</span>(<span class="string">&#x27;pears&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>indexOf(&#39;dates&#39;)</code> 返回 <code>-1</code>，<code>indexOf(&#39;oranges&#39;)</code> 返回 <code>2</code>，<code>indexOf(&#39;pears&#39;)</code> 返回 <code>1</code> (每个元素存在的第一个索引)。</p>
+<h3 id="11-使用-for-循环遍历数组中的全部元素"><a href="#11-使用-for-循环遍历数组中的全部元素" class="headerlink" title="11. 使用 for 循环遍历数组中的全部元素"></a>11. 使用 for 循环遍历数组中的全部元素</h3><p>使用数组时，我们经常需要遍历数组的所有元素来找出我们需要的一个或多个元素，抑或是对数组执行一些特定的操作。 JavaScript 为我们提供了几个内置的方法，它们以不同的方式遍历数组，以便我们可以用于不同的场景（如 <code>every()</code>、<code>forEach()</code>、<code>map()</code> 等等）。 然而，最简单的 <code>for</code> 循环不仅能实现上述这些方法的功能，而且相比之下也会更加灵活。</p>
+<p>请看以下的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greaterThanTen</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> newArr = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[i] &gt; <span class="number">10</span>) &#123;</span><br><span class="line">      newArr.<span class="title function_">push</span>(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newArr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">greaterThanTen</span>([<span class="number">2</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">14</span>, <span class="number">80</span>, <span class="number">0</span>, <span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>在这个函数中，我们用一个 <code>for</code> 循环来遍历数组，逐一对其中的元素进行判断。 通过上面的代码，我们可以找出数组中大于 <code>10</code> 的所有元素，并返回一个包含这些元素的新数组 <code>[12, 14, 80]</code>。</p>
+<h3 id="12-创建复杂的多维数组"><a href="#12-创建复杂的多维数组" class="headerlink" title="12. 创建复杂的多维数组"></a>12. 创建复杂的多维数组</h3><p>数组的一个强大的特性是，它可以包含其他数组，甚至完全由其他数组组成。  数组中的数组还可以再包含其他数组，即可以嵌套任意多层数组。 通过这种方式，数组可以很快成为非常复杂的数据结构，称为多维（multi-dimensional）数组，或嵌套（nested）数组。 请看如下的示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nestedArray = [</span><br><span class="line">  [<span class="string">&#x27;deep&#x27;</span>],</span><br><span class="line">  [</span><br><span class="line">    [<span class="string">&#x27;deeper&#x27;</span>], [<span class="string">&#x27;deeper&#x27;</span>] </span><br><span class="line">  ],</span><br><span class="line">  [</span><br><span class="line">    [</span><br><span class="line">      [<span class="string">&#x27;deepest&#x27;</span>], [<span class="string">&#x27;deepest&#x27;</span>]</span><br><span class="line">    ],</span><br><span class="line">    [</span><br><span class="line">      [</span><br><span class="line">        [<span class="string">&#x27;deepest-est?&#x27;</span>]</span><br><span class="line">      ]</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p><code>deep</code> 数组已嵌套 2 层。 <code>deeper</code> 数组嵌套了 3 层。 <code>deepest</code> 数组嵌套了 3 层， <code>deepest-est?</code> 嵌套了 5 层。</p>
+<p>虽然这个例子看起来错综复杂，不过，尤其是在处理大量数据的时候，这种数据结构还是会用到的。 尽管结构复杂，不过我们仍可以通过方括号表示法来访问嵌套得最深的数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(nestedArray[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>控制台打印的是字符串 <code>deepest-est?</code>。 既然我们知道数据的位置，当然，我们也可以修改它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nestedArray[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>] = <span class="string">&#x27;deeper still&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(nestedArray[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>现在控制台打印的是 <code>deeper still</code>。</p>
+<h3 id="13-将键值对添加到对象中"><a href="#13-将键值对添加到对象中" class="headerlink" title="13. 将键值对添加到对象中"></a>13. 将键值对添加到对象中</h3><p>对象（object）本质上是键值对（key-value pair）的集合。 或者说，一系列被映射到唯一标识符的数据就是对象；习惯上，唯一标识符叫做属性（property）或者键（key）；数据叫做值（value）。 让我们来看一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> tekkenCharacter = &#123;</span><br><span class="line">  <span class="attr">player</span>: <span class="string">&#x27;Hwoarang&#x27;</span>,</span><br><span class="line">  <span class="attr">fightingStyle</span>: <span class="string">&#x27;Tae Kwon Doe&#x27;</span>,</span><br><span class="line">  <span class="attr">human</span>: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码定义了一个叫做 <code>tekkenCharacter</code> 的“铁拳”游戏人物对象。 它有三个属性，每个属性都对应一个特定的值。 如果我们想为它再添加一个叫做 <code>origin</code> 的属性，可以这样写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tekkenCharacter.<span class="property">origin</span> = <span class="string">&#x27;South Korea&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码中，我们使用了点号表示法。 如果我们现在输出 <code>tekkenCharacter</code> 对象，便可以看到它具有 <code>origin</code> 属性。 接下来，因为这个人物在游戏中有着与众不同的橘色头发， 我们可以通过方括号表示法来为它添加这个属性，像这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tekkenCharacter[<span class="string">&#x27;hair color&#x27;</span>] = <span class="string">&#x27;dyed orange&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果要设置的属性中存在空格，或者要设置的属性是一个变量，那我们必须使用方括号表示法（bracket notation）来为对象添加属性。 在上面的代码中，我们把属性（hair color）放到引号里，以此来表示整个字符串都是需要设置的属性。 如果我们不加上引号，那么中括号里的内容会被当作一个变量来解析，这个变量对应的值就会作为要设置的属性， 请看这段代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> eyes = <span class="string">&#x27;eye color&#x27;</span>;</span><br><span class="line"></span><br><span class="line">tekkenCharacter[eyes] = <span class="string">&#x27;brown&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>执行以上所有示例代码后，对象会变成这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">player</span>: <span class="string">&#x27;Hwoarang&#x27;</span>,</span><br><span class="line">  <span class="attr">fightingStyle</span>: <span class="string">&#x27;Tae Kwon Doe&#x27;</span>,</span><br><span class="line">  <span class="attr">human</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">origin</span>: <span class="string">&#x27;South Korea&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;hair color&#x27;</span>: <span class="string">&#x27;dyed orange&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;eye color&#x27;</span>: <span class="string">&#x27;brown&#x27;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-改嵌套在对象中的对象"><a href="#14-改嵌套在对象中的对象" class="headerlink" title="14. 改嵌套在对象中的对象"></a>14. 改嵌套在对象中的对象</h3><p>在对象中，我们也可以嵌套任意层数的对象，对象的属性值可以是 JavaScript 支持的任意类型，包括数组和其他对象。 请看以下例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nestedObject = &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="number">28802695164</span>,</span><br><span class="line">  <span class="attr">date</span>: <span class="string">&#x27;December 31, 2016&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">totalUsers</span>: <span class="number">99</span>,</span><br><span class="line">    <span class="attr">online</span>: <span class="number">80</span>,</span><br><span class="line">    <span class="attr">onlineStatus</span>: &#123;</span><br><span class="line">      <span class="attr">active</span>: <span class="number">67</span>,</span><br><span class="line">      <span class="attr">away</span>: <span class="number">13</span>,</span><br><span class="line">      <span class="attr">busy</span>: <span class="number">8</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><code>nestedObject</code> 有 3 个属性：<code>id</code>（属性值为数字）、<code>date</code>（属性值为字符串）、<code>data</code>（属性值为嵌套的对象）。 虽然对象中的数据可能很复杂，我们仍能使用上一个挑战中讲到的写法来访问我们需要的信息。 如果我们想把嵌套在 <code>onlineStatus</code> 中 <code>busy</code> 的属性值改为 <code>10</code>，可以用点号表示法来这样实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nestedObject.<span class="property">data</span>.<span class="property">onlineStatus</span>.<span class="property">busy</span> = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-使用方括号访问属性名称"><a href="#15-使用方括号访问属性名称" class="headerlink" title="15. 使用方括号访问属性名称"></a>15. 使用方括号访问属性名称</h3><p>可以在一对方括号中用一个变量作为属性名来访问属性的值。 假设一个超市收银台程序中有一个 <code>foods</code> 对象, 并且有一个函数会设置 <code>selectedFood</code>；如果我们需要查询 <code>foods</code> 对象中，某种食物是否存在， 可以这样实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> selectedFood = <span class="title function_">getCurrentFood</span>(scannedItem);</span><br><span class="line"><span class="keyword">let</span> inventory = foods[selectedFood];</span><br></pre></td></tr></table></figure>
+
+<p>上述代码会先读取 <code>selectedFood</code> 变量的值，并返回 <code>foods</code> 对象中以该值命名的属性所对应的属性值。 若没有以该值命名的属性，则会返回 <code>undefined</code>。 有时候对象的属性名在运行之前是不确定的，或者我们需要动态地访问对象的属性值。在这些场景下，方括号表示法就变得十分有用。</p>
+<h3 id="16-使用-delete-关键字删除对象属性"><a href="#16-使用-delete-关键字删除对象属性" class="headerlink" title="16. 使用 delete 关键字删除对象属性"></a>16. 使用 delete 关键字删除对象属性</h3><p>对象是以键值对的形式，灵活、直观地存储结构化数据的一种方式，<em><strong>而且</strong></em>，通过对象的属性查找属性值是速度很快的操作。</p>
+<p>如何从一个对象中<em>移除</em>一个键值对。</p>
+<p>回顾一下 <code>foods</code> 对象。 如果我们想移除 <code>apples</code> 属性，可以像这样使用 <code>delete</code> 关键字：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> foods.<span class="property">apples</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="17-检查对象是否具有某个属性"><a href="#17-检查对象是否具有某个属性" class="headerlink" title="17. 检查对象是否具有某个属性"></a>17. 检查对象是否具有某个属性</h3><p> JavaScript 为我们提供了两种不同的方式来实现这个功能： 一个是通过 <code>hasOwnProperty()</code> 方法，另一个是使用 <code>in</code> 关键字。 假如我们有一个 <code>users</code> 对象，为检查它是否含有 <code>Alan</code> 属性，可以这样写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">users.<span class="title function_">hasOwnProperty</span>(<span class="string">&#x27;Alan&#x27;</span>);</span><br><span class="line"><span class="string">&#x27;Alan&#x27;</span> <span class="keyword">in</span> users;</span><br></pre></td></tr></table></figure>
+
+<p>这两者结果都应该为 <code>true</code>。</p>
+<h3 id="18-使用-for…in-语句遍历对象"><a href="#18-使用-for…in-语句遍历对象" class="headerlink" title="18. 使用 for…in 语句遍历对象"></a>18. 使用 for…in 语句遍历对象</h3><p>Sometimes you need to iterate through all the keys within an object. You can use a for…in loop to do this. The for…in loop looks like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> refrigerator = &#123;</span><br><span class="line">  <span class="string">&#x27;milk&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">&#x27;eggs&#x27;</span>: <span class="number">12</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> food <span class="keyword">in</span> refrigerator) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(food, refrigerator[food]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This code logs <code>milk 1</code> and <code>eggs 12</code>, with each key-value pair on its own line.</p>
+<p>We defined the variable <code>food</code> in the loop head and this variable was set to each of the object’s keys on each iteration, resulting in each food’s name being printed to the console.</p>
+<p><strong>注意：</strong>对象中的键是无序的，这与数组不同。 因此，一个对象中某个属性的位置，或者说它出现的相对顺序，在引用或访问该属性时是不确定的。</p>
+<h3 id="19-使用-Object-keys-生成由对象的所有属性组成的数组"><a href="#19-使用-Object-keys-生成由对象的所有属性组成的数组" class="headerlink" title="19. 使用 Object.keys() 生成由对象的所有属性组成的数组"></a>19. 使用 Object.keys() 生成由对象的所有属性组成的数组</h3><p>我们可以给 <code>Object.keys()</code> 方法传入一个对象作为参数，来生成包含对象所有键的数组。 这个方法将对象作为参数并返回代表对象中每个属性的字符串数组。 需要注意的是，数组中元素的顺序是不确定的。</p>
+<h1 id><a href="#" class="headerlink" title></a></h1>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/" title="JavaScript Algorithms and Data Structures(五)">http://moyun.com/javascript-algorithms-and-data-structures-五/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/javascript-algorithms-and-data-structures-%E5%9B%9B/" rel="prev" title="JavaScript Algorithms and Data Structures(四)">
+                  <i class="fa fa-chevron-left"></i> JavaScript Algorithms and Data Structures(四)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">378k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:44</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

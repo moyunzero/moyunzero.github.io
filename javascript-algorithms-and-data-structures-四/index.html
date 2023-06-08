@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures 调试1. 使用控制台检查变量值Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Algorithms and Data Structures(四)">
+<meta property="og:url" content="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures 调试1. 使用控制台检查变量值Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-06T00:58:43.110Z">
+<meta property="article:modified_time" content="2023-06-06T00:59:25.162Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/","path":"javascript-algorithms-and-data-structures-四/","title":"JavaScript Algorithms and Data Structures(四)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript Algorithms and Data Structures(四) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-JavaScript-Algorithms-and-Data-Structures"><span class="nav-text">freeCodeCamp —- JavaScript Algorithms and Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E8%AF%95"><span class="nav-text">调试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%A3%80%E6%9F%A5%E5%8F%98%E9%87%8F%E5%80%BC"><span class="nav-text">1. 使用控制台检查变量值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%86%E8%A7%A3-freeCodeCamp-%E5%92%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="nav-text">2. 了解 freeCodeCamp 和浏览器控制台之间的差异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8-type-of-%E6%A3%80%E6%9F%A5%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">3. 使用 type of 检查变量的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%8D%95%E8%8E%B7%E6%8B%BC%E9%94%99%E7%9A%84%E5%8F%98%E9%87%8F%E5%90%8D%E5%92%8C%E5%87%BD%E6%95%B0%E5%90%8D"><span class="nav-text">4. 捕获拼错的变量名和函数名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%8D%95%E8%8E%B7%E6%9C%AA%E9%97%AD%E5%90%88%E7%9A%84%E6%8B%AC%E5%8F%B7%E3%80%81%E6%96%B9%E6%8B%AC%E5%8F%B7%E3%80%81%E5%A4%A7%E6%8B%AC%E5%8F%B7%E5%92%8C%E5%BC%95%E5%8F%B7"><span class="nav-text">5. 捕获未闭合的括号、方括号、大括号和引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%8D%95%E6%8D%89%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E5%8F%8C%E5%BC%95%E5%8F%B7%E7%9A%84%E6%B7%B7%E5%90%88%E7%94%A8%E6%B3%95"><span class="nav-text">6. 捕捉单引号和双引号的混合用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%8D%95%E8%8E%B7%E4%BD%BF%E7%94%A8%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E8%80%8C%E4%B8%8D%E6%98%AF%E7%9B%B8%E7%AD%89%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">7. 捕获使用赋值运算符而不是相等运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E6%8D%95%E6%8D%89%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%90%8E%E7%BC%BA%E5%B0%91%E7%9A%84%E5%B7%A6%E6%8B%AC%E5%8F%B7%E5%92%8C%E5%8F%B3%E6%8B%AC%E5%8F%B7"><span class="nav-text">8. 捕捉函数调用后缺少的左括号和右括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0%E6%97%B6%EF%BC%8C%E6%8D%95%E8%8E%B7%E4%BB%A5%E9%94%99%E8%AF%AF%E9%A1%BA%E5%BA%8F%E4%BC%A0%E9%80%92%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-text">9. 调用函数时，捕获以错误顺序传递的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E6%8D%95%E8%8E%B7%E4%BD%BF%E7%94%A8%E7%B4%A2%E5%BC%95%E7%9A%84%E6%97%B6%E5%80%99%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="nav-text">10. 捕获使用索引的时候出现的错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E9%87%8D%E6%96%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E6%97%B6%E8%A6%81%E5%B0%8F%E5%BF%83"><span class="nav-text">11. 重新初始化循环中的变量时要小心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E4%BD%BF%E7%94%A8%E6%9C%89%E6%95%88%E7%9A%84%E7%BB%88%E6%AD%A2%E6%9D%A1%E4%BB%B6%E9%98%B2%E6%AD%A2%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="nav-text">12. 使用有效的终止条件防止无限循环</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archive/">
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/javascript-algorithms-and-data-structures-%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-03</time>
+        <br>
+      JavaScript Algorithms and Data Structures(一)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/javascript-algorithms-and-data-structures-%E4%BA%94/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-08</time>
+        <br>
+      JavaScript Algorithms and Data Structures(五)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript Algorithms and Data Structures(四) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript Algorithms and Data Structures(四)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-06 08:58:43 / 修改时间：08:59:25" itemprop="dateCreated datePublished" datetime="2023-06-06T08:58:43+08:00">2023-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><h3 id="1-使用控制台检查变量值"><a href="#1-使用控制台检查变量值" class="headerlink" title="1. 使用控制台检查变量值"></a>1. 使用控制台检查变量值</h3><p>Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码</p>
+<span id="more"></span>
+
+<p>可以在 Chrome 的菜单中找到“开发者工具”或 FireFox 的菜单中的 “Web 控制台”。 如果你使用其他浏览器或手机，我们强烈建议你切换到桌面版 Firefox 或 Chrome。</p>
+<p><code>console.log()</code> 方法可能是最有用的调试工具，它可以将括号中的内容输出到控制台。 将它放在代码中的关键点可以显示变量在当时的值。 在查看输出之前，最好先想清楚输出应该是什么。 在整个代码中使用检查点来查看计算状态将有助于缩小问题的范围。</p>
+<p>下面是输出 <code>Hello world!</code> 字符串到控制台的示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello world!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-了解-freeCodeCamp-和浏览器控制台之间的差异"><a href="#2-了解-freeCodeCamp-和浏览器控制台之间的差异" class="headerlink" title="2. 了解 freeCodeCamp 和浏览器控制台之间的差异"></a>2. 了解 freeCodeCamp 和浏览器控制台之间的差异</h3><p>你可能已经注意到一些 freeCodeCamp 的挑战有自己的控制台。 这个控制台的行为与浏览器控制台有些不同。</p>
+<p>有许多方法可以与 <code>console</code> 一起使用来输出消息。 <code>log</code>、<code>warn</code> 和 <code>clear</code> 就是几个例子。 freeCodeCamp 控制台只会输出 <code>log</code> 消息，而浏览器控制台会输出所有消息。 当你对你的代码进行修改时，它将自动运行并显示日志。 每次代码运行时，freeCodeCamp 控制台都会被清除。</p>
+<h3 id="3-使用-type-of-检查变量的类型"><a href="#3-使用-type-of-检查变量的类型" class="headerlink" title="3. 使用 type of 检查变量的类型"></a>3. 使用 type of 检查变量的类型</h3><p>可以使用 <code>typeof</code> 检查变量的数据结构或类型。 在处理多种数据类型时，这会对调试很有帮助。 如果想计算两数之和，但实际传入了一个字符串参数，则结果可能是错误的。 类型错误可能隐藏在计算或函数调用中。 当你以 JavaScript 对象（JSON）的形式访问和使用外部数据时尤其要小心。</p>
+<p>下面是使用 <code>typeof</code> 的一些示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> <span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> <span class="number">0</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> []);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将按顺序显示字符串 <code>string</code>、<code>number</code>、<code>object</code> 和 <code>object</code>。</p>
+<p>JavaScript 有七种原始（不可变）数据类型： <code>Boolean</code>，<code>Null</code>，<code>Undefined</code>，<code>Number</code>，<code>String</code>，<code>Symbol</code> （new with ES6），<code>BigInt</code> （new with ES2020）和一种可变数据类型：<code>Object</code>。 注意：在 JavaScript 中，数组在本质上是一种对象。</p>
+<h3 id="4-捕获拼错的变量名和函数名"><a href="#4-捕获拼错的变量名和函数名" class="headerlink" title="4. 捕获拼错的变量名和函数名"></a>4. 捕获拼错的变量名和函数名</h3><p><code>console.log()</code> 和 <code>typeof</code> 方法是检查中间值和程序输出类型的两种主要方法。 现在是时候了解一下 bug 出现的常见的情形。 一个语法级别的问题是打字太快带来的低级拼写错误。</p>
+<p>变量或函数名的错写、漏写或大小写弄混都会让浏览器尝试查找并不存在的东西，并报出“引用错误”。 JavaScript 变量和函数名称区分大小写。</p>
+<h3 id="5-捕获未闭合的括号、方括号、大括号和引号"><a href="#5-捕获未闭合的括号、方括号、大括号和引号" class="headerlink" title="5. 捕获未闭合的括号、方括号、大括号和引号"></a>5. 捕获未闭合的括号、方括号、大括号和引号</h3><p>要注意的另一个语法错误是所有的小括号、方括号、花括号和引号都必须配对。 当你编辑代码并插入新代码其中带有括号时，很容易忘记括号闭合。 此外，在将代码块嵌套到其他代码块时要小心，例如将回调函数作为参数添加到方法中。</p>
+<p>避免这种错误的一种方法是，一次性输入完这些符号，然后将光标移回它们之间继续编写。 好在现在大部分编辑器都会帮你自动补全。</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/learn/javascript-algorithms-and-data-structures">JavaScript 算法和数据结构</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/learn/javascript-algorithms-and-data-structures/#debugging">调试</a></li>
+</ol>
+<h3 id="6-捕捉单引号和双引号的混合用法"><a href="#6-捕捉单引号和双引号的混合用法" class="headerlink" title="6. 捕捉单引号和双引号的混合用法"></a>6. 捕捉单引号和双引号的混合用法</h3><p>JavaScript 允许使用单引号（<code>&#39;</code>）和双引号（<code>&quot;</code>）声明字符串。 决定使用哪一个通常看个人偏好，但有一些例外。</p>
+<p>如果字符串中有缩写或存在一段带引号的文本，你就会明白为什么 JavaScript 允许两种引号了。 请注意，不要提前用引号结束字符串，这会导致语法错误。</p>
+<p>下面是混合使用引号的一些示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> grouchoContraction = <span class="string">&quot;I&#x27;ve had a perfectly wonderful evening, but this wasn&#x27;t it.&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> quoteInString = <span class="string">&quot;Groucho Marx once said &#x27;Quote me as saying I was mis-quoted.&#x27;&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> uhOhGroucho = <span class="string">&#x27;I&#x27;</span>ve had a perfectly wonderful evening, but <span class="variable language_">this</span> wasn<span class="string">&#x27;t it.&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>前两项是正确的，但第三项是不正确的。</p>
+<p>当然，只使用一种引号也是可以的。 可以使用反斜杠（<code>\</code>）来转义字符串内的引号：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> allSameQuotes = <span class="string">&#x27;I\&#x27;ve had a perfectly wonderful evening, but this wasn\&#x27;t it.&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-捕获使用赋值运算符而不是相等运算符"><a href="#7-捕获使用赋值运算符而不是相等运算符" class="headerlink" title="7. 捕获使用赋值运算符而不是相等运算符"></a>7. 捕获使用赋值运算符而不是相等运算符</h3><p>分支程序，即在满足某些条件时执行不同操作的程序，依赖于 JavaScript 中的<code>if</code>，<code>else if</code>、<code>else</code>语句。 条件有时采取测试一个结果是否等于一个值的形式。</p>
+<p>这种逻辑可以表述为“如果 x 等于 y ，则……”，听起来像是可以使用 <code>=</code>（即赋值运算符）。 然而，这会导致程序中流程出问题。</p>
+<p>如前面的挑战所述，JavaScript 中的赋值运算符 (<code>=</code>) 是用来为变量名赋值的。 并且 <code>==</code> 和 <code>===</code> 运算符检查相等性（三等号 <code>===</code> 是用来测试是否严格相等的，严格相等的意思是值和类型都必须相同）。</p>
+<p>下面的代码将 <code>x</code> 赋值为 2，表达式会在执行后得到 <code>true</code>。 JavaScript 会把大部分的值都视为 <code>true</code>，除了所谓的 “falsy”值，即：<code>false</code>、<code>0</code>、<code>&quot;&quot;</code>（空字符串）、<code>NaN</code>、<code>undefined</code> 和 <code>null</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">if</span> (x = y) &#123;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，除非 <code>y</code> 值是假值，否则当 <code>y</code> 为任何值时，<code>if</code> 语句中的代码块都会运行。 我们期望运行的 <code>else</code> 代码块实际上将不会运行。</p>
+<h3 id="8-捕捉函数调用后缺少的左括号和右括号"><a href="#8-捕捉函数调用后缺少的左括号和右括号" class="headerlink" title="8. 捕捉函数调用后缺少的左括号和右括号"></a>8. 捕捉函数调用后缺少的左括号和右括号</h3><p>当函数或方法不接受任何参数时，你可能忘记在调用它时加上空的左括号和右括号。 通常，函数调用的结果会保存在变量中，供其他代码使用。 可以通过将变量值（或其类型）打印到控制台，查看输出究竟是一个函数引用还是函数调用的返回值来检测这类错误。</p>
+<p>下面示例中的两个变量是不同的:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;You rock!&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> varOne = myFunction;</span><br><span class="line"><span class="keyword">let</span> varTwo = <span class="title function_">myFunction</span>();</span><br></pre></td></tr></table></figure>
+
+<p>这里 <code>varOne</code> 是函数 <code>myFunction</code> ，<code>varTwo</code> 是字符串 <code>You rock!</code></p>
+<h3 id="9-调用函数时，捕获以错误顺序传递的参数"><a href="#9-调用函数时，捕获以错误顺序传递的参数" class="headerlink" title="9. 调用函数时，捕获以错误顺序传递的参数"></a>9. 调用函数时，捕获以错误顺序传递的参数</h3><p>继续讨论调用函数，需要注意的下一个 bug 是函数的参数传递顺序错误。 如果参数分别是不同的类型，例如接受数组和整数两个参数的函数，参数顺序传错就可能会引发运行时错误。 对于接受相同类型参数的函数，传错参数也会导致逻辑错误或运行结果错误。 确保以正确的顺序提供所有必需的参数以避免这些问题。</p>
+<h3 id="10-捕获使用索引的时候出现的错误"><a href="#10-捕获使用索引的时候出现的错误" class="headerlink" title="10. 捕获使用索引的时候出现的错误"></a>10. 捕获使用索引的时候出现的错误</h3><p>当试图访问字符串或数组的特定索引（分割或访问一个片段）或循环索引时，有时会出现 Off by one errors 错误（有时称为 OBOE）。 JavaScript 索引从 0 开始，而不是 1，这意味着最后一个索引总会比字符串或数组的长度少 1。 如果尝试访问等于长度的索引，程序可能会抛出“索引超出范围”引用错误或打印出 <code>undefined</code>。</p>
+<p>当使用将索引范围作为参数的字符串或数组方法时，阅读相关的文档并了解参数中的索引的包含性（即是否考虑进返回值中）很重要。 以下是一些错误的示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> alphabet = <span class="string">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> len = alphabet.<span class="property">length</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= len; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(alphabet[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(alphabet[j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> k = <span class="number">0</span>; k &lt; len; k++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(alphabet[k]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一个例子多了一次循环，第二个例子少了一次循环（漏掉了索引 0 处的字符）， 第三个例子是正确的。</p>
+<h3 id="11-重新初始化循环中的变量时要小心"><a href="#11-重新初始化循环中的变量时要小心" class="headerlink" title="11. 重新初始化循环中的变量时要小心"></a>11. 重新初始化循环中的变量时要小心</h3><p>有时需要在循环中保存信息以增加计数器或重置变量。 一个潜在的问题是变量什么时候该重新初始化，什么时候不该重新初始化，反之亦然。 如果你不小心重置了用于终止条件的变量，导致无限循环，这将特别危险。</p>
+<p>使用<code>console.log()</code>在每个循环中打印变量值可以发现与重置相关的错误或者重置变量失败。</p>
+<h3 id="12-使用有效的终止条件防止无限循环"><a href="#12-使用有效的终止条件防止无限循环" class="headerlink" title="12. 使用有效的终止条件防止无限循环"></a>12. 使用有效的终止条件防止无限循环</h3><p>最后一个话题是可怕的无限循环。 当需要程序运行代码块一定次数或满足条件时，循环是很好的工具，但是它们需要终止条件来结束循环。 无限循环可能会使浏览器冻结或崩溃，并导致程序执行混乱，没有人想要这样的结果。</p>
+<p>在本节的介绍中有一个无限循环的例子——它没有终止条件来摆脱<code>loopy()</code>内的<code>while</code>循环。 不要调用这个函数！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">loopy</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序员的工作是确保最终达到终止条件，该条件告诉程序何时跳出循环。 有一种错误是从终端条件向错误方向递增或递减计数器变量。 另一种是在循环代码中意外重置计数器或索引变量，而不是递增或递减它。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/" title="JavaScript Algorithms and Data Structures(四)">http://moyun.com/javascript-algorithms-and-data-structures-四/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/javascript-algorithms-and-data-structures-%E4%B8%89/" rel="prev" title="JavaScript Algorithms and Data Structures(三)">
+                  <i class="fa fa-chevron-left"></i> JavaScript Algorithms and Data Structures(三)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/javascript-algorithms-and-data-structures-%E4%BA%94/" rel="next" title="JavaScript Algorithms and Data Structures(五)">
+                  JavaScript Algorithms and Data Structures(五) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">378k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:44</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

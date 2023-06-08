@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-05T02:38:59.671Z</updated>
+  <updated>2023-06-08T12:58:16.797Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript Algorithms and Data Structures(五)</title>
+    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/"/>
+    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/</id>
+    <published>2023-06-08T12:57:24.011Z</published>
+    <updated>2023-06-08T12:58:16.797Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;基础数据结构&quot;&gt;&lt;a href=&quot;#基础数据结构&quot; class=&quot;headerlink&quot; title=&quot;基础数据结构&quot;&gt;&lt;/a&gt;基础数据结构&lt;/h2&gt;&lt;h3 id=&quot;1-使用数组存储不同类型的数据&quot;&gt;&lt;a href=&quot;#1-使用数组存储不同类型的数据&quot; class=&quot;headerlink&quot; title=&quot;1.使用数组存储不同类型的数据&quot;&gt;&lt;/a&gt;1.使用数组存储不同类型的数据&lt;/h3&gt;&lt;p&gt;以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（numbers）以及 JavaScript 中的其他数据类型&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript Algorithms and Data Structures(四)</title>
+    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/"/>
+    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/</id>
+    <published>2023-06-06T00:58:43.110Z</published>
+    <updated>2023-06-06T00:59:25.162Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;调试&quot;&gt;&lt;a href=&quot;#调试&quot; class=&quot;headerlink&quot; title=&quot;调试&quot;&gt;&lt;/a&gt;调试&lt;/h2&gt;&lt;h3 id=&quot;1-使用控制台检查变量值&quot;&gt;&lt;a href=&quot;#1-使用控制台检查变量值&quot; class=&quot;headerlink&quot; title=&quot;1. 使用控制台检查变量值&quot;&gt;&lt;/a&gt;1. 使用控制台检查变量值&lt;/h3&gt;&lt;p&gt;Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript Algorithms and Data Structures(三)</title>
     <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%89/"/>
     <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%89/</id>
     <published>2023-06-05T02:38:12.067Z</published>
-    <updated>2023-06-05T02:38:59.671Z</updated>
+    <updated>2023-06-05T07:10:39.668Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
@@ -94,16 +142,10 @@
     <link href="http://moyun.com/algorithm%E2%80%94%E2%80%94linkedlist/"/>
     <id>http://moyun.com/algorithm%E2%80%94%E2%80%94linkedlist/</id>
     <published>2023-06-02T13:25:53.437Z</published>
-    <updated>2023-06-05T07:08:48.855Z</updated>
+    <updated>2023-06-06T12:56:16.944Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;链表&quot;&gt;&lt;a href=&quot;#链表&quot; class=&quot;headerlink&quot; title=&quot;链表&quot;&gt;&lt;/a&gt;链表&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;链表&quot;&gt;&lt;a href=&quot;#链表&quot; class=&quot;headerlink&quot; title=&quot;链表&quot;&gt;&lt;/a&gt;链表&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot; title=&quot;1.理论基础&quot;&gt;&lt;/a&gt;1.理论基础&lt;/h2&gt;&lt;p&gt;链表是一种通过指针串联在一起的线性结构，每一个节点由两部构成&lt;/p&gt;</summary>
     
     
     
@@ -144,11 +186,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -172,11 +214,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="animation" scheme="http://moyun.com/tags/animation/"/>
     
@@ -200,11 +242,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="animation" scheme="http://moyun.com/tags/animation/"/>
     
@@ -234,11 +276,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -262,11 +304,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -288,11 +330,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -317,9 +359,9 @@
     <category term="Array" scheme="http://moyun.com/categories/Algorithm/Array/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="Array" scheme="http://moyun.com/tags/Array/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Algorithm" scheme="http://moyun.com/tags/Algorithm/"/>
     
@@ -342,9 +384,9 @@
     <category term="HTML" scheme="http://moyun.com/categories/Frontend-Notes/HTML/"/>
     
     
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
@@ -374,11 +416,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -402,11 +444,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="media" scheme="http://moyun.com/tags/media/"/>
     
@@ -430,11 +472,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -456,11 +498,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -488,11 +530,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -516,65 +558,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Responsive Web Dedign(七)</title>
-    <link href="http://moyun.com/responsive-web-dedign-%E4%B8%83/"/>
-    <id>http://moyun.com/responsive-web-dedign-%E4%B8%83/</id>
-    <published>2023-05-06T04:57:38.730Z</published>
-    <updated>2023-06-01T03:26:55.372Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Learn-Typography-by-Building-a-Nutrition-Label&quot;&gt;&lt;a href=&quot;#Learn-Typography-by-Building-a-Nutrition-Label&quot; class=&quot;headerlink&quot; title=&quot;Learn Typography by Building a Nutrition Label&quot;&gt;&lt;/a&gt;Learn Typography by Building a Nutrition Label&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
     
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Responsive Web Dedign(六)</title>
-    <link href="http://moyun.com/responsive-web-dedign-%E5%85%AD/"/>
-    <id>http://moyun.com/responsive-web-dedign-%E5%85%AD/</id>
-    <published>2023-05-05T01:08:06.798Z</published>
-    <updated>2023-06-01T03:28:37.437Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Learn-CSS-Flexbox-by-Building-a-Photo-Gallery&quot;&gt;&lt;a href=&quot;#Learn-CSS-Flexbox-by-Building-a-Photo-Gallery&quot; class=&quot;headerlink&quot; title=&quot;Learn CSS Flexbox by Building a Photo Gallery&quot;&gt;&lt;/a&gt;Learn CSS Flexbox by Building a Photo Gallery&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Flexbox" scheme="http://moyun.com/tags/Flexbox/"/>
     
   </entry>
   
