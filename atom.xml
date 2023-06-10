@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-08T12:58:16.797Z</updated>
+  <updated>2023-06-10T09:18:46.037Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript Algorithms and Data Structures(六)</title>
+    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%85%AD/"/>
+    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E5%85%AD/</id>
+    <published>2023-06-10T09:18:03.944Z</published>
+    <updated>2023-06-10T09:18:46.037Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;基础算法&quot;&gt;&lt;a href=&quot;#基础算法&quot; class=&quot;headerlink&quot; title=&quot;基础算法&quot;&gt;&lt;/a&gt;基础算法&lt;/h2&gt;&lt;h3 id=&quot;1-将摄氏度转换为华氏度&quot;&gt;&lt;a href=&quot;#1-将摄氏度转换为华氏度&quot; class=&quot;headerlink&quot; title=&quot;1. 将摄氏度转换为华氏度&quot;&gt;&lt;/a&gt;1. 将摄氏度转换为华氏度&lt;/h3&gt;&lt;p&gt;从摄氏转换为华氏的公式是，摄氏温度乘以 &lt;code&gt;9/5&lt;/code&gt;，再加上 &lt;code&gt;32&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;输入参数 &lt;code&gt;celsius&lt;/code&gt; 代表一个摄氏度的温度。 使用已定义的变量 &lt;code&gt;fahrenheit&lt;/code&gt;，并赋值为相应的华氏度的温度值。 使用上面提到的公式来帮助将摄氏温度转换为华氏温度。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript Algorithms and Data Structures(五)</title>
     <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/"/>
     <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/</id>
     <published>2023-06-08T12:57:24.011Z</published>
-    <updated>2023-06-08T12:58:16.797Z</updated>
+    <updated>2023-06-08T12:59:39.979Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
@@ -45,7 +70,7 @@
     <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/"/>
     <id>http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/</id>
     <published>2023-06-06T00:58:43.110Z</published>
-    <updated>2023-06-06T00:59:25.162Z</updated>
+    <updated>2023-06-08T12:59:39.976Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
@@ -186,11 +211,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -214,11 +239,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="animation" scheme="http://moyun.com/tags/animation/"/>
     
@@ -242,11 +267,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="animation" scheme="http://moyun.com/tags/animation/"/>
     
@@ -276,11 +301,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -304,11 +329,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -330,11 +355,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -359,9 +384,9 @@
     <category term="Array" scheme="http://moyun.com/categories/Algorithm/Array/"/>
     
     
-    <category term="Array" scheme="http://moyun.com/tags/Array/"/>
-    
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Array" scheme="http://moyun.com/tags/Array/"/>
     
     <category term="Algorithm" scheme="http://moyun.com/tags/Algorithm/"/>
     
@@ -384,9 +409,9 @@
     <category term="HTML" scheme="http://moyun.com/categories/Frontend-Notes/HTML/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
@@ -416,11 +441,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
@@ -444,11 +469,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="media" scheme="http://moyun.com/tags/media/"/>
     
@@ -472,11 +497,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -498,11 +523,11 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -530,39 +555,13 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Responsive Web Dedign(八)</title>
-    <link href="http://moyun.com/responsive-web-dedign-%E5%85%AB/"/>
-    <id>http://moyun.com/responsive-web-dedign-%E5%85%AB/</id>
-    <published>2023-05-07T07:46:56.042Z</published>
-    <updated>2023-06-01T03:27:23.649Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Learn-Accessibility-by-Building-a-Quiz&quot;&gt;&lt;a href=&quot;#Learn-Accessibility-by-Building-a-Quiz&quot; class=&quot;headerlink&quot; title=&quot;Learn Accessibility by Building a Quiz&quot;&gt;&lt;/a&gt;Learn Accessibility by Building a Quiz&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
     
   </entry>
   
