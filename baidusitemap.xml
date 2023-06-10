@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://moyun.com/algorithm%E2%80%94%E2%80%94hash-table/</loc>
+    <lastmod>2023-06-10</lastmod>
+  </url>
+  <url>
     <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E5%85%AD/</loc>
     <lastmod>2023-06-10</lastmod>
   </url>
