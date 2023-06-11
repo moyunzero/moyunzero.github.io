@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://moyun.com//index.html</loc>
+    <lastmod>2023-06-11</lastmod>
+  </url>
+  <url>
     <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%83/</loc>
     <lastmod>2023-06-11</lastmod>
   </url>
@@ -35,10 +39,6 @@
   <url>
     <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/</loc>
     <lastmod>2023-06-04</lastmod>
-  </url>
-  <url>
-    <loc>http://moyun.com/project-exercise-%E2%80%94-build-a-personal-portfolio-webpage/</loc>
-    <lastmod>2023-06-01</lastmod>
   </url>
   <url>
     <loc>http://moyun.com/project-exercise-%E2%80%94-build-a-technical-documentation-page/</loc>

@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://moyun.com/archives/index.html</loc>
+    
+    <lastmod>2023-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://moyun.com/index.html</loc>
+    
+    <lastmod>2023-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%83/</loc>
     
     <lastmod>2023-06-11</lastmod>
@@ -77,15 +95,6 @@
     <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/</loc>
     
     <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/project-exercise-%E2%80%94-build-a-personal-portfolio-webpage/</loc>
-    
-    <lastmod>2023-06-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -290,45 +299,9 @@
   </url>
   
   <url>
-    <loc>http://moyun.com/Started/index-1.html</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://moyun.com/Installation/index.html</loc>
     
     <lastmod>2023-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/Started/index.html</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/Docs/index.html</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/archives/index.html</loc>
-    
-    <lastmod>2023-04-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -399,6 +372,13 @@
   </url>
   
   <url>
+    <loc>http://moyun.com/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://moyun.com/tags/CSS3/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -414,13 +394,6 @@
   
   <url>
     <loc>http://moyun.com/tags/Hash-table/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -485,6 +458,13 @@
   </url>
   
   <url>
+    <loc>http://moyun.com/categories/Frontend-Notes/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://moyun.com/categories/Project-Exercise/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -492,7 +472,7 @@
   </url>
   
   <url>
-    <loc>http://moyun.com/categories/Frontend-Notes/</loc>
+    <loc>http://moyun.com/categories/Algorithm/Hash-table/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -513,21 +493,14 @@
   </url>
   
   <url>
-    <loc>http://moyun.com/categories/Project-Exercise/Primary-Program/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/categories/Algorithm/Hash-table/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://moyun.com/categories/Frontend-Notes/HTML/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://moyun.com/categories/Project-Exercise/Primary-Program/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
