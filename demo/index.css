@@ -1,9 +1,9 @@
 /* Custom properties/variables  */
 :root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
+  --main-skyblue:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --main-red:  linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  --main-blue: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --main-gray: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 /* Base reset */
@@ -73,7 +73,7 @@ body {
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-white);
+  color: var(--main-skyblue);
 }
 
 h1,
@@ -97,7 +97,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-white);
+  color: var(--main-skyblue);
 }
 
 img {
@@ -115,8 +115,18 @@ img {
   left: 0;
   width: 100%;
   background: var(--main-red);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 0 var(--main-red);
   z-index: 10;
+}
+.nav .navhead{
+  position: absolute;
+  left: 10%;
+    /* 这里设置盒子宽度 */
+  height: 100%; /* 这里设置盒子高度 */
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-list {
@@ -141,7 +151,7 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
 }
 
 /* Welcome section */
@@ -154,14 +164,14 @@ img {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-image: var(--main-gray);
 }
 
 .welcome-section > p {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-red);
+  color: var(--main-gray);
 }
 
 /* Projects section */
@@ -169,13 +179,13 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-blue);
+  background: var(--main-gray);
 }
 
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
+  border-bottom: 0.2rem solid var(--main-gray);
 }
 
 @media (max-width: 28.75em) {
@@ -311,7 +321,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: var(--main-gray);
+  background: var(--main-red);
   border-top: 4px solid var(--main-red);
 }
 
