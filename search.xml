@@ -6632,4 +6632,160 @@
         <tag>CSS3</tag>
       </tags>
   </entry>
+  <entry>
+    <title>JavaScript Algorithms and Data Structures(八)</title>
+    <url>/javascript-algorithms-and-data-structures-%E5%85%AB/</url>
+    <content><![CDATA[<h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
+<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><h3 id="1-学习函数式编程"><a href="#1-学习函数式编程" class="headerlink" title="1. 学习函数式编程"></a>1. 学习函数式编程</h3><p>函数式编程是一种方案简单、功能独立、对作用域外没有任何副作用的编程范式：<code>INPUT -&gt; PROCESS -&gt; OUTPUT</code>。</p>
+<span id="more"></span>
+
+<p>函数式编程：</p>
+<p>1）功能独立——不依赖于程序的状态（比如可能发生变化的全局变量）；</p>
+<p>2）纯函数——同一个输入永远能得到同一个输出；</p>
+<p>3）有限的副作用——可以严格地限制函数外部对状态的更改。</p>
+<h3 id="2-了解函数式编程术语"><a href="#2-了解函数式编程术语" class="headerlink" title="2. 了解函数式编程术语"></a>2. 了解函数式编程术语</h3><p>FCC 团队需求有变更，现在想要两种茶：绿茶（green tea）和红茶（black tea）。 事实证明，用户需求变更是很常见的。</p>
+<p>基于以上信息，我们需要重构上一节挑战中的 <code>getTea</code> 函数来处理多种茶的请求。 我们可以修改 <code>getTea</code> 接受一个函数作为参数，使它能够修改茶的类型。 这让 <code>getTea</code> 更灵活，也使需求变更时为程序员提供更多控制权。</p>
+<p>首先，我们将介绍一些术语：</p>
+<p>Callbacks 是被传递到另一个函数中调用的函数。 你应该已经在其他函数中看过这个写法，例如在 <code>filter</code> 中，回调函数告诉 JavaScript 以什么规则过滤数组。</p>
+<p>函数就像其他正常值一样，可以赋值给变量、传递给另一个函数，或从其它函数返回，这种函数叫做头等 first class 函数。 在 JavaScript 中，所有函数都是头等函数。</p>
+<p>将函数作为参数或将函数作为返回值返回的函数叫作高阶函数。</p>
+<p>当函数被传递给另一个函数或从另一个函数返回时，那些传入或返回的函数可以叫作 lambda。</p>
+<h3 id="3-了解使用命令式编程的危害"><a href="#3-了解使用命令式编程的危害" class="headerlink" title="3. 了解使用命令式编程的危害"></a>3. 了解使用命令式编程的危害</h3><p>使用函数式编程是一个好的习惯。 它使你的代码易于管理，避免潜在的 bug。 但在开始之前，先看看命令式编程方法，以强调你可能有什么问题。</p>
+<p>在英语 (以及许多其他语言) 中，命令式时态用来发出指令。 同样，命令式编程是向计算机提供一套执行任务的声明。</p>
+<p>命令式编程常常改变程序状态，例如更新全局变量。 一个典型的例子是编写 <code>for</code> 循环，它为一个数组的索引提供了准确的迭代方向。</p>
+<p>相反，函数式编程是声明式编程的一种形式。 通过调用方法或函数来告诉计算机要做什么。</p>
+<p>JavaScript 提供了许多处理常见任务的方法，所以你无需写出计算机应如何执行它们。 例如，你可以用 <code>map</code> 函数替代上面提到的 <code>for</code> 循环来处理数组迭代。 这有助于避免语义错误，如调试章节介绍的 “Off By One Errors”。</p>
+<p>考虑这样的场景：你正在浏览器中浏览网页，并想操作你打开的标签。 下面我们来试试用面向对象的思路来描述这种情景。</p>
+<p>窗口对象由选项卡组成，通常会打开多个窗口。 窗口对象中每个打开网站的标题都保存在一个数组中。 在对浏览器进行了如打开新标签、合并窗口、关闭标签之类的操作后，你需要输出所有打开的标签。 关掉的标签将从数组中删除，新打开的标签（为简单起见）则添加到数组的末尾。</p>
+<p>代码编辑器中显示了此功能的实现，其中包含 <code>tabOpen()</code>，<code>tabClose()</code>，和 <code>join()</code> 函数。 <code>tabs</code> 数组是窗口对象的一部分用于储存打开页面的名称。</p>
+<h3 id="4-使用函数式编程避免变化和副作用"><a href="#4-使用函数式编程避免变化和副作用" class="headerlink" title="4. 使用函数式编程避免变化和副作用"></a>4. 使用函数式编程避免变化和副作用</h3><p>如果你还没想通，上一个挑战的问题出在 <code>tabClose()</code> 函数里的 <code>splice</code>。 不幸的是，<code>splice</code> 修改了调用它的原始数组，所以第二次调用它时是基于修改后的数组，才给出了意料之外的结果。</p>
+<p>这是一个小例子，还有更广义的定义——在变量，数组或对象上调用一个函数，这个函数会改变对象中的变量或其他东西。</p>
+<p>函数式编程的核心原则之一是不改变任何东西。 变化会导致错误。 如果一个函数不改变传入的参数、全局变量等数据，那么它造成问题的可能性就会小很多。</p>
+<p>前面的例子没有任何复杂的操作，但是 <code>splice</code> 方法改变了原始数组，导致 bug 产生。</p>
+<p>回想一下，在函数式编程中，改变或变更叫做 mutation，这种改变的结果叫做“副作用”（side effect）。 理想情况下，函数应该是不会产生任何副作用的 pure function。</p>
+<p>让我们尝试掌握这个原则：不要改变代码中的任何变量或对象。</p>
+<h3 id="5-传递参数以避免函数中的外部依赖"><a href="#5-传递参数以避免函数中的外部依赖" class="headerlink" title="5. 传递参数以避免函数中的外部依赖"></a>5. 传递参数以避免函数中的外部依赖</h3><p>上一个挑战是更接近函数式编程原则的挑战，但是仍然缺少一些东西。</p>
+<p>虽然我们没有改变全局变量值，但在没有全局变量 <code>fixedValue</code> 的情况下，<code>incrementer</code> 函数将不起作用。</p>
+<p>函数式编程的另一个原则是：总是显式声明依赖关系。 如果函数依赖于一个变量或对象，那么将该变量或对象作为参数直接传递到函数中。</p>
+<p>这样做会有很多好处。 其中一点是让函数更容易测试，因为你确切地知道参数是什么，并且这个参数也不依赖于程序中的任何其他内容。</p>
+<p>其次，这样做可以让你更加自信地更改，删除或添加新代码。 因为你很清楚哪些是可以改的，哪些是不可以改的，这样你就知道哪里可能会有潜在的陷阱。</p>
+<p>最后，无论代码的哪一部分执行它，函数总是会为同一组输入生成相同的输出。</p>
+<h3 id="6-在函数中重构全局变量"><a href="#6-在函数中重构全局变量" class="headerlink" title="6. 在函数中重构全局变量"></a>6. 在函数中重构全局变量</h3><p>目前为止，我们已经看到了函数式编程的两个原则：</p>
+<ol>
+<li><p>不要更改变量或对象 - 创建新变量和对象，并在需要时从函数返回它们。 提示：使用类似 <code>const newArr = arrVar</code> 的东西，其中 <code>arrVar</code> 是一个数组，只会创建对现有变量的引用，而不是副本。 所以更改 <code>newArr</code> 中的值会同时更改 <code>arrVar</code> 中的值。</p>
+</li>
+<li><p>声明函数参数 - 函数内的任何计算仅取决于参数，而不取决于任何全局对象或变量。</p>
+</li>
+</ol>
+<p>给数字增加 1 不够有意思，但是我们可以在处理数组或更复杂的对象时应用这些原则。</p>
+<h3 id="7-使用-map-方法从数组中提取数据"><a href="#7-使用-map-方法从数组中提取数据" class="headerlink" title="7. 使用 map 方法从数组中提取数据"></a>7. 使用 map 方法从数组中提取数据</h3><p>目前为止，我们已经学会了使用纯函数来避免程序中的副作用。 此外，我们已经看到函数的值仅取决于其输入参数。</p>
+<p>这仅仅是个开始。 顾名思义，函数式编程以函数理论为中心。</p>
+<p>能够将它们作为参数传递给其他函数，从另一个函数返回一个函数是有意义的。 函数在 JavaScript 中被视为 First Class Objects，它们可以像任何其他对象一样使用。 它们可以保存在变量中，存储在对象中，也可以作为函数参数传递。</p>
+<p>让我们从一些简单的数组函数开始，这些函数是数组对象原型上的方法。 在本练习中，我们来了解下数组的 <code>map</code> 方法（即 <code>Array.prototype.map()</code>）。</p>
+<p>请记住，<code>map</code>方法是迭代数组中每一项的方式之一。 在对每个元素应用回调函数后，它会创建一个新数组(不改变原来的数组)。 它这样做时没有改变原始数组。</p>
+<p>当调用回调函数时，传入了三个参数。 第一个参数是当前正在处理的数组项。 第二个参数是当前数组项的索引值，第三个参数是在其上调用 <code>map</code> 方法的数组。</p>
+<p>看下在 <code>users</code> 上使用 <code>map</code> 方法的例子，返回了一个新数组只包含了用户的名字。 为了简化，例子里只使用了回调函数的第一个参数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> users = [</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;Amy&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;camperCat&#x27;</span>, <span class="attr">age</span>: <span class="number">10</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> names = users.<span class="title function_">map</span>(<span class="function"><span class="params">user</span> =&gt;</span> user.<span class="property">name</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(names);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示值 <code>[ &#39;John&#39;, &#39;Amy&#39;, &#39;camperCat&#39; ]</code>。</p>
+<h3 id="8-在原型上实现-map-方法"><a href="#8-在原型上实现-map-方法" class="headerlink" title="8. 在原型上实现 map 方法"></a>8. 在原型上实现 map 方法</h3><p>之前用到了 <code>Array.prototype.map()</code> 方法（即 <code>map()</code>），通过 <code>map</code> 返回一个与调用它的数组长度相同的数组。 只要它的回调函数不改变原始数组，它就不会改变原始数组。</p>
+<p>换句话说，<code>map</code> 是一个纯函数，它的输出仅取决于输入的数组和作为参数传入的回调函数。 此外，它接收另一个函数作为它的参数。</p>
+<p>实现一个 <code>map</code>，加深对它的了解。 你可以用 <code>for</code> 循环或者 <code>Array.prototype.forEach()</code> 方法。</p>
+<h3 id="9-使用-filter-方法从数组中提取数据"><a href="#9-使用-filter-方法从数组中提取数据" class="headerlink" title="9. 使用 filter 方法从数组中提取数据"></a>9. 使用 filter 方法从数组中提取数据</h3><p>另一个有用的数组方法是 <code>filter()</code>（即 <code>Array.prototype.filter()</code>）。</p>
+<p><code>filter</code> 在一个数组的每个元素上调用一个函数，并返回一个新的数组，其中只包含该函数返回一个真值的元素，也就是说，一个被传递给 <code>Boolean()</code> 构造函数后返回 <code>true</code> 的值。 换言之，它根据传递给它的函数过滤数组。 和 <code>map</code> 一样，filter 不会改变原始数组。</p>
+<p>回调函数接收三个参数。 第一个参数是当前正在被处理的元素。 第二个参数是这个元素的索引，第三个参数是在其上调用 <code>filter</code> 方法的数组。</p>
+<p>看下在 <code>users</code> 上使用 <code>filter</code> 方法的例子，返回了一个包含了 30 岁以下的用户新数组。 为了简化，例子里只使用了回调函数的第一个参数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> users = [</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;Amy&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;camperCat&#x27;</span>, <span class="attr">age</span>: <span class="number">10</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> usersUnder30 = users.<span class="title function_">filter</span>(<span class="function"><span class="params">user</span> =&gt;</span> user.<span class="property">age</span> &lt; <span class="number">30</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(usersUnder30); </span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示值 <code>[ &#123; name: &#39;Amy&#39;, age: 20 &#125;, &#123; name: &#39;camperCat&#39;, age: 10 &#125; ]</code></p>
+<h3 id="10-在原型上实现-filter-方法"><a href="#10-在原型上实现-filter-方法" class="headerlink" title="10.在原型上实现 filter 方法"></a>10.在原型上实现 filter 方法</h3><p>为了加深对 <code>filter</code> 的理解，可以自己实现一个。 可以用 <code>for</code> 循环或 <code>Array.prototype.forEach()</code>。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">myFilter</span> = <span class="keyword">function</span>(<span class="params">callback</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> newArray = [];</span><br><span class="line">  <span class="comment">// Only change code below this line</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Boolean</span>(<span class="title function_">callback</span>(<span class="variable language_">this</span>[i], i, <span class="variable language_">this</span>)) === <span class="literal">true</span>) &#123;</span><br><span class="line">      newArray.<span class="title function_">push</span>(<span class="variable language_">this</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Only change code above this line</span></span><br><span class="line">  <span class="keyword">return</span> newArray;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-使用-slice-方法返回数组的一部分"><a href="#11-使用-slice-方法返回数组的一部分" class="headerlink" title="11. 使用 slice 方法返回数组的一部分"></a>11. 使用 slice 方法返回数组的一部分</h3><p><code>slice</code> 方法可以从已有数组中返回指定元素。 它接受两个参数，第一个规定从何处开始选取，第二个规定从何处结束选取（不包括该元素）。 如果没有传参，则默认为从数组的开头开始到结尾结束，这是复制整个数组的简单方式。 <code>slice</code> 返回一个新数组，不会修改原始数组。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">&quot;Cat&quot;</span>, <span class="string">&quot;Dog&quot;</span>, <span class="string">&quot;Tiger&quot;</span>, <span class="string">&quot;Zebra&quot;</span>];</span><br><span class="line"><span class="keyword">const</span> newArray = arr.<span class="title function_">slice</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>newArray</code> 值为 <code>[&quot;Dog&quot;, &quot;Tiger&quot;]</code></p>
+<h3 id="12-使用-slice-而不是-splice-从数组中移除元素"><a href="#12-使用-slice-而不是-splice-从数组中移除元素" class="headerlink" title="12. 使用 slice 而不是 splice 从数组中移除元素"></a>12. 使用 slice 而不是 splice 从数组中移除元素</h3><p>使用数组时经常遇到要删除一些元素并保留数组剩余部分的情况。 为此，JavaScript 提供了 <code>splice</code> 方法，它接收两个参数：从哪里开始删除项目的索引，和要删除的项目数。 如果没有提供第二个参数，默认情况下是移除一直到结尾的所有元素。 但 <code>splice</code> 方法会改变调用它的原始数组。 举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cities = [<span class="string">&quot;Chicago&quot;</span>, <span class="string">&quot;Delhi&quot;</span>, <span class="string">&quot;Islamabad&quot;</span>, <span class="string">&quot;London&quot;</span>, <span class="string">&quot;Berlin&quot;</span>];</span><br><span class="line">cities.<span class="title function_">splice</span>(<span class="number">3</span>, <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在这里 <code>splice</code> 返回字符串 <code>London</code> 并从城市数组中删除它。 <code>cities</code> 将有值 <code>[&quot;Chicago&quot;, &quot;Delhi&quot;, &quot;Islamabad&quot;, &quot;Berlin&quot;]</code>。</p>
+<p>正如我们在上一次挑战中看到的那样，<code>slice</code> 方法不会改变原始数组，而是返回一个可以保存到变量中的新数组。 回想一下，<code>slice</code> 方法接收两个参数，从开始索引开始选取到结束（不包括该元素），并在新数组中返回这些元素。 使用 <code>slice</code> 方法替代 <code>splice</code> 有助于避免数组变化产生的副作用。</p>
+<h3 id="13-使用-concat-方法组合两个数组"><a href="#13-使用-concat-方法组合两个数组" class="headerlink" title="13. 使用 concat 方法组合两个数组"></a>13. 使用 concat 方法组合两个数组</h3><p>Concatenation 意思是将元素连接到尾部。 同理，JavaScript 为字符串和数组提供了<code>concat</code>方法。 对数组来说，在一个数组上调用 <code>concat</code> 方法，然后提供另一个数组作为参数添加到第一个数组末尾。 它返回一个新数组，不会改变任何一个原始数组。 举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].<span class="title function_">concat</span>([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>返回的数组将是 <code>[1, 2, 3, 4, 5, 6]</code>。</p>
+<h3 id="14-使用-concat-而不是-push-将元素添加到数组的末尾"><a href="#14-使用-concat-而不是-push-将元素添加到数组的末尾" class="headerlink" title="14. 使用 concat 而不是 push 将元素添加到数组的末尾"></a>14. 使用 concat 而不是 push 将元素添加到数组的末尾</h3><p>函数式编程就是创建和使用具有不变性的函数。</p>
+<p>上一个挑战介绍了 <code>concat</code> 方法，这是一种在不改变原始数组的前提下，将数组组合成一个新数组的方法。 将 <code>concat</code> 方法与 <code>push</code> 方法做比较。 <code>push</code> 将一个元素添加到调用它的数组的末尾，这样会改变该数组。 举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>arr</code> 的值被修改为 <code>[1, 2, 3, 4, 5, 6]</code>，这不是函数编程方式。</p>
+<p><code>concat</code> 方法可以将新项目添加到数组末尾，而不附带改变数组。</p>
+<h3 id="15-使用-reduce-方法分析数据"><a href="#15-使用-reduce-方法分析数据" class="headerlink" title="15. 使用 reduce 方法分析数据"></a>15. 使用 reduce 方法分析数据</h3><p><code>reduce()</code>（即<code>Array.prototype.reduce()</code>），是 JavaScript 所有数组操作中最常用的方法。 几乎可以用<code>reduce</code>方法解决所有数组处理问题。</p>
+<p><code>reduce</code> 方法是处理数组更通用的方式，而且 <code>filter</code> 和 <code>map</code> 方法都可以当作是 <code>reduce</code> 的特殊实现。 <code>reduce</code> 方法遍历数组中的每个项目并返回单个值（即字符串、数字、对象、数组）。 这是通过在每次迭代中调用一个回调函数来实现的。</p>
+<p>回调函数接受四个参数。 第一个参数称为叠加器，它是上一次迭代中回调函数的返回值，第二个参数是当前正在处理的数组元素，第三个参数是该参数的索引，第四个参数是在其上调用 <code>reduce</code> 方法的数组。</p>
+<p>除了回调函数，<code>reduce</code> 还有一个额外的参数作为叠加器的初始值。 如果没有第二个参数，会跳过第一次迭代，第二次迭代给叠加器传入数组的第一个元素。</p>
+<p>见下面的例子，给 <code>users</code> 数组使用 <code>reduce</code> 方法，返回所有用户数组的和。 为了简化，例子仅使用了回调函数的第一个参数和第二个参数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> users = [</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;Amy&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;camperCat&#x27;</span>, <span class="attr">age</span>: <span class="number">10</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sumOfAges = users.<span class="title function_">reduce</span>(<span class="function">(<span class="params">sum, user</span>) =&gt;</span> sum + user.<span class="property">age</span>, <span class="number">0</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sumOfAges);</span><br></pre></td></tr></table></figure>
+
+<p>这里控制台将显示值 <code>64</code>。</p>
+<p>在另一个例子里，查看如何返回一个包含用户名称做为属性，其年龄做为值的对象。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> users = [</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;Amy&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;camperCat&#x27;</span>, <span class="attr">age</span>: <span class="number">10</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> usersObj = users.<span class="title function_">reduce</span>(<span class="function">(<span class="params">obj, user</span>) =&gt;</span> &#123;</span><br><span class="line">  obj[user.<span class="property">name</span>] = user.<span class="property">age</span>;</span><br><span class="line">  <span class="keyword">return</span> obj;</span><br><span class="line">&#125;, &#123;&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(usersObj);</span><br></pre></td></tr></table></figure>
+
+<p>控制台将显示值 <code>&#123; John: 34, Amy: 20, camperCat: 10 &#125;</code>。</p>
+<h3 id="16-使用-sort-方法按字母顺序给数组排序"><a href="#16-使用-sort-方法按字母顺序给数组排序" class="headerlink" title="16. 使用 sort 方法按字母顺序给数组排序"></a>16. 使用 sort 方法按字母顺序给数组排序</h3><p><code>sort</code> 方法可以根据回调函数对数组元素进行排序。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">ascendingOrder</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> a - b;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">ascendingOrder</span>([<span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>这将返回值 <code>[1, 2, 3, 4, 5]</code>。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">reverseAlpha</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> a === b ? <span class="number">0</span> : a &lt; b ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">reverseAlpha</span>([<span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;z&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;s&#x27;</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>这将返回值 <code>[&#39;z&#39;, &#39;s&#39;, &#39;l&#39;, &#39;h&#39;, &#39;b&#39;]</code>。</p>
+<p>JavaScript 的默认排序方法是 Unicode 值顺序排序，有时可能会得到意想不到的结果。 因此，建议提供一个回调函数来指定如何对数组项目排序。 这个回调函数通常叫做 <code>compareFunction</code>，它根据 <code>compareFunction</code> 的返回值决定数组元素的排序方式： 如果两个元素 <code>a</code> 和 <code>b</code>，<code>compareFunction(a,b)</code> 返回一个比 0 小的值，那么 <code>a</code> 会在 <code>b</code> 的前面。 如果两个元素 <code>a</code> 和 <code>b</code>，<code>compareFunction(a,b)</code> 返回一个比 0 大的值，那么 <code>b</code> 会在 <code>a</code> 的前面。 如果两个元素 <code>a</code> 和 <code>b</code>，<code>compareFunction(a,b)</code> 返回等于 0 的值，那么 <code>a</code> 和 <code>b</code> 的位置保持不变。</p>
+<h3 id="17-在不更改原始数组的前提下返回排序后的数组"><a href="#17-在不更改原始数组的前提下返回排序后的数组" class="headerlink" title="17. 在不更改原始数组的前提下返回排序后的数组"></a>17. 在不更改原始数组的前提下返回排序后的数组</h3><p><code>sort</code> 方法会产生改变原始数组中元素顺序的副作用。 换句话说，它会改变数组的位置。 避免这种情况的一种方法是先将空数组连接到正在排序的数组上（记住 <code>slice</code> 和 <code>concat</code> 返回一个新数组），再用<code>sort</code>方法。</p>
+<h3 id="18-使用-split-方法将字符串拆分成数组"><a href="#18-使用-split-方法将字符串拆分成数组" class="headerlink" title="18. 使用 split 方法将字符串拆分成数组"></a>18. 使用 split 方法将字符串拆分成数组</h3><p><code>split</code> 方法将一个字符串分割成一个字符串数组。 它需要一个参数作为分隔符，它可以是用于拆分字符串或正则表达式的一个字符。 举个例子，如果分隔符是空格，你会得到一个单词数组；如果分隔符是空字符串，你会得到一个由字符串中每个字符组成的数组。</p>
+<p>下面是两个用空格分隔一个字符串的例子，另一个是用数字的正则表达式分隔：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> bySpace = str.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> otherString = <span class="string">&quot;How9are7you2today&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> byDigits = otherString.<span class="title function_">split</span>(<span class="regexp">/\d/</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>bySpace</code> 将有值 <code>[&quot;Hello&quot;, &quot;World&quot;]</code>，<code>byDigits</code> 将有值 <code>[&quot;How&quot;, &quot;are&quot;, &quot;you&quot;, &quot;today&quot;]</code>。</p>
+<p>因为字符串是不可变的，<code>split</code> 方法操作它们更方便。</p>
+<h3 id="19-使用-join-方法将数组组合成字符串"><a href="#19-使用-join-方法将数组组合成字符串" class="headerlink" title="19. 使用 join 方法将数组组合成字符串"></a>19. 使用 join 方法将数组组合成字符串</h3><p><code>join</code> 方法用来把数组中的所有元素放入一个字符串。 并通过指定的分隔符参数进行分隔。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;World&quot;</span>];</span><br><span class="line"><span class="keyword">const</span> str = arr.<span class="title function_">join</span>(<span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>str</code> 的值应该是字符串 <code>Hello World</code>。</p>
+<h3 id="20-应用函数式编程将字符串转换为URL片段"><a href="#20-应用函数式编程将字符串转换为URL片段" class="headerlink" title="20. 应用函数式编程将字符串转换为URL片段"></a>20. 应用函数式编程将字符串转换为URL片段</h3><p>最后几个挑战中涵盖了许多符合函数式编程原则并在处理数组和字符串中非常有用的方法。 我们还学习了强大的、可以将问题简化为更简单形式的 <code>reduce</code> 方法。 从计算平均值到排序，任何数组操作都可以用它来实现。 回想一下，<code>map</code> 和 <code>filter</code> 方法都是 <code>reduce</code> 的特殊实现。</p>
+<p>让我们把学到的知识结合起来解决一个实际问题。</p>
+<p>许多内容管理站点（CMS）为了让添加书签更简单，会将帖子的标题添加到 URL 上。 举个例子，如果你写了一篇标题为 <code>Stop Using Reduce</code> 的帖子，URL很可能会包含标题字符串的某种形式 (如：<code>.../stop-using-reduce</code>)。 你可能已经在 freeCodeCamp 网站上注意到了这一点。</p>
+<h3 id="21-使用-every-方法检查数组中的每个元素是否符合条件"><a href="#21-使用-every-方法检查数组中的每个元素是否符合条件" class="headerlink" title="21. 使用 every 方法检查数组中的每个元素是否符合条件"></a>21. 使用 every 方法检查数组中的每个元素是否符合条件</h3><p><code>every</code> 方法用于检测数组中<em>所有</em>元素是否都符合指定条件。 如果所有元素满足条件，返回布尔值 <code>true</code>，反之返回 <code>false</code>。</p>
+<p>举个例子，下面的代码检测数组 <code>numbers</code> 的所有元素是否都小于 10：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">10</span>, <span class="number">11</span>];</span><br><span class="line"></span><br><span class="line">numbers.<span class="title function_">every</span>(<span class="keyword">function</span>(<span class="params">currentValue</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> currentValue &lt; <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>every</code> 方法在这里会返回 <code>false</code>。</p>
+<h3 id="22-使用-some-方法检查数组中是否有元素是否符合条件"><a href="#22-使用-some-方法检查数组中是否有元素是否符合条件" class="headerlink" title="22. 使用 some 方法检查数组中是否有元素是否符合条件"></a>22. 使用 some 方法检查数组中是否有元素是否符合条件</h3><p><code>some</code> 方法用于检测数组中<em>任何</em>元素是否满足指定条件。 如果有一个元素满足条件，返回布尔值 <code>true</code>，反之返回 <code>false</code>。</p>
+<p>举个例子，下面的代码检测数组<code>numbers</code>中是否有元素小于 10：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">10</span>, <span class="number">50</span>, <span class="number">8</span>, <span class="number">220</span>, <span class="number">110</span>, <span class="number">11</span>];</span><br><span class="line"></span><br><span class="line">numbers.<span class="title function_">some</span>(<span class="keyword">function</span>(<span class="params">currentValue</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> currentValue &lt; <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>some</code> 方法将返回 <code>true</code>。</p>
+<h3 id="23-函数柯里化和局部调用"><a href="#23-函数柯里化和局部调用" class="headerlink" title="23. 函数柯里化和局部调用"></a>23. 函数柯里化和局部调用</h3><p>arity（参数个数）是函数所需的形参的数量。 函数柯里化（Currying）意思是把接受多个 arity 的函数变换成接受单一 arity 的函数。</p>
+<p>换句话说，就是重构函数让它接收一个参数，然后返回接收下一个参数的函数，依此类推。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">unCurried</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">curried</span>(<span class="params">x</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">y</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">curried</span> = x =&gt; <span class="function"><span class="params">y</span> =&gt;</span> x + y</span><br><span class="line"></span><br><span class="line"><span class="title function_">curried</span>(<span class="number">1</span>)(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>curried(1)(2)</code> 会返回 <code>3</code>。</p>
+<p>柯里化在不能一次为函数提供所有参数情况下很有用。 因为它可以将每个函数的调用保存到一个变量中，该变量将保存返回的函数引用，该引用在下一个参数可用时接受该参数。 下面是使用柯里化函数的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> funcForY = <span class="title function_">curried</span>(<span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">funcForY</span>(<span class="number">2</span>)); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+<p>类似地，局部调用（ partial application）的意思是一次对一个函数应用几个参数，然后返回另一个应用更多参数的函数。 这是一个示例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">impartial</span>(<span class="params">x, y, z</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y + z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> partialFn = impartial.<span class="title function_">bind</span>(<span class="variable language_">this</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="title function_">partialFn</span>(<span class="number">10</span>); <span class="comment">// 13</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>freeCodeCamp</category>
+        <category>JavaScript Algorithms and Data Structures</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
 </search>
