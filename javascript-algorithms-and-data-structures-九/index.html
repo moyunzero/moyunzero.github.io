@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures 中级算法1. 范围内的数字求和我们会传入一个由两个数字组成的数组。 给出一个含有两个数字的数组，我们需要写一个函数，让它返回这两个数字间所有数字（包含这两个数字）的总和。 最低的数字并不总是第一位。 例如，sumAll([4,1]) 应返回 10，因为从 1 到 4（包含 1、4）的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Algorithms and Data Structures(九)">
+<meta property="og:url" content="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B9%9D/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- JavaScript Algorithms and Data Structures 中级算法1. 范围内的数字求和我们会传入一个由两个数字组成的数组。 给出一个含有两个数字的数组，我们需要写一个函数，让它返回这两个数字间所有数字（包含这两个数字）的总和。 最低的数字并不总是第一位。 例如，sumAll([4,1]) 应返回 10，因为从 1 到 4（包含 1、4）的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-13T06:25:37.303Z">
+<meta property="article:modified_time" content="2023-06-13T06:39:06.823Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B9%9D/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/javascript-algorithms-and-data-structures-%E4%B9%9D/","path":"javascript-algorithms-and-data-structures-九/","title":"JavaScript Algorithms and Data Structures(九)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript Algorithms and Data Structures(九) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-demo"><a href="/demo/" rel="section"><i class="fa fa-file-code fa-fw"></i>demo</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-JavaScript-Algorithms-and-Data-Structures"><span class="nav-text">freeCodeCamp —- JavaScript Algorithms and Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E7%BA%A7%E7%AE%97%E6%B3%95"><span class="nav-text">中级算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%8C%83%E5%9B%B4%E5%86%85%E7%9A%84%E6%95%B0%E5%AD%97%E6%B1%82%E5%92%8C"><span class="nav-text">1. 范围内的数字求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E7%BB%84%E7%9A%84%E5%AF%B9%E7%A7%B0%E5%B7%AE"><span class="nav-text">2. 数组的对称差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="nav-text">3. 过滤数组元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%89%BE%E5%87%BA%E5%8C%85%E5%90%AB%E7%89%B9%E5%AE%9A%E9%94%AE%E5%80%BC%E5%AF%B9%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-text">4. 找出包含特定键值对的对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%9F%AD%E7%BA%BF%E8%BF%9E%E6%8E%A5%E6%A0%BC%E5%BC%8F"><span class="nav-text">5. 短线连接格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%84%BF%E7%AB%A5%E9%BB%91%E8%AF%9D"><span class="nav-text">6. 儿童黑话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%9B%BF%E6%8D%A2"><span class="nav-text">7. 搜索与替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-DNA-%E9%85%8D%E5%AF%B9"><span class="nav-text">8. DNA 配对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%AF%BB%E6%89%BE%E7%BC%BA%E5%A4%B1%E7%9A%84%E5%AD%97%E6%AF%8D"><span class="nav-text">9. 寻找缺失的字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E9%9B%86%E5%90%88%E6%8E%92%E5%BA%8F"><span class="nav-text">10. 集合排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E8%BD%AC%E6%8D%A2-HTML-%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93"><span class="nav-text">11. 转换 HTML 字符实体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E6%B1%82%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E4%B8%AD%E7%9A%84%E5%A5%87%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="nav-text">12. 求斐波那契数列中的奇数之和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E8%B4%A8%E6%95%B0%E6%B1%82%E5%92%8C"><span class="nav-text">13. 质数求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E6%89%BE%E5%87%BA%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E5%86%85%E7%9A%84%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="nav-text">14. 找出数字范围内的最小公倍数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E6%A0%B9%E6%8D%AE%E5%8F%82%E6%95%B0%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="nav-text">15. 根据参数删除数组元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96"><span class="nav-text">16. 数组扁平化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E7%BF%BB%E8%AF%91%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">17. 翻译二进制字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AFTrue"><span class="nav-text">18. 一切都是True</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="nav-text">19. 可选参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%91%98%E5%AF%B9%E8%B1%A1"><span class="nav-text">20. 创建一个人员对象</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fa fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/javascript-algorithms-and-data-structures-%E5%85%AD/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-10</time>
+        <br>
+      JavaScript Algorithms and Data Structures(六)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B9%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript Algorithms and Data Structures(九) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript Algorithms and Data Structures(九)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-13 14:25:37 / 修改时间：14:39:06" itemprop="dateCreated datePublished" datetime="2023-06-13T14:25:37+08:00">2023-06-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
+<h2 id="中级算法"><a href="#中级算法" class="headerlink" title="中级算法"></a>中级算法</h2><h3 id="1-范围内的数字求和"><a href="#1-范围内的数字求和" class="headerlink" title="1. 范围内的数字求和"></a>1. 范围内的数字求和</h3><p>我们会传入一个由两个数字组成的数组。 给出一个含有两个数字的数组，我们需要写一个函数，让它返回这两个数字间所有数字（包含这两个数字）的总和。 最低的数字并不总是第一位。</p>
+<p>例如，<code>sumAll([4,1])</code> 应返回 <code>10</code>，因为从 1 到 4（包含 1、4）的所有数字的和是 <code>10</code>。</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sumAll</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> a =<span class="title class_">Math</span>.<span class="title function_">max</span>(arr[<span class="number">0</span>],arr[<span class="number">1</span>]);</span><br><span class="line">  <span class="keyword">const</span> b =<span class="title class_">Math</span>.<span class="title function_">min</span>(arr[<span class="number">0</span>],arr[<span class="number">1</span>]);</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = b;i &lt;= a;i++)&#123;</span><br><span class="line">    sum +=i; </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">sumAll</span>([<span class="number">1</span>, <span class="number">4</span>]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">sumAll</span>([<span class="number">1</span>, <span class="number">4</span>]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-数组的对称差"><a href="#2-数组的对称差" class="headerlink" title="2. 数组的对称差"></a>2. 数组的对称差</h3><p>比较两个数组并返回一个新数组，包含所有只在其中一个数组中出现的元素，排除两个数组都存在的元素。 换言之，我们需要返回两个数组的对称差。</p>
+<p><strong>注意：</strong>返回数组中的元素顺序不会影响挑战的测试结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">diffArray</span>(<span class="params">arr1, arr2</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> arr1</span><br><span class="line">    .<span class="title function_">concat</span>(arr2)</span><br><span class="line">    .<span class="title function_">filter</span>(<span class="function"><span class="params">item</span> =&gt;</span> !arr1.<span class="title function_">includes</span>(item) || !arr2.<span class="title function_">includes</span>(item));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">diffArray</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-过滤数组元素"><a href="#3-过滤数组元素" class="headerlink" title="3. 过滤数组元素"></a>3. 过滤数组元素</h3><p>你将获得一个初始数组（<code>destroyer</code> 函数中的第一个参数），后跟一个或多个参数。 从初始数组中移除所有与后续参数相等的元素。</p>
+<p><strong>注意：</strong> 你可以使用 <code>arguments</code> 对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">destroyer</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> valsToRemove = <span class="title class_">Object</span>.<span class="title function_">values</span>(<span class="variable language_">arguments</span>).<span class="title function_">slice</span>(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> filteredArray = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> removeElement = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; valsToRemove.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] === valsToRemove[j]) &#123;</span><br><span class="line">        removeElement = <span class="literal">true</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!removeElement) &#123;</span><br><span class="line">      filteredArray.<span class="title function_">push</span>(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> filteredArray;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">destroyer</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-找出包含特定键值对的对象"><a href="#4-找出包含特定键值对的对象" class="headerlink" title="4. 找出包含特定键值对的对象"></a>4. 找出包含特定键值对的对象</h3><p>创建一个查看对象数组（第一个参数）的函数，并返回具有匹配的名称和值对的所有对象的数组（第二个参数）。 如果要包含在返回的数组中，则源对象的每个名称和值对都必须存在于集合中的对象中。</p>
+<p>比如，如果第一个参数是 <code>[&#123; first: &quot;Romeo&quot;, last: &quot;Montague&quot; &#125;, &#123; first: &quot;Mercutio&quot;, last: null &#125;, &#123; first: &quot;Tybalt&quot;, last: &quot;Capulet&quot; &#125;]</code>，第二个参数是 <code>&#123; last: &quot;Capulet&quot; &#125;</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">whatIsInAName</span>(<span class="params">collection, source</span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> souceKeys = <span class="title class_">Object</span>.<span class="title function_">keys</span>(source);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// filter the collection</span></span><br><span class="line">  <span class="keyword">return</span> collection.<span class="title function_">filter</span>(<span class="function"><span class="params">obj</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; souceKeys.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (obj[souceKeys[i]] !== source[souceKeys[i]]) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;   </span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-短线连接格式"><a href="#5-短线连接格式" class="headerlink" title="5. 短线连接格式"></a>5. 短线连接格式</h3><p>将字符串转换为短线连接格式。 短线连接格式是小写单词全部小写并以破折号分隔。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">spinalCase</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// Replace low-upper case to low-space-uppercase</span></span><br><span class="line">  str = str.<span class="title function_">replace</span>(<span class="regexp">/([a-z])([A-Z])/g</span>, <span class="string">&quot;$1 $2&quot;</span>);</span><br><span class="line">  <span class="comment">// Split on whitespace and underscores and join with dash</span></span><br><span class="line">  <span class="keyword">return</span> str</span><br><span class="line">    .<span class="title function_">toLowerCase</span>()</span><br><span class="line">    .<span class="title function_">split</span>(<span class="regexp">/(?:_| )+/</span>)</span><br><span class="line">    .<span class="title function_">join</span>(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">spinalCase</span>(<span class="string">&quot;The_Andy_Griffith_Show&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-儿童黑话"><a href="#6-儿童黑话" class="headerlink" title="6. 儿童黑话"></a>6. 儿童黑话</h3><p>儿童黑话也叫 Pig Latin，是一种英语语言游戏。 规则如下：</p>
+<ul>
+<li><p>如果单词以辅音开头，就把第一个辅音字母或第一组辅音簇移到单词的结尾，并在后面加上 <code>ay</code>。</p>
+</li>
+<li><p>如果单词以元音开头，只需要在结尾加上 <code>way</code>。</p>
+</li>
+</ul>
+<hr>
+<p>请把传入的字符串根据上述规则翻译成儿童黑话并返回结果。 输入的字符串一定是一个小写的英文单词。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">translatePigLatin</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> consonantRegex = <span class="regexp">/^[^aeiou]+/</span>;</span><br><span class="line">  <span class="keyword">let</span> myConsonants = str.<span class="title function_">match</span>(consonantRegex);</span><br><span class="line">  <span class="keyword">return</span> myConsonants !== <span class="literal">null</span></span><br><span class="line">    ? str</span><br><span class="line">        .<span class="title function_">replace</span>(consonantRegex, <span class="string">&quot;&quot;</span>)</span><br><span class="line">        .<span class="title function_">concat</span>(myConsonants)</span><br><span class="line">        .<span class="title function_">concat</span>(<span class="string">&quot;ay&quot;</span>)</span><br><span class="line">    : str.<span class="title function_">concat</span>(<span class="string">&quot;way&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">translatePigLatin</span>(<span class="string">&quot;consonant&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-搜索与替换"><a href="#7-搜索与替换" class="headerlink" title="7. 搜索与替换"></a>7. 搜索与替换</h3><p>要写一个字符串的搜索与替换函数，它的返回值为完成替换后的新字符串。</p>
+<p>这个函数接收的第一个参数为待替换的句子。</p>
+<p>第二个参数为句中需要被替换的单词。</p>
+<p>第三个参数为替换后的单词。</p>
+<p><strong>注意：</strong> 在更换原始单词时保留原始单词中第一个字符的大小写。 即如果传入的第二个参数为 <code>Book</code>，第三个参数为 <code>dog</code>，那么替换后的结果应为 <code>Dog</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myReplace</span>(<span class="params">str, before, after</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="regexp">/^[A-Z]/</span>.<span class="title function_">test</span>(before)) &#123;</span><br><span class="line">    after = after[<span class="number">0</span>].<span class="title function_">toUpperCase</span>() + after.<span class="title function_">substring</span>(<span class="number">1</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    after = after[<span class="number">0</span>].<span class="title function_">toLowerCase</span>() + after.<span class="title function_">substring</span>(<span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">replace</span>(before, after);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="title function_">myReplace</span>(<span class="string">&quot;Let us go to the store&quot;</span>, <span class="string">&quot;store&quot;</span>, <span class="string">&quot;mall&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-DNA-配对"><a href="#8-DNA-配对" class="headerlink" title="8. DNA 配对"></a>8. DNA 配对</h3><p>脱氧核糖核酸组由核酸对组成。 基本配对的字符是 <em>AT</em> and <em>CG</em>，这些字符形成了 DNA 双螺旋的构件。</p>
+<p>DNA 链缺少配对元素。 写一个函数来匹配缺失的 DNA 字符串。 对于提供的字符串中的每个字符，找出基本的配对字符。 返回二维数组的结果。</p>
+<p>例如，传入 <code>GCG</code> 时，应返回 <code>[[&quot;G&quot;, &quot;C&quot;], [&quot;C&quot;,&quot;G&quot;], [&quot;G&quot;, &quot;C&quot;]]</code>。</p>
+<p>字符和它的配对组成一个数组，所有配对数组放在一个数组里。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">pairElement</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// create object for pair lookup</span></span><br><span class="line">  <span class="keyword">const</span> pairs = &#123;</span><br><span class="line">    <span class="attr">A</span>: <span class="string">&quot;T&quot;</span>,</span><br><span class="line">    <span class="attr">T</span>: <span class="string">&quot;A&quot;</span>,</span><br><span class="line">    <span class="attr">C</span>: <span class="string">&quot;G&quot;</span>,</span><br><span class="line">    <span class="attr">G</span>: <span class="string">&quot;C&quot;</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// map character to array of character and matching pair</span></span><br><span class="line">  <span class="keyword">return</span> str</span><br><span class="line">    .<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>)</span><br><span class="line">    .<span class="title function_">map</span>(<span class="function"><span class="params">x</span> =&gt;</span> [x, pairs[x]]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">pairElement</span>(<span class="string">&quot;GCG&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-寻找缺失的字母"><a href="#9-寻找缺失的字母" class="headerlink" title="9. 寻找缺失的字母"></a>9. 寻找缺失的字母</h3><p>写一个函数，找出传入的字符串里缺失的字母并返回它。</p>
+<p>如果所有字母都在传入的字符串范围内，返回 <code>undefined</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fearNotLetter</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; str.<span class="property">length</span>; i++) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> charCode = str.<span class="title function_">charCodeAt</span>(i);</span><br><span class="line">    <span class="keyword">if</span> (charCode !== str.<span class="title function_">charCodeAt</span>(<span class="number">0</span>) + i) &#123;</span><br><span class="line"><span class="comment">//  String.fromCharCode() 方法返回由指定的 UTF-16 代码单元序列创建的字符串。</span></span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(charCode - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fearNotLetter</span>(<span class="string">&quot;abce&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-集合排序"><a href="#10-集合排序" class="headerlink" title="10. 集合排序"></a>10. 集合排序</h3><p>编写一个带有两个或更多数组的函数，并按原始提供的数组的顺序返回一个新的唯一值数组。</p>
+<p>换句话说，所有数组中出现的所有值都应按其原始顺序包括在内，但最终数组中不得重复。</p>
+<p>去重后的数字应按其出现在参数中的原始顺序排序，最终数组不应按数字大小进行排序。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">uniteUnique</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> newArr = <span class="title class_">Object</span>.<span class="title function_">values</span>(<span class="variable language_">arguments</span>)</span><br><span class="line">  <span class="keyword">let</span> a = [];</span><br><span class="line">  <span class="keyword">let</span> b = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span> ;i &lt;newArr.<span class="property">length</span>;i++ )&#123;</span><br><span class="line">    a = a.<span class="title function_">concat</span>(newArr[i]);  </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> j = <span class="number">0</span> ;j &lt; a.<span class="property">length</span>;j++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(!b.<span class="title function_">includes</span>(a[j]) )&#123;</span><br><span class="line">      b.<span class="title function_">push</span>(a[j])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="keyword">return</span> b </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">uniteUnique</span>([<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>], [<span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>], [<span class="number">2</span>, <span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-转换-HTML-字符实体"><a href="#11-转换-HTML-字符实体" class="headerlink" title="11. 转换 HTML 字符实体"></a>11. 转换 HTML 字符实体</h3><p>请将字符串中的 <code>&amp;</code>、<code>&lt;</code>、<code>&gt;</code>、<code>&quot;</code>（双引号）和 <code>&#39;</code>（单引号）转换为相应的 HTML 字符实体。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">convertHTML</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="comment">// Split by character to avoid problems.</span></span><br><span class="line">  <span class="keyword">var</span> temp = str.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  <span class="comment">// Since we are only checking for a few HTML elements, use a switch</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; temp.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">switch</span> (temp[i]) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;&lt;&quot;</span>:</span><br><span class="line">        temp[i] = <span class="string">&quot;&amp;lt;&quot;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;&amp;&quot;</span>:</span><br><span class="line">        temp[i] = <span class="string">&quot;&amp;amp;&quot;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;&gt;&quot;</span>:</span><br><span class="line">        temp[i] = <span class="string">&quot;&amp;gt;&quot;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&#x27;&quot;&#x27;</span>:</span><br><span class="line">        temp[i] = <span class="string">&quot;&amp;quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;&#x27;&quot;</span>:</span><br><span class="line">        temp[i] = <span class="string">&quot;&amp;apos;&quot;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  temp = temp.<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//test here</span></span><br><span class="line"><span class="title function_">convertHTML</span>(<span class="string">&quot;Dolce &amp; Gabbana&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-求斐波那契数列中的奇数之和"><a href="#12-求斐波那契数列中的奇数之和" class="headerlink" title="12. 求斐波那契数列中的奇数之和"></a>12. 求斐波那契数列中的奇数之和</h3><p>写一个函数，参数为一个正整数 <code>num</code>，返回值为斐波那契数列中，小于或等于 <code>num</code> 的奇数之和。</p>
+<p>斐波那契数列的前两个数字是 0 和 1。 后面的每个数字由之前两数相加得出。 斐波那契数列的前七个数字分别为：0、1、1、2、3、5、8。</p>
+<p>比如，<code>sumFibs(10)</code> 应该返回 <code>10</code>。 因为斐波那契数列中，比 <code>10</code> 小的数字只有 1、1、3、5。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sumFibs</span>(<span class="params">num</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> prevNumber = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> currNumber = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (currNumber &lt;= num) &#123;</span><br><span class="line">    <span class="keyword">if</span> (currNumber % <span class="number">2</span> !== <span class="number">0</span>) &#123;</span><br><span class="line">      result += currNumber;</span><br><span class="line">    &#125;</span><br><span class="line">    currNumber += prevNumber;</span><br><span class="line">    prevNumber = currNumber - prevNumber;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test here</span></span><br><span class="line"><span class="title function_">sumFibs</span>(<span class="number">75024</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-质数求和"><a href="#13-质数求和" class="headerlink" title="13. 质数求和"></a>13. 质数求和</h3><p>质数（prime number）是大于 1 且仅可以被 1 和自己整除的数。 比如，2 就是一个质数，因为它只可以被 1 和 2（它本身）整除。 相反，4 不是质数，因为它可以被 1, 2 和 4 整除。</p>
+<p>请完成 <code>sumPrimes</code> 方法，使其返回小于等于传入参数数字的所有质数之和。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sumPrimes</span>(<span class="params">num</span>) &#123;</span><br><span class="line">  <span class="comment">// Helper function to check primality</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">isPrime</span>(<span class="params">num</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> sqrt = <span class="title class_">Math</span>.<span class="title function_">sqrt</span>(num);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt;= sqrt; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (num % i === <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Check all numbers for primality</span></span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt;= num; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_">isPrime</span>(i))</span><br><span class="line">      sum += i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-找出数字范围内的最小公倍数"><a href="#14-找出数字范围内的最小公倍数" class="headerlink" title="14. 找出数字范围内的最小公倍数"></a>14. 找出数字范围内的最小公倍数</h3><p>找到给定参数的最小公倍数，可以被这两个参数整除，也可以被指定范围内的所有整数整除。</p>
+<p>注意，较小数不一定总是出现在数组的第一个元素。</p>
+<p>例如，如果给定 1 和 3，找到 1 和 3 的最小公倍数，也可以被 1 到 3 <em>之间</em>的所有数字整除。 这里的答案将是 6。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">smallestCommons</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [min, max] = arr.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">  <span class="keyword">const</span> numberDivisors = max - min + <span class="number">1</span>;</span><br><span class="line">  <span class="comment">// Largest possible value for SCM</span></span><br><span class="line">  <span class="keyword">let</span> upperBound = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = min; i &lt;= max; i++) &#123;</span><br><span class="line">    upperBound *= i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Test all multiples of &#x27;max&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> multiple = max; multiple &lt;= upperBound; multiple += max) &#123;</span><br><span class="line">    <span class="comment">// Check if every value in range divides &#x27;multiple&#x27;</span></span><br><span class="line">    <span class="keyword">let</span> divisorCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = min; i &lt;= max; i++) &#123;</span><br><span class="line">      <span class="comment">// Count divisors</span></span><br><span class="line">      <span class="keyword">if</span> (multiple % i === <span class="number">0</span>) &#123;</span><br><span class="line">        divisorCount += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (divisorCount === numberDivisors) &#123;</span><br><span class="line">      <span class="keyword">return</span> multiple;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">smallestCommons</span>([<span class="number">1</span>, <span class="number">5</span>]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-根据参数删除数组元素"><a href="#15-根据参数删除数组元素" class="headerlink" title="15. 根据参数删除数组元素"></a>15. 根据参数删除数组元素</h3><p>给定数组 <code>arr</code>，从数组的第一个元素开始，用函数 <code>func</code> 来检查数组的每个元素是否返回 <code>true</code>。 如果返回 false，就把这个元素删除。 持续执行删除操作，直到某个元素传入 func 时返回 true 为止。</p>
+<p>然后在条件满足后返回数组的其余部分，否则， <code>arr</code> 应作为空数组返回。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">dropElements</span>(<span class="params">arr, func</span>) &#123;</span><br><span class="line">  <span class="keyword">while</span> (arr.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; !<span class="title function_">func</span>(arr[<span class="number">0</span>])) &#123;</span><br><span class="line">    arr.<span class="title function_">shift</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(arr)</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test here</span></span><br><span class="line"><span class="title function_">dropElements</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> n &gt;= <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-数组扁平化"><a href="#16-数组扁平化" class="headerlink" title="16. 数组扁平化"></a>16. 数组扁平化</h3><p>嵌套数组扁平化成一维数组。 必须考虑到各种深度的嵌套层级。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">steamrollArray</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> flattenedArray = [];</span><br><span class="line">  <span class="comment">// Loop over array contents</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr[i])) &#123;</span><br><span class="line">      <span class="comment">// Recursively flatten entries that are arrays</span></span><br><span class="line">      <span class="comment">//  and push into the flattenedArray</span></span><br><span class="line">      flattenedArray.<span class="title function_">push</span>(...<span class="title function_">steamrollArray</span>(arr[i]));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// Copy contents that are not arrays</span></span><br><span class="line">      flattenedArray.<span class="title function_">push</span>(arr[i]);     </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> flattenedArray;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test here</span></span><br><span class="line"><span class="title function_">steamrollArray</span>([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[<span class="number">4</span>]]]]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="17-翻译二进制字符串"><a href="#17-翻译二进制字符串" class="headerlink" title="17. 翻译二进制字符串"></a>17. 翻译二进制字符串</h3><p>请实现一个函数，把传入的二进制字符串转换成英文句子。</p>
+<p>二进制字符串会以空格分隔。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">binaryAgent</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> biString = str.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">  <span class="keyword">var</span> uniString = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; biString.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    uniString.<span class="title function_">push</span>(<span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(<span class="built_in">parseInt</span>(biString[i], <span class="number">2</span>)));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> uniString.<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test here</span></span><br><span class="line"><span class="title function_">binaryAgent</span>(</span><br><span class="line">  <span class="string">&quot;01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111&quot;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="18-一切都是True"><a href="#18-一切都是True" class="headerlink" title="18. 一切都是True"></a>18. 一切都是True</h3><p>检查谓词（第二个参数）在集合（第一个参数）的所有元素是否为 truthy。</p>
+<p>换句话说，你将获得一个对象的数组集合。 如果数组中的每个对象里，<code>pre</code> 对应属性值均为 <code>truthy</code>，则返回 <code>true</code>。 否则，返回 <code>false</code> 。</p>
+<p>JavaScript 中，如果一个值在 Boolean 的上下文中的执行结果为 <code>true</code>，那么我们称这个值是 <code>truthy</code> 的。</p>
+<p>别忘了，你可以使用点号表示法或方括号表示法（<code>[]</code>）来访问对象的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">truthCheck</span>(<span class="params">collection, pre</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> c <span class="keyword">in</span> collection) &#123;</span><br><span class="line">    <span class="keyword">if</span> (collection[c].<span class="title function_">hasOwnProperty</span>(pre) &amp;&amp; <span class="title class_">Boolean</span>(collection[c][pre])) &#123;</span><br><span class="line">      counter++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> counter == collection.<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">truthCheck</span>([&#123; <span class="attr">name</span>: <span class="string">&quot;Quincy&quot;</span>, <span class="attr">role</span>: <span class="string">&quot;Founder&quot;</span>, <span class="attr">isBot</span>: <span class="literal">false</span> &#125;, &#123; <span class="attr">name</span>: <span class="string">&quot;Naomi&quot;</span>, <span class="attr">role</span>: <span class="string">&quot;&quot;</span>, <span class="attr">isBot</span>: <span class="literal">false</span> &#125;, &#123; <span class="attr">name</span>: <span class="string">&quot;Camperbot&quot;</span>, <span class="attr">role</span>: <span class="string">&quot;Bot&quot;</span>, <span class="attr">isBot</span>: <span class="literal">true</span> &#125;], <span class="string">&quot;isBot&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="19-可选参数"><a href="#19-可选参数" class="headerlink" title="19. 可选参数"></a>19. 可选参数</h3><p>创建一个将两个参数相加的函数。 如果只提供了一个参数，则返回一个需要一个参数并返回总和的函数。</p>
+<p>比如，<code>addTogether(2, 3)</code> 应该返回 <code>5</code>。 而 <code>addTogether(2)</code> 应该返回一个函数。</p>
+<p>调用这个返回的函数，为它传入一个值，会返回两个值的总和：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sumTwoAnd = <span class="title function_">addTogether</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>sumTwoAnd(3)</code> 应返回 <code>5</code>。</p>
+<p>如果任一参数不是有效数字，则返回 undefined。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">addTogether</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [first, second] = <span class="variable language_">arguments</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>)</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>([first, second])</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> (first) === <span class="string">&quot;number&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> (second) === <span class="string">&quot;number&quot;</span>) <span class="keyword">return</span> first + second;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">arguments</span>.<span class="property">length</span> === <span class="number">1</span>) <span class="keyword">return</span> <span class="function">(<span class="params">second</span>) =&gt;</span> <span class="title function_">addTogether</span>(first, second);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="20-创建一个人员对象"><a href="#20-创建一个人员对象" class="headerlink" title="20. 创建一个人员对象"></a>20. 创建一个人员对象</h3><p>用以下方法填充对象构造函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getFirstName</span>()</span><br><span class="line"><span class="title function_">getLastName</span>()</span><br><span class="line"><span class="title function_">getFullName</span>()</span><br><span class="line"><span class="title function_">setFirstName</span>(first)</span><br><span class="line"><span class="title function_">setLastName</span>(last)</span><br><span class="line"><span class="title function_">setFullName</span>(firstAndLast)</span><br></pre></td></tr></table></figure>
+
+<p>运行测试以查看每个方法的预期输出。 方法接收一个参数，因此必须要有一个参数，并且其类型应该为字符串。 这些方法必须是与对象交互的唯一可用方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B9%9D/" title="JavaScript Algorithms and Data Structures(九)">http://moyun.com/javascript-algorithms-and-data-structures-九/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/javascript-algorithms-and-data-structures-%E5%85%AB/" rel="prev" title="JavaScript Algorithms and Data Structures(八)">
+                  <i class="fa fa-chevron-left"></i> JavaScript Algorithms and Data Structures(八)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">418k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">6:20</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>
