@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%83/</loc>
+    <lastmod>2023-06-13</lastmod>
+  </url>
+  <url>
     <loc>http://moyun.com/javascript-algorithms-and-data-structures-%E5%85%AB/</loc>
     <lastmod>2023-06-12</lastmod>
   </url>
