@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-14T02:38:42.014Z</updated>
+  <updated>2023-06-15T03:22:45.220Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Front End Development Libraries(一)</title>
+    <link href="http://moyun.com/front-end-development-libraries-%E4%B8%80/"/>
+    <id>http://moyun.com/front-end-development-libraries-%E4%B8%80/</id>
+    <published>2023-06-15T03:21:47.203Z</published>
+    <updated>2023-06-15T03:22:45.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="Front End Development Libraries" scheme="http://moyun.com/categories/freeCodeCamp/Front-End-Development-Libraries/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+    <category term="BootStrap" scheme="http://moyun.com/tags/BootStrap/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript Algorithms and Data Structures(十)</title>
@@ -517,31 +548,6 @@
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Algorithm" scheme="http://moyun.com/tags/Algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML notes</title>
-    <link href="http://moyun.com/html-notes/"/>
-    <id>http://moyun.com/html-notes/</id>
-    <published>2023-05-26T13:24:28.393Z</published>
-    <updated>2023-05-29T02:27:09.544Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h1&gt;&lt;h2 id=&quot;1-HTML概念&quot;&gt;&lt;a href=&quot;#1-HTML概念&quot; class=&quot;headerlink&quot; title=&quot;1. HTML概念&quot;&gt;&lt;/a&gt;1. HTML概念&lt;/h2&gt;&lt;p&gt;HTML(HyperText Markup Language,超文本标记语言)是一种用来告知浏览器如何组织页面的标记语言&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Frontend Notes" scheme="http://moyun.com/categories/Frontend-Notes/"/>
-    
-    <category term="HTML" scheme="http://moyun.com/categories/Frontend-Notes/HTML/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

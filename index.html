@@ -154,18 +154,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -194,6 +194,223 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/front-end-development-libraries-%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/front-end-development-libraries-%E4%B8%80/" class="post-title-link" itemprop="url">Front End Development Libraries(一)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-15 11:21:47 / 修改时间：11:22:45" itemprop="dateCreated datePublished" datetime="2023-06-15T11:21:47+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Front-End-Development-Libraries/" itemprop="url" rel="index"><span itemprop="name">Front End Development Libraries</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>10k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
+<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><h3 id="1-使用Bootstrap-Fluid-容器实现响应式设计"><a href="#1-使用Bootstrap-Fluid-容器实现响应式设计" class="headerlink" title="1. 使用Bootstrap Fluid 容器实现响应式设计"></a>1. 使用Bootstrap Fluid 容器实现响应式设计</h3><p>Bootstrap 会根据屏幕大小来动态调整 HTML 元素的大小————因此称为 Responsive Design（响应式设计）。</p>
+<p>通过响应式设计，我们将无需额外设计一个手机版的网页， 因为它在任何尺寸的屏幕上看起来都很棒。</p>
+<p>任何 Web 应用，都可以通过添加如下代码到 HTML 顶部来引入 Bootstrap 。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>不过在这里，已经预先为此页面添加了上述代码。 注意使用 <code>&gt;</code> 或者 <code>/&gt;</code> 两种方式闭合 <code>link</code> 标签都是可行的。</p>
+<p>首先，我们应该将所有 HTML（ <code>link</code> 标签和 <code>style</code> 元素除外）嵌套在带有 <code>container-fluid</code> class 的 <code>div</code> 元素里面。</p>
+<h3 id="2-使图片自适应移动端"><a href="#2-使图片自适应移动端" class="headerlink" title="2. 使图片自适应移动端"></a>2. 使图片自适应移动端</h3><p>首先，在已有的图片下面添加一张新的图片。 将新图片的 <code>src</code> 属性设置为 <code>https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg</code>。</p>
+<p>如果图片的大小恰恰和我们手机屏幕尺寸大小一样自然是最好的。</p>
+<p>幸运的是，现在通过 Bootstrap，我们仅仅只需要为 image 标签上设置 class 属性为 <code>img-responsive</code> ， 就可以让它完美地适应你的页面的宽度了。</p>
+<h3 id="3-用-Bootstrap-居中文本"><a href="#3-用-Bootstrap-居中文本" class="headerlink" title="3. 用 Bootstrap 居中文本"></a>3. 用 Bootstrap 居中文本</h3><p>可以使用 Bootstrap 将顶部的元素居中来美化页面。 只需要将 <code>h2</code> 元素的 class 属性设置为 <code>text-center</code> 就可以实现。</p>
+<p>记住：可以为一个元素添加多个 classes ，class 间通过空格分隔，就像这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;red-text text-center&quot;</span>&gt;</span>your text<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-创建一个-Bootstrap-按钮"><a href="#4-创建一个-Bootstrap-按钮" class="headerlink" title="4. 创建一个 Bootstrap 按钮"></a>4. 创建一个 Bootstrap 按钮</h3><p>Bootstrap 的 <code>button</code> 元素有着独有的、比默认 HTML 按钮更好的样式风格。</p>
+<p>在较大的小猫图片下方创建新的 <code>button</code> 元素。 为它添加 <code>btn</code> 与 <code>btn-default</code> 两个 classes 和 <code>Like</code> 文本。</p>
+<h3 id="5-创建一个-Bootstrap-块级元素按钮"><a href="#5-创建一个-Bootstrap-块级元素按钮" class="headerlink" title="5. 创建一个 Bootstrap 块级元素按钮"></a>5. 创建一个 Bootstrap 块级元素按钮</h3><p>一般情况下，<code>btn</code> 和 <code>btn-default</code> 两个 classes 修饰的 <code>button</code> 元素宽度与它包含的文本相同， 举个例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个按钮的宽度应该和文本 <code>Submit</code> 的宽度相同。</p>
+<p>提交</p>
+<p>通过为按钮添加 class 属性 <code>btn-block</code> 使其成为块级元素，按钮会伸展并填满页面的整个水平空间，后续的元素会流到这个块级元素的下方，即 “另起一行”。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default btn-block&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个按钮会 100% 占满所有的可用宽度。</p>
+<h3 id="6-体验-Bootstrap-按钮的不同主题"><a href="#6-体验-Bootstrap-按钮的不同主题" class="headerlink" title="6. 体验 Bootstrap 按钮的不同主题"></a>6. 体验 Bootstrap 按钮的不同主题</h3><p><code>btn-primary</code> class 的颜色是应用的主要颜色。 这样 “突出显示” 是引导用户按部就班进行操作的有效办法。</p>
+<p>将按钮的 class 从 Bootstrap 的 <code>btn-default</code> 替换为 <code>btn-primary</code>。</p>
+<p>注意：按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> classes。</p>
+<h3 id="7-可选操作样式-btn-info"><a href="#7-可选操作样式-btn-info" class="headerlink" title="7. 可选操作样式 btn-info"></a>7. 可选操作样式 btn-info</h3><p>Bootstrap 有着丰富的预定义按钮颜色。 浅蓝色的 <code>btn-info</code> class 通常用在备选操作上。</p>
+<p>在 <code>Like</code> 按钮下方使用文本 <code>Info</code> 创建一个新的块级 Bootstrap 按钮，并向其中添加 Bootstrap 的 <code>btn-info</code> 类。</p>
+<p>注意：这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。</p>
+<h3 id="8-使用-btn-danger-提示危险操作"><a href="#8-使用-btn-danger-提示危险操作" class="headerlink" title="8. 使用 btn-danger 提示危险操作"></a>8. 使用 btn-danger 提示危险操作</h3><p>Bootstrap 有着丰富的预定义按钮颜色。 红色 <code>btn-danger</code> class 用来提醒用户此行为具有破坏性，比如删除一张猫的图片。</p>
+<p>创建一个带有文本 <code>Delete</code> 的按钮，给它设置 class <code>btn-danger</code>。</p>
+<p>注意：这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。</p>
+<h3 id="9-使用-Bootstrap-Grid-并排放置元素"><a href="#9-使用-Bootstrap-Grid-并排放置元素" class="headerlink" title="9. 使用 Bootstrap Grid 并排放置元素"></a>9. 使用 Bootstrap Grid 并排放置元素</h3><p>Bootstrap 具有一套 12 列的响应式栅格系统，可以轻松地将多个元素放入一行并指定它们的相对宽度。 Bootstrap 的大部分 class 属性都可以应用在 <code>div</code> 元素上。</p>
+<p>Bootstrap 有不同的列宽属性，它根据用户的屏幕宽度来使用相应的宽度。 比如，手机的屏幕窄，而笔记本电脑的屏幕更宽。</p>
+<p>以 Bootstrap 的 <code>col-md-*</code> class 为例， 在这里， <code>md</code> 表示 medium （中等的）， 而 <code>*</code> 是一个数字，说明了这个元素占有多少个列宽度。 这个例子就是指定了中等大小屏幕（例如笔记本电脑）下元素所占的列宽度。</p>
+<p>在 Cat Photo App 中，将使用 <code>col-xs-*</code> ， 其中 <code>xs</code> 是 extra small 的缩写 (比如窄屏手机屏幕)， <code>*</code> 是填写的数字，代表一行中的元素该占多少列宽。</p>
+<p>将 <code>Like</code>、<code>Info</code> 和 <code>Delete</code> 三个按钮并排放入一个 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素中，然后将每个按钮都各用一个 <code>&lt;div class=&quot;col-xs-4&quot;&gt;</code> 元素包裹起来。</p>
+<p>当 <code>div</code> 元素设置了 <code>row</code> class 之后，那几个按钮便会嵌入其中了。</p>
+<h3 id="10-替换自定义的-Bootstrap-样式"><a href="#10-替换自定义的-Bootstrap-样式" class="headerlink" title="10. 替换自定义的 Bootstrap 样式"></a>10. 替换自定义的 Bootstrap 样式</h3><p>现在可以清理一下之前代码，用 Bootstrap 的内置样式来替换之前定义的样式，这样 Cat Photo App 看起来更简洁些。</p>
+<p>别担心——以后会有大把时间来自定义 CSS 样式的。</p>
+<p>删除 <code>style</code> 元素里的 <code>.red-text</code>、<code>p</code> 和 <code>.smaller-image</code> CSS 声明，使 <code>style</code> 元素只留下 <code>h2</code> 和 <code>thick-green-border</code>。</p>
+<p>删除包含死链接的 <code>p</code> 元素。 然后将 <code>h2</code> 的 <code>red-text</code> class 替换为 Bootstrap 的 <code>text-primary</code> class。</p>
+<p>最后，从第一个 <code>img</code> 元素中删除 <code>smaller-image</code> class，并将其替换为 <code>img-responsive</code> class。</p>
+<h3 id="11-使用-span-创建行内元素"><a href="#11-使用-span-创建行内元素" class="headerlink" title="11. 使用 span 创建行内元素"></a>11. 使用 span 创建行内元素</h3><p>通过使用行内元素 <code>span</code>，可以把不同的元素放在同一行，甚至能为一行的不同部分指定不同样式。</p>
+<p>使用一个 <code>span</code> 元素，将文本 <code>love</code> 嵌入现在包含文本 <code>Things cats love</code> 的 <code>p</code> 元素中。 然后给 <code>span</code> 元素设置 class <code>text-danger</code>，使文本变成红色。</p>
+<p>对含有文本 <code>Top 3 things cats hate</code> 的 <code>p</code> 元素这样处理：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Top 3 things cats <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;text-danger&quot;</span>&gt;</span>hate:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="12-创建自定义标题"><a href="#12-创建自定义标题" class="headerlink" title="12. 创建自定义标题"></a>12. 创建自定义标题</h3><p>为 Cat Photo App 做一个简单的头部，把标题和惬意的猫咪图片放在同一行。</p>
+<p>记住，由于 Bootstrap 使用了响应式栅格系统，可以很方便地把元素放到一行以及指定元素的相对宽度。 大部分的 Bootstrap 的 class 都能被用在 <code>div</code> 元素上。</p>
+<p>把第一张图片和 <code>h2</code> 元素用一个简单的 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素包裹起来。 再用 <code>&lt;div class=&quot;col-xs-8&quot;&gt;</code> 包裹 <code>h2</code> 元素，用 <code>&lt;div class=&quot;col-xs-4&quot;&gt;</code> 包裹我们的图片，这样它们就能位于同一行了。</p>
+<p>注意现在图片是否与文字大小一致呢？</p>
+<h3 id="13-在按钮中添加字体图标"><a href="#13-在按钮中添加字体图标" class="headerlink" title="13. 在按钮中添加字体图标"></a>13. 在按钮中添加字体图标</h3><p>Font Awesome 是一个非常便利的图标库。 我们可以通过 webfont 或矢量图的方式来使用这些图标。 这些图标就和字体一样， 不仅能通过像素单位指定它们的大小，它们也同样会继承父级 HTML 元素的字号。</p>
+<p>可以将 Font Awesome 图标库添加至任何一个 web app 中，方法很简单，只需要在 HTML head 标签中添加以下代码即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个挑战中，我们已经为你在页面上添加好了 Font Awesome 图标库。</p>
+<p><code>i</code> 元素原本是用来表示斜体文字内容的；不过现在，用它来表示图标也很常见。 只需要为 <code>i</code> 元素添加相应的 class 就可以让它展示图标，比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-info-circle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>同时，我们也可以使用 <code>span</code> 元素来展示图标。</p>
+<hr>
+<p>请使用 Font Awesome 来为我们的点赞按钮添加一个 <code>thumbs-up</code> 图标，只需添加一个 class 包含 <code>fas</code> 和 <code>fa-thumbs-up</code> 的 <code>i</code> 元素即可。 同时，请记得保留图标之后的文字内容 <code>Like</code>。</p>
+<h3 id="14-将字体图标添加到所有的按钮上"><a href="#14-将字体图标添加到所有的按钮上" class="headerlink" title="14.将字体图标添加到所有的按钮上"></a>14.将字体图标添加到所有的按钮上</h3><p>为 info 按钮添加 Font Awesome <code>info-circle</code> 图标，delete 按钮添加 <code>trash</code> 图标。</p>
+<p><strong>Note:</strong> You can use either <code>i</code> or <code>span</code> elements to complete this challenge.</p>
+<h3 id="15-响应式风格的单选按钮"><a href="#15-响应式风格的单选按钮" class="headerlink" title="15. 响应式风格的单选按钮"></a>15. 响应式风格的单选按钮</h3><p>Bootstrap 的 <code>col-xs-*</code> class 也可以用在 <code>form</code> 元素上！ 这样就可以在不关心屏幕大小的情况下，将的单选按钮均匀的平铺在页面上。</p>
+<p>将所有单选按钮放入 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素中。 再用 <code>&lt;div class=&quot;col-xs-6&quot;&gt;</code> 元素包裹每一个单选按钮。</p>
+<p><strong>注意：</strong> 提醒一句，单选按钮是 type 为 <code>radio</code> 的 <code>input</code> 元素。</p>
+<h3 id="16-响应式风格的复选框"><a href="#16-响应式风格的复选框" class="headerlink" title="16. 响应式风格的复选框"></a>16. 响应式风格的复选框</h3><p>Bootstrap 的 <code>col-xs-*</code> 可应用于所有的 <code>form</code> 元素上，包括复选框！ 这样就可以不必关注屏幕大小，均匀地把复选框放在页面上了。</p>
+<hr>
+<p>将所有三个复选框都放置于一个 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素中。 然后分别把每个复选框都放置于一个 <code>&lt;div class=&quot;col-xs-4&quot;&gt;</code> 元素中。</p>
+<h3 id="17-给表单输入框添加样式"><a href="#17-给表单输入框添加样式" class="headerlink" title="17. 给表单输入框添加样式"></a>17. 给表单输入框添加样式</h3><p>可以在 submit <code>button</code> 元素内加上 <code>&lt;i class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt;</code>，来添加 Font Awesome 的 <code>fa-paper-plane</code> 图标。</p>
+<p>为表单的文本输入框（text input）设置 <code>form-control</code> class。 为表单的提交（submit）按钮设置 <code>btn btn-primary</code> class， 并为它加上 Font Awesome 的 <code>fa-paper-plane</code> 图标。</p>
+<p>所有文本输入类的元素如 <code>&lt;input&gt;</code>，<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 只要设置 <code>.form-control</code> class 就会占满100%的宽度。</p>
+<h3 id="18-使用-Bootstrap-响应式排列表单元素"><a href="#18-使用-Bootstrap-响应式排列表单元素" class="headerlink" title="18. 使用 Bootstrap 响应式排列表单元素"></a>18. 使用 Bootstrap 响应式排列表单元素</h3><p>现在把表单里的 <code>input</code> 元素和 submit <code>button</code> （提交按钮）放在同一行。 跟着之前的做法来就行：准备好一个具有 <code>row</code> class 的 <code>div</code> 元素还有几个具有 <code>col-xs-*</code> class 的 <code>div</code> 元素。</p>
+<p>先把表单的 text <code>input</code> （文本输入框）和 submit <code>button</code> （提交按钮）放进具有 <code>row</code> class 的 <code>div</code> 中。 再用 <code>col-xs-7</code> class 的 div 包裹表单的 text <code>input</code> （文本输入框）， <code>col-xs-5</code> class 的 <code>div</code> 包裹表单的 submit <code>button</code> （提交按钮）。</p>
+<p>这是我们到目前为止 Cat Photo App 的最后一个挑战了。 祝你编码愉快。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=<span class="string">&quot;https://fonts.googleapis.com/css?family=Lobster&quot;</span> rel=<span class="string">&quot;stylesheet&quot;</span> type=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="selector-tag">h2</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">font-family</span>: Lobster, Monospace;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="selector-class">.thick-green-border</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-color</span>: green;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-width</span>: <span class="number">10px</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-style</span>: solid;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;container-fluid&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-8&quot;&gt;</span><br><span class="line">      &lt;h2 class=&quot;text-primary text-center&quot;&gt;CatPhotoApp&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;img-responsive thick-green-border&quot; src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A cute orange cat lying on its back.&quot;&gt;&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Three kittens running towards the camera.&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-block btn-primary&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt; Like&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-block btn-info&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Info&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-block btn-danger&quot;&gt;&lt;i class=&quot;fa fa-trash&quot;&gt;&lt;/i&gt; Delete&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;Things cats &lt;span class=&quot;text-danger&quot;&gt;love:&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;li&gt;cat nip&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;laser pointers&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;lasagna&lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">  &lt;p&gt;Top 3 things cats hate:&lt;/p&gt;</span><br><span class="line">  &lt;ol&gt;</span><br><span class="line">    &lt;li&gt;flea treatment&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;thunder&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;other cats&lt;/li&gt;</span><br><span class="line">  &lt;/ol&gt;</span><br><span class="line">  &lt;form action=&quot;https://freecatphotoapp.com/submit-cat-photo&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-6&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Indoor&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-6&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;personality&quot;&gt; Loving&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;personality&quot;&gt; Lazy&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;personality&quot;&gt; Crazy&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-7&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;cat photo URL&quot; required&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-5&quot;&gt;</span><br><span class="line">        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt; Submit&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="19-创建一个-Bootstrap-标题"><a href="#19-创建一个-Bootstrap-标题" class="headerlink" title="19. 创建一个 Bootstrap 标题"></a>19. 创建一个 Bootstrap 标题</h3><p>现在，来运用 HTML、CSS 和 Bootstrap 从头开始做点东西。</p>
+<p>接下来将会搭建一个 jQuery playground，以便在后续的 jQuery 课程中使用它。</p>
+<p>首先，创建一个包含 <code>jQuery Playground</code> 文本内容的 <code>h3</code> 元素。</p>
+<p>通过给 <code>h3</code> 元素设置 Bootstrap 的 <code>text-primary</code> class 属性来为其上色，然后添加 Bootstrap 的 <code>text-center</code> class 属性使其文本居中显示。</p>
+<h3 id="20-将页面放在-container-fluid-div-中"><a href="#20-将页面放在-container-fluid-div-中" class="headerlink" title="20. 将页面放在 container-fluid div 中"></a>20. 将页面放在 container-fluid div 中</h3><p>现在确保页面所有内容都可以响应移动端。</p>
+<p>将的 <code>h3</code> 元素内嵌进一个具有 <code>container-fluid</code> class 的<code>div</code> 元素中。</p>
+<h3 id="21-将页面放在-container-fluid-div-中"><a href="#21-将页面放在-container-fluid-div-中" class="headerlink" title="21. 将页面放在 container-fluid div 中"></a>21. 将页面放在 container-fluid div 中</h3><p>现在确保页面所有内容都可以响应移动端。</p>
+<p>将的 <code>h3</code> 元素内嵌进一个具有 <code>container-fluid</code> class 的<code>div</code> 元素中。</p>
+<h3 id="22-分割-Bootstrap-Row"><a href="#22-分割-Bootstrap-Row" class="headerlink" title="22. 分割 Bootstrap Row"></a>22. 分割 Bootstrap Row</h3><p>现在已经有了一个 Bootstrap Row，把它分成两列。</p>
+<p>在行内创建两个 class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素。</p>
+<h3 id="23-创建-Bootstrap-Wells"><a href="#23-创建-Bootstrap-Wells" class="headerlink" title="23. 创建 Bootstrap Wells"></a>23. 创建 Bootstrap Wells</h3><p>Bootstrap 有一个叫作 <code>well</code> 的 class，作用是使界面更具层次感。</p>
+<p>在每一个 class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素中都嵌入一个带有 <code>well</code> class 的 <code>div</code> 元素。</p>
+<h3 id="24-在-Bootstrap-Wells-中添加元素"><a href="#24-在-Bootstrap-Wells-中添加元素" class="headerlink" title="24. 在 Bootstrap Wells 中添加元素"></a>24. 在 Bootstrap Wells 中添加元素</h3><p>现在的每一行的列都已经有了 <code>div</code> 元素。 这已经足够了， 现在让我们添加 <code>button</code> 元素吧。</p>
+<p>每一个 class 属性为 <code>well</code> 的 <code>div</code> 元素内都应该放三个 <code>button</code> 元素。</p>
+<h3 id="25-给-Bootstrap-按钮添加默认样式"><a href="#25-给-Bootstrap-按钮添加默认样式" class="headerlink" title="25. 给 Bootstrap 按钮添加默认样式"></a>25. 给 Bootstrap 按钮添加默认样式</h3><p>Bootstrap 还有另外一种按钮 class 属性叫做 <code>btn-default</code>。</p>
+<p>为所有的 <code>button</code> 元素增加两个 class： <code>btn</code> 和 <code>btn-default</code>。</p>
+<h3 id="26-用-jQuery-选择器给目标元素的添加-class"><a href="#26-用-jQuery-选择器给目标元素的添加-class" class="headerlink" title="26. 用 jQuery 选择器给目标元素的添加 class"></a>26. 用 jQuery 选择器给目标元素的添加 class</h3><p>并不是所有 class 属性都需要有对应的 CSS 样式。 有时候我们设置 class 只是为了更方便地在 jQuery 中选中这些元素。</p>
+<p>为每一个 <code>button</code> 元素添加 <code>target</code> class。</p>
+<h3 id="27-给-Bootstrap-元素添加-id-属性"><a href="#27-给-Bootstrap-元素添加-id-属性" class="headerlink" title="27. 给 Bootstrap 元素添加 id 属性"></a>27. 给 Bootstrap 元素添加 id 属性</h3><p>回忆一下，除了可以给元素添加 class 属性，我们还可以给元素设置 <code>id</code> 属性。</p>
+<p>每个元素的 id 都必须是唯一的，并且在一个页面中只能使用一次。</p>
+<p>让我们为每个 class 为 <code>well</code> 的 <code>div</code> 元素添加一个唯一的 id。</p>
+<p>记住，可以这样给一个元素设置 id：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;well&quot;</span> <span class="attr">id</span>=<span class="string">&quot;center-well&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>给左边的块设置 id 为 <code>left-well</code>。 给右边的块设置 id 为 <code>right-well</code>。</p>
+<h3 id="28-给-Bootstrap-Wells-设置标签"><a href="#28-给-Bootstrap-Wells-设置标签" class="headerlink" title="28. 给 Bootstrap Wells 设置标签"></a>28. 给 Bootstrap Wells 设置标签</h3><p>为了让页面逻辑更清晰，每个 wells 都标上它们的 id 吧。</p>
+<p>在 left-well 的上一层，class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素里面，增加一个文本为 <code>#left-well</code> 的 <code>h4</code> 元素。</p>
+<p>在 right-well 的上一层，class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素里面，增加一个文本为 <code>#right-well</code> 的 <code>h4</code> 元素。</p>
+<h3 id="29-给每个元素一个唯一的-id"><a href="#29-给每个元素一个唯一的-id" class="headerlink" title="29. 给每个元素一个唯一的 id"></a>29. 给每个元素一个唯一的 id</h3><p>也可以通过 jQuery 根据每个按钮唯一的 id 来定位出它们。</p>
+<p>给每一个按钮设置唯一的 id，以 <code>target1</code> 开始，<code>target6</code> 结束。</p>
+<p>确保 <code>target1</code> 到 <code>target3</code> 在 <code>#left-well</code> 之中，<code>target4</code> 到 <code>target6</code> 在 <code>#right-well</code> 之中。</p>
+<h3 id="30-给-Bootstrap-按钮设置标签"><a href="#30-给-Bootstrap-按钮设置标签" class="headerlink" title="30. 给 Bootstrap 按钮设置标签"></a>30. 给 Bootstrap 按钮设置标签</h3><p>正如标注了每个 wells 一样，同样可以标注每一个按钮。</p>
+<p>为每个 <code>button</code> 元素设置与其 id 选择器对应的文本。</p>
+<h3 id="31-使用注释来说明代码"><a href="#31-使用注释来说明代码" class="headerlink" title="31. 使用注释来说明代码"></a>31. 使用注释来说明代码</h3><p>使用 jQuery 时，修改 HTML 元素时并不需要直接修改 HTML 代码。</p>
+<p>必须确保让每个人都知道不应该直接修改此页面上的这些代码。</p>
+<p>记住，可以在 <code>&lt;!--</code> 为开始，<code>--&gt;</code> 为结束的地方进行评论注释。</p>
+<p>请你在 HTML 顶部加如下一段注释： <code>Code below this line should not be changed</code> 。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1433,113 +1650,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="墨韵">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MoYun">
-      <meta itemprop="description" content="ZERO-前端学习博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | MoYun">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/javascript-algorithms-and-data-structures-%E4%BA%8C/" class="post-title-link" itemprop="url">JavaScript Algorithms and Data Structures(二)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-06-04 22:05:32 / 修改时间：22:07:40" itemprop="dateCreated datePublished" datetime="2023-06-04T22:05:32+08:00">2023-06-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>11k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>10 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="1-比较-var-和-let-关键字的作用域"><a href="#1-比较-var-和-let-关键字的作用域" class="headerlink" title="1.比较 var 和 let 关键字的作用域"></a>1.比较 <code>var</code> 和 <code>let</code> 关键字的作用域</h3><p>使用 <code>var</code> 关键字声明变量时，它是<strong>全局声明</strong>的，如果在函数<strong>内部</strong>声明则是<strong>局部声明</strong>的。</p>
-<p><code>let</code> 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 <code>let</code> 关键字声明变量时，其<strong>作用域</strong> <strong>仅</strong>限于该代码块、语句或表达式。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/javascript-algorithms-and-data-structures-%E4%BA%8C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1565,14 +1675,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">433k</span>
+    <span title="站点总字数">443k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6:34</span>
+    <span title="站点阅读时长">6:43</span>
   </span>
 </div>
 <div class="busuanzi-count">
