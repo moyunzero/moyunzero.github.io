@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://moyun.com/algorithm%E2%80%94%E2%80%94string/</loc>
+    
+    <lastmod>2023-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://moyun.com/front-end-development-libraries-%E4%B8%80/</loc>
     
     <lastmod>2023-06-15</lastmod>
@@ -491,6 +500,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://moyun.com/tags/String/</loc>
+    <lastmod>2023-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://moyun.com/tags/KMP/</loc>
+    <lastmod>2023-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -572,6 +595,13 @@
   
   <url>
     <loc>http://moyun.com/categories/freeCodeCamp/Front-End-Development-Libraries/</loc>
+    <lastmod>2023-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://moyun.com/categories/Algorithm/String/</loc>
     <lastmod>2023-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

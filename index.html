@@ -154,18 +154,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -194,6 +194,203 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/algorithm%E2%80%94%E2%80%94string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm%E2%80%94%E2%80%94string/" class="post-title-link" itemprop="url">Algorithm——String</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-15 16:48:13 / 修改时间：16:49:11" itemprop="dateCreated datePublished" datetime="2023-06-15T16:48:13+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Algorithm/String/" itemprop="url" rel="index"><span itemprop="name">String</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="1-反转字符串"><a href="#1-反转字符串" class="headerlink" title="1. 反转字符串"></a>1. 反转字符串</h2><p>344.编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。</p>
+<p>不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。</p>
+<div class="tabs" id="test344"><ul class="nav-tabs"><li class="tab active"><a href="#test344-1">示例1</a></li><li class="tab"><a href="#test344-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test344-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</span><br><span class="line">输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test344-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]</span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>使用双指针的方法，因为字符串也是一种数组，所以元素在内存中是连续分布，这就决定了反转链表和反转字符串方式上还是有所差异的。</p>
+<p>对于字符串，我们定义两个指针（也可以说是索引下标），一个从字符串前面，一个从字符串后面，两个指针同时向中间移动，并交换元素。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">character[]</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">void</span>&#125; Do not return anything, modify s in-place instead.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseString = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> r = s.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> l = <span class="number">0</span> ;l &lt;= r ;l++ )&#123;</span><br><span class="line">        [s[l],s[r]] = [s[r],s[l]] </span><br><span class="line">        r--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s ;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-反转字符串II"><a href="#2-反转字符串II" class="headerlink" title="2. 反转字符串II"></a>2. 反转字符串II</h2><p>541.给定一个字符串 s 和一个整数 k，从字符串开头算起，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。</p>
+<p>如果剩余字符少于 k 个，则将剩余字符全部反转。<br>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样</p>
+<div class="tabs" id="test541"><ul class="nav-tabs"><li class="tab active"><a href="#test541-1">示例1</a></li><li class="tab"><a href="#test541-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test541-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">输出：&quot;bacdfeg&quot;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test541-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abcd&quot;, k = 2</span><br><span class="line">输出：&quot;bacd&quot;</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>其实在遍历字符串的过程中，只要让 i += (2 * k)，i 每次移动 2 * k 就可以了，然后判断是否需要有反转的区间。</p>
+<p>因为要找的也就是每2 * k 区间的起点，这样写，程序会高效很多。</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">k</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseStr = <span class="keyword">function</span>(<span class="params">s, k</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> n = s.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> arr = <span class="title class_">Array</span>.<span class="title function_">from</span>(s);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">2</span> * k) &#123;</span><br><span class="line">        <span class="title function_">reverse</span>(arr, i, <span class="title class_">Math</span>.<span class="title function_">min</span>(i + k, n) - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">reverse</span> = (<span class="params">arr, left, right</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">const</span> temp = arr[left];</span><br><span class="line">        arr[left] = arr[right];</span><br><span class="line">        arr[right] = temp;</span><br><span class="line">        left++;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-替换空格"><a href="#3-替换空格" class="headerlink" title="3. 替换空格"></a>3. 替换空格</h2><p>剑指05. 请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。</p>
+<div class="tabs" id="test-05"><ul class="nav-tabs"><li class="tab active"><a href="#test-05-1">示例1</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test-05-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;We are happy.&quot;</span><br><span class="line">输出：&quot;We%20are%20happy.&quot;</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>将字符串转换为数组，然后统计其中的空格数量。<br>根据空格数量和原有字符串有效字符长度，计算出刚好存放替换后的字符长度的数组。<br>创建两个指针，一个指数组末尾，一个指字符串有效位的末尾，实现原地修改。</p>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> replaceSpace = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    s = s.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> oldLen = s.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">let</span> spaceCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; oldLen; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] === <span class="string">&#x27; &#x27;</span>) spaceCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="property">length</span> += spaceCount * <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = oldLen - <span class="number">1</span>, j = s.<span class="property">length</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--, j--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] !== <span class="string">&#x27; &#x27;</span>) s[j] = s[i];</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            s[j - <span class="number">2</span>] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">            s[j - <span class="number">1</span>] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            s[j] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            j -= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-翻转字符串里的单词"><a href="#4-翻转字符串里的单词" class="headerlink" title="4. 翻转字符串里的单词"></a>4. 翻转字符串里的单词</h2><p>给你一个字符串 s ，请你反转字符串中 单词 的顺序。</p>
+<p>单词 是由非空格字符组成的字符串。s 中使用至少一个空格将字符串中的 单词 分隔开。</p>
+<p>返回 单词 顺序颠倒且 单词 之间用单个空格连接的结果字符串。</p>
+<p>注意：输入字符串 s中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。</p>
+<div class="tabs" id="test151"><ul class="nav-tabs"><li class="tab active"><a href="#test151-1">示例1</a></li><li class="tab"><a href="#test151-2">示例2</a></li><li class="tab"><a href="#test151-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test151-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;the sky is blue&quot;</span><br><span class="line">输出：&quot;blue is sky the&quot;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test151-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;  hello world  &quot;</span><br><span class="line">输出：&quot;world hello&quot;</span><br><span class="line">解释：反转后的字符串中不能存在前导空格和尾随空格。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test151-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]</span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]输入：s = &quot;a good   example&quot;</span><br><span class="line">输出：&quot;example good a&quot;</span><br><span class="line">解释：如果两个单词间有多余的空格，反转后的字符串需要将单词间的空格减少到仅有一个。</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>移除多余空格</li>
+<li>将整个字符串反转</li>
+<li>将每个单词反转</li>
+</ul>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="keyword">var</span> reverseWords = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">   <span class="comment">// 字符串转数组</span></span><br><span class="line">   <span class="keyword">const</span> strArr = <span class="title class_">Array</span>.<span class="title function_">from</span>(s);</span><br><span class="line">   <span class="comment">// 移除多余空格</span></span><br><span class="line">   <span class="title function_">removeExtraSpaces</span>(strArr);</span><br><span class="line">   <span class="comment">// 翻转</span></span><br><span class="line">   <span class="title function_">reverse</span>(strArr, <span class="number">0</span>, strArr.<span class="property">length</span> - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">let</span> start = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= strArr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">     <span class="keyword">if</span> (strArr[i] === <span class="string">&#x27; &#x27;</span> || i === strArr.<span class="property">length</span>) &#123;</span><br><span class="line">       <span class="comment">// 翻转单词</span></span><br><span class="line">       <span class="title function_">reverse</span>(strArr, start, i - <span class="number">1</span>);</span><br><span class="line">       start = i + <span class="number">1</span>;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> strArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除多余空格</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">removeExtraSpaces</span>(<span class="params">strArr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> slowIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> fastIndex = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(fastIndex &lt; strArr.<span class="property">length</span>) &#123;</span><br><span class="line">    <span class="comment">// 移除开始位置和重复的空格</span></span><br><span class="line">    <span class="keyword">if</span> (strArr[fastIndex] === <span class="string">&#x27; &#x27;</span> &amp;&amp; (fastIndex === <span class="number">0</span> || strArr[fastIndex - <span class="number">1</span>] === <span class="string">&#x27; &#x27;</span>)) &#123;</span><br><span class="line">      fastIndex++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      strArr[slowIndex++] = strArr[fastIndex++];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 移除末尾空格</span></span><br><span class="line">  strArr.<span class="property">length</span> = strArr[slowIndex - <span class="number">1</span>] === <span class="string">&#x27; &#x27;</span> ? slowIndex - <span class="number">1</span> : slowIndex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 翻转从 start 到 end 的字符</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">reverse</span>(<span class="params">strArr, start, end</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> left = start;</span><br><span class="line">  <span class="keyword">let</span> right = end;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">    <span class="comment">// 交换</span></span><br><span class="line">    [strArr[left], strArr[right]] = [strArr[right], strArr[left]];</span><br><span class="line">    left++;</span><br><span class="line">    right--;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseWords = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> s.<span class="title function_">trim</span>().<span class="title function_">split</span>(<span class="regexp">/\s+/</span>).<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-左旋转字符串"><a href="#5-左旋转字符串" class="headerlink" title="5. 左旋转字符串"></a>5. 左旋转字符串</h2><p>剑指58. 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
+<div class="tabs" id="test-58"><ul class="nav-tabs"><li class="tab active"><a href="#test-58-1">示例1</a></li><li class="tab"><a href="#test-58-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test-58-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">输出: &quot;cdefgab&quot;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test-58-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;lrloseumgh&quot;, k = 6</span><br><span class="line">输出: &quot;umghlrlose&quot;</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>反转区间为前n的子串</li>
+<li>反转区间为n到末尾的子串</li>
+<li>反转整个字符串</li>
+</ol>
+<p>最后就可以达到左旋n的目的，而不用定义新的字符串，完全在本串上操作。</p>
+<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseLeftWords = <span class="keyword">function</span> (<span class="params">s, n</span>) &#123;</span><br><span class="line">    <span class="comment">/** Utils */</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">reverseWords</span>(<span class="params">strArr, start, end</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp;</span><br><span class="line">        <span class="keyword">while</span> (start &lt; end) &#123;</span><br><span class="line">            temp = strArr[start];</span><br><span class="line">            strArr[start] = strArr[end];</span><br><span class="line">            strArr[end] = temp;</span><br><span class="line">            start++;</span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/** Main code */</span></span><br><span class="line">    <span class="keyword">let</span> strArr = s.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">    <span class="keyword">let</span> length = strArr.<span class="property">length</span>;</span><br><span class="line">    <span class="title function_">reverseWords</span>(strArr, <span class="number">0</span>, length - <span class="number">1</span>);</span><br><span class="line">    <span class="title function_">reverseWords</span>(strArr, <span class="number">0</span>, length - n - <span class="number">1</span>);</span><br><span class="line">    <span class="title function_">reverseWords</span>(strArr, length - n, length - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> strArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">reverseLeftWords</span> = (<span class="params">s, k</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> len = s.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> n = k % len;</span><br><span class="line">    <span class="keyword">const</span> double = <span class="string">`<span class="subst">$&#123;s&#125;</span><span class="subst">$&#123;s&#125;</span>`</span>;</span><br><span class="line">    <span class="keyword">return</span> double.<span class="title function_">slice</span>(n, n + len);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-实现strStr"><a href="#6-实现strStr" class="headerlink" title="6. 实现strStr()"></a>6. 实现strStr()</h2><ol start="28">
+<li>找出字符串中第一个匹配项的下标，给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串的第一个匹配项的下标（下标从 0 开始）。如果 <code>needle</code> 不是 <code>haystack</code> 的一部分，则返回  <code>-1</code> 。<div class="tabs" id="test28"><ul class="nav-tabs"><li class="tab active"><a href="#test28-1">示例1</a></li><li class="tab"><a href="#test28-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test28-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;</span><br><span class="line">输出：0</span><br><span class="line">解释：&quot;sad&quot; 在下标 0 和 6 处匹配。</span><br><span class="line">第一个匹配项的下标是 0 ，所以返回 0 。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test28-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：&quot;leeto&quot; 没有在 &quot;leetcode&quot; 中出现，所以返回 -1 。</span><br></pre></td></tr></table></figure></div></div></div></li>
+</ol>
+<h3 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h3><p><strong>KMP有什么用</strong></p>
+<p>KMP主要应用在字符串匹配上。</p>
+<p>KMP的主要思想是<strong>当出现字符串不匹配时，可以知道一部分之前已经匹配的文本内容，可以利用这些信息避免从头再去做匹配了。</strong></p>
+<p>所以如何记录已经匹配的文本内容，是KMP的重点，也是next数组肩负的重任。</p>
+<p><strong>前缀表</strong></p>
+<p>next数组就是一个前缀表（prefix table）。</p>
+<p><strong>前缀表是用来回退的，它记录了模式串与主串(文本串)不匹配的时候，模式串应该从哪里开始重新匹配。</strong></p>
+<p>要在文本串：aabaabaafa 中查找是否出现过一个模式串：aabaaf。</p>
+<p><strong>记录下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</strong></p>
+<p><strong>最长公共前后缀？</strong></p>
+<p>文章中字符串的<strong>前缀是指不包含最后一个字符的所有以第一个字符开头的连续子串</strong>。</p>
+<p><strong>后缀是指不包含第一个字符的所有以最后一个字符结尾的连续子串</strong>。</p>
+<p><strong>因为前缀表要求的就是相同前后缀的长度。</strong></p>
+<p>而最长公共前后缀里面的“公共”，更像是说前缀和后缀公共的长度。这其实并不是前缀表所需要的。</p>
+<p>所以字符串a的最长相等前后缀为0。 字符串aa的最长相等前后缀为1。 字符串aaa的最长相等前后缀为2。 等等…..</p>
+<p>前缀表具有告诉我们当前位置匹配失败，跳到之前已经匹配过的地方的能力</p>
+<p><strong>如何计算前缀表</strong></p>
+<p>接下来就要说一说怎么计算前缀表。</p>
+<p>如图：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B25.png" alt="KMP精讲5"></p>
+<p>长度为前1个字符的子串<code>a</code>，最长相同前后缀的长度为0。（注意字符串的<strong>前缀是指不包含最后一个字符的所有以第一个字符开头的连续子串</strong>；<strong>后缀是指不包含第一个字符的所有以最后一个字符结尾的连续子串</strong>。）</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B26.png" alt="KMP精讲6"></p>
+<p>长度为前2个字符的子串<code>aa</code>，最长相同前后缀的长度为1。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B27.png" alt="KMP精讲7"></p>
+<p>长度为前3个字符的子串<code>aab</code>，最长相同前后缀的长度为0。</p>
+<p>以此类推： 长度为前4个字符的子串<code>aaba</code>，最长相同前后缀的长度为1。 长度为前5个字符的子串<code>aabaa</code>，最长相同前后缀的长度为2。 长度为前6个字符的子串<code>aabaaf</code>，最长相同前后缀的长度为0。</p>
+<p>那么把求得的最长相同前后缀的长度就是对应前缀表的元素，如图： <img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B28.png" alt="KMP精讲8"></p>
+<p>可以看出模式串与前缀表对应位置的数字表示的就是：<strong>下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</strong></p>
+<p><strong>前缀表与next数组</strong></p>
+<p>next数组就可以是前缀表，但是很多实现都是把前缀表统一减一（右移一位，初始位置为-1）之后作为next数组。</p>
+<p>为什么这么做呢，其实<strong>这并不涉及到KMP的原理，而是具体实现，next数组既可以就是前缀表，也可以是前缀表统一减一（右移一位，初始位置为-1）。</strong></p>
+<p><strong>使用next数组来匹配</strong></p>
+<p><strong>以下我们以前缀表统一减一之后的next数组来做演示</strong>。</p>
+<p>有了next数组，就可以根据next数组来 匹配文本串s，和模式串t了。</p>
+<p>注意next数组是新前缀表（旧前缀表统一减一了）。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/KMP%E7%B2%BE%E8%AE%B24.gif" alt="KMP精讲4"></p>
+<h3 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h3><h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">haystack</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">needle</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> strStr = <span class="keyword">function</span>(<span class="params">haystack, needle</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> n = haystack.<span class="property">length</span></span><br><span class="line">    <span class="keyword">let</span> m = needle.<span class="property">length</span></span><br><span class="line">    <span class="keyword">if</span>(m === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> next = <span class="keyword">new</span> <span class="title class_">Array</span>(m).<span class="title function_">fill</span>(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt; m; i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; needle[i] !== needle[j])&#123;</span><br><span class="line">            j = next[j - <span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(needle[i] === needle[j])&#123;</span><br><span class="line">            j++</span><br><span class="line">        &#125;</span><br><span class="line">        next[i] = j</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 搞懂上面的，下面的也就懂了</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="comment">// 如果当前i 和 j不一致，就回退到上一个相等的位置的下一个看看是否匹配</span></span><br><span class="line">        <span class="comment">// 会不断回退，0为回退到边界，当回退到0意味着要重新从头开始匹配</span></span><br><span class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; haystack[i] !== needle[j])&#123;</span><br><span class="line">            j = next[j - <span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>( haystack[i] === needle[j])&#123;</span><br><span class="line">            j++</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 当j 和 m的长度相等时，就说明存在</span></span><br><span class="line">        <span class="keyword">if</span>(j === m)&#123;</span><br><span class="line">            <span class="keyword">return</span> i - m + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-重复的子字符串"><a href="#7-重复的子字符串" class="headerlink" title="7.重复的子字符串"></a>7.重复的子字符串</h2><p>459.给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
+<div class="tabs" id="test459"><ul class="nav-tabs"><li class="tab active"><a href="#test459-1">示例1</a></li><li class="tab"><a href="#test459-2">示例2</a></li><li class="tab"><a href="#test459-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test459-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abab&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 可由子串 &quot;ab&quot; 重复两次构成。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test459-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;aba&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test459-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abcabcabcabc&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 可由子串 &quot;abc&quot; 重复四次构成。 (或子串 &quot;abcabc&quot; 重复两次构成。)</span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h3><p>为了避免这种无用的环绕，可以创建一个新的字符串str,它等于原来的字符串S再加上S自身，这样其实就包含了所有移动的字符串。</p>
+<p>比如字符串：S = acd，那么str = S + S = acdacd</p>
+<p>acd移动的可能：dac、cda。其实都包含在了str中了。就像一个滑动窗口</p>
+<p>一开始acd (acd) ，移动一次ac(dac)d,移动两次a(cda)cd。循环结束</p>
+<p>所以可以直接判断str中去除首尾元素之后，是否包含自身元素。如果包含。则表明存在重复子串。</p>
+<h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> repeatedSubstringPattern = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> s1 = (s + s).<span class="title function_">slice</span>(<span class="number">1</span>, -<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> s1.<span class="title function_">indexOf</span>(s) != -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -233,7 +430,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-06-15 11:21:47 / 修改时间：11:22:45" itemprop="dateCreated datePublished" datetime="2023-06-15T11:21:47+08:00">2023-06-15</time>
+      <time title="创建时间：2023-06-15 11:21:47 / 修改时间：11:23:45" itemprop="dateCreated datePublished" datetime="2023-06-15T11:21:47+08:00">2023-06-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1544,112 +1741,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="墨韵">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MoYun">
-      <meta itemprop="description" content="ZERO-前端学习博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | MoYun">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/javascript-algorithms-and-data-structures-%E4%B8%89/" class="post-title-link" itemprop="url">JavaScript Algorithms and Data Structures(三)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-06-05 10:38:12 / 修改时间：15:10:39" itemprop="dateCreated datePublished" datetime="2023-06-05T10:38:12+08:00">2023-06-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>10k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>10 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="1-使用测试方法"><a href="#1-使用测试方法" class="headerlink" title="1. 使用测试方法"></a>1. 使用测试方法</h3><p>在编程语言中，正则表达式用于匹配指定的字符串。 通过正则表达式创建匹配模式（规则）可以帮你完成指定匹配。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/javascript-algorithms-and-data-structures-%E4%B8%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1675,14 +1766,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">443k</span>
+    <span title="站点总字数">451k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6:43</span>
+    <span title="站点阅读时长">6:50</span>
   </span>
 </div>
 <div class="busuanzi-count">
