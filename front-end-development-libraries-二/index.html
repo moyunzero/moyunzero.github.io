@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Front End Development Libraries jQuery1. 了解 script 和 document.ready 是如何工作的在使用 jQuery 之前，需要在 HTML 页面中添加一些东西。 首先，在页面顶部添加 script 标签， 记得在后面为它添加结束标签。 浏览器会运行 script 标签所有的 JavaScript 脚本包括 jQu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Front End Development Libraries(二)">
+<meta property="og:url" content="http://moyun.com/front-end-development-libraries-%E4%BA%8C/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Front End Development Libraries jQuery1. 了解 script 和 document.ready 是如何工作的在使用 jQuery 之前，需要在 HTML 页面中添加一些东西。 首先，在页面顶部添加 script 标签， 记得在后面为它添加结束标签。 浏览器会运行 script 标签所有的 JavaScript 脚本包括 jQu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-17T07:01:48.034Z">
+<meta property="article:modified_time" content="2023-06-17T07:02:24.314Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="jQuery">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/front-end-development-libraries-%E4%BA%8C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/front-end-development-libraries-%E4%BA%8C/","path":"front-end-development-libraries-二/","title":"Front End Development Libraries(二)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Front End Development Libraries(二) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-demo"><a href="/demo/" rel="section"><i class="fa fa-file-code fa-fw"></i>demo</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Front-End-Development-Libraries"><span class="nav-text">freeCodeCamp —- Front End Development Libraries</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery"><span class="nav-text">jQuery</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%86%E8%A7%A3-script-%E5%92%8C-document-ready-%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84"><span class="nav-text">1. 了解 script 和 document.ready 是如何工作的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8-jQuery-%E9%80%89%E6%8B%A9%E5%99%A8%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0"><span class="nav-text">2. 使用 jQuery 选择器选择元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8-jQuery-class-%E9%80%89%E6%8B%A9%E5%99%A8%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0"><span class="nav-text">3. 使用 jQuery class 选择器选择元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8-jQuery-id-%E9%80%89%E6%8B%A9%E5%99%A8%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0"><span class="nav-text">4. 使用 jQuery id 选择器选择元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%A0%E9%99%A4-jQuery-%E5%87%BD%E6%95%B0"><span class="nav-text">5. 删除 jQuery 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%94%A8%E5%A4%9A%E4%B8%AA-jQuery-%E9%80%89%E6%8B%A9%E5%99%A8%E9%80%89%E6%8B%A9%E5%90%8C%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="nav-text">6. 用多个 jQuery 选择器选择同一个元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E4%BD%BF%E7%94%A8-jQuery-%E4%BB%8E%E5%85%83%E7%B4%A0%E4%B8%AD%E7%A7%BB%E9%99%A4-class"><span class="nav-text">7. 使用 jQuery 从元素中移除 class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BD%BF%E7%94%A8-jQuery-%E4%BB%8E%E5%85%83%E7%B4%A0%E4%B8%AD%E7%A7%BB%E9%99%A4-class"><span class="nav-text">8. 使用 jQuery 从元素中移除 class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E4%BD%BF%E7%94%A8-jQuery-%E6%9B%B4%E6%94%B9%E5%85%83%E7%B4%A0%E7%9A%84-CSS"><span class="nav-text">9. 使用 jQuery 更改元素的 CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E4%BD%BF%E7%94%A8-jQuery-%E7%A6%81%E7%94%A8%E5%85%83%E7%B4%A0"><span class="nav-text">10. 使用 jQuery 禁用元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E4%BD%BF%E7%94%A8-jQuery-%E6%9B%B4%E6%94%B9%E5%85%83%E7%B4%A0%E5%86%85%E9%83%A8%E7%9A%84%E6%96%87%E6%9C%AC"><span class="nav-text">11.  使用 jQuery 更改元素内部的文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E4%BD%BF%E7%94%A8-jQuery-%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="nav-text">12. 使用 jQuery 删除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E4%BD%BF%E7%94%A8-jQuery-%E7%9A%84-appendTo-%E6%96%B9%E6%B3%95%E7%A7%BB%E5%8A%A8%E5%85%83%E7%B4%A0"><span class="nav-text">13. 使用 jQuery 的 appendTo 方法移动元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E4%BD%BF%E7%94%A8-jQuery-%E5%85%8B%E9%9A%86%E5%85%83%E7%B4%A0"><span class="nav-text">14. 使用 jQuery 克隆元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E4%BD%BF%E7%94%A8-jQuery-%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E7%9A%84%E7%88%B6%E5%85%83%E7%B4%A0"><span class="nav-text">15. 使用 jQuery 选择元素的父元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E4%BD%BF%E7%94%A8-jQuery-%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E7%9A%84%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-text">16. 使用 jQuery 选择元素的子元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E4%BD%BF%E7%94%A8-jQuery-%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E7%9A%84%E7%89%B9%E5%AE%9A%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-text">17. 使用 jQuery 选择元素的特定子元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E4%BD%BF%E7%94%A8-jQuery-%E9%80%89%E6%8B%A9%E5%81%B6%E6%95%B0%E5%85%83%E7%B4%A0"><span class="nav-text">18. 使用 jQuery 选择偶数元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E4%BD%BF%E7%94%A8-jQuery-%E4%BF%AE%E6%94%B9%E6%95%B4%E4%B8%AA%E9%A1%B5%E9%9D%A2"><span class="nav-text">18. 使用 jQuery 修改整个页面</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fa fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/front-end-development-libraries-%E4%B8%80/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-15</time>
+        <br>
+      Front End Development Libraries(一)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/front-end-development-libraries-%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Front End Development Libraries(二) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Front End Development Libraries(二)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-17 15:01:48 / 修改时间：15:02:24" itemprop="dateCreated datePublished" datetime="2023-06-17T15:01:48+08:00">2023-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Front-End-Development-Libraries/" itemprop="url" rel="index"><span itemprop="name">Front End Development Libraries</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
+<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><h3 id="1-了解-script-和-document-ready-是如何工作的"><a href="#1-了解-script-和-document-ready-是如何工作的" class="headerlink" title="1. 了解 script 和 document.ready 是如何工作的"></a>1. 了解 script 和 document.ready 是如何工作的</h3><p>在使用 jQuery 之前，需要在 HTML 页面中添加一些东西。</p>
+<p>首先，在页面顶部添加 <code>script</code> 标签， 记得在后面为它添加结束标签。</p>
+<p>浏览器会运行 <code>script</code> 标签所有的 JavaScript 脚本包括 jQuery。</p>
+<p>在 <code>script</code> 标签中添加代码 <code>$(document).ready(function() &#123;</code>。 然后在后面（仍在该 <code>script</code> 标签内）用 <code>&#125;);</code> 闭合它。</p>
+<p>稍后将详细介绍 <code>functions</code>， 重要的是要知道，在浏览器加载页面后，你放入此 <code>function</code> 的代码将立即运行。</p>
+<p>有一点很重要，如果没有 <code>document ready function</code>，代码将在 HTML 页面呈现之前运行，这可能会导致错误。</p>
+<h3 id="2-使用-jQuery-选择器选择元素"><a href="#2-使用-jQuery-选择器选择元素" class="headerlink" title="2. 使用 jQuery 选择器选择元素"></a>2. 使用 jQuery 选择器选择元素</h3><p>现在我们有一个 <code>document ready</code> 函数。</p>
+<p>首先，完成第一个 jQuery 语句。 所有的 jQuery 函数都以 <code>$</code> 开头，这个符号通常被称为美元符号（dollar sign operator）或 bling。</p>
+<p>jQuery 通常选取并操作带有选择器（selector）的 HTML 标签。</p>
+<p>比如，想要给 <code>button</code> 元素添加跳跃效果。 只需要在 document ready 函数内添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated bounce&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>请注意，我们已经在后台引入了 jQuery 库和 Animate.css 库，所以你可以在编辑器里直接使用它们。 你将使用 jQuery 将 Animate.css <code>bounce</code> class 应用于 <code>button</code> 元素。</p>
+<h3 id="3-使用-jQuery-class-选择器选择元素"><a href="#3-使用-jQuery-class-选择器选择元素" class="headerlink" title="3. 使用 jQuery class 选择器选择元素"></a>3. 使用 jQuery class 选择器选择元素</h3><p>如何使所有的 <code>button</code> 标签都有弹跳的动画效果？ 用 <code>$(&quot;button&quot;)</code> 选取所有的 button 标签，并用 <code>.addClass(&quot;animated bounce&quot;);</code> 给其添加一些 CSS 属性。</p>
+<p>jQuery 的 <code>.addClass()</code> 方法用来给标签添加类。</p>
+<p>首先，使用 <code>$(&quot;.well&quot;)</code> 选取类为 <code>well</code> 的 <code>div</code> 标签。</p>
+<p>值得注意的是，和 CSS 声明一样，在类名前需要添加 <code>.</code>。</p>
+<p>然后，用 jQuery 的 <code>.addClass()</code> 方法添加 <code>animated</code> 和 <code>shake</code> class。</p>
+<p>例如，在 <code>document ready function</code> 中添加下面的代码，使所有类为 <code>text-primary</code> 的标签抖动：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.text-primary&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated shake&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-使用-jQuery-id-选择器选择元素"><a href="#4-使用-jQuery-id-选择器选择元素" class="headerlink" title="4. 使用 jQuery id 选择器选择元素"></a>4. 使用 jQuery id 选择器选择元素</h3><p>也能通过 id 属性选取标签。</p>
+<p>首先，用 <code>$(&quot;#target3&quot;)</code> 选择器选取 id 为 <code>target3</code> 的 <code>button</code> 标签。</p>
+<p>注意，和 CSS 声明一样，在 id 名前需要添加 <code>#</code>。</p>
+<p>然后，用 jQuery 的 <code>.addClass()</code> 方法添加 <code>animated</code> 和 <code>fadeOut</code> 类。</p>
+<p>下面的代码的效果是使 id 为 <code>target6</code> 的 <code>button</code> 标签淡出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target6&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated fadeOut&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-删除-jQuery-函数"><a href="#5-删除-jQuery-函数" class="headerlink" title="5. 删除 jQuery 函数"></a>5. 删除 jQuery 函数</h3><p>这些动画开始看起来很酷，但是有时可能会让用户分心。</p>
+<p>请删除 <code>document ready function</code> 内的三个 jQuery 函数，但保留 <code>document ready function</code> 本身。</p>
+<h3 id="6-用多个-jQuery-选择器选择同一个元素"><a href="#6-用多个-jQuery-选择器选择同一个元素" class="headerlink" title="6. 用多个 jQuery 选择器选择同一个元素"></a>6. 用多个 jQuery 选择器选择同一个元素</h3><p>现在你知道了三种选取标签的方法：用元素选择器：<code>$(&quot;button&quot;)</code>、用类选择器：<code>$(&quot;.btn&quot;)</code> 以及用 id 选择器：<code>$(&quot;#target1&quot;)</code> 。</p>
+<p>虽然可以在单个 <code>.addClass()</code> 内添加多个类，但是我们可以用<em>三种不同的方式</em>给一种标签添加类。</p>
+<p>以三种不同的方式用 <code>.addClass()</code> 方法每次只给一种标签添加一个类：</p>
+<p>给所有的 <code>button</code> 标签添加 <code>animated</code> 类。</p>
+<p>给所有类为 <code>.btn</code> 的 button 标签添加 <code>shake</code> 类。</p>
+<p>给所有 id 为 <code>#target1</code> 的 button 标签添加 <code>btn-primary</code> 类。</p>
+<p><strong>注意：</strong>只针对一个元素并且一次只能添加一个 class。 总之，三个选择器最终将给 <code>#target1</code> 添加三个 class <code>shake</code>、<code>animated</code> 以及 <code>btn-primary</code>。</p>
+<h3 id="7-使用-jQuery-从元素中移除-class"><a href="#7-使用-jQuery-从元素中移除-class" class="headerlink" title="7. 使用 jQuery 从元素中移除 class"></a>7. 使用 jQuery 从元素中移除 class</h3><p>和用 jQuery 的 <code>addClass()</code> 方法给标签添加类一样，也可以利用 jQuery 的 <code>removeClass()</code> 方法移除它们。</p>
+<p>下面是为指定按钮执行上面的操作的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">removeClass</span>(<span class="string">&quot;btn-default&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>请把所有 <code>button</code> 元素的 <code>btn-default</code> class 移除。</p>
+<h3 id="8-使用-jQuery-从元素中移除-class"><a href="#8-使用-jQuery-从元素中移除-class" class="headerlink" title="8. 使用 jQuery 从元素中移除 class"></a>8. 使用 jQuery 从元素中移除 class</h3><p>和用 jQuery 的 <code>addClass()</code> 方法给标签添加类一样，也可以利用 jQuery 的 <code>removeClass()</code> 方法移除它们。</p>
+<p>下面是为指定按钮执行上面的操作的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">removeClass</span>(<span class="string">&quot;btn-default&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>请把所有 <code>button</code> 元素的 <code>btn-default</code> class 移除。</p>
+<h3 id="9-使用-jQuery-更改元素的-CSS"><a href="#9-使用-jQuery-更改元素的-CSS" class="headerlink" title="9. 使用 jQuery 更改元素的 CSS"></a>9. 使用 jQuery 更改元素的 CSS</h3><p>也能用 jQuery 直接改变 HTML 标签的 CSS。</p>
+<p>jQuery 有一个 <code>.css()</code> 方法，能改变标签的 CSS。</p>
+<p>下面的代码效果是把颜色变蓝：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;blue&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这与通常的 CSS 声明略有不同，因为这个 CSS 属性和它的值在英文引号里，并且它们用逗号而不是冒号间隔开。</p>
+<p>删除 jQuery 选择器，留下一个空的 <code>document ready function</code> 。</p>
+<p>选择 <code>target1</code>，并将其颜色更改为红色。</p>
+<h3 id="10-使用-jQuery-禁用元素"><a href="#10-使用-jQuery-禁用元素" class="headerlink" title="10. 使用 jQuery 禁用元素"></a>10. 使用 jQuery 禁用元素</h3><p>还能用 jQuery 改变 HTML 标签的非 CSS 属性， 例如：禁用按钮。</p>
+<p>当禁用按钮时，它将变成灰色并无法点击。</p>
+<p>jQuery 有一个 <code>.prop()</code> 方法，可以用其调整标签的属性。</p>
+<p>下面是禁用所有的按钮的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">prop</span>(<span class="string">&quot;disabled&quot;</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p>仅禁用 <code>target1</code> 按钮。</p>
+<h3 id="11-使用-jQuery-更改元素内部的文本"><a href="#11-使用-jQuery-更改元素内部的文本" class="headerlink" title="11.  使用 jQuery 更改元素内部的文本"></a>11.  使用 jQuery 更改元素内部的文本</h3><p>可以通过 jQuery 改变元素开始和结束标签之间的文本。 甚至改变 HTML 标签。</p>
+<p>jQuery 有一个 <code>.html()</code> 函数，能用其在标签里添加 HTML 标签和文本， 函数提供的内容将完全替换之前标签的内容。</p>
+<p>下面是重写并强调标题文本的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h3&quot;</span>).<span class="title function_">html</span>(<span class="string">&quot;&lt;em&gt;jQuery Playground&lt;/em&gt;&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>jQuery 还有一个类似的函数 <code>.text()</code>，可以在不添加标签的前提下改变标签内的文本。 换句话说，这个函数不会评估传递给它的任何 HTML 标记，而是将其视为要替换现有内容的文本。</p>
+<p>给 id 为 <code>target4</code> 的按钮的文本添加强调效果。</p>
+<p>注意，<code>&lt;i&gt;</code> 标签虽然传统上用来强调文本，但此后常用作图标的标签。 <code>&lt;em&gt;</code> 标签作为强调标签现在已被广泛接受。 可以使用任意一种完成这个挑战。</p>
+<h3 id="12-使用-jQuery-删除元素"><a href="#12-使用-jQuery-删除元素" class="headerlink" title="12. 使用 jQuery 删除元素"></a>12. 使用 jQuery 删除元素</h3><p>现在学习用 jQuery 从页面移除 HTML 标签。</p>
+<p>jQuery has a function called <code>.remove()</code> that will remove an HTML element entirely.</p>
+<p>用 <code>.remove()</code> 方法从页面移除 <code>#target4</code> 元素。</p>
+<h3 id="13-使用-jQuery-的-appendTo-方法移动元素"><a href="#13-使用-jQuery-的-appendTo-方法移动元素" class="headerlink" title="13. 使用 jQuery 的 appendTo 方法移动元素"></a>13. 使用 jQuery 的 appendTo 方法移动元素</h3><p>现在来把标签从一个 <code>div</code> 移动到另一个里。</p>
+<p>jQuery 有一个 <code>appendTo()</code> 方法，可以选取 HTML 标签并将其添加到另一个标签里面。</p>
+<p>例如，如果要把 <code>target4</code> 从 right well 移到 left well，可以设置如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target4&quot;</span>).<span class="title function_">appendTo</span>(<span class="string">&quot;#left-well&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>把 <code>target2</code> 元素从 <code>left-well</code> 移动到 <code>right-well</code>。</p>
+<h3 id="14-使用-jQuery-克隆元素"><a href="#14-使用-jQuery-克隆元素" class="headerlink" title="14. 使用 jQuery 克隆元素"></a>14. 使用 jQuery 克隆元素</h3><p>除了移动标签，也可以把元素从一个地方复制到另一地方。</p>
+<p>jQuery 有一个 <code>clone()</code> 方法，可以复制标签。</p>
+<p>例如，如果想把 <code>target2</code> 从 <code>left-well</code> 复制到 <code>right-well</code>，可以设置如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">clone</span>().<span class="title function_">appendTo</span>(<span class="string">&quot;#right-well&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>是否注意到这两个 jQuery 函数连在一起了？ 这被称为链式调用（function chaining），是一种用 jQuery 实现效果的简便方法。</p>
+<p>克隆 <code>target5</code> 元素，并将其附加到 <code>left-well</code> 。</p>
+<h3 id="15-使用-jQuery-选择元素的父元素"><a href="#15-使用-jQuery-选择元素的父元素" class="headerlink" title="15. 使用 jQuery 选择元素的父元素"></a>15. 使用 jQuery 选择元素的父元素</h3><p>每个 HTML 标签都默认 <code>inherits</code>（继承）其 <code>parent</code>（父标签）的 CSS 属性。</p>
+<p>For example, the <code>h3</code> element in your <code>jQuery Playground</code> has the parent element of <code>&lt;div class=&quot;container-fluid&quot;&gt;</code>, which itself has the parent element of <code>body</code>.</p>
+<p>jQuery 有一个 <code>parent()</code> 方法，可以访问被选取标签的父标签。</p>
+<p>下面的代码展示了使用 <code>parent()</code> 方法把 <code>left-well</code> 标签的父标签背景色设置成蓝色（blue）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#left-well&quot;</span>).<span class="title function_">parent</span>().<span class="title function_">css</span>(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;blue&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>把 <code>#target1</code> 元素的父元素背景色设置成红色（red）。</p>
+<h3 id="16-使用-jQuery-选择元素的子元素"><a href="#16-使用-jQuery-选择元素的子元素" class="headerlink" title="16. 使用 jQuery 选择元素的子元素"></a>16. 使用 jQuery 选择元素的子元素</h3><p>把 HTML 标签放到另一个级别的标签里，这些 HTML 标签被称为该标签的子标签（children element）。 例如，本次挑战中文本为 <code>#target1</code>、<code>#target2</code> 和 <code>#target3</code> 的按钮都是 <code>&lt;div class=&quot;well&quot; id=&quot;left-well&quot;&gt;</code> 标签的子标签。</p>
+<p>jQuery 有一个 <code>children()</code> 方法，可以访问被选取标签的子标签。</p>
+<p>下面的代码展示了用 <code>children()</code> 方法把 <code>left-well</code> 标签的子标签的颜色设置成 <code>blue</code>（蓝色）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#left-well&quot;</span>).<span class="title function_">children</span>().<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;blue&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>将 <code>right-well</code> 元素的所有子元素设置为橙色（orange）。</p>
+<h3 id="17-使用-jQuery-选择元素的特定子元素"><a href="#17-使用-jQuery-选择元素的特定子元素" class="headerlink" title="17. 使用 jQuery 选择元素的特定子元素"></a>17. 使用 jQuery 选择元素的特定子元素</h3><p>已经看到了 id 属性对于 jQuery 选择器选取标签的便利， 但这并不适用于所有情景。</p>
+<p>幸运的是，jQuery 有一些其他的方法可以选取正确的标签。</p>
+<p>jQuery 可以用 CSS 选择器（CSS Selectors）选取标签。 <code>target:nth-child(n)</code> CSS 选择器可以选取指定 class 或者元素类型的的第 n 个标签。</p>
+<p>下面的代码展示了给每个区域（well）的第 3 个标签设置弹跳（bounce）动画效果：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.target:nth-child(3)&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated bounce&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>给 well 元素的第二个子元素添加弹跳（bounce）动画效果。 你必须选择具有 <code>target</code> class 的元素子项。</p>
+<h3 id="18-使用-jQuery-选择偶数元素"><a href="#18-使用-jQuery-选择偶数元素" class="headerlink" title="18. 使用 jQuery 选择偶数元素"></a>18. 使用 jQuery 选择偶数元素</h3><p>也可以用基于位置的奇 <code>:odd</code> 和偶 <code>:even</code> 选择器选取标签。</p>
+<p>注意，jQuery 是零索引（zero-indexed）的，这意味着第 1 个标签的位置编号是 0。 这有点混乱和反常——<code>:odd</code> 表示选择第 2 个标签（位置编号 1）、第 4 个标签（位置编号 3）……等等，以此类推。</p>
+<p>下面的代码展示了选取所有 <code>target</code> class 的奇数元素并给它们设置 class：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.target:odd&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated shake&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>尝试选取所有 <code>target</code> class 元素的偶数元素并给它们设置 <code>animated</code> 和 <code>shake</code> class。 请记住， <strong>偶数</strong>指的是基于零系统的元素的位置。</p>
+<h3 id="18-使用-jQuery-修改整个页面"><a href="#18-使用-jQuery-修改整个页面" class="headerlink" title="18. 使用 jQuery 修改整个页面"></a>18. 使用 jQuery 修改整个页面</h3><p>目前，已经完成了 jQuery playground。 把它移除吧。</p>
+<p>jQuery 也能选取 <code>body</code> 标签。</p>
+<p>这是使整个 body 淡出的代码：<code>$(&quot;body&quot;).addClass(&quot;animated fadeOut&quot;);</code></p>
+<p>来做一些更好玩的事。 给 <code>body</code> 标签添加 <code>animated</code> 和 <code>hinge</code> class。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  $(<span class="variable language_">document</span>).<span class="title function_">ready</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    $(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">prop</span>(<span class="string">&quot;disabled&quot;</span>, <span class="literal">true</span>);</span><br><span class="line">    $(<span class="string">&quot;#target4&quot;</span>).<span class="title function_">remove</span>();</span><br><span class="line">    $(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">appendTo</span>(<span class="string">&quot;#right-well&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#target5&quot;</span>).<span class="title function_">clone</span>().<span class="title function_">appendTo</span>(<span class="string">&quot;#left-well&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">parent</span>().<span class="title function_">css</span>(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#right-well&quot;</span>).<span class="title function_">children</span>().<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;orange&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#left-well&quot;</span>).<span class="title function_">children</span>().<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;green&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;.target:nth-child(2)&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated bounce&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;.target:even&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated shake&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;body&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated hinge&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 只修改这一行上面的代码 --&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container-fluid&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;text-primary text-center&quot;</span>&gt;</span>jQuery Playground<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-6&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h4</span>&gt;</span>#left-well<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;well&quot;</span> <span class="attr">id</span>=<span class="string">&quot;left-well&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target1&quot;</span>&gt;</span>#target1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target2&quot;</span>&gt;</span>#target2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target3&quot;</span>&gt;</span>#target3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-6&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h4</span>&gt;</span>#right-well<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;well&quot;</span> <span class="attr">id</span>=<span class="string">&quot;right-well&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target4&quot;</span>&gt;</span>#target4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target5&quot;</span>&gt;</span>#target5<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target6&quot;</span>&gt;</span>#target6<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/front-end-development-libraries-%E4%BA%8C/" title="Front End Development Libraries(二)">http://moyun.com/front-end-development-libraries-二/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/jQuery/" rel="tag"><i class="fa fa-tag"></i> jQuery</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/front-end-development-libraries-%E4%B8%89/" rel="prev" title="Front End Development Libraries(三)">
+                  <i class="fa fa-chevron-left"></i> Front End Development Libraries(三)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">464k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:02</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

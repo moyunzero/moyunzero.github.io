@@ -154,7 +154,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -165,7 +165,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -194,6 +194,395 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/front-end-development-libraries-%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/front-end-development-libraries-%E4%BA%8C/" class="post-title-link" itemprop="url">Front End Development Libraries(二)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-17 15:01:48 / 修改时间：15:02:24" itemprop="dateCreated datePublished" datetime="2023-06-17T15:01:48+08:00">2023-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Front-End-Development-Libraries/" itemprop="url" rel="index"><span itemprop="name">Front End Development Libraries</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
+<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><h3 id="1-了解-script-和-document-ready-是如何工作的"><a href="#1-了解-script-和-document-ready-是如何工作的" class="headerlink" title="1. 了解 script 和 document.ready 是如何工作的"></a>1. 了解 script 和 document.ready 是如何工作的</h3><p>在使用 jQuery 之前，需要在 HTML 页面中添加一些东西。</p>
+<p>首先，在页面顶部添加 <code>script</code> 标签， 记得在后面为它添加结束标签。</p>
+<p>浏览器会运行 <code>script</code> 标签所有的 JavaScript 脚本包括 jQuery。</p>
+<p>在 <code>script</code> 标签中添加代码 <code>$(document).ready(function() &#123;</code>。 然后在后面（仍在该 <code>script</code> 标签内）用 <code>&#125;);</code> 闭合它。</p>
+<p>稍后将详细介绍 <code>functions</code>， 重要的是要知道，在浏览器加载页面后，你放入此 <code>function</code> 的代码将立即运行。</p>
+<p>有一点很重要，如果没有 <code>document ready function</code>，代码将在 HTML 页面呈现之前运行，这可能会导致错误。</p>
+<h3 id="2-使用-jQuery-选择器选择元素"><a href="#2-使用-jQuery-选择器选择元素" class="headerlink" title="2. 使用 jQuery 选择器选择元素"></a>2. 使用 jQuery 选择器选择元素</h3><p>现在我们有一个 <code>document ready</code> 函数。</p>
+<p>首先，完成第一个 jQuery 语句。 所有的 jQuery 函数都以 <code>$</code> 开头，这个符号通常被称为美元符号（dollar sign operator）或 bling。</p>
+<p>jQuery 通常选取并操作带有选择器（selector）的 HTML 标签。</p>
+<p>比如，想要给 <code>button</code> 元素添加跳跃效果。 只需要在 document ready 函数内添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated bounce&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>请注意，我们已经在后台引入了 jQuery 库和 Animate.css 库，所以你可以在编辑器里直接使用它们。 你将使用 jQuery 将 Animate.css <code>bounce</code> class 应用于 <code>button</code> 元素。</p>
+<h3 id="3-使用-jQuery-class-选择器选择元素"><a href="#3-使用-jQuery-class-选择器选择元素" class="headerlink" title="3. 使用 jQuery class 选择器选择元素"></a>3. 使用 jQuery class 选择器选择元素</h3><p>如何使所有的 <code>button</code> 标签都有弹跳的动画效果？ 用 <code>$(&quot;button&quot;)</code> 选取所有的 button 标签，并用 <code>.addClass(&quot;animated bounce&quot;);</code> 给其添加一些 CSS 属性。</p>
+<p>jQuery 的 <code>.addClass()</code> 方法用来给标签添加类。</p>
+<p>首先，使用 <code>$(&quot;.well&quot;)</code> 选取类为 <code>well</code> 的 <code>div</code> 标签。</p>
+<p>值得注意的是，和 CSS 声明一样，在类名前需要添加 <code>.</code>。</p>
+<p>然后，用 jQuery 的 <code>.addClass()</code> 方法添加 <code>animated</code> 和 <code>shake</code> class。</p>
+<p>例如，在 <code>document ready function</code> 中添加下面的代码，使所有类为 <code>text-primary</code> 的标签抖动：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.text-primary&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated shake&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-使用-jQuery-id-选择器选择元素"><a href="#4-使用-jQuery-id-选择器选择元素" class="headerlink" title="4. 使用 jQuery id 选择器选择元素"></a>4. 使用 jQuery id 选择器选择元素</h3><p>也能通过 id 属性选取标签。</p>
+<p>首先，用 <code>$(&quot;#target3&quot;)</code> 选择器选取 id 为 <code>target3</code> 的 <code>button</code> 标签。</p>
+<p>注意，和 CSS 声明一样，在 id 名前需要添加 <code>#</code>。</p>
+<p>然后，用 jQuery 的 <code>.addClass()</code> 方法添加 <code>animated</code> 和 <code>fadeOut</code> 类。</p>
+<p>下面的代码的效果是使 id 为 <code>target6</code> 的 <code>button</code> 标签淡出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target6&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated fadeOut&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-删除-jQuery-函数"><a href="#5-删除-jQuery-函数" class="headerlink" title="5. 删除 jQuery 函数"></a>5. 删除 jQuery 函数</h3><p>这些动画开始看起来很酷，但是有时可能会让用户分心。</p>
+<p>请删除 <code>document ready function</code> 内的三个 jQuery 函数，但保留 <code>document ready function</code> 本身。</p>
+<h3 id="6-用多个-jQuery-选择器选择同一个元素"><a href="#6-用多个-jQuery-选择器选择同一个元素" class="headerlink" title="6. 用多个 jQuery 选择器选择同一个元素"></a>6. 用多个 jQuery 选择器选择同一个元素</h3><p>现在你知道了三种选取标签的方法：用元素选择器：<code>$(&quot;button&quot;)</code>、用类选择器：<code>$(&quot;.btn&quot;)</code> 以及用 id 选择器：<code>$(&quot;#target1&quot;)</code> 。</p>
+<p>虽然可以在单个 <code>.addClass()</code> 内添加多个类，但是我们可以用<em>三种不同的方式</em>给一种标签添加类。</p>
+<p>以三种不同的方式用 <code>.addClass()</code> 方法每次只给一种标签添加一个类：</p>
+<p>给所有的 <code>button</code> 标签添加 <code>animated</code> 类。</p>
+<p>给所有类为 <code>.btn</code> 的 button 标签添加 <code>shake</code> 类。</p>
+<p>给所有 id 为 <code>#target1</code> 的 button 标签添加 <code>btn-primary</code> 类。</p>
+<p><strong>注意：</strong>只针对一个元素并且一次只能添加一个 class。 总之，三个选择器最终将给 <code>#target1</code> 添加三个 class <code>shake</code>、<code>animated</code> 以及 <code>btn-primary</code>。</p>
+<h3 id="7-使用-jQuery-从元素中移除-class"><a href="#7-使用-jQuery-从元素中移除-class" class="headerlink" title="7. 使用 jQuery 从元素中移除 class"></a>7. 使用 jQuery 从元素中移除 class</h3><p>和用 jQuery 的 <code>addClass()</code> 方法给标签添加类一样，也可以利用 jQuery 的 <code>removeClass()</code> 方法移除它们。</p>
+<p>下面是为指定按钮执行上面的操作的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">removeClass</span>(<span class="string">&quot;btn-default&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>请把所有 <code>button</code> 元素的 <code>btn-default</code> class 移除。</p>
+<h3 id="8-使用-jQuery-从元素中移除-class"><a href="#8-使用-jQuery-从元素中移除-class" class="headerlink" title="8. 使用 jQuery 从元素中移除 class"></a>8. 使用 jQuery 从元素中移除 class</h3><p>和用 jQuery 的 <code>addClass()</code> 方法给标签添加类一样，也可以利用 jQuery 的 <code>removeClass()</code> 方法移除它们。</p>
+<p>下面是为指定按钮执行上面的操作的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">removeClass</span>(<span class="string">&quot;btn-default&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>请把所有 <code>button</code> 元素的 <code>btn-default</code> class 移除。</p>
+<h3 id="9-使用-jQuery-更改元素的-CSS"><a href="#9-使用-jQuery-更改元素的-CSS" class="headerlink" title="9. 使用 jQuery 更改元素的 CSS"></a>9. 使用 jQuery 更改元素的 CSS</h3><p>也能用 jQuery 直接改变 HTML 标签的 CSS。</p>
+<p>jQuery 有一个 <code>.css()</code> 方法，能改变标签的 CSS。</p>
+<p>下面的代码效果是把颜色变蓝：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;blue&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这与通常的 CSS 声明略有不同，因为这个 CSS 属性和它的值在英文引号里，并且它们用逗号而不是冒号间隔开。</p>
+<p>删除 jQuery 选择器，留下一个空的 <code>document ready function</code> 。</p>
+<p>选择 <code>target1</code>，并将其颜色更改为红色。</p>
+<h3 id="10-使用-jQuery-禁用元素"><a href="#10-使用-jQuery-禁用元素" class="headerlink" title="10. 使用 jQuery 禁用元素"></a>10. 使用 jQuery 禁用元素</h3><p>还能用 jQuery 改变 HTML 标签的非 CSS 属性， 例如：禁用按钮。</p>
+<p>当禁用按钮时，它将变成灰色并无法点击。</p>
+<p>jQuery 有一个 <code>.prop()</code> 方法，可以用其调整标签的属性。</p>
+<p>下面是禁用所有的按钮的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">prop</span>(<span class="string">&quot;disabled&quot;</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p>仅禁用 <code>target1</code> 按钮。</p>
+<h3 id="11-使用-jQuery-更改元素内部的文本"><a href="#11-使用-jQuery-更改元素内部的文本" class="headerlink" title="11.  使用 jQuery 更改元素内部的文本"></a>11.  使用 jQuery 更改元素内部的文本</h3><p>可以通过 jQuery 改变元素开始和结束标签之间的文本。 甚至改变 HTML 标签。</p>
+<p>jQuery 有一个 <code>.html()</code> 函数，能用其在标签里添加 HTML 标签和文本， 函数提供的内容将完全替换之前标签的内容。</p>
+<p>下面是重写并强调标题文本的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h3&quot;</span>).<span class="title function_">html</span>(<span class="string">&quot;&lt;em&gt;jQuery Playground&lt;/em&gt;&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>jQuery 还有一个类似的函数 <code>.text()</code>，可以在不添加标签的前提下改变标签内的文本。 换句话说，这个函数不会评估传递给它的任何 HTML 标记，而是将其视为要替换现有内容的文本。</p>
+<p>给 id 为 <code>target4</code> 的按钮的文本添加强调效果。</p>
+<p>注意，<code>&lt;i&gt;</code> 标签虽然传统上用来强调文本，但此后常用作图标的标签。 <code>&lt;em&gt;</code> 标签作为强调标签现在已被广泛接受。 可以使用任意一种完成这个挑战。</p>
+<h3 id="12-使用-jQuery-删除元素"><a href="#12-使用-jQuery-删除元素" class="headerlink" title="12. 使用 jQuery 删除元素"></a>12. 使用 jQuery 删除元素</h3><p>现在学习用 jQuery 从页面移除 HTML 标签。</p>
+<p>jQuery has a function called <code>.remove()</code> that will remove an HTML element entirely.</p>
+<p>用 <code>.remove()</code> 方法从页面移除 <code>#target4</code> 元素。</p>
+<h3 id="13-使用-jQuery-的-appendTo-方法移动元素"><a href="#13-使用-jQuery-的-appendTo-方法移动元素" class="headerlink" title="13. 使用 jQuery 的 appendTo 方法移动元素"></a>13. 使用 jQuery 的 appendTo 方法移动元素</h3><p>现在来把标签从一个 <code>div</code> 移动到另一个里。</p>
+<p>jQuery 有一个 <code>appendTo()</code> 方法，可以选取 HTML 标签并将其添加到另一个标签里面。</p>
+<p>例如，如果要把 <code>target4</code> 从 right well 移到 left well，可以设置如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target4&quot;</span>).<span class="title function_">appendTo</span>(<span class="string">&quot;#left-well&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>把 <code>target2</code> 元素从 <code>left-well</code> 移动到 <code>right-well</code>。</p>
+<h3 id="14-使用-jQuery-克隆元素"><a href="#14-使用-jQuery-克隆元素" class="headerlink" title="14. 使用 jQuery 克隆元素"></a>14. 使用 jQuery 克隆元素</h3><p>除了移动标签，也可以把元素从一个地方复制到另一地方。</p>
+<p>jQuery 有一个 <code>clone()</code> 方法，可以复制标签。</p>
+<p>例如，如果想把 <code>target2</code> 从 <code>left-well</code> 复制到 <code>right-well</code>，可以设置如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">clone</span>().<span class="title function_">appendTo</span>(<span class="string">&quot;#right-well&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>是否注意到这两个 jQuery 函数连在一起了？ 这被称为链式调用（function chaining），是一种用 jQuery 实现效果的简便方法。</p>
+<p>克隆 <code>target5</code> 元素，并将其附加到 <code>left-well</code> 。</p>
+<h3 id="15-使用-jQuery-选择元素的父元素"><a href="#15-使用-jQuery-选择元素的父元素" class="headerlink" title="15. 使用 jQuery 选择元素的父元素"></a>15. 使用 jQuery 选择元素的父元素</h3><p>每个 HTML 标签都默认 <code>inherits</code>（继承）其 <code>parent</code>（父标签）的 CSS 属性。</p>
+<p>For example, the <code>h3</code> element in your <code>jQuery Playground</code> has the parent element of <code>&lt;div class=&quot;container-fluid&quot;&gt;</code>, which itself has the parent element of <code>body</code>.</p>
+<p>jQuery 有一个 <code>parent()</code> 方法，可以访问被选取标签的父标签。</p>
+<p>下面的代码展示了使用 <code>parent()</code> 方法把 <code>left-well</code> 标签的父标签背景色设置成蓝色（blue）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#left-well&quot;</span>).<span class="title function_">parent</span>().<span class="title function_">css</span>(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;blue&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>把 <code>#target1</code> 元素的父元素背景色设置成红色（red）。</p>
+<h3 id="16-使用-jQuery-选择元素的子元素"><a href="#16-使用-jQuery-选择元素的子元素" class="headerlink" title="16. 使用 jQuery 选择元素的子元素"></a>16. 使用 jQuery 选择元素的子元素</h3><p>把 HTML 标签放到另一个级别的标签里，这些 HTML 标签被称为该标签的子标签（children element）。 例如，本次挑战中文本为 <code>#target1</code>、<code>#target2</code> 和 <code>#target3</code> 的按钮都是 <code>&lt;div class=&quot;well&quot; id=&quot;left-well&quot;&gt;</code> 标签的子标签。</p>
+<p>jQuery 有一个 <code>children()</code> 方法，可以访问被选取标签的子标签。</p>
+<p>下面的代码展示了用 <code>children()</code> 方法把 <code>left-well</code> 标签的子标签的颜色设置成 <code>blue</code>（蓝色）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#left-well&quot;</span>).<span class="title function_">children</span>().<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;blue&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>将 <code>right-well</code> 元素的所有子元素设置为橙色（orange）。</p>
+<h3 id="17-使用-jQuery-选择元素的特定子元素"><a href="#17-使用-jQuery-选择元素的特定子元素" class="headerlink" title="17. 使用 jQuery 选择元素的特定子元素"></a>17. 使用 jQuery 选择元素的特定子元素</h3><p>已经看到了 id 属性对于 jQuery 选择器选取标签的便利， 但这并不适用于所有情景。</p>
+<p>幸运的是，jQuery 有一些其他的方法可以选取正确的标签。</p>
+<p>jQuery 可以用 CSS 选择器（CSS Selectors）选取标签。 <code>target:nth-child(n)</code> CSS 选择器可以选取指定 class 或者元素类型的的第 n 个标签。</p>
+<p>下面的代码展示了给每个区域（well）的第 3 个标签设置弹跳（bounce）动画效果：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.target:nth-child(3)&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated bounce&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>给 well 元素的第二个子元素添加弹跳（bounce）动画效果。 你必须选择具有 <code>target</code> class 的元素子项。</p>
+<h3 id="18-使用-jQuery-选择偶数元素"><a href="#18-使用-jQuery-选择偶数元素" class="headerlink" title="18. 使用 jQuery 选择偶数元素"></a>18. 使用 jQuery 选择偶数元素</h3><p>也可以用基于位置的奇 <code>:odd</code> 和偶 <code>:even</code> 选择器选取标签。</p>
+<p>注意，jQuery 是零索引（zero-indexed）的，这意味着第 1 个标签的位置编号是 0。 这有点混乱和反常——<code>:odd</code> 表示选择第 2 个标签（位置编号 1）、第 4 个标签（位置编号 3）……等等，以此类推。</p>
+<p>下面的代码展示了选取所有 <code>target</code> class 的奇数元素并给它们设置 class：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;.target:odd&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated shake&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>尝试选取所有 <code>target</code> class 元素的偶数元素并给它们设置 <code>animated</code> 和 <code>shake</code> class。 请记住， <strong>偶数</strong>指的是基于零系统的元素的位置。</p>
+<h3 id="18-使用-jQuery-修改整个页面"><a href="#18-使用-jQuery-修改整个页面" class="headerlink" title="18. 使用 jQuery 修改整个页面"></a>18. 使用 jQuery 修改整个页面</h3><p>目前，已经完成了 jQuery playground。 把它移除吧。</p>
+<p>jQuery 也能选取 <code>body</code> 标签。</p>
+<p>这是使整个 body 淡出的代码：<code>$(&quot;body&quot;).addClass(&quot;animated fadeOut&quot;);</code></p>
+<p>来做一些更好玩的事。 给 <code>body</code> 标签添加 <code>animated</code> 和 <code>hinge</code> class。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  $(<span class="variable language_">document</span>).<span class="title function_">ready</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    $(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">prop</span>(<span class="string">&quot;disabled&quot;</span>, <span class="literal">true</span>);</span><br><span class="line">    $(<span class="string">&quot;#target4&quot;</span>).<span class="title function_">remove</span>();</span><br><span class="line">    $(<span class="string">&quot;#target2&quot;</span>).<span class="title function_">appendTo</span>(<span class="string">&quot;#right-well&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#target5&quot;</span>).<span class="title function_">clone</span>().<span class="title function_">appendTo</span>(<span class="string">&quot;#left-well&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#target1&quot;</span>).<span class="title function_">parent</span>().<span class="title function_">css</span>(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#right-well&quot;</span>).<span class="title function_">children</span>().<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;orange&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;#left-well&quot;</span>).<span class="title function_">children</span>().<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;green&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;.target:nth-child(2)&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated bounce&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;.target:even&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated shake&quot;</span>);</span><br><span class="line">    $(<span class="string">&quot;body&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;animated hinge&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 只修改这一行上面的代码 --&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container-fluid&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;text-primary text-center&quot;</span>&gt;</span>jQuery Playground<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-6&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h4</span>&gt;</span>#left-well<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;well&quot;</span> <span class="attr">id</span>=<span class="string">&quot;left-well&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target1&quot;</span>&gt;</span>#target1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target2&quot;</span>&gt;</span>#target2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target3&quot;</span>&gt;</span>#target3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-xs-6&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h4</span>&gt;</span>#right-well<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;well&quot;</span> <span class="attr">id</span>=<span class="string">&quot;right-well&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target4&quot;</span>&gt;</span>#target4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target5&quot;</span>&gt;</span>#target5<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default target&quot;</span> <span class="attr">id</span>=<span class="string">&quot;target6&quot;</span>&gt;</span>#target6<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/front-end-development-libraries-%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/front-end-development-libraries-%E4%B8%89/" class="post-title-link" itemprop="url">Front End Development Libraries(三)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-17 15:01:34 / 修改时间：15:02:51" itemprop="dateCreated datePublished" datetime="2023-06-17T15:01:34+08:00">2023-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Front-End-Development-Libraries/" itemprop="url" rel="index"><span itemprop="name">Front End Development Libraries</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
+<h2 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h2><h3 id="1-用-Sass-变量存储数据"><a href="#1-用-Sass-变量存储数据" class="headerlink" title="1. 用 Sass 变量存储数据"></a>1. 用 Sass 变量存储数据</h3><p>Sass 不同于 CSS 的一个特点是它允许使用变量。 可以在 Sass 中声明变量，并为它赋值，就像在 JavaScript 中一样。</p>
+<p>在 JavaScript 中，变量是使用 <code>let</code> 和 <code>const</code> 关键字定义的。 在 Sass 中，变量以 <code>$</code> 开头的，后跟变量名。</p>
+<p>这里有几个例子：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$main-fonts</span>: Arial, sans-serif;</span><br><span class="line"><span class="variable">$headings-color</span>: green;</span><br></pre></td></tr></table></figure>
+
+<p>并使用变量：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="variable">$main-fonts</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$headings-color</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当需要把多个元素设置成相同颜色时，变量就会很有用。 一旦需要更改颜色，只需要改变这个变量的值就好。</p>
+<h3 id="2-用-Sass-嵌套-CSS"><a href="#2-用-Sass-嵌套-CSS" class="headerlink" title="2. 用 Sass 嵌套 CSS"></a>2. 用 Sass 嵌套 CSS</h3><p>Sass 允许 CSS 规则的嵌套，这在组织样式表的时候会很有用。</p>
+<p>在 CSS 里，每个元素的样式都需要写在独立的代码块中，如下所示：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nav</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nav</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对于一个大型项目，CSS 规则会很复杂。 这时，引入嵌套功能（即在对应的父元素中写子元素的样式）可以有效地简化代码：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nav</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">li</span> &#123;</span><br><span class="line">      <span class="attribute">display</span>: inline-block;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-用-Mixins-创建可重用-CSS"><a href="#3-用-Mixins-创建可重用-CSS" class="headerlink" title="3. 用 Mixins 创建可重用 CSS"></a>3. 用 Mixins 创建可重用 CSS</h3><p>在 Sass 中，mixin 是一组 CSS 声明，可以在整个样式表中重复使用。</p>
+<p>CSS 的新功能需要一段时间适配后，所有浏览器后才能完全使用。 随着浏览器的不断升级，使用这些 CSS 规则时可能需要添加浏览器前缀。 考虑 <code>box-shadow</code>：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  -webkit-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">#fff</span>;</span><br><span class="line">  -moz-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">#fff</span>;</span><br><span class="line">  -ms-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对于所有具有 <code>box-shadow</code> 属性的元素重写此规则，或者更改每个值以测试不同的效果，需要花费大量的精力。 Mixins 就像 CSS 的函数。 以下是一个例子：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> box-shadow(<span class="variable">$x</span>, <span class="variable">$y</span>, <span class="variable">$blur</span>, <span class="variable">$c</span>)&#123; </span><br><span class="line">  -webkit-<span class="attribute">box-shadow</span>: <span class="variable">$x</span> <span class="variable">$y</span> <span class="variable">$blur</span> <span class="variable">$c</span>;</span><br><span class="line">  -moz-<span class="attribute">box-shadow</span>: <span class="variable">$x</span> <span class="variable">$y</span> <span class="variable">$blur</span> <span class="variable">$c</span>;</span><br><span class="line">  -ms-<span class="attribute">box-shadow</span>: <span class="variable">$x</span> <span class="variable">$y</span> <span class="variable">$blur</span> <span class="variable">$c</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="variable">$x</span> <span class="variable">$y</span> <span class="variable">$blur</span> <span class="variable">$c</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>定义以 <code>@mixin</code> 开头，后跟自定义名称。 参数（<code>$x</code>，<code>$y</code>，<code>$blur</code>，以及上例中的 <code>$c</code> ）是可选的。 现在在需要 <code>box-shadow</code> 规则的地方，只需一行 mixin 调用而无需添加所有的浏览器前缀。 mixin 可以通过 <code>@include</code> 指令调用。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="keyword">@include</span> box-shadow(<span class="number">0px</span>, <span class="number">0px</span>, <span class="number">4px</span>, <span class="number">#fff</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-使用-if-和-else-为样式添加逻辑"><a href="#4-使用-if-和-else-为样式添加逻辑" class="headerlink" title="4. 使用 @if 和 @else 为样式添加逻辑"></a>4. 使用 @if 和 @else 为样式添加逻辑</h3><p>Sass 中的 <code>@if</code> 指令对于测试特定情况非常有用——它的工作方式与 JavaScript 中的 <code>if</code> 语句类似。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> make-bold(<span class="variable">$bool</span>) &#123;</span><br><span class="line">  <span class="keyword">@if</span> <span class="variable">$bool</span> == true &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And just like in JavaScript, the <code>@else if</code> and <code>@else</code> directives test for more conditions:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> text-effect(<span class="variable">$val</span>) &#123;</span><br><span class="line">  <span class="keyword">@if</span> <span class="variable">$val</span> == danger &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">@else</span> if <span class="variable">$val</span> == alert &#123;</span><br><span class="line">    <span class="attribute">color</span>: yellow;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">@else</span> if <span class="variable">$val</span> == success &#123;</span><br><span class="line">    <span class="attribute">color</span>: green;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">@else</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>创建一个名为 <code>border-stroke</code> 的 mixin，它接受一个参数 <code>$val</code>。 The mixin should check for the following conditions using <code>@if</code>, <code>@else if</code>, and <code>@else</code> directives:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">light - <span class="number">1px</span> solid black</span><br><span class="line">medium - <span class="number">3px</span> solid black</span><br><span class="line">heavy - <span class="number">6px</span> solid black</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-使用-for-创建一个-Sass-循环"><a href="#5-使用-for-创建一个-Sass-循环" class="headerlink" title="5. 使用 @for 创建一个 Sass 循环"></a>5. 使用 @for 创建一个 Sass 循环</h3><p>可以在 Sass 中使用 <code>@for</code> 循环添加样式，它的用法和 JavaScript 中的 <code>for</code> 循环类似。</p>
+<p><code>@for</code> 以两种方式使用：“开始 through 结束” 或 “开始 to 结束”。 主要区别在于“开始 <strong>to</strong> 结束”<em>不包括</em>结束数字，而“开始 <strong>through</strong> 结束”<em>包括</em>结束数字。</p>
+<p>这是一个开始 <strong>through</strong> 结束的示例：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@for</span> <span class="variable">$i</span> from <span class="number">1</span> through <span class="number">12</span> &#123;</span><br><span class="line">  <span class="selector-class">.col-</span>#&#123;<span class="variable">$i</span>&#125; &#123; <span class="attribute">width</span>: <span class="number">100%</span>/<span class="number">12</span> * <span class="variable">$i</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>#&#123;$i&#125;</code> 部分是将变量（<code>i</code>）与文本组合成字符串的语法。 当 Sass 文件转换为 CSS 时，它看起来像这样：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.col-1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8.33333%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">16.66667%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-12</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是创建网格布局的有效方法。 现在，有了 12 个可用作 CSS class 的列宽选项。</p>
+<h3 id="6-使用-each-遍历列表中的项目"><a href="#6-使用-each-遍历列表中的项目" class="headerlink" title="6.使用 @each 遍历列表中的项目"></a>6.使用 @each 遍历列表中的项目</h3><p>上一个挑战显示了 <code>@for</code> 指令如何通过起始值和结束值循环一定次数。 Sass 还提供 <code>@each</code> 指令，该指令循环遍历列表或映射中的每个项目。 在每次迭代时，变量将从列表或映射分配给当前值。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@each</span> <span class="variable">$color</span> in blue, red, green &#123;</span><br><span class="line">  .#&#123;<span class="variable">$color</span>&#125;-text &#123;<span class="attribute">color</span>: <span class="variable">$color</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>map 的语法略有不同。 这是一个示例：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$colors</span>: (color1: blue, color2: red, color3: green);</span><br><span class="line"></span><br><span class="line"><span class="keyword">@each</span> <span class="variable">$key</span>, <span class="variable">$color</span> in <span class="variable">$colors</span> &#123;</span><br><span class="line">  .#&#123;<span class="variable">$color</span>&#125;-text &#123;<span class="attribute">color</span>: <span class="variable">$color</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>请注意，需要用 <code>$key</code> 变量来引用 map 中的键。 否则，编译后的 CSS 将包含 <code>color1</code>，<code>color2</code>…… 以上两个代码示例都转换为以下 CSS：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blue-text</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.red-text</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.green-text</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-使用-while-循环创建样式"><a href="#7-使用-while-循环创建样式" class="headerlink" title="7. 使用 @while 循环创建样式"></a>7. 使用 @while 循环创建样式</h3><p>Sass 中的 <code>@while</code> 指令与 JavaScript 中的 <code>while</code> 类似。 只要满足条件，它就会一直创建 CSS 代码。</p>
+<p><code>@for</code> 挑战提供了一个创建简单网格系统的示例。 用 <code>@while</code> 也可以实现。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$x</span>: <span class="number">1</span>;</span><br><span class="line"><span class="keyword">@while</span> <span class="variable">$x</span> &lt; <span class="number">13</span> &#123;</span><br><span class="line">  <span class="selector-class">.col-</span>#&#123;<span class="variable">$x</span>&#125; &#123; <span class="attribute">width</span>: <span class="number">100%</span>/<span class="number">12</span> * <span class="variable">$x</span>;&#125;</span><br><span class="line">  <span class="variable">$x</span>: <span class="variable">$x</span> + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先，定义变量 <code>$x</code> 并将其设置为 1。 接下来，使用 <code>@while</code> 指令，<em>while</em> <code>$x</code> 小于 13 时创建网格系统 。 在设置 <code>width</code> 的 CSS 规则后，<code>$x</code> 增加 1 以避免无限循环。</p>
+<h3 id="8-用-Partials-将样式分成小块"><a href="#8-用-Partials-将样式分成小块" class="headerlink" title="8. 用 Partials 将样式分成小块"></a>8. 用 Partials 将样式分成小块</h3><p>Sass 中的 Partials 是包含 CSS 代码段的单独的文件。 这些片段可以导入其它 Sass 文件使用。 可以把类似代码放到模块中，以保持代码结构规整且易于管理。</p>
+<p>partials 的名称以下划线（<code>_</code>）字符开头，这样 Sass 就知道它是 CSS 的一小部分，而不会将其转换为 CSS 文件。 此外，Sass 文件以 <code>.scss</code> 文件扩展名结尾。 要将 partial 中的代码放入另一个 Sass 文件中，使用 <code>@import</code> 指令。</p>
+<p>例如，如果所有 mixins 都保存在名为 “_mixins.scss” 的 partial 中，并且在 “main.scss” 文件中需要它们，下面是使用方法：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;mixins&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>请注意，<code>import</code> 语句中不需要下划线——Sass 知道它是 partial。 将 partial 导入文件后，可以使用所有变量、mixins 和其它代码。</p>
+<h3 id="9-将一组-CSS-样式扩展到另一个元素"><a href="#9-将一组-CSS-样式扩展到另一个元素" class="headerlink" title="9. 将一组 CSS 样式扩展到另一个元素"></a>9. 将一组 CSS 样式扩展到另一个元素</h3><p>Sass 有一个名为 <code>extend</code> 的功能，可以很容易地从一个元素中借用 CSS 规则并在另一个元素上重用它们。</p>
+<p>例如，下面的 CSS 规则块设置了 <code>.panel</code> class 的样式。 它有 <code>background-color</code>，<code>height</code> 和 <code>border</code>。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.panel</span>&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在需要另一个名为 <code>.big-panel</code> 的面板。 它具有与 <code>.panel</code> 相同的基本属性，但还需要 <code>width</code> 和 <code>font-size</code>。 可以从 <code>.panel</code> 复制并粘贴初始 CSS 规则，但是当添加更多类型的面板时，代码会变得重复。 <code>extend</code> 指令是一种重用为一个元素编写的规则的简单方法，可以为另一个元素重用并添加更多规则：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.big-panel</span>&#123;</span><br><span class="line">  <span class="keyword">@extend</span> .panel;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了新样式之外，<code>.big-panel</code> 将具有与 <code>.panel</code> 相同的属性。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -233,7 +622,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-06-15 16:48:13 / 修改时间：16:49:11" itemprop="dateCreated datePublished" datetime="2023-06-15T16:48:13+08:00">2023-06-15</time>
+      <time title="创建时间：2023-06-15 16:48:13 / 修改时间：16:57:29" itemprop="dateCreated datePublished" datetime="2023-06-15T16:48:13+08:00">2023-06-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,106 +664,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="1-反转字符串"><a href="#1-反转字符串" class="headerlink" title="1. 反转字符串"></a>1. 反转字符串</h2><p>344.编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。</p>
-<p>不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。</p>
-<div class="tabs" id="test344"><ul class="nav-tabs"><li class="tab active"><a href="#test344-1">示例1</a></li><li class="tab"><a href="#test344-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test344-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</span><br><span class="line">输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test344-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]</span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>使用双指针的方法，因为字符串也是一种数组，所以元素在内存中是连续分布，这就决定了反转链表和反转字符串方式上还是有所差异的。</p>
-<p>对于字符串，我们定义两个指针（也可以说是索引下标），一个从字符串前面，一个从字符串后面，两个指针同时向中间移动，并交换元素。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">character[]</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">void</span>&#125; Do not return anything, modify s in-place instead.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseString = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> r = s.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> l = <span class="number">0</span> ;l &lt;= r ;l++ )&#123;</span><br><span class="line">        [s[l],s[r]] = [s[r],s[l]] </span><br><span class="line">        r--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s ;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-反转字符串II"><a href="#2-反转字符串II" class="headerlink" title="2. 反转字符串II"></a>2. 反转字符串II</h2><p>541.给定一个字符串 s 和一个整数 k，从字符串开头算起，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。</p>
-<p>如果剩余字符少于 k 个，则将剩余字符全部反转。<br>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样</p>
-<div class="tabs" id="test541"><ul class="nav-tabs"><li class="tab active"><a href="#test541-1">示例1</a></li><li class="tab"><a href="#test541-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test541-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">输出：&quot;bacdfeg&quot;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test541-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abcd&quot;, k = 2</span><br><span class="line">输出：&quot;bacd&quot;</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>其实在遍历字符串的过程中，只要让 i += (2 * k)，i 每次移动 2 * k 就可以了，然后判断是否需要有反转的区间。</p>
-<p>因为要找的也就是每2 * k 区间的起点，这样写，程序会高效很多。</p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">k</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseStr = <span class="keyword">function</span>(<span class="params">s, k</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> n = s.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> arr = <span class="title class_">Array</span>.<span class="title function_">from</span>(s);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">2</span> * k) &#123;</span><br><span class="line">        <span class="title function_">reverse</span>(arr, i, <span class="title class_">Math</span>.<span class="title function_">min</span>(i + k, n) - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">reverse</span> = (<span class="params">arr, left, right</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">const</span> temp = arr[left];</span><br><span class="line">        arr[left] = arr[right];</span><br><span class="line">        arr[right] = temp;</span><br><span class="line">        left++;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-替换空格"><a href="#3-替换空格" class="headerlink" title="3. 替换空格"></a>3. 替换空格</h2><p>剑指05. 请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。</p>
-<div class="tabs" id="test-05"><ul class="nav-tabs"><li class="tab active"><a href="#test-05-1">示例1</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test-05-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;We are happy.&quot;</span><br><span class="line">输出：&quot;We%20are%20happy.&quot;</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>将字符串转换为数组，然后统计其中的空格数量。<br>根据空格数量和原有字符串有效字符长度，计算出刚好存放替换后的字符长度的数组。<br>创建两个指针，一个指数组末尾，一个指字符串有效位的末尾，实现原地修改。</p>
-<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> replaceSpace = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    s = s.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> oldLen = s.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">let</span> spaceCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; oldLen; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] === <span class="string">&#x27; &#x27;</span>) spaceCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="property">length</span> += spaceCount * <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = oldLen - <span class="number">1</span>, j = s.<span class="property">length</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--, j--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] !== <span class="string">&#x27; &#x27;</span>) s[j] = s[i];</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            s[j - <span class="number">2</span>] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">            s[j - <span class="number">1</span>] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            s[j] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            j -= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-翻转字符串里的单词"><a href="#4-翻转字符串里的单词" class="headerlink" title="4. 翻转字符串里的单词"></a>4. 翻转字符串里的单词</h2><p>给你一个字符串 s ，请你反转字符串中 单词 的顺序。</p>
-<p>单词 是由非空格字符组成的字符串。s 中使用至少一个空格将字符串中的 单词 分隔开。</p>
-<p>返回 单词 顺序颠倒且 单词 之间用单个空格连接的结果字符串。</p>
-<p>注意：输入字符串 s中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。</p>
-<div class="tabs" id="test151"><ul class="nav-tabs"><li class="tab active"><a href="#test151-1">示例1</a></li><li class="tab"><a href="#test151-2">示例2</a></li><li class="tab"><a href="#test151-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test151-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;the sky is blue&quot;</span><br><span class="line">输出：&quot;blue is sky the&quot;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test151-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;  hello world  &quot;</span><br><span class="line">输出：&quot;world hello&quot;</span><br><span class="line">解释：反转后的字符串中不能存在前导空格和尾随空格。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test151-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]</span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]输入：s = &quot;a good   example&quot;</span><br><span class="line">输出：&quot;example good a&quot;</span><br><span class="line">解释：如果两个单词间有多余的空格，反转后的字符串需要将单词间的空格减少到仅有一个。</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>移除多余空格</li>
-<li>将整个字符串反转</li>
-<li>将每个单词反转</li>
-</ul>
-<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="keyword">var</span> reverseWords = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">   <span class="comment">// 字符串转数组</span></span><br><span class="line">   <span class="keyword">const</span> strArr = <span class="title class_">Array</span>.<span class="title function_">from</span>(s);</span><br><span class="line">   <span class="comment">// 移除多余空格</span></span><br><span class="line">   <span class="title function_">removeExtraSpaces</span>(strArr);</span><br><span class="line">   <span class="comment">// 翻转</span></span><br><span class="line">   <span class="title function_">reverse</span>(strArr, <span class="number">0</span>, strArr.<span class="property">length</span> - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">let</span> start = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= strArr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">     <span class="keyword">if</span> (strArr[i] === <span class="string">&#x27; &#x27;</span> || i === strArr.<span class="property">length</span>) &#123;</span><br><span class="line">       <span class="comment">// 翻转单词</span></span><br><span class="line">       <span class="title function_">reverse</span>(strArr, start, i - <span class="number">1</span>);</span><br><span class="line">       start = i + <span class="number">1</span>;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> strArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除多余空格</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">removeExtraSpaces</span>(<span class="params">strArr</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> slowIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> fastIndex = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(fastIndex &lt; strArr.<span class="property">length</span>) &#123;</span><br><span class="line">    <span class="comment">// 移除开始位置和重复的空格</span></span><br><span class="line">    <span class="keyword">if</span> (strArr[fastIndex] === <span class="string">&#x27; &#x27;</span> &amp;&amp; (fastIndex === <span class="number">0</span> || strArr[fastIndex - <span class="number">1</span>] === <span class="string">&#x27; &#x27;</span>)) &#123;</span><br><span class="line">      fastIndex++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      strArr[slowIndex++] = strArr[fastIndex++];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 移除末尾空格</span></span><br><span class="line">  strArr.<span class="property">length</span> = strArr[slowIndex - <span class="number">1</span>] === <span class="string">&#x27; &#x27;</span> ? slowIndex - <span class="number">1</span> : slowIndex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 翻转从 start 到 end 的字符</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">reverse</span>(<span class="params">strArr, start, end</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> left = start;</span><br><span class="line">  <span class="keyword">let</span> right = end;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">    <span class="comment">// 交换</span></span><br><span class="line">    [strArr[left], strArr[right]] = [strArr[right], strArr[left]];</span><br><span class="line">    left++;</span><br><span class="line">    right--;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseWords = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> s.<span class="title function_">trim</span>().<span class="title function_">split</span>(<span class="regexp">/\s+/</span>).<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-左旋转字符串"><a href="#5-左旋转字符串" class="headerlink" title="5. 左旋转字符串"></a>5. 左旋转字符串</h2><p>剑指58. 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
-<div class="tabs" id="test-58"><ul class="nav-tabs"><li class="tab active"><a href="#test-58-1">示例1</a></li><li class="tab"><a href="#test-58-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test-58-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">输出: &quot;cdefgab&quot;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test-58-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;lrloseumgh&quot;, k = 6</span><br><span class="line">输出: &quot;umghlrlose&quot;</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><ol>
-<li>反转区间为前n的子串</li>
-<li>反转区间为n到末尾的子串</li>
-<li>反转整个字符串</li>
-</ol>
-<p>最后就可以达到左旋n的目的，而不用定义新的字符串，完全在本串上操作。</p>
-<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseLeftWords = <span class="keyword">function</span> (<span class="params">s, n</span>) &#123;</span><br><span class="line">    <span class="comment">/** Utils */</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">reverseWords</span>(<span class="params">strArr, start, end</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp;</span><br><span class="line">        <span class="keyword">while</span> (start &lt; end) &#123;</span><br><span class="line">            temp = strArr[start];</span><br><span class="line">            strArr[start] = strArr[end];</span><br><span class="line">            strArr[end] = temp;</span><br><span class="line">            start++;</span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/** Main code */</span></span><br><span class="line">    <span class="keyword">let</span> strArr = s.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">    <span class="keyword">let</span> length = strArr.<span class="property">length</span>;</span><br><span class="line">    <span class="title function_">reverseWords</span>(strArr, <span class="number">0</span>, length - <span class="number">1</span>);</span><br><span class="line">    <span class="title function_">reverseWords</span>(strArr, <span class="number">0</span>, length - n - <span class="number">1</span>);</span><br><span class="line">    <span class="title function_">reverseWords</span>(strArr, length - n, length - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> strArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">reverseLeftWords</span> = (<span class="params">s, k</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> len = s.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> n = k % len;</span><br><span class="line">    <span class="keyword">const</span> double = <span class="string">`<span class="subst">$&#123;s&#125;</span><span class="subst">$&#123;s&#125;</span>`</span>;</span><br><span class="line">    <span class="keyword">return</span> double.<span class="title function_">slice</span>(n, n + len);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-实现strStr"><a href="#6-实现strStr" class="headerlink" title="6. 实现strStr()"></a>6. 实现strStr()</h2><ol start="28">
-<li>找出字符串中第一个匹配项的下标，给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串的第一个匹配项的下标（下标从 0 开始）。如果 <code>needle</code> 不是 <code>haystack</code> 的一部分，则返回  <code>-1</code> 。<div class="tabs" id="test28"><ul class="nav-tabs"><li class="tab active"><a href="#test28-1">示例1</a></li><li class="tab"><a href="#test28-2">示例2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test28-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;</span><br><span class="line">输出：0</span><br><span class="line">解释：&quot;sad&quot; 在下标 0 和 6 处匹配。</span><br><span class="line">第一个匹配项的下标是 0 ，所以返回 0 。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test28-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：&quot;leeto&quot; 没有在 &quot;leetcode&quot; 中出现，所以返回 -1 。</span><br></pre></td></tr></table></figure></div></div></div></li>
-</ol>
-<h3 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h3><p><strong>KMP有什么用</strong></p>
-<p>KMP主要应用在字符串匹配上。</p>
-<p>KMP的主要思想是<strong>当出现字符串不匹配时，可以知道一部分之前已经匹配的文本内容，可以利用这些信息避免从头再去做匹配了。</strong></p>
-<p>所以如何记录已经匹配的文本内容，是KMP的重点，也是next数组肩负的重任。</p>
-<p><strong>前缀表</strong></p>
-<p>next数组就是一个前缀表（prefix table）。</p>
-<p><strong>前缀表是用来回退的，它记录了模式串与主串(文本串)不匹配的时候，模式串应该从哪里开始重新匹配。</strong></p>
-<p>要在文本串：aabaabaafa 中查找是否出现过一个模式串：aabaaf。</p>
-<p><strong>记录下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</strong></p>
-<p><strong>最长公共前后缀？</strong></p>
-<p>文章中字符串的<strong>前缀是指不包含最后一个字符的所有以第一个字符开头的连续子串</strong>。</p>
-<p><strong>后缀是指不包含第一个字符的所有以最后一个字符结尾的连续子串</strong>。</p>
-<p><strong>因为前缀表要求的就是相同前后缀的长度。</strong></p>
-<p>而最长公共前后缀里面的“公共”，更像是说前缀和后缀公共的长度。这其实并不是前缀表所需要的。</p>
-<p>所以字符串a的最长相等前后缀为0。 字符串aa的最长相等前后缀为1。 字符串aaa的最长相等前后缀为2。 等等…..</p>
-<p>前缀表具有告诉我们当前位置匹配失败，跳到之前已经匹配过的地方的能力</p>
-<p><strong>如何计算前缀表</strong></p>
-<p>接下来就要说一说怎么计算前缀表。</p>
-<p>如图：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B25.png" alt="KMP精讲5"></p>
-<p>长度为前1个字符的子串<code>a</code>，最长相同前后缀的长度为0。（注意字符串的<strong>前缀是指不包含最后一个字符的所有以第一个字符开头的连续子串</strong>；<strong>后缀是指不包含第一个字符的所有以最后一个字符结尾的连续子串</strong>。）</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B26.png" alt="KMP精讲6"></p>
-<p>长度为前2个字符的子串<code>aa</code>，最长相同前后缀的长度为1。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B27.png" alt="KMP精讲7"></p>
-<p>长度为前3个字符的子串<code>aab</code>，最长相同前后缀的长度为0。</p>
-<p>以此类推： 长度为前4个字符的子串<code>aaba</code>，最长相同前后缀的长度为1。 长度为前5个字符的子串<code>aabaa</code>，最长相同前后缀的长度为2。 长度为前6个字符的子串<code>aabaaf</code>，最长相同前后缀的长度为0。</p>
-<p>那么把求得的最长相同前后缀的长度就是对应前缀表的元素，如图： <img src="https://code-thinking.cdn.bcebos.com/pics/KMP%E7%B2%BE%E8%AE%B28.png" alt="KMP精讲8"></p>
-<p>可以看出模式串与前缀表对应位置的数字表示的就是：<strong>下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</strong></p>
-<p><strong>前缀表与next数组</strong></p>
-<p>next数组就可以是前缀表，但是很多实现都是把前缀表统一减一（右移一位，初始位置为-1）之后作为next数组。</p>
-<p>为什么这么做呢，其实<strong>这并不涉及到KMP的原理，而是具体实现，next数组既可以就是前缀表，也可以是前缀表统一减一（右移一位，初始位置为-1）。</strong></p>
-<p><strong>使用next数组来匹配</strong></p>
-<p><strong>以下我们以前缀表统一减一之后的next数组来做演示</strong>。</p>
-<p>有了next数组，就可以根据next数组来 匹配文本串s，和模式串t了。</p>
-<p>注意next数组是新前缀表（旧前缀表统一减一了）。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/KMP%E7%B2%BE%E8%AE%B24.gif" alt="KMP精讲4"></p>
-<h3 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h3><h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">haystack</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">needle</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> strStr = <span class="keyword">function</span>(<span class="params">haystack, needle</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> n = haystack.<span class="property">length</span></span><br><span class="line">    <span class="keyword">let</span> m = needle.<span class="property">length</span></span><br><span class="line">    <span class="keyword">if</span>(m === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> next = <span class="keyword">new</span> <span class="title class_">Array</span>(m).<span class="title function_">fill</span>(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt; m; i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; needle[i] !== needle[j])&#123;</span><br><span class="line">            j = next[j - <span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(needle[i] === needle[j])&#123;</span><br><span class="line">            j++</span><br><span class="line">        &#125;</span><br><span class="line">        next[i] = j</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 搞懂上面的，下面的也就懂了</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="comment">// 如果当前i 和 j不一致，就回退到上一个相等的位置的下一个看看是否匹配</span></span><br><span class="line">        <span class="comment">// 会不断回退，0为回退到边界，当回退到0意味着要重新从头开始匹配</span></span><br><span class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; haystack[i] !== needle[j])&#123;</span><br><span class="line">            j = next[j - <span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>( haystack[i] === needle[j])&#123;</span><br><span class="line">            j++</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 当j 和 m的长度相等时，就说明存在</span></span><br><span class="line">        <span class="keyword">if</span>(j === m)&#123;</span><br><span class="line">            <span class="keyword">return</span> i - m + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7-重复的子字符串"><a href="#7-重复的子字符串" class="headerlink" title="7.重复的子字符串"></a>7.重复的子字符串</h2><p>459.给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
-<div class="tabs" id="test459"><ul class="nav-tabs"><li class="tab active"><a href="#test459-1">示例1</a></li><li class="tab"><a href="#test459-2">示例2</a></li><li class="tab"><a href="#test459-3">示例3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test459-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abab&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 可由子串 &quot;ab&quot; 重复两次构成。</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test459-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;aba&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test459-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abcabcabcabc&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 可由子串 &quot;abc&quot; 重复四次构成。 (或子串 &quot;abcabc&quot; 重复两次构成。)</span><br></pre></td></tr></table></figure></div></div></div>
-
-<h3 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h3><p>为了避免这种无用的环绕，可以创建一个新的字符串str,它等于原来的字符串S再加上S自身，这样其实就包含了所有移动的字符串。</p>
-<p>比如字符串：S = acd，那么str = S + S = acdacd</p>
-<p>acd移动的可能：dac、cda。其实都包含在了str中了。就像一个滑动窗口</p>
-<p>一开始acd (acd) ，移动一次ac(dac)d,移动两次a(cda)cd。循环结束</p>
-<p>所以可以直接判断str中去除首尾元素之后，是否包含自身元素。如果包含。则表明存在重复子串。</p>
-<h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> repeatedSubstringPattern = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> s1 = (s + s).<span class="title function_">slice</span>(<span class="number">1</span>, -<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> s1.<span class="title function_">indexOf</span>(s) != -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/algorithm%E2%80%94%E2%80%94string/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -428,9 +725,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-15 11:21:47 / 修改时间：11:23:45" itemprop="dateCreated datePublished" datetime="2023-06-15T11:21:47+08:00">2023-06-15</time>
+      <time title="创建时间：2023-06-15 11:21:47" itemprop="dateCreated datePublished" datetime="2023-06-15T11:21:47+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-16 09:57:20" itemprop="dateModified" datetime="2023-06-16T09:57:20+08:00">2023-06-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -453,14 +756,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>10k</span>
+      <span>11k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>9 分钟</span>
+      <span>10 分钟</span>
     </span>
 </div>
 
@@ -472,126 +775,15 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
-<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><h3 id="1-使用Bootstrap-Fluid-容器实现响应式设计"><a href="#1-使用Bootstrap-Fluid-容器实现响应式设计" class="headerlink" title="1. 使用Bootstrap Fluid 容器实现响应式设计"></a>1. 使用Bootstrap Fluid 容器实现响应式设计</h3><p>Bootstrap 会根据屏幕大小来动态调整 HTML 元素的大小————因此称为 Responsive Design（响应式设计）。</p>
-<p>通过响应式设计，我们将无需额外设计一个手机版的网页， 因为它在任何尺寸的屏幕上看起来都很棒。</p>
-<p>任何 Web 应用，都可以通过添加如下代码到 HTML 顶部来引入 Bootstrap 。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>不过在这里，已经预先为此页面添加了上述代码。 注意使用 <code>&gt;</code> 或者 <code>/&gt;</code> 两种方式闭合 <code>link</code> 标签都是可行的。</p>
-<p>首先，我们应该将所有 HTML（ <code>link</code> 标签和 <code>style</code> 元素除外）嵌套在带有 <code>container-fluid</code> class 的 <code>div</code> 元素里面。</p>
-<h3 id="2-使图片自适应移动端"><a href="#2-使图片自适应移动端" class="headerlink" title="2. 使图片自适应移动端"></a>2. 使图片自适应移动端</h3><p>首先，在已有的图片下面添加一张新的图片。 将新图片的 <code>src</code> 属性设置为 <code>https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg</code>。</p>
-<p>如果图片的大小恰恰和我们手机屏幕尺寸大小一样自然是最好的。</p>
-<p>幸运的是，现在通过 Bootstrap，我们仅仅只需要为 image 标签上设置 class 属性为 <code>img-responsive</code> ， 就可以让它完美地适应你的页面的宽度了。</p>
-<h3 id="3-用-Bootstrap-居中文本"><a href="#3-用-Bootstrap-居中文本" class="headerlink" title="3. 用 Bootstrap 居中文本"></a>3. 用 Bootstrap 居中文本</h3><p>可以使用 Bootstrap 将顶部的元素居中来美化页面。 只需要将 <code>h2</code> 元素的 class 属性设置为 <code>text-center</code> 就可以实现。</p>
-<p>记住：可以为一个元素添加多个 classes ，class 间通过空格分隔，就像这样：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;red-text text-center&quot;</span>&gt;</span>your text<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-创建一个-Bootstrap-按钮"><a href="#4-创建一个-Bootstrap-按钮" class="headerlink" title="4. 创建一个 Bootstrap 按钮"></a>4. 创建一个 Bootstrap 按钮</h3><p>Bootstrap 的 <code>button</code> 元素有着独有的、比默认 HTML 按钮更好的样式风格。</p>
-<p>在较大的小猫图片下方创建新的 <code>button</code> 元素。 为它添加 <code>btn</code> 与 <code>btn-default</code> 两个 classes 和 <code>Like</code> 文本。</p>
-<h3 id="5-创建一个-Bootstrap-块级元素按钮"><a href="#5-创建一个-Bootstrap-块级元素按钮" class="headerlink" title="5. 创建一个 Bootstrap 块级元素按钮"></a>5. 创建一个 Bootstrap 块级元素按钮</h3><p>一般情况下，<code>btn</code> 和 <code>btn-default</code> 两个 classes 修饰的 <code>button</code> 元素宽度与它包含的文本相同， 举个例子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这个按钮的宽度应该和文本 <code>Submit</code> 的宽度相同。</p>
-<p>提交</p>
-<p>通过为按钮添加 class 属性 <code>btn-block</code> 使其成为块级元素，按钮会伸展并填满页面的整个水平空间，后续的元素会流到这个块级元素的下方，即 “另起一行”。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default btn-block&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这个按钮会 100% 占满所有的可用宽度。</p>
-<h3 id="6-体验-Bootstrap-按钮的不同主题"><a href="#6-体验-Bootstrap-按钮的不同主题" class="headerlink" title="6. 体验 Bootstrap 按钮的不同主题"></a>6. 体验 Bootstrap 按钮的不同主题</h3><p><code>btn-primary</code> class 的颜色是应用的主要颜色。 这样 “突出显示” 是引导用户按部就班进行操作的有效办法。</p>
-<p>将按钮的 class 从 Bootstrap 的 <code>btn-default</code> 替换为 <code>btn-primary</code>。</p>
-<p>注意：按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> classes。</p>
-<h3 id="7-可选操作样式-btn-info"><a href="#7-可选操作样式-btn-info" class="headerlink" title="7. 可选操作样式 btn-info"></a>7. 可选操作样式 btn-info</h3><p>Bootstrap 有着丰富的预定义按钮颜色。 浅蓝色的 <code>btn-info</code> class 通常用在备选操作上。</p>
-<p>在 <code>Like</code> 按钮下方使用文本 <code>Info</code> 创建一个新的块级 Bootstrap 按钮，并向其中添加 Bootstrap 的 <code>btn-info</code> 类。</p>
-<p>注意：这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。</p>
-<h3 id="8-使用-btn-danger-提示危险操作"><a href="#8-使用-btn-danger-提示危险操作" class="headerlink" title="8. 使用 btn-danger 提示危险操作"></a>8. 使用 btn-danger 提示危险操作</h3><p>Bootstrap 有着丰富的预定义按钮颜色。 红色 <code>btn-danger</code> class 用来提醒用户此行为具有破坏性，比如删除一张猫的图片。</p>
-<p>创建一个带有文本 <code>Delete</code> 的按钮，给它设置 class <code>btn-danger</code>。</p>
-<p>注意：这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。</p>
-<h3 id="9-使用-Bootstrap-Grid-并排放置元素"><a href="#9-使用-Bootstrap-Grid-并排放置元素" class="headerlink" title="9. 使用 Bootstrap Grid 并排放置元素"></a>9. 使用 Bootstrap Grid 并排放置元素</h3><p>Bootstrap 具有一套 12 列的响应式栅格系统，可以轻松地将多个元素放入一行并指定它们的相对宽度。 Bootstrap 的大部分 class 属性都可以应用在 <code>div</code> 元素上。</p>
-<p>Bootstrap 有不同的列宽属性，它根据用户的屏幕宽度来使用相应的宽度。 比如，手机的屏幕窄，而笔记本电脑的屏幕更宽。</p>
-<p>以 Bootstrap 的 <code>col-md-*</code> class 为例， 在这里， <code>md</code> 表示 medium （中等的）， 而 <code>*</code> 是一个数字，说明了这个元素占有多少个列宽度。 这个例子就是指定了中等大小屏幕（例如笔记本电脑）下元素所占的列宽度。</p>
-<p>在 Cat Photo App 中，将使用 <code>col-xs-*</code> ， 其中 <code>xs</code> 是 extra small 的缩写 (比如窄屏手机屏幕)， <code>*</code> 是填写的数字，代表一行中的元素该占多少列宽。</p>
-<p>将 <code>Like</code>、<code>Info</code> 和 <code>Delete</code> 三个按钮并排放入一个 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素中，然后将每个按钮都各用一个 <code>&lt;div class=&quot;col-xs-4&quot;&gt;</code> 元素包裹起来。</p>
-<p>当 <code>div</code> 元素设置了 <code>row</code> class 之后，那几个按钮便会嵌入其中了。</p>
-<h3 id="10-替换自定义的-Bootstrap-样式"><a href="#10-替换自定义的-Bootstrap-样式" class="headerlink" title="10. 替换自定义的 Bootstrap 样式"></a>10. 替换自定义的 Bootstrap 样式</h3><p>现在可以清理一下之前代码，用 Bootstrap 的内置样式来替换之前定义的样式，这样 Cat Photo App 看起来更简洁些。</p>
-<p>别担心——以后会有大把时间来自定义 CSS 样式的。</p>
-<p>删除 <code>style</code> 元素里的 <code>.red-text</code>、<code>p</code> 和 <code>.smaller-image</code> CSS 声明，使 <code>style</code> 元素只留下 <code>h2</code> 和 <code>thick-green-border</code>。</p>
-<p>删除包含死链接的 <code>p</code> 元素。 然后将 <code>h2</code> 的 <code>red-text</code> class 替换为 Bootstrap 的 <code>text-primary</code> class。</p>
-<p>最后，从第一个 <code>img</code> 元素中删除 <code>smaller-image</code> class，并将其替换为 <code>img-responsive</code> class。</p>
-<h3 id="11-使用-span-创建行内元素"><a href="#11-使用-span-创建行内元素" class="headerlink" title="11. 使用 span 创建行内元素"></a>11. 使用 span 创建行内元素</h3><p>通过使用行内元素 <code>span</code>，可以把不同的元素放在同一行，甚至能为一行的不同部分指定不同样式。</p>
-<p>使用一个 <code>span</code> 元素，将文本 <code>love</code> 嵌入现在包含文本 <code>Things cats love</code> 的 <code>p</code> 元素中。 然后给 <code>span</code> 元素设置 class <code>text-danger</code>，使文本变成红色。</p>
-<p>对含有文本 <code>Top 3 things cats hate</code> 的 <code>p</code> 元素这样处理：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Top 3 things cats <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;text-danger&quot;</span>&gt;</span>hate:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="12-创建自定义标题"><a href="#12-创建自定义标题" class="headerlink" title="12. 创建自定义标题"></a>12. 创建自定义标题</h3><p>为 Cat Photo App 做一个简单的头部，把标题和惬意的猫咪图片放在同一行。</p>
-<p>记住，由于 Bootstrap 使用了响应式栅格系统，可以很方便地把元素放到一行以及指定元素的相对宽度。 大部分的 Bootstrap 的 class 都能被用在 <code>div</code> 元素上。</p>
-<p>把第一张图片和 <code>h2</code> 元素用一个简单的 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素包裹起来。 再用 <code>&lt;div class=&quot;col-xs-8&quot;&gt;</code> 包裹 <code>h2</code> 元素，用 <code>&lt;div class=&quot;col-xs-4&quot;&gt;</code> 包裹我们的图片，这样它们就能位于同一行了。</p>
-<p>注意现在图片是否与文字大小一致呢？</p>
-<h3 id="13-在按钮中添加字体图标"><a href="#13-在按钮中添加字体图标" class="headerlink" title="13. 在按钮中添加字体图标"></a>13. 在按钮中添加字体图标</h3><p>Font Awesome 是一个非常便利的图标库。 我们可以通过 webfont 或矢量图的方式来使用这些图标。 这些图标就和字体一样， 不仅能通过像素单位指定它们的大小，它们也同样会继承父级 HTML 元素的字号。</p>
-<p>可以将 Font Awesome 图标库添加至任何一个 web app 中，方法很简单，只需要在 HTML head 标签中添加以下代码即可：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在这个挑战中，我们已经为你在页面上添加好了 Font Awesome 图标库。</p>
-<p><code>i</code> 元素原本是用来表示斜体文字内容的；不过现在，用它来表示图标也很常见。 只需要为 <code>i</code> 元素添加相应的 class 就可以让它展示图标，比如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fas fa-info-circle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>同时，我们也可以使用 <code>span</code> 元素来展示图标。</p>
-<hr>
-<p>请使用 Font Awesome 来为我们的点赞按钮添加一个 <code>thumbs-up</code> 图标，只需添加一个 class 包含 <code>fas</code> 和 <code>fa-thumbs-up</code> 的 <code>i</code> 元素即可。 同时，请记得保留图标之后的文字内容 <code>Like</code>。</p>
-<h3 id="14-将字体图标添加到所有的按钮上"><a href="#14-将字体图标添加到所有的按钮上" class="headerlink" title="14.将字体图标添加到所有的按钮上"></a>14.将字体图标添加到所有的按钮上</h3><p>为 info 按钮添加 Font Awesome <code>info-circle</code> 图标，delete 按钮添加 <code>trash</code> 图标。</p>
-<p><strong>Note:</strong> You can use either <code>i</code> or <code>span</code> elements to complete this challenge.</p>
-<h3 id="15-响应式风格的单选按钮"><a href="#15-响应式风格的单选按钮" class="headerlink" title="15. 响应式风格的单选按钮"></a>15. 响应式风格的单选按钮</h3><p>Bootstrap 的 <code>col-xs-*</code> class 也可以用在 <code>form</code> 元素上！ 这样就可以在不关心屏幕大小的情况下，将的单选按钮均匀的平铺在页面上。</p>
-<p>将所有单选按钮放入 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素中。 再用 <code>&lt;div class=&quot;col-xs-6&quot;&gt;</code> 元素包裹每一个单选按钮。</p>
-<p><strong>注意：</strong> 提醒一句，单选按钮是 type 为 <code>radio</code> 的 <code>input</code> 元素。</p>
-<h3 id="16-响应式风格的复选框"><a href="#16-响应式风格的复选框" class="headerlink" title="16. 响应式风格的复选框"></a>16. 响应式风格的复选框</h3><p>Bootstrap 的 <code>col-xs-*</code> 可应用于所有的 <code>form</code> 元素上，包括复选框！ 这样就可以不必关注屏幕大小，均匀地把复选框放在页面上了。</p>
-<hr>
-<p>将所有三个复选框都放置于一个 <code>&lt;div class=&quot;row&quot;&gt;</code> 元素中。 然后分别把每个复选框都放置于一个 <code>&lt;div class=&quot;col-xs-4&quot;&gt;</code> 元素中。</p>
-<h3 id="17-给表单输入框添加样式"><a href="#17-给表单输入框添加样式" class="headerlink" title="17. 给表单输入框添加样式"></a>17. 给表单输入框添加样式</h3><p>可以在 submit <code>button</code> 元素内加上 <code>&lt;i class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt;</code>，来添加 Font Awesome 的 <code>fa-paper-plane</code> 图标。</p>
-<p>为表单的文本输入框（text input）设置 <code>form-control</code> class。 为表单的提交（submit）按钮设置 <code>btn btn-primary</code> class， 并为它加上 Font Awesome 的 <code>fa-paper-plane</code> 图标。</p>
-<p>所有文本输入类的元素如 <code>&lt;input&gt;</code>，<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 只要设置 <code>.form-control</code> class 就会占满100%的宽度。</p>
-<h3 id="18-使用-Bootstrap-响应式排列表单元素"><a href="#18-使用-Bootstrap-响应式排列表单元素" class="headerlink" title="18. 使用 Bootstrap 响应式排列表单元素"></a>18. 使用 Bootstrap 响应式排列表单元素</h3><p>现在把表单里的 <code>input</code> 元素和 submit <code>button</code> （提交按钮）放在同一行。 跟着之前的做法来就行：准备好一个具有 <code>row</code> class 的 <code>div</code> 元素还有几个具有 <code>col-xs-*</code> class 的 <code>div</code> 元素。</p>
-<p>先把表单的 text <code>input</code> （文本输入框）和 submit <code>button</code> （提交按钮）放进具有 <code>row</code> class 的 <code>div</code> 中。 再用 <code>col-xs-7</code> class 的 div 包裹表单的 text <code>input</code> （文本输入框）， <code>col-xs-5</code> class 的 <code>div</code> 包裹表单的 submit <code>button</code> （提交按钮）。</p>
-<p>这是我们到目前为止 Cat Photo App 的最后一个挑战了。 祝你编码愉快。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=<span class="string">&quot;https://fonts.googleapis.com/css?family=Lobster&quot;</span> rel=<span class="string">&quot;stylesheet&quot;</span> type=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="selector-tag">h2</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">font-family</span>: Lobster, Monospace;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="selector-class">.thick-green-border</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-color</span>: green;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-width</span>: <span class="number">10px</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-style</span>: solid;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;container-fluid&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-8&quot;&gt;</span><br><span class="line">      &lt;h2 class=&quot;text-primary text-center&quot;&gt;CatPhotoApp&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;img-responsive thick-green-border&quot; src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A cute orange cat lying on its back.&quot;&gt;&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Three kittens running towards the camera.&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-block btn-primary&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt; Like&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-block btn-info&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; Info&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">      &lt;button class=&quot;btn btn-block btn-danger&quot;&gt;&lt;i class=&quot;fa fa-trash&quot;&gt;&lt;/i&gt; Delete&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;Things cats &lt;span class=&quot;text-danger&quot;&gt;love:&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;li&gt;cat nip&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;laser pointers&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;lasagna&lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">  &lt;p&gt;Top 3 things cats hate:&lt;/p&gt;</span><br><span class="line">  &lt;ol&gt;</span><br><span class="line">    &lt;li&gt;flea treatment&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;thunder&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;other cats&lt;/li&gt;</span><br><span class="line">  &lt;/ol&gt;</span><br><span class="line">  &lt;form action=&quot;https://freecatphotoapp.com/submit-cat-photo&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-6&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Indoor&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-6&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;personality&quot;&gt; Loving&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;personality&quot;&gt; Lazy&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-4&quot;&gt;</span><br><span class="line">        &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;personality&quot;&gt; Crazy&lt;/label&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-7&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;cat photo URL&quot; required&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;col-xs-5&quot;&gt;</span><br><span class="line">        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt; Submit&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="19-创建一个-Bootstrap-标题"><a href="#19-创建一个-Bootstrap-标题" class="headerlink" title="19. 创建一个 Bootstrap 标题"></a>19. 创建一个 Bootstrap 标题</h3><p>现在，来运用 HTML、CSS 和 Bootstrap 从头开始做点东西。</p>
-<p>接下来将会搭建一个 jQuery playground，以便在后续的 jQuery 课程中使用它。</p>
-<p>首先，创建一个包含 <code>jQuery Playground</code> 文本内容的 <code>h3</code> 元素。</p>
-<p>通过给 <code>h3</code> 元素设置 Bootstrap 的 <code>text-primary</code> class 属性来为其上色，然后添加 Bootstrap 的 <code>text-center</code> class 属性使其文本居中显示。</p>
-<h3 id="20-将页面放在-container-fluid-div-中"><a href="#20-将页面放在-container-fluid-div-中" class="headerlink" title="20. 将页面放在 container-fluid div 中"></a>20. 将页面放在 container-fluid div 中</h3><p>现在确保页面所有内容都可以响应移动端。</p>
-<p>将的 <code>h3</code> 元素内嵌进一个具有 <code>container-fluid</code> class 的<code>div</code> 元素中。</p>
-<h3 id="21-将页面放在-container-fluid-div-中"><a href="#21-将页面放在-container-fluid-div-中" class="headerlink" title="21. 将页面放在 container-fluid div 中"></a>21. 将页面放在 container-fluid div 中</h3><p>现在确保页面所有内容都可以响应移动端。</p>
-<p>将的 <code>h3</code> 元素内嵌进一个具有 <code>container-fluid</code> class 的<code>div</code> 元素中。</p>
-<h3 id="22-分割-Bootstrap-Row"><a href="#22-分割-Bootstrap-Row" class="headerlink" title="22. 分割 Bootstrap Row"></a>22. 分割 Bootstrap Row</h3><p>现在已经有了一个 Bootstrap Row，把它分成两列。</p>
-<p>在行内创建两个 class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素。</p>
-<h3 id="23-创建-Bootstrap-Wells"><a href="#23-创建-Bootstrap-Wells" class="headerlink" title="23. 创建 Bootstrap Wells"></a>23. 创建 Bootstrap Wells</h3><p>Bootstrap 有一个叫作 <code>well</code> 的 class，作用是使界面更具层次感。</p>
-<p>在每一个 class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素中都嵌入一个带有 <code>well</code> class 的 <code>div</code> 元素。</p>
-<h3 id="24-在-Bootstrap-Wells-中添加元素"><a href="#24-在-Bootstrap-Wells-中添加元素" class="headerlink" title="24. 在 Bootstrap Wells 中添加元素"></a>24. 在 Bootstrap Wells 中添加元素</h3><p>现在的每一行的列都已经有了 <code>div</code> 元素。 这已经足够了， 现在让我们添加 <code>button</code> 元素吧。</p>
-<p>每一个 class 属性为 <code>well</code> 的 <code>div</code> 元素内都应该放三个 <code>button</code> 元素。</p>
-<h3 id="25-给-Bootstrap-按钮添加默认样式"><a href="#25-给-Bootstrap-按钮添加默认样式" class="headerlink" title="25. 给 Bootstrap 按钮添加默认样式"></a>25. 给 Bootstrap 按钮添加默认样式</h3><p>Bootstrap 还有另外一种按钮 class 属性叫做 <code>btn-default</code>。</p>
-<p>为所有的 <code>button</code> 元素增加两个 class： <code>btn</code> 和 <code>btn-default</code>。</p>
-<h3 id="26-用-jQuery-选择器给目标元素的添加-class"><a href="#26-用-jQuery-选择器给目标元素的添加-class" class="headerlink" title="26. 用 jQuery 选择器给目标元素的添加 class"></a>26. 用 jQuery 选择器给目标元素的添加 class</h3><p>并不是所有 class 属性都需要有对应的 CSS 样式。 有时候我们设置 class 只是为了更方便地在 jQuery 中选中这些元素。</p>
-<p>为每一个 <code>button</code> 元素添加 <code>target</code> class。</p>
-<h3 id="27-给-Bootstrap-元素添加-id-属性"><a href="#27-给-Bootstrap-元素添加-id-属性" class="headerlink" title="27. 给 Bootstrap 元素添加 id 属性"></a>27. 给 Bootstrap 元素添加 id 属性</h3><p>回忆一下，除了可以给元素添加 class 属性，我们还可以给元素设置 <code>id</code> 属性。</p>
-<p>每个元素的 id 都必须是唯一的，并且在一个页面中只能使用一次。</p>
-<p>让我们为每个 class 为 <code>well</code> 的 <code>div</code> 元素添加一个唯一的 id。</p>
-<p>记住，可以这样给一个元素设置 id：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;well&quot;</span> <span class="attr">id</span>=<span class="string">&quot;center-well&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>给左边的块设置 id 为 <code>left-well</code>。 给右边的块设置 id 为 <code>right-well</code>。</p>
-<h3 id="28-给-Bootstrap-Wells-设置标签"><a href="#28-给-Bootstrap-Wells-设置标签" class="headerlink" title="28. 给 Bootstrap Wells 设置标签"></a>28. 给 Bootstrap Wells 设置标签</h3><p>为了让页面逻辑更清晰，每个 wells 都标上它们的 id 吧。</p>
-<p>在 left-well 的上一层，class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素里面，增加一个文本为 <code>#left-well</code> 的 <code>h4</code> 元素。</p>
-<p>在 right-well 的上一层，class 属性为 <code>col-xs-6</code> 的 <code>div</code> 元素里面，增加一个文本为 <code>#right-well</code> 的 <code>h4</code> 元素。</p>
-<h3 id="29-给每个元素一个唯一的-id"><a href="#29-给每个元素一个唯一的-id" class="headerlink" title="29. 给每个元素一个唯一的 id"></a>29. 给每个元素一个唯一的 id</h3><p>也可以通过 jQuery 根据每个按钮唯一的 id 来定位出它们。</p>
-<p>给每一个按钮设置唯一的 id，以 <code>target1</code> 开始，<code>target6</code> 结束。</p>
-<p>确保 <code>target1</code> 到 <code>target3</code> 在 <code>#left-well</code> 之中，<code>target4</code> 到 <code>target6</code> 在 <code>#right-well</code> 之中。</p>
-<h3 id="30-给-Bootstrap-按钮设置标签"><a href="#30-给-Bootstrap-按钮设置标签" class="headerlink" title="30. 给 Bootstrap 按钮设置标签"></a>30. 给 Bootstrap 按钮设置标签</h3><p>正如标注了每个 wells 一样，同样可以标注每一个按钮。</p>
-<p>为每个 <code>button</code> 元素设置与其 id 选择器对应的文本。</p>
-<h3 id="31-使用注释来说明代码"><a href="#31-使用注释来说明代码" class="headerlink" title="31. 使用注释来说明代码"></a>31. 使用注释来说明代码</h3><p>使用 jQuery 时，修改 HTML 元素时并不需要直接修改 HTML 代码。</p>
-<p>必须确保让每个人都知道不应该直接修改此页面上的这些代码。</p>
-<p>记住，可以在 <code>&lt;!--</code> 为开始，<code>--&gt;</code> 为结束的地方进行评论注释。</p>
-<p>请你在 HTML 顶部加如下一段注释： <code>Code below this line should not be changed</code> 。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/front-end-development-libraries-%E4%B8%80/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1084,7 +1276,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-14 15:30:50" itemprop="dateModified" datetime="2023-06-14T15:30:50+08:00">2023-06-14</time>
+      <time title="修改时间：2023-06-15 17:00:03" itemprop="dateModified" datetime="2023-06-15T17:00:03+08:00">2023-06-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1345,7 +1537,7 @@
 <p>在遍历数组的时候，只需要向map去查询是否有和目前遍历元素匹配的数值，如果有，就找到的匹配对，如果没有，就把目前遍历的元素放进map中，因为map存放的就是我们访问过的元素。</p>
 <h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">target</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> twoSum = <span class="keyword">function</span> (<span class="params">nums, target</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> hash = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.<span class="property">length</span>; i++) &#123;  <span class="comment">// 遍历当前元素，并在map中寻找是否有匹配的key</span></span><br><span class="line">    <span class="keyword">if</span> (hash[target - nums[i]] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> [hash[target - nums[i]],i ];</span><br><span class="line">    &#125;</span><br><span class="line">    hash[nums[i]] = i;   <span class="comment">// 如果没找到匹配对，就把访问过的元素和下标加入到map中</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> [];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="四数相加II"><a href="#四数相加II" class="headerlink" title="四数相加II"></a>四数相加II</h2><p>454.给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：</p>
+<h2 id="6-四数相加II"><a href="#6-四数相加II" class="headerlink" title="6. 四数相加II"></a>6. 四数相加II</h2><p>454.给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：</p>
 <ul>
 <li><p>0 &lt;= i, j, k, l &lt; n</p>
 </li>
@@ -1523,224 +1715,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="墨韵">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MoYun">
-      <meta itemprop="description" content="ZERO-前端学习博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | MoYun">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/javascript-algorithms-and-data-structures-%E4%BA%94/" class="post-title-link" itemprop="url">JavaScript Algorithms and Data Structures(五)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-06-08 20:57:24 / 修改时间：20:59:39" itemprop="dateCreated datePublished" datetime="2023-06-08T20:57:24+08:00">2023-06-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>9.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>9 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
-<h2 id="基础数据结构"><a href="#基础数据结构" class="headerlink" title="基础数据结构"></a>基础数据结构</h2><h3 id="1-使用数组存储不同类型的数据"><a href="#1-使用数组存储不同类型的数据" class="headerlink" title="1.使用数组存储不同类型的数据"></a>1.使用数组存储不同类型的数据</h3><p>以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（numbers）以及 JavaScript 中的其他数据类型</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/javascript-algorithms-and-data-structures-%E4%BA%94/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="墨韵">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MoYun">
-      <meta itemprop="description" content="ZERO-前端学习博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | MoYun">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/javascript-algorithms-and-data-structures-%E5%9B%9B/" class="post-title-link" itemprop="url">JavaScript Algorithms and Data Structures(四)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-06-06 08:58:43" itemprop="dateCreated datePublished" datetime="2023-06-06T08:58:43+08:00">2023-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-08 20:59:39" itemprop="dateModified" datetime="2023-06-08T20:59:39+08:00">2023-06-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/" itemprop="url" rel="index"><span itemprop="name">JavaScript Algorithms and Data Structures</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>4.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures"><a href="#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures" class="headerlink" title="freeCodeCamp —- JavaScript Algorithms and Data Structures"></a>freeCodeCamp —- JavaScript Algorithms and Data Structures</h1><hr>
-<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><h3 id="1-使用控制台检查变量值"><a href="#1-使用控制台检查变量值" class="headerlink" title="1. 使用控制台检查变量值"></a>1. 使用控制台检查变量值</h3><p>Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/javascript-algorithms-and-data-structures-%E5%9B%9B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1766,14 +1740,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">451k</span>
+    <span title="站点总字数">464k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6:50</span>
+    <span title="站点阅读时长">7:02</span>
   </span>
 </div>
 <div class="busuanzi-count">
