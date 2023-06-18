@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-17T07:02:24.314Z</updated>
+  <updated>2023-06-18T08:05:43.375Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -17,20 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Front End Development Libraries(四)</title>
+    <link href="http://moyun.com/front-end-development-libraries-%E5%9B%9B/"/>
+    <id>http://moyun.com/front-end-development-libraries-%E5%9B%9B/</id>
+    <published>2023-06-18T08:04:56.719Z</published>
+    <updated>2023-06-18T08:05:43.375Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Front End Development Libraries&quot;&gt;&lt;/a&gt;freeCodeCamp —- Front End Development Libraries&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;React&quot;&gt;&lt;a href=&quot;#React&quot; class=&quot;headerlink&quot; title=&quot;React&quot;&gt;&lt;/a&gt;React&lt;/h2&gt;&lt;h3 id=&quot;1-创建一个简单的-JSX-元素&quot;&gt;&lt;a href=&quot;#1-创建一个简单的-JSX-元素&quot; class=&quot;headerlink&quot; title=&quot;1. 创建一个简单的 JSX 元素&quot;&gt;&lt;/a&gt;1. 创建一个简单的 JSX 元素&lt;/h3&gt;&lt;p&gt;简介：React 是由 Facebook 创建和维护的开源视图库。 它是渲染现代 Web 应用程序用户界面（UI）的好工具。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="Front End Development Libraries" scheme="http://moyun.com/categories/freeCodeCamp/Front-End-Development-Libraries/"/>
+    
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="React" scheme="http://moyun.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Front End Development Libraries(二)</title>
     <link href="http://moyun.com/front-end-development-libraries-%E4%BA%8C/"/>
     <id>http://moyun.com/front-end-development-libraries-%E4%BA%8C/</id>
     <published>2023-06-17T07:01:48.034Z</published>
-    <updated>2023-06-17T07:02:24.314Z</updated>
+    <updated>2023-06-18T08:05:57.569Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Front End Development Libraries&quot;&gt;&lt;/a&gt;freeCodeCamp —- Front End Development Libraries&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;jQuery&quot;&gt;&lt;a href=&quot;#jQuery&quot; class=&quot;headerlink&quot; title=&quot;jQuery&quot;&gt;&lt;/a&gt;jQuery&lt;/h2&gt;&lt;h3 id=&quot;1-了解-script-和-document-ready-是如何工作的&quot;&gt;&lt;a href=&quot;#1-了解-script-和-document-ready-是如何工作的&quot; class=&quot;headerlink&quot; title=&quot;1. 了解 script 和 document.ready 是如何工作的&quot;&gt;&lt;/a&gt;1. 了解 script 和 document.ready 是如何工作的&lt;/h3&gt;</summary>
     
     
     
@@ -52,16 +73,12 @@
     <link href="http://moyun.com/front-end-development-libraries-%E4%B8%89/"/>
     <id>http://moyun.com/front-end-development-libraries-%E4%B8%89/</id>
     <published>2023-06-17T07:01:34.043Z</published>
-    <updated>2023-06-17T07:02:51.032Z</updated>
+    <updated>2023-06-18T08:06:14.126Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Front End Development Libraries&quot;&gt;&lt;/a&gt;freeCodeCamp —- Front End Development Libraries&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;Sass&quot;&gt;&lt;a href=&quot;#Sass&quot; class=&quot;headerlink&quot; title=&quot;Sass&quot;&gt;&lt;/a&gt;Sass&lt;/h2&gt;&lt;h3 id=&quot;1-用-Sass-变量存储数据&quot;&gt;&lt;a href=&quot;#1-用-Sass-变量存储数据&quot; class=&quot;headerlink&quot; title=&quot;1. 用 Sass 变量存储数据&quot;&gt;&lt;/a&gt;1. 用 Sass 变量存储数据&lt;/h3&gt;&lt;p&gt;Sass 不同于 CSS 的一个特点是它允许使用变量。 可以在 Sass 中声明变量，并为它赋值，就像在 JavaScript 中一样。&lt;/p&gt;
+&lt;p&gt;在 JavaScript 中，变量是使用 &lt;code&gt;let&lt;/code&gt; 和 &lt;code&gt;const&lt;/code&gt; 关键字定义的。 在 Sass 中，变量以 &lt;code&gt;$&lt;/code&gt; 开头的，后跟变量名。&lt;/p&gt;</summary>
     
     
     
@@ -110,7 +127,7 @@
     <link href="http://moyun.com/front-end-development-libraries-%E4%B8%80/"/>
     <id>http://moyun.com/front-end-development-libraries-%E4%B8%80/</id>
     <published>2023-06-15T03:21:47.203Z</published>
-    <updated>2023-06-16T01:57:20.077Z</updated>
+    <updated>2023-06-18T08:06:30.436Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Front End Development Libraries&quot;&gt;&lt;/a&gt;freeCodeCamp —- Front End Development Libraries&lt;/h1&gt;&lt;hr&gt;
@@ -233,16 +250,11 @@
     <link href="http://moyun.com/algorithm%E2%80%94%E2%80%94hash-table/"/>
     <id>http://moyun.com/algorithm%E2%80%94%E2%80%94hash-table/</id>
     <published>2023-06-10T14:25:53.753Z</published>
-    <updated>2023-06-15T09:00:03.174Z</updated>
+    <updated>2023-06-18T08:06:49.907Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;哈希表&quot;&gt;&lt;a href=&quot;#哈希表&quot; class=&quot;headerlink&quot; title=&quot;哈希表&quot;&gt;&lt;/a&gt;哈希表&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;哈希表&quot;&gt;&lt;a href=&quot;#哈希表&quot; class=&quot;headerlink&quot; title=&quot;哈希表&quot;&gt;&lt;/a&gt;哈希表&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot; title=&quot;1. 理论基础&quot;&gt;&lt;/a&gt;1. 理论基础&lt;/h2&gt;&lt;p&gt;哈希表其实就是数组。&lt;/p&gt;
+&lt;p&gt;一般，哈希表用来快速判断一个元素是否出现在集合里&lt;/p&gt;</summary>
     
     
     
@@ -517,40 +529,6 @@
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
     
     <category term="animation" scheme="http://moyun.com/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project Exercise — Product Landing Page</title>
-    <link href="http://moyun.com/project-exercise-%E2%80%94-product-landing-page/"/>
-    <id>http://moyun.com/project-exercise-%E2%80%94-product-landing-page/</id>
-    <published>2023-05-29T02:20:28.694Z</published>
-    <updated>2023-06-01T03:24:03.471Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h5 id=&quot;Product-Landing-Page-——-Test&quot;&gt;&lt;a href=&quot;#Product-Landing-Page-——-Test&quot; class=&quot;headerlink&quot; title=&quot;Product Landing Page —— Test&quot;&gt;&lt;/a&gt;Product Landing Page —— Test&lt;/h5&gt;&lt;h5 id=&quot;Objective&quot;&gt;&lt;a href=&quot;#Objective&quot; class=&quot;headerlink&quot; title=&quot;Objective:&quot;&gt;&lt;/a&gt;&lt;strong&gt;Objective:&lt;/strong&gt;&lt;/h5&gt;&lt;blockquote&gt;
-&lt;p&gt;Build an app that is functionally similar to &lt;a href=&quot;https://product-landing-page.freecodecamp.rocks/&quot;&gt;https://product-landing-page.freecodecamp.rocks&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Project Exercise" scheme="http://moyun.com/categories/Project-Exercise/"/>
-    
-    <category term="Primary Program" scheme="http://moyun.com/categories/Project-Exercise/Primary-Program/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
     
   </entry>
   
