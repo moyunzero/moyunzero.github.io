@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-06-18T08:08:02.613Z</updated>
+  <updated>2023-06-25T11:22:40.236Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Front End Development Libraries(五)</title>
+    <link href="http://moyun.com/front-end-development-libraries-%E4%BA%94/"/>
+    <id>http://moyun.com/front-end-development-libraries-%E4%BA%94/</id>
+    <published>2023-06-25T11:21:45.706Z</published>
+    <updated>2023-06-25T11:22:40.236Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Front End Development Libraries&quot;&gt;&lt;/a&gt;freeCodeCamp —- Front End Development Libraries&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;Redux&quot;&gt;&lt;a href=&quot;#Redux&quot; class=&quot;headerlink&quot; title=&quot;Redux&quot;&gt;&lt;/a&gt;Redux&lt;/h2&gt;&lt;h3 id=&quot;1-创建一个-Redux-Store&quot;&gt;&lt;a href=&quot;#1-创建一个-Redux-Store&quot; class=&quot;headerlink&quot; title=&quot;1. 创建一个 Redux Store&quot;&gt;&lt;/a&gt;1. 创建一个 Redux Store&lt;/h3&gt;&lt;p&gt;Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="Front End Development Libraries" scheme="http://moyun.com/categories/freeCodeCamp/Front-End-Development-Libraries/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+    <category term="Redux" scheme="http://moyun.com/tags/Redux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Front End Development Libraries(六)</title>
+    <link href="http://moyun.com/front-end-development-libraries-%E5%85%AD/"/>
+    <id>http://moyun.com/front-end-development-libraries-%E5%85%AD/</id>
+    <published>2023-06-25T11:21:45.635Z</published>
+    <updated>2023-06-25T11:23:15.075Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Front-End-Development-Libraries&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Front-End-Development-Libraries&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Front End Development Libraries&quot;&gt;&lt;/a&gt;freeCodeCamp —- Front End Development Libraries&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;React和Redux&quot;&gt;&lt;a href=&quot;#React和Redux&quot; class=&quot;headerlink&quot; title=&quot;React和Redux&quot;&gt;&lt;/a&gt;React和Redux&lt;/h2&gt;&lt;h3 id=&quot;1-React-和-Redux-入门&quot;&gt;&lt;a href=&quot;#1-React-和-Redux-入门&quot; class=&quot;headerlink&quot; title=&quot;1. React 和 Redux 入门&quot;&gt;&lt;/a&gt;1. React 和 Redux 入门&lt;/h3&gt;&lt;p&gt;React 是提供数据的视图库，能以高效、可预测的方式渲染视图。 Redux 是状态管理框架，可用于简化 APP 应用状态的管理。 在 React Redux app 应用中，通常可创建单一的 Redux store 来管理整个应用的状态。 React 组件仅订阅 store 中与其角色相关的数据， 可直接从 React 组件中分发 actions 以触发 store 对象的更新。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="Front End Development Libraries" scheme="http://moyun.com/categories/freeCodeCamp/Front-End-Development-Libraries/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+    <category term="React" scheme="http://moyun.com/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>Front End Development Libraries(四)</title>
@@ -466,69 +518,13 @@
     <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
     
     
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
     <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
     
     <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Project Exercise" scheme="http://moyun.com/tags/Project-Exercise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Responsive Web Dedign(十五)</title>
-    <link href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%94/"/>
-    <id>http://moyun.com/responsive-web-dedign-%E5%8D%81%E4%BA%94/</id>
-    <published>2023-05-31T07:29:22.438Z</published>
-    <updated>2023-06-01T03:25:12.064Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Learn-CSS-Transforms-by-Building-a-Penguin&quot;&gt;&lt;a href=&quot;#Learn-CSS-Transforms-by-Building-a-Penguin&quot; class=&quot;headerlink&quot; title=&quot;Learn CSS Transforms by Building a Penguin&quot;&gt;&lt;/a&gt;Learn CSS Transforms by Building a Penguin&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="animation" scheme="http://moyun.com/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Responsive Web Dedign(十四)</title>
-    <link href="http://moyun.com/responsive-web-dedign-%E5%8D%81%E5%9B%9B/"/>
-    <id>http://moyun.com/responsive-web-dedign-%E5%8D%81%E5%9B%9B/</id>
-    <published>2023-05-30T01:45:40.547Z</published>
-    <updated>2023-06-01T03:25:03.470Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-Responsive-Web-Dedign&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-Responsive-Web-Dedign&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- Responsive Web Dedign&quot;&gt;&lt;/a&gt;freeCodeCamp —- Responsive Web Dedign&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Learn-CSS-Animation-by-Building-a-Ferris-Wheel&quot;&gt;&lt;a href=&quot;#Learn-CSS-Animation-by-Building-a-Ferris-Wheel&quot; class=&quot;headerlink&quot; title=&quot;Learn CSS Animation by Building a Ferris Wheel&quot;&gt;&lt;/a&gt;Learn CSS Animation by Building a Ferris Wheel&lt;/h4&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="Responsive Web Dedign" scheme="http://moyun.com/categories/freeCodeCamp/Responsive-Web-Dedign/"/>
-    
-    
-    <category term="HTML5" scheme="http://moyun.com/tags/HTML5/"/>
-    
-    <category term="CSS3" scheme="http://moyun.com/tags/CSS3/"/>
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="animation" scheme="http://moyun.com/tags/animation/"/>
     
   </entry>
   

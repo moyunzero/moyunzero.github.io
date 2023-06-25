@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Front End Development Libraries Redux1. 创建一个 Redux StoreRedux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Front End Development Libraries(五)">
+<meta property="og:url" content="http://moyun.com/front-end-development-libraries-%E4%BA%94/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Front End Development Libraries Redux1. 创建一个 Redux StoreRedux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-25T11:21:45.706Z">
+<meta property="article:modified_time" content="2023-06-25T11:22:40.236Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Redux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/front-end-development-libraries-%E4%BA%94/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/front-end-development-libraries-%E4%BA%94/","path":"front-end-development-libraries-五/","title":"Front End Development Libraries(五)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Front End Development Libraries(五) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-demo"><a href="/demo/" rel="section"><i class="fa fa-file-code fa-fw"></i>demo</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Front-End-Development-Libraries"><span class="nav-text">freeCodeCamp —- Front End Development Libraries</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Redux"><span class="nav-text">Redux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-Redux-Store"><span class="nav-text">1. 创建一个 Redux Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BB%8E-Redux-Store-%E8%8E%B7%E5%8F%96%E7%8A%B6%E6%80%81"><span class="nav-text">2. 从 Redux Store 获取状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA-Redux-Action"><span class="nav-text">3. 定义一个 Redux Action</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA-Action-Creator"><span class="nav-text">4. 定义一个 Action Creator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%86%E5%8F%91-Action-Event"><span class="nav-text">5. 分发 Action Event</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%9C%A8-Store-%E9%87%8C%E5%A4%84%E7%90%86-Action"><span class="nav-text">6. 在 Store 里处理 Action</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E4%BD%BF%E7%94%A8-Switch-%E8%AF%AD%E5%8F%A5%E5%A4%84%E7%90%86%E5%A4%9A%E4%B8%AA-Actions"><span class="nav-text">7. 使用 Switch 语句处理多个 Actions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BD%BF%E7%94%A8-const-%E5%A3%B0%E6%98%8E-Action-Types"><span class="nav-text">8. 使用 const 声明 Action Types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E6%B3%A8%E5%86%8C-Store-%E7%9B%91%E5%90%AC%E5%99%A8"><span class="nav-text">9. 注册 Store 监听器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E7%BB%84%E5%90%88%E5%A4%9A%E4%B8%AA-Reducers"><span class="nav-text">10. 组合多个 Reducers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%8F%91%E9%80%81-Action-Data-%E7%BB%99-Store"><span class="nav-text">11. 发送 Action Data 给 Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C"><span class="nav-text">12.使用中间件处理异步操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E7%94%A8-Redux-%E5%86%99%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-text">13. 用 Redux 写一个计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E6%B0%B8%E4%B8%8D%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81"><span class="nav-text">14. 永不改变状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">15. 在数组中使用扩展运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%A1%B9%E7%9B%AE"><span class="nav-text">16. 从数组中删除项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E4%BD%BF%E7%94%A8-Object-assign-%E6%8B%B7%E8%B4%9D%E5%AF%B9%E8%B1%A1"><span class="nav-text">17. 使用 Object.assign 拷贝对象</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/front-end-development-libraries-%E5%85%AD/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-25</time>
+        <br>
+      Front End Development Libraries(六)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/front-end-development-libraries-%E4%BA%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Front End Development Libraries(五) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Front End Development Libraries(五)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-25 19:21:45 / 修改时间：19:22:40" itemprop="dateCreated datePublished" datetime="2023-06-25T19:21:45+08:00">2023-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Front-End-Development-Libraries/" itemprop="url" rel="index"><span itemprop="name">Front End Development Libraries</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><h3 id="1-创建一个-Redux-Store"><a href="#1-创建一个-Redux-Store" class="headerlink" title="1. 创建一个 Redux Store"></a>1. 创建一个 Redux Store</h3><p>Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。</p>
+<span id="more"></span>
+
+<p>在 Redux 中，有一个状态对象负责应用程序的整个状态， 这意味着如果你有一个包含十个组件且每个组件都有自己的本地状态的 React 项目，那么这个项目的整个状态将通过 Redux <code>store</code> 被定义为单个状态对象， 这是学习 Redux 时要理解的第一个重要原则：Redux store 是应用程序状态的唯一真实来源。</p>
+<p>这也意味着，如果应用程序想要更新状态，<strong>只能</strong>通过 Redux store 执行。 单向数据流可以更轻松地对应用程序中的状态进行监测管理。</p>
+<hr>
+<p>Redux <code>store</code> 是一个保存和管理应用程序状态的<code>state</code>。 可以使用 Redux 对象中的 <code>createStore()</code> 来创建一个 redux <code>store</code>。 此方法将 <code>reducer</code> 函数作为必需参数， <code>reducer</code> 函数将在后面的挑战中介绍。该函数已在代码编辑器中为你定义， 它只需将 <code>state</code> 作为参数并返回一个 <code>state</code> 即可。</p>
+<p>声明一个 <code>store</code> 变量并把它分配给 <code>createStore()</code> 方法，然后把 <code>reducer</code> 作为一个参数传入即可。</p>
+<h3 id="2-从-Redux-Store-获取状态"><a href="#2-从-Redux-Store-获取状态" class="headerlink" title="2. 从 Redux Store 获取状态"></a>2. 从 Redux Store 获取状态</h3><p>Redux store 对象提供了几种与之交互的方法， 比如，可以使用 <code>getState()</code> 方法检索 Redux store 对象中保存的当前 <code>state</code>。</p>
+<hr>
+<p>在代码编辑器中可以将上一个挑战中的代码更简洁地重写， 在 <code>store</code> 中使用 <code>store.getState()</code> 检索<code>state</code>，并将其分配给新变量 <code>currentState</code>。</p>
+<h3 id="3-定义一个-Redux-Action"><a href="#3-定义一个-Redux-Action" class="headerlink" title="3. 定义一个 Redux Action"></a>3. 定义一个 Redux Action</h3><p>由于 Redux 是一个状态管理框架，因此更新状态是其核心任务之一。 在 Redux 中，所有状态更新都由 dispatch action 触发， action 只是一个 JavaScript 对象，其中包含有关已发生的 action 事件的信息。 Redux store 接收这些 action 对象，然后更新相应的状态。 有时，Redux action 也会携带一些数据。 例如，在用户登录后携带用户名， 虽然数据是可选的，但 action 必须带有 <code>type</code> 属性，该属性表示此 action 的类型。</p>
+<p>我们可以将 Redux action 视为信使，将有关应用程序中发生的事件信息提供给 Redux store， 然后 store 根据发生的 action 进行状态的更新。</p>
+<hr>
+<p>编写 Redux action 就像声明具有 type 属性的对象一样简单， 声明一个对象 <code>action</code> 并为它设置一个属性 <code>type</code>，并将它的值设置成字符串<code>&#39;LOGIN&#39;</code>。</p>
+<h3 id="4-定义一个-Action-Creator"><a href="#4-定义一个-Action-Creator" class="headerlink" title="4. 定义一个 Action Creator"></a>4. 定义一个 Action Creator</h3><p>创建 action 后要将 action 发送到 Redux store，以便它可以更新其状态。 在 Redux 中，可以定义动作创建器来完成此任务， action creator 只是一个返回动作的 JavaScript 函数。 换句话说，action creator 创建表示动作事件的对象。</p>
+<hr>
+<p>定义名为 <code>actionCreator()</code> 的函数，该函数在调用时返回 <code>action</code> 对象。</p>
+<h3 id="5-分发-Action-Event"><a href="#5-分发-Action-Event" class="headerlink" title="5. 分发 Action Event"></a>5. 分发 Action Event</h3><p><code>dispatch</code> 方法用于将 action 分派给 Redux store， 调用 <code>store.dispatch()</code>，并传递从一个 action creator 返回的值，将一个 action 送回给 store。</p>
+<p>回想一下，action creator 返回一个具有 type 属性的对象，该属性指定已发生的动作。 然后该方法会将一个 action 对象发送到 Redux store。 基于上一个挑战的示例，下面的行是等效的，两者都会调度类 <code>LOGIN</code> 类型的 action：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">store.<span class="title function_">dispatch</span>(<span class="title function_">actionCreator</span>());</span><br><span class="line">store.<span class="title function_">dispatch</span>(&#123; <span class="attr">type</span>: <span class="string">&#x27;LOGIN&#x27;</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>代码编辑器中的 Redux store 具有初始化状过的 state，包含 <code>login</code> 属性当前设置为 <code>false</code>的对象， 还有一个名为 <code>loginAction()</code> 的 action creator，它返回类型为 <code>LOGIN</code> 的 action， 然后通过调用 <code>dispatch</code> 方法将 <code>LOGIN</code> 的 action dispatch 给 Redux store，并传入 <code>loginAction()</code> 创建的 action。</p>
+<h3 id="6-在-Store-里处理-Action"><a href="#6-在-Store-里处理-Action" class="headerlink" title="6. 在 Store 里处理 Action"></a>6. 在 Store 里处理 Action</h3><p>在一个 action 被创建并 dispatch 之后，Redux store 需要知道如何响应该操作。 这就是 <code>reducer</code> 函数存在的意义。 Redux 中的 Reducers 负责响应 action 然后进行状态的修改。 <code>reducer</code> 将 <code>state</code> 和 <code>action</code> 作为参数，并且它总是返回一个新的 <code>state</code>。 我们要知道这是 reducer 的<strong>唯一</strong>的作用。 它不应有任何其他的作用：比如它不应调用 API 接口，也不应存在任何潜在的副作用。 reducer 只是一个接受状态和动作，然后返回新状态的纯函数。</p>
+<p>Redux 的另一个关键原则是 <code>state</code> 是只读的。 换句话说，<code>reducer</code> 函数必须<strong>始终</strong>返回一个新的 <code>state</code>，并且永远不会直接修改状态。 Redux 不强制改变状态，但是需要在 reducer 函数的代码中强制执行它， 以后的挑战会练习这一点。</p>
+<hr>
+<p>代码编辑器中具有前面的示例以及一个 <code>reducer</code> 函数。 需要完善 <code>reducer</code> 函数的内容，使得它如果收到类型为<code>&#39;LOGIN&#39;</code>的action，它将返回一个将 <code>login</code> 设置为 <code>true</code> 的 state 对象。 否则，它就返回当前的 <code>state</code>。 请注意，当前 <code>state</code> 和 dispatch 的 <code>action</code> 将被传递给 reducer，因此可以使用 <code>action.type</code> 直接获取 action 的类型。</p>
+<h3 id="7-使用-Switch-语句处理多个-Actions"><a href="#7-使用-Switch-语句处理多个-Actions" class="headerlink" title="7. 使用 Switch 语句处理多个 Actions"></a>7. 使用 Switch 语句处理多个 Actions</h3><p>可以定义 Redux store 处理多种 action 类型。 假设在 Redux store 中管理用户身份验证。 希望用状态表示用户登录和注销。 使用 state 的 <code>authenticated</code> 属性表示它。 还需要使用 action creators 创建与用户登录和用户注销相对应的 action，以及 action 对象本身。</p>
+<hr>
+<p>代码编辑器为你创建了 store、actions、action creators。 通过编写 <code>reducer</code> 函数来处理多个身份验证操作。 可以在 <code>reducer</code> 里通过使用 JavaScript 的 <code>switch</code> 来响应不同的 action 事件。 这是编写 Redux reducers 的标准模式。 switch 语句应该切换 <code>action.type</code> 并返回适当的身份验证状态。</p>
+<p><strong>注意：</strong> 此时，不要担心 state 的不变性，因为在这个示例中它很小而且很简单。 所以对于每个操作都可以返回一个新对象，比如 <code>&#123;authenticated: true&#125;</code>。 另外，不要忘记在 switch 语句中写一个 <code>default</code> case，返回当前的 <code>state</code>。 这是很重要的，因为当程序有多个 reducer，当每一个 action 被 dispatch 时它们都会运行，即使 action 与该 reducer 无关。 在这种情况下，你要确保返回当前的 <code>state</code></p>
+<h3 id="8-使用-const-声明-Action-Types"><a href="#8-使用-const-声明-Action-Types" class="headerlink" title="8. 使用 const 声明 Action Types"></a>8. 使用 const 声明 Action Types</h3><p>在使用 Redux 时的一个常见做法是将操作类型指定为只读，然后在任何使用它们的地方引用这些常量。 可以通过将 action types 使用 <code>const</code> 声明重构你正在使用的代码。</p>
+<hr>
+<p>将 <code>LOGIN</code> 和 <code>LOGOUT</code> 声明为 <code>const</code> 的值，并为它们分别分配字符串 <code>&#39;LOGIN&#39;</code> 和 <code>&#39;LOGOUT&#39;</code>。 然后，编辑 <code>authReducer()</code> 和 action creators 来引用这些常量而不是字符串值。</p>
+<p><strong>注意：</strong> 通常以全部大写形式写出常量，这也是 Redux 的标准做法。</p>
+<h3 id="9-注册-Store-监听器"><a href="#9-注册-Store-监听器" class="headerlink" title="9. 注册 Store 监听器"></a>9. 注册 Store 监听器</h3><p>在 Redux <code>store</code> 对象上访问数据的另一种方法是 <code>store.subscribe()</code>。 这允许将监听器函数订阅到 store，只要 action 被 dispatch 就会调用它们。 这个方法的一个简单用途是为 store 订阅一个函数，它只是在每次收到一个 action 并且更新 store 时记录一条消息。</p>
+<hr>
+<p>编写一个回调函数，每次 store 收到一个 action 时，它会递增全局变量 <code>count</code>，并将此函数传递给 <code>store.subscribe()</code> 方法。 将会看到 <code>store.dispatch()</code> 连续三次被调用，每次都直接传入一个 action 对象。 观察 dispatch action 之间的控制台输出，看看是否发生了更新。</p>
+<h3 id="10-组合多个-Reducers"><a href="#10-组合多个-Reducers" class="headerlink" title="10. 组合多个 Reducers"></a>10. 组合多个 Reducers</h3><p>当应用程序的状态开始变得越来越复杂时，可能会将 state 分成多个块。 相反，请记住 Redux 的第一个原则：所有应用程序状态都保存在 store 中的一个简单的 state 对象中。 因此，Redux 提供 reducer 组合作为复杂状态模型的解决方案。 定义多个 reducer 来处理应用程序状态的不同部分，然后将这些 reducer 组合成一个 root reducer。 然后将 root reducer 传递给 Redux <code>createStore()</code>方法。</p>
+<p>为了将多个 reducer 组合在一起，Redux 提供了<code>combineReducers()</code>方法。 该方法接受一个对象作为参数，在该参数中定义一个属性，该属性将键与特定 reducer 函数关联。 Redux 将使用给定的键值作为关联状态的名称。</p>
+<p>通常情况下，当它们在某种程度上是独一无二的，为每个应用程序的 state 创建一个 reducer 是一个很好的做法。 例如，在一个带有用户身份验证的记笔记应用程序中，一个 reducer 可以处理身份验证而另一个处理用户提交的文本和注释。 对于这样的应用程序，可能会编写 <code>combineReducers()</code> 方法，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> rootReducer = <span class="title class_">Redux</span>.<span class="title function_">combineReducers</span>(&#123;</span><br><span class="line">  <span class="attr">auth</span>: authenticationReducer,</span><br><span class="line">  <span class="attr">notes</span>: notesReducer</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>现在，<code>notes</code> 键将包含与注释相关联的所有状态，并由 <code>notesReducer</code> 处理。 这就是组合多个 reducer 来管理更复杂的应用程序状态的方式， 在此示例中，Redux store 中保存的状态将是一个包含 <code>auth</code> 和 <code>notes</code> 属性的简单对象。</p>
+<hr>
+<p>代码编辑器中提供了 <code>counterReducer()</code> 和 <code>authReducer()</code> 函数以及 Redux store。 使用 <code>Redux.combineReducers()</code> 方法编写完成 <code>rootReducer()</code> 函数。 将 <code>counterReducer</code> 分配给一个叫做 <code>count</code> 的键，将 <code>authReducer</code> 分配给一个叫做 <code>auth</code> 的键。</p>
+<h3 id="11-发送-Action-Data-给-Store"><a href="#11-发送-Action-Data-给-Store" class="headerlink" title="11. 发送 Action Data 给 Store"></a>11. 发送 Action Data 给 Store</h3><p>到目前为止，你已经学会了如何将 action dispatch 给 Redux store，但到目前为止，这些 action 并未包含除 <code>type</code>之外的任何信息。 还可以和 action 一起发送特定数据。 事实上，这是非常常见的，因为 action 通常源于一些用户交互，并且往往会携带一些数据， Redux store 经常需要知道这些数据。</p>
+<hr>
+<p>在代码编辑器中定义了一个基础的 <code>notesReducer()</code> 和 <code>addNoteText()</code> action creator。 完成 <code>addNoteText()</code> 函数的主体，这样它就会返回一个 <code>action</code> 对象。 该对象应该包含一个 <code>type</code> 属性，其值为 <code>ADD_NOTE</code>，还有一个传入 action creator 的属性为 <code>text</code> 的 <code>note</code> 数据。 当调用 action creator 时，需要传入可以访问该对象的特定笔记信息。</p>
+<p>接下来，完成在 <code>notesReducer()</code> 中编写的 <code>switch</code> 语句。 需要添加一个处理 <code>addNoteText()</code> 操作的选项。 如果 action 的类型为 <code>ADD_NOTE</code>，就应该触发这个 case，并且它应该在传入的 <code>action</code> 上返回 <code>text</code> 属性作为新的 <code>state</code></p>
+<p>这个 action 将在代码底部发送。 一旦完成后，运行代码并观察控制台。 这就是将特定于 action 的数据发送到 store 并在更新 store <code>state</code>时使用它所需的全部内容。</p>
+<h3 id="12-使用中间件处理异步操作"><a href="#12-使用中间件处理异步操作" class="headerlink" title="12.使用中间件处理异步操作"></a>12.使用中间件处理异步操作</h3><p>目前为止的挑战都在避免讨论异步操作，但它们是 Web 开发中不可避免的一部分。 在某些时候，需要在 Redux 应用程序中使用异步请求，那么如何处理这些类型的请求？ Redux 中间件专为此目的而设计，称为 Redux Thunk 中间件。 这里简要介绍如何在 Redux 中使用它。</p>
+<p>如果要使用 Redux Thunk 中间件，请将其作为参数传递给 <code>Redux.applyMiddleware()</code>。 然后将此函数作为第二个可选参数提供给 <code>createStore()</code> 函数， 看一下编辑器底部的代码。 然后，要创建一个异步的 action，需要在 action creator 中返回一个以 <code>dispatch</code> 为参数的函数。 在这个函数中，可以 dispatch action 并执行异步请求。</p>
+<p>在此示例中，使用 <code>setTimeout()</code> 模拟异步请求。 通常在执行异步行为之前 dispatch action，以便应用程序状态知道正在请求某些数据（例如，这个状态可以显示加载图标）。 然后，一旦收到数据，就会发送另一个 action，该 action 的 data 是请求返回的数据同时也代表 API 操作完成。</p>
+<p>请记住，正在将 <code>dispatch</code> 作为参数传递给这个特殊的 action creator。 需要 dispatch action 时只需将 action 直接传递给 dispatch，中间件就可以处理其余的部分。</p>
+<hr>
+<p>在 <code>handleAsync()</code> 的 action creator 中编写两个 dispatch 事件。 在 <code>setTimeout()</code>（模拟 API 调用）之前 dispatch <code>requestingData()</code>。 然后在收到（模拟）数据后，dispatch <code>receivedData()</code> action，传入这些数据。 现在已经知道如何处理 Redux 中的异步操作， 其他所有操作都继续像以前一样。</p>
+<h3 id="13-用-Redux-写一个计数器"><a href="#13-用-Redux-写一个计数器" class="headerlink" title="13. 用 Redux 写一个计数器"></a>13. 用 Redux 写一个计数器</h3><p>现在已经了解了 Redux 的所有核心原则！ 已经了解了如何创建 action 和 action creator，创建 Redux store，通过 store dispatch action，以及使用纯粹的 reducer 设计状态更新。 甚至已经看到过如何使用 reducer 组合管理复杂状态并处理异步操作。 这些例子很简单，但这些概念是 Redux 的核心原则。 如果已经理解这些，那么就可以开始构建自己的 Redux 应用了。 接下来的挑战包括关于 <code>state</code> 不变性的一些细节，但是，这里是对到目前为止学到的所有内容的回顾。</p>
+<hr>
+<p>在本课程中，将从头开始使用 Redux 实现一个简单的计数器。 基本知识在代码编辑器中提供，但你必须完成细节！ 使用提供的名称定义 <code>incAction</code> 和 <code>decAction</code> action creator，<code>counterReducer()</code>，<code>INCREMENT</code>和<code>DECREMENT</code> action 类型，以及 Redux <code>store</code>。 一旦完成，应该能够 dispatch <code>INCREMENT</code> 或 <code>DECREMENT</code> 动作来增加或减少 <code>store</code> 中保存的状态。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">INCREMENT</span> = <span class="string">&quot;INCREMENT&quot;</span>; <span class="comment">// define a constant for increment action types</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">DECREMENT</span> = <span class="string">&quot;DECREMENT&quot;</span>; <span class="comment">// define a constant for decrement action types</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// define the counter reducer which will increment or decrement the state based on the action it receives</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">counterReducer</span> = (<span class="params">state = <span class="number">0</span>, action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">INCREMENT</span>:</span><br><span class="line">      <span class="keyword">return</span> state + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="attr">DECREMENT</span>:</span><br><span class="line">      <span class="keyword">return</span> state - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// define an action creator for incrementing</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">incAction</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">INCREMENT</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// define an action creator for decrementing</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">decAction</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">DECREMENT</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// define the Redux store here, passing in your reducers</span></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(counterReducer);</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-永不改变状态"><a href="#14-永不改变状态" class="headerlink" title="14. 永不改变状态"></a>14. 永不改变状态</h3><p>这些最后的挑战描述了在 Redux 中强制执行状态不变性关键原则的几种方法。 不可变状态意味着永远不直接修改状态，而是返回一个新的状态副本。</p>
+<p>如果拍摄 Redux 应用程序一段时间状态的快照，会看到类似 <code>state 1</code>，<code>state 2</code>，<code>state 3</code>，<code>state 4</code>，<code>...</code>等等，每个状态可能与最后一个状态相似，但每个状态都是一个独特的数据。 事实上，这种不变性提供了时间旅行调试等功能。</p>
+<p>Redux 并没有主动地在其 store 或者 reducer 中强制执行状态不变性，责任落在程序员身上。 幸运的是，JavaScript（尤其是 ES6）提供了一些有用的工具，可以用来强制执行状态的不变性，无论是 <code>string</code>，<code>number</code>，<code>array</code> 或 <code>object</code>。 请注意，字符串和数字是原始值，并且本质上是不可变的。 换句话说，3 总是 3， 不能改变数字 3 的值。 然而，<code>array</code> 或 <code>object</code> 是可变的。 实际上，状态可能会包括 <code>array</code> 或 <code>object</code>，因为它们经常用来描述一些代表信息的数据结构。</p>
+<hr>
+<p>代码编辑器中有一个 <code>store</code> 和 <code>reducer</code>，用于管理待办事项。 完成 reducer 里的 <code>ADD_TO_DO</code> 用例，使其可以将一个新的待办事项附加到 state。 使用通过标准 JavaScript 或 ES6 的一些方法实现此目的。 看看是否可以找到一种方法来返回一个新数组，其中来自 <code>action.todo</code> 的项目添加到数组的末尾。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">ADD_TO_DO</span> = <span class="string">&quot;ADD_TO_DO&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// A list of strings representing tasks to do:</span></span><br><span class="line"><span class="keyword">const</span> todos = [</span><br><span class="line">  <span class="string">&quot;Go to the store&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Clean the house&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Cook dinner&quot;</span>,</span><br><span class="line">  <span class="string">&quot;Learn to code&quot;</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">immutableReducer</span> = (<span class="params">state = todos, action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">ADD_TO_DO</span>:</span><br><span class="line">      <span class="comment">// don&#x27;t mutate state here or the tests will fail</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> state.<span class="title function_">concat</span>(action.<span class="property">todo</span>);</span><br><span class="line">    <span class="comment">// or return [...state, action.todo]</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// an example todo argument would be &#x27;Learn React&#x27;,</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addToDo</span> = todo =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">ADD_TO_DO</span>,</span><br><span class="line">    todo</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(immutableReducer);</span><br></pre></td></tr></table></figure>
+
+<p>保存！你的代码已保存到你的浏览器本地存储中。</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/learn/front-end-development-libraries">前端开发库</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/learn/front-end-development-libraries/#redux">Redux</a></li>
+</ol>
+<h3 id="15-在数组中使用扩展运算符"><a href="#15-在数组中使用扩展运算符" class="headerlink" title="15. 在数组中使用扩展运算符"></a>15. 在数组中使用扩展运算符</h3><p>ES6 中有助于在 Redux 中强制执行状态不变性的一个解决方案是扩展运算符：<code>...</code>。 扩展运算符具有很多的应用，其中一种非常适合通过一个已有的数组生成一个新数组。 这是相对较新的但常用的语法。 例如，如果你有一个数组 <code>myArray</code> 并写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newArray = [...myArray];</span><br></pre></td></tr></table></figure>
+
+<p><code>newArray</code> 现在是 <code>myArray</code> 的克隆。 两个数组仍然分别存在于内存中。 如果你执行像 <code>newArray.push(5)</code> 这样的变异， <code>myArray</code> 不会改变。 <code>...</code> 有效将 <code>myArray</code> 中的值<em>展开</em>到一个新数组中。 要克隆数组，但在新数组中添加其他值，可以编写 <code>[...myArray, &#39;new value&#39;]</code>。 这将返回一个由 <code>myArray</code> 中的值和字符串 <code>new value</code>（作为最后一个值）组成的新数组。 扩展语法可以像这样在数组组合中多次使用，但重要的是要注意它只是生成数组的浅拷贝副本。 也就是说，它只为一维数组提供不可变的数组操作。</p>
+<hr>
+<p>添加待办事项时，使用 spread 运算符返回新的状态副本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">immutableReducer</span> = (<span class="params">state = [<span class="string">&quot;Do not mutate state!&quot;</span>], action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;ADD_TO_DO&quot;</span>:</span><br><span class="line">      <span class="comment">// don&#x27;t mutate state here or the tests will fail</span></span><br><span class="line">      <span class="keyword">let</span> arr = [...state, action.<span class="property">todo</span>];</span><br><span class="line">      <span class="keyword">return</span> arr;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addToDo</span> = todo =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;ADD_TO_DO&quot;</span>,</span><br><span class="line">    todo</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(immutableReducer);</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-从数组中删除项目"><a href="#16-从数组中删除项目" class="headerlink" title="16. 从数组中删除项目"></a>16. 从数组中删除项目</h3><p>是时候练习从数组中删除项目了。 扩展运算符也可以在这里使用。 其他有用的JavaScript方法包括 <code>slice()</code> 和 <code>concat()</code>。</p>
+<hr>
+<p>reducer 和 action creator 被修改为根据项目的索引从数组中删除一个项目。 完成编写 reducer 以便返回一个新的状态数组，并删除特定索引处的项目。</p>
+<h3 id="17-使用-Object-assign-拷贝对象"><a href="#17-使用-Object-assign-拷贝对象" class="headerlink" title="17. 使用 Object.assign 拷贝对象"></a>17. 使用 Object.assign 拷贝对象</h3><p>最后几个挑战适用于数组，但是当状态是 <code>object</code> 时，有一些方法可以实现状态不变性。 处理对象的一个常用的方法是 <code>Object.assign()</code>。 <code>Object.assign()</code> 获取目标对象和源对象，并将源对象中的属性映射到目标对象。 任何匹配的属性都会被源对象中的属性覆盖。 通常用于通过传递一个空对象作为第一个参数，然后是要用复制的对象来制作对象的浅表副本。 下面是一个示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> newObject = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj1, obj2);</span><br></pre></td></tr></table></figure>
+
+<p>这会创建 <code>newObject</code> 作为新的 <code>object</code>，其中包含 <code>obj1</code> 和 <code>obj2</code> 中当前存在的属性。</p>
+<hr>
+<p>Redux state 和 actions 被修改为处理 <code>state</code> 的 <code>object</code> 。 编辑代码，为类型为 <code>ONLINE</code> 的 actions 返回一个新的 <code>state</code> 对象，这个类型将 <code>status</code> 属性设置为 <code>online</code> 字符串。 尝试使用 <code>Object.assign()</code> 来完成挑战。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/front-end-development-libraries-%E4%BA%94/" title="Front End Development Libraries(五)">http://moyun.com/front-end-development-libraries-五/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+              <a href="/tags/Redux/" rel="tag"><i class="fa fa-tag"></i> Redux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/front-end-development-libraries-%E5%85%AD/" rel="prev" title="Front End Development Libraries(六)">
+                  <i class="fa fa-chevron-left"></i> Front End Development Libraries(六)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">516k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:49</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"moyun.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="freeCodeCamp —- Front End Development Libraries React和Redux1. React 和 Redux 入门React 是提供数据的视图库，能以高效、可预测的方式渲染视图。 Redux 是状态管理框架，可用于简化 APP 应用状态的管理。 在 React Redux app 应用中，通常可创建单一的 Redux store 来管理整个应用的状态。 R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Front End Development Libraries(六)">
+<meta property="og:url" content="http://moyun.com/front-end-development-libraries-%E5%85%AD/index.html">
+<meta property="og:site_name" content="MoYun">
+<meta property="og:description" content="freeCodeCamp —- Front End Development Libraries React和Redux1. React 和 Redux 入门React 是提供数据的视图库，能以高效、可预测的方式渲染视图。 Redux 是状态管理框架，可用于简化 APP 应用状态的管理。 在 React Redux app 应用中，通常可创建单一的 Redux store 来管理整个应用的状态。 R">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-25T11:21:45.635Z">
+<meta property="article:modified_time" content="2023-06-25T11:23:15.075Z">
+<meta property="article:author" content="墨韵">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="React">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://moyun.com/front-end-development-libraries-%E5%85%AD/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://moyun.com/front-end-development-libraries-%E5%85%AD/","path":"front-end-development-libraries-六/","title":"Front End Development Libraries(六)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Front End Development Libraries(六) | MoYun</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MoYun" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MoYun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-demo"><a href="/demo/" rel="section"><i class="fa fa-file-code fa-fw"></i>demo</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#freeCodeCamp-%E2%80%94-Front-End-Development-Libraries"><span class="nav-text">freeCodeCamp —- Front End Development Libraries</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#React%E5%92%8CRedux"><span class="nav-text">React和Redux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-React-%E5%92%8C-Redux-%E5%85%A5%E9%97%A8"><span class="nav-text">1. React 和 Redux 入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%A6%96%E5%85%88%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E7%8A%B6%E6%80%81"><span class="nav-text">2. 首先在本地管理状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8F%90%E5%8F%96%E7%8A%B6%E6%80%81%E9%80%BB%E8%BE%91%E7%BB%99-Redux"><span class="nav-text">3. 提取状态逻辑给 Redux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8-Provider-%E8%BF%9E%E6%8E%A5-Redux-%E5%92%8C-React"><span class="nav-text">4. 使用 Provider 连接 Redux 和 React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%98%A0%E5%B0%84-State-%E5%88%B0-Props"><span class="nav-text">5. 映射 State 到 Props</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%98%A0%E5%B0%84-Dispatch-%E5%88%B0-Props"><span class="nav-text">6. 映射 Dispatch 到 Props</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E8%BF%9E%E6%8E%A5-Redux-%E5%92%8C-React"><span class="nav-text">7. 连接 Redux 和 React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%B0%86-Redux-%E8%BF%9E%E6%8E%A5%E5%88%B0-Messages-App"><span class="nav-text">8. 将 Redux 连接到 Messages App</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%B0%86%E5%B1%80%E9%83%A8%E7%8A%B6%E6%80%81%E6%8F%90%E5%8F%96%E5%88%B0-Redux-%E4%B8%AD"><span class="nav-text">9. 将局部状态提取到 Redux 中</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨韵"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">墨韵</p>
+  <div class="site-description" itemprop="description">ZERO-前端学习博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/moyunzero" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;moyunzero" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zero305747648@gmail.com" title="E-Mail → mailto:zero305747648@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/front-end-development-libraries-%E4%BA%94/" rel="bookmark">
+        <time class="popular-posts-time">2023-06-25</time>
+        <br>
+      Front End Development Libraries(五)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://moyun.com/front-end-development-libraries-%E5%85%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="墨韵">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MoYun">
+      <meta itemprop="description" content="ZERO-前端学习博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Front End Development Libraries(六) | MoYun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Front End Development Libraries(六)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-25 19:21:45 / 修改时间：19:23:15" itemprop="dateCreated datePublished" datetime="2023-06-25T19:21:45+08:00">2023-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/" itemprop="url" rel="index"><span itemprop="name">freeCodeCamp</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/freeCodeCamp/Front-End-Development-Libraries/" itemprop="url" rel="index"><span itemprop="name">Front End Development Libraries</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>13k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="freeCodeCamp-—-Front-End-Development-Libraries"><a href="#freeCodeCamp-—-Front-End-Development-Libraries" class="headerlink" title="freeCodeCamp —- Front End Development Libraries"></a>freeCodeCamp —- Front End Development Libraries</h1><hr>
+<h2 id="React和Redux"><a href="#React和Redux" class="headerlink" title="React和Redux"></a>React和Redux</h2><h3 id="1-React-和-Redux-入门"><a href="#1-React-和-Redux-入门" class="headerlink" title="1. React 和 Redux 入门"></a>1. React 和 Redux 入门</h3><p>React 是提供数据的视图库，能以高效、可预测的方式渲染视图。 Redux 是状态管理框架，可用于简化 APP 应用状态的管理。 在 React Redux app 应用中，通常可创建单一的 Redux store 来管理整个应用的状态。 React 组件仅订阅 store 中与其角色相关的数据， 可直接从 React 组件中分发 actions 以触发 store 对象的更新。</p>
+<span id="more"></span>
+
+<p>React 组件可以在本地管理自己的状态，但是对于复杂的应用来说，它的状态最好是用 Redux 保存在单一位置，有特定本地状态的独立组件例外。 当单个组件可能仅具有特定于其的本地状态时，算是例外。 最后一点是，Redux 没有内置的 React 支持，需要安装 <code>react-redux</code>包， 通过这个方式把 Redux 的 <code>state</code> 和 <code>dispatch</code> 作为 <code>props</code> 传给组件。</p>
+<p>在接下来的挑战中，先要创建一个可输入新文本消息的 React 组件， 添加这些消息到数组里，在视图上显示数组。 这应该是 React 课程中的一个很好的回顾。 接着，创建 Redux store 和 actions 来管理消息数组的状态。 最后，使用 <code>react-redux</code> 连接 Redux store 和组件，从而将本地状态提取到 Redux store 中。</p>
+<hr>
+<p>从 <code>DisplayMessages</code> 组件开始。 把构造函数添加到此组件中，使用含两个属性的状态初始化该组件，这两个属性为：<code>input</code>（设置为空字符串），<code>messages</code>（设置为空数组）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DisplayMessages</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="comment">// 修改这行下面的代码</span></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">props</span>)&#123;</span><br><span class="line">    <span class="variable language_">super</span>(props);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">state</span>=&#123;</span><br><span class="line">      <span class="attr">input</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">messages</span>:[]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 修改这行上面的代码</span></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-首先在本地管理状态"><a href="#2-首先在本地管理状态" class="headerlink" title="2. 首先在本地管理状态"></a>2. 首先在本地管理状态</h3><p>首先，在 <code>render()</code> 方法中，让组件渲染 <code>input</code>、<code>button</code>、<code>ul</code> 三个元素。 <code>input</code> 元素的改变会触发 <code>handleChange()</code> 方法。 此外，<code>input</code> 元素会渲染组件状态中 <code>input</code> 的值。 点击按钮 <code>button</code> 需触发 <code>submitMessage()</code> 方法。</p>
+<p>接着，写出这两种方法。 <code>handleChange()</code> 方法会更新 <code>input</code> 为用户正在输入的内容。 <code>submitMessage()</code> 方法把当前存储在 <code>input</code> 的消息与本地状态的 <code>messages</code> 数组连接起来，并清除 <code>input</code> 的值。</p>
+<p>最后，在 <code>ul</code> 中展示 <code>messages</code> 数组，其中每个元素内容需放到 <code>li</code> 元素内。</p>
+<h3 id="3-提取状态逻辑给-Redux"><a href="#3-提取状态逻辑给-Redux" class="headerlink" title="3. 提取状态逻辑给 Redux"></a>3. 提取状态逻辑给 Redux</h3><p>完成 React 组件后，我们需要把在本地 <code>state</code> 执行的逻辑移到 Redux 中， 这是为小规模 React 应用添加 Redux 的第一步。 该应用的唯一功能是把用户的新消息添加到无序列表中。 下面我们用简单的示例来演示 React 和 Redux 之间的配合。</p>
+<hr>
+<p>首先，定义 action 的类型 <code>ADD</code>，将其设置为常量 <code>ADD</code>。 接着，定义创建 action 的函数<code>addMessage()</code>，用该函数创建添加消息的 action， 把 <code>message</code> 传给创建 action 的函数并返回包含该消息的 <code>action</code></p>
+<p>接着，创建名为 <code>messageReducer()</code> 的 reducer 方法，为这些消息处理状态。 初始状态应为空数组。 reducer 向状态中的消息数组添加消息，或返回当前状态。 最后，创建 Redux store 并传给 reducer。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义 ADD、addMessage()、messageReducer() 并在这里存储：</span></span><br><span class="line"><span class="comment">// define ADD, addMessage(), messageReducer(), and store here:</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">ADD</span> = <span class="string">&quot;ADD&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addMessage</span> = message =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">ADD</span>,</span><br><span class="line">    message</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Use ES6 default paramter to give the &#x27;previousState&#x27; parameter an initial value.</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">messageReducer</span> = (<span class="params">previousState = [], action</span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// Use switch statement to lay out the reducer logic in response to different action type</span></span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">ADD</span>:</span><br><span class="line">      <span class="comment">// Use ES6 spread operator to return a new array where the new message is added to previousState</span></span><br><span class="line">      <span class="keyword">return</span> [...previousState, action.<span class="property">message</span>];</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="comment">// A default case to fall back on in case if the update to Redux store is not for this specific state.</span></span><br><span class="line">      <span class="keyword">return</span> previousState;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(messageReducer);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-使用-Provider-连接-Redux-和-React"><a href="#4-使用-Provider-连接-Redux-和-React" class="headerlink" title="4. 使用 Provider 连接 Redux 和 React"></a>4. 使用 Provider 连接 Redux 和 React</h3><p>在上一挑战中，创建了 Redux store 和 action，分别用于处理消息数组和添加新消息。 下一步要为 React 提供访问 Redux store 及发起更新所需的 actions。 <code>react-redux</code> 包可帮助我们完成这些任务。</p>
+<p>React Redux 提供的 API 有两个关键的功能：<code>Provider</code> 和 <code>connect</code>。 会在另一个挑战会介绍 <code>connect</code>。 <code>Provider</code>是 React Redux 包装 React 应用的 wrapper 组件， 它允许访问整个组件树中的 Redux <code>store</code> 及 <code>dispatch</code>（分发）方法。 <code>Provider</code> 需要两个 props：Redux store 和 App 应用的子组件。 用于 App 组件的 <code>Provider</code> 可这样定义：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Provider</span> store=&#123;store&#125;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">App</span>/&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Provider</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>此时，编辑器上显示的是过去几个挑战中所有代码， 包括 Redux store、actions、<code>DisplayMessages</code> 组件。 新出现的代码是底部的<code>AppWrapper</code>组件， 这个顶级组件可用于渲染 <code>ReactRedux</code> 的 <code>Provider</code>，并把 Redux 的 store 作为 props 传入。 接着，渲染 <code>DisplayMessages</code> 为子组件。 完成这些任务后，会看到 React 组件渲染到页面上。</p>
+<p><strong>注意：</strong> React Redux 在此可作全局变量，因此可通过点号表示法访问 Provider。 利用这一点，编辑器上的代码把 <code>Provider</code> 设置为常量，便于你在 <code>AppWrapper</code> 渲染方法中使用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Redux:</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">ADD</span> = <span class="string">&#x27;ADD&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addMessage</span> = (<span class="params">message</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">ADD</span>,</span><br><span class="line">    message</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">messageReducer</span> = (<span class="params">state = [], action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">ADD</span>:</span><br><span class="line">      <span class="keyword">return</span> [</span><br><span class="line">        ...state,</span><br><span class="line">        action.<span class="property">message</span></span><br><span class="line">      ];</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(messageReducer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// React:</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DisplayMessages</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>(props);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">state</span> = &#123;</span><br><span class="line">      <span class="attr">input</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">messages</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">handleChange</span> = <span class="variable language_">this</span>.<span class="property">handleChange</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">submitMessage</span> = <span class="variable language_">this</span>.<span class="property">submitMessage</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">handleChange</span>(<span class="params">event</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">      <span class="attr">input</span>: event.<span class="property">target</span>.<span class="property">value</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">submitMessage</span>(<span class="params"></span>) &#123;  </span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(<span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> currentMessage = state.<span class="property">input</span>;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">input</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">messages</span>: state.<span class="property">messages</span>.<span class="title function_">concat</span>(currentMessage)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Type in a new Message:<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">input</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">value</span>=<span class="string">&#123;this.state.input&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">onChange</span>=<span class="string">&#123;this.handleChange&#125;/</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.submitMessage&#125;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;this.state.messages.map( (message, idx) =&gt; &#123;</span></span><br><span class="line"><span class="language-xml">              return (</span></span><br><span class="line"><span class="language-xml">                 <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;idx&#125;</span>&gt;</span>&#123;message&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              )</span></span><br><span class="line"><span class="language-xml">            &#125;)</span></span><br><span class="line"><span class="language-xml">          &#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Provider</span> = <span class="title class_">ReactRedux</span>.<span class="property">Provider</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AppWrapper</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="comment">// 在这一行下面渲染 Provider</span></span><br><span class="line">   <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">Provider</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">DisplayMessages</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Provider</span>&gt;</span></span></span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment">// 修改这行上面的代码</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-映射-State-到-Props"><a href="#5-映射-State-到-Props" class="headerlink" title="5. 映射 State 到 Props"></a>5. 映射 State 到 Props</h3><p><code>Provider</code>可向 React 组件提供 <code>state</code> 和 <code>dispatch</code> ，但必须确切地指定所需要的 state 和 actions， 以确保每个组件只能访问所需的 state。 完成这个任务，需要创建两个函数：<code>mapStateToProps()</code>、<code>mapDispatchToProps()</code>。</p>
+<p>在这两个函数中，声明 state 中函数所要访问的部分及需要 dispatch 的创建 action 的函数。 完成这些，我们就可以迎接下一个挑战，学习如何使用 React Redux 的 <code>connect</code> 方法来把函数连接到组件了。</p>
+<p><strong>注意：</strong> 在幕后，React Redux 用 <code>store.subscribe()</code> 方法来实现 <code>mapStateToProps()</code>。</p>
+<hr>
+<p>创建 <code>mapStateToProps()</code> 函数， 以 <code>state</code> 为参数，然后返回一个对象，该对象把 state 映射到特定属性名上， 这些属性能通过 <code>props</code> 访问组件。 由于此示例把 app 应用的整个状态保存在单一数组中，可把整个状态传给组件。 在返回的对象中创建 <code>messages</code> 属性，并设置为 <code>state</code>。</p>
+<h3 id="6-映射-Dispatch-到-Props"><a href="#6-映射-Dispatch-到-Props" class="headerlink" title="6. 映射 Dispatch 到 Props"></a>6. 映射 Dispatch 到 Props</h3><p><code>mapDispatchToProps()</code> 函数可为 React 组件提供特定的创建 action 的函数，以便组件可 dispatch actions，从而更改 Redux store 中的数据。 该函数的结构跟上一挑战中的<code>mapStateToProps()</code>函数相似， 它返回一个对象，把 dispatch actions 映射到属性名上，该属性名成为<code>props</code>。 然而，每个属性都返回一个用 action creator 及与 action 相关的所有数据调用 <code>dispatch</code> 的函数，而不是返回 <code>state</code> 的一部分。 可以访问 <code>dispatch</code>，因为在定义函数时，我们以参数形式把它传入 <code>mapDispatchToProps()</code> 了，这跟 <code>state</code> 传入 <code>mapStateToProps()</code> 是一样的。 在幕后，React Redux 用 Redux 的 <code>store.dispatch()</code> 来管理这些含 <code>mapDispatchToProps()</code> 的dispatches， 这跟它使用 <code>store.subscribe()</code> 来订阅映射到 <code>state</code> 的组件的方式类似。</p>
+<p>例如，创建 action 的函数 <code>loginUser()</code> 把 <code>username</code> 作为 action payload， <code>mapDispatchToProps()</code> 返回给创建 action 的函数的对象如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">submitLoginUser</span>: <span class="keyword">function</span>(<span class="params">username</span>) &#123;</span><br><span class="line">    <span class="title function_">dispatch</span>(<span class="title function_">loginUser</span>(username));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>编辑器上提供的是创建 action 的函数 <code>addMessage()</code>。 写出接收 <code>dispatch</code> 为参数的函数 <code>mapDispatchToProps()</code>，返回一个 dispatch 函数对象， 其属性为 <code>submitNewMessage</code>。该函数在 dispatch <code>addMessage()</code> 时为新消息提供一个参数。</p>
+<h3 id="7-连接-Redux-和-React"><a href="#7-连接-Redux-和-React" class="headerlink" title="7. 连接 Redux 和 React"></a>7. 连接 Redux 和 React</h3><p>你已经写了<code>mapStateToProps()</code>、<code>mapDispatchToProps()</code> 两个函数，现在可以用它们来把 <code>state</code> 和 <code>dispatch</code> 映射到 React 组件的 <code>props</code> 了。 React Redux 的 <code>connect</code> 方法可以完成这个任务。 此方法有 <code>mapStateToProps()</code>、<code>mapDispatchToProps()</code> 两个可选参数， 它们是可选的，原因是你的组件可能仅需要访问 <code>state</code> 但不需要分发任何 actions，反之亦然。</p>
+<p>为了使用此方法，需要传入函数参数并在调用时传入组件。 这种语法有些不寻常，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">connect</span>(mapStateToProps, mapDispatchToProps)(<span class="title class_">MyComponent</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>如果要省略 <code>connect</code> 方法中的某个参数，则应当用 <code>null</code> 替换这个参数。</p>
+<hr>
+<p>代码编辑器具有 <code>mapStateToProps()</code> 和 <code>mapDispatchToProps()</code> 函数，以及一个名为 <code>Presentational</code> 的新 React 组件。 使用 <code>ReactRedux</code> 全局对象中的 <code>connect</code> 方法将此组件连接到 Redux，并立即在 <code>Presentational</code> 组件上调用它。 将结果赋值给名为 <code>ConnectedComponent</code> 的新 <code>const</code>，表示连接的组件。 就是这样，现在你已经连接到 Redux 了！ 尝试将 <code>connect</code> 的参数更改为 <code>null</code>，并观察测试结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">addMessage</span> = (<span class="params">message</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;ADD&#x27;</span>,</span><br><span class="line">    <span class="attr">message</span>: message</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapStateToProps</span> = (<span class="params">state</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">messages</span>: state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapDispatchToProps</span> = (<span class="params">dispatch</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">submitNewMessage</span>: <span class="function">(<span class="params">message</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">dispatch</span>(<span class="title function_">addMessage</span>(message));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Presentational</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>This is a Presentational Component<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> connect = <span class="title class_">ReactRedux</span>.<span class="property">connect</span>;</span><br><span class="line"><span class="comment">// 修改这行下面的代码</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ConnectedComponent</span> = <span class="title function_">connect</span>(mapStateToProps, mapDispatchToProps) (<span class="title class_">Presentational</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-将-Redux-连接到-Messages-App"><a href="#8-将-Redux-连接到-Messages-App" class="headerlink" title="8. 将 Redux 连接到 Messages App"></a>8. 将 Redux 连接到 Messages App</h3><p>知道如何使用 <code>connect</code> 连接 React 和 Redux 后，我们可以在 React 组件中应用上面学到的内容。</p>
+<p>在上一课，连接到 Redux 的组件命名为 <code>Presentational</code>，这个命名不是任意的， 这样的术语<em>通常</em>是指未直接连接到 Redux 的 React 组件， 它们只负责执行接收 props 的函数来实现 UI 的呈现。 相比之下，容器组件用来连接到 Redux 上。 这些组件通常负责把 actions 分派给 store，且经常给子组件传入 store state 属性。</p>
+<hr>
+<p>到目前为止，我们的编辑器上已包含了整个章节的代码， 唯一不同的是，React 组件被重新命名为 <code>Presentational</code>，即展示层组件。 创建一个新组件，保存在名为 <code>Container</code> 的常量中。 这个常量用 <code>connect</code> 把 <code>Presentational</code> 组件和 Redux 连接起来。 然后，在<code>AppWrapper</code> 中渲染 React Redux 的 <code>Provider</code>组件， 给 <code>Provider</code> 传入 Redux <code>store</code> 属性并渲染 <code>Container</code> 为子组件。 设置完所有内容后，将再次看到消息应用程序渲染到页面上。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Redux:</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">ADD</span> = <span class="string">&#x27;ADD&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addMessage</span> = (<span class="params">message</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">ADD</span>,</span><br><span class="line">    <span class="attr">message</span>: message</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">messageReducer</span> = (<span class="params">state = [], action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">ADD</span>:</span><br><span class="line">      <span class="keyword">return</span> [</span><br><span class="line">        ...state,</span><br><span class="line">        action.<span class="property">message</span></span><br><span class="line">      ];</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(messageReducer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// React:</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Presentational</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>(props);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">state</span> = &#123;</span><br><span class="line">      <span class="attr">input</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">messages</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">handleChange</span> = <span class="variable language_">this</span>.<span class="property">handleChange</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">submitMessage</span> = <span class="variable language_">this</span>.<span class="property">submitMessage</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">handleChange</span>(<span class="params">event</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">      <span class="attr">input</span>: event.<span class="property">target</span>.<span class="property">value</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">submitMessage</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> currentMessage = <span class="variable language_">this</span>.<span class="property">state</span>.<span class="property">input</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">      <span class="attr">input</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">messages</span>: <span class="variable language_">this</span>.<span class="property">state</span>.<span class="property">messages</span>.<span class="title function_">concat</span>(currentMessage)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Type in a new Message:<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">input</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">value</span>=<span class="string">&#123;this.state.input&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">onChange</span>=<span class="string">&#123;this.handleChange&#125;/</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.submitMessage&#125;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;this.state.messages.map( (message, idx) =&gt; &#123;</span></span><br><span class="line"><span class="language-xml">              return (</span></span><br><span class="line"><span class="language-xml">                 <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;idx&#125;</span>&gt;</span>&#123;message&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              )</span></span><br><span class="line"><span class="language-xml">            &#125;)</span></span><br><span class="line"><span class="language-xml">          &#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// React-Redux:</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapStateToProps</span> = (<span class="params">state</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123; <span class="attr">messages</span>: state &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapDispatchToProps</span> = (<span class="params">dispatch</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">submitNewMessage</span>: <span class="function">(<span class="params">newMessage</span>) =&gt;</span> &#123;</span><br><span class="line">       <span class="title function_">dispatch</span>(<span class="title function_">addMessage</span>(newMessage))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Provider</span> = <span class="title class_">ReactRedux</span>.<span class="property">Provider</span>;</span><br><span class="line"><span class="keyword">const</span> connect = <span class="title class_">ReactRedux</span>.<span class="property">connect</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// define the Container component here:</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Container</span> = <span class="title function_">connect</span>(mapStateToProps,mapDispatchToProps)(<span class="title class_">Presentational</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AppWrapper</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// complete the return statement:</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">Provider</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Container</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Provider</span>&gt;</span></span></span><br><span class="line">      );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-将局部状态提取到-Redux-中"><a href="#9-将局部状态提取到-Redux-中" class="headerlink" title="9. 将局部状态提取到 Redux 中"></a>9. 将局部状态提取到 Redux 中</h3><p>马上就完成了! 请回顾一下为管理 React messages app 的状态写的 Redux 代码。 现在有了连接好的 Redux，还要从<code>Presentational</code>组件中提取状态管理到 Redux， 目前，已连接 Redux，但正在 <code>Presentational</code> 组件中本地处理状态。</p>
+<hr>
+<p>在 <code>Presentational</code> 组件中，先删除本地 <code>state</code> 中的 <code>messages</code> 属性， 被删的 messages 将由 Redux 管理。 接着，修改 <code>submitMessage()</code> 方法，使该方法从 <code>this.props</code> 那里分发 <code>submitNewMessage()</code>；从本地 <code>state</code> 中传入当前消息输入作为参数。 因本地状态删除了 <code>messages</code> 属性，所以在调用 <code>this.setState()</code> 时也要删除 <code>messages</code> 属性。 最后，修改 <code>render()</code> 方法，使其所映射的消息是从 <code>props</code> 接收的，而不是 <code>state</code></p>
+<p>完成这些更改后，我们的应用会实现 Redux 管理应用的状态，但它继续运行着相同的功能。 此示例还阐明了组件获得本地 <code>state</code> 的方式，即在自己的 <code>state</code> 中继续跟踪用户本地输入。 由此可见，Redux 为 React 提供了很有用的状态管理框架。 先前，仅使用 React 的本地状态也实现了相同的结果，这在应付简单的应用时通常是可行的。 但是，随着应用变得越来越大，越来越复杂，应用的状态管理也变得非常困难，Redux 就是为解决这样的问题而诞生的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Redux:</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">ADD</span> = <span class="string">&#x27;ADD&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addMessage</span> = (<span class="params">message</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="variable constant_">ADD</span>,</span><br><span class="line">    <span class="attr">message</span>: message</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">messageReducer</span> = (<span class="params">state = [], action</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="attr">ADD</span>:</span><br><span class="line">      <span class="keyword">return</span> [</span><br><span class="line">        ...state,</span><br><span class="line">        action.<span class="property">message</span></span><br><span class="line">      ];</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="title class_">Redux</span>.<span class="title function_">createStore</span>(messageReducer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// React:</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Provider</span> = <span class="title class_">ReactRedux</span>.<span class="property">Provider</span>;</span><br><span class="line"><span class="keyword">const</span> connect = <span class="title class_">ReactRedux</span>.<span class="property">connect</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Change code below this line</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Presentational</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>(props);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Remove property &#x27;messages&#x27; from Presentational&#x27;s local state</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">state</span> = &#123;</span><br><span class="line">      <span class="attr">input</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">handleChange</span> = <span class="variable language_">this</span>.<span class="property">handleChange</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">submitMessage</span> = <span class="variable language_">this</span>.<span class="property">submitMessage</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">handleChange</span>(<span class="params">event</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">      <span class="attr">input</span>: event.<span class="property">target</span>.<span class="property">value</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">submitMessage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Call &#x27;submitNewMessage&#x27;, which has been mapped to Presentational&#x27;s props, with a new message;</span></span><br><span class="line">    <span class="comment">// meanwhile, remove the &#x27;messages&#x27; property from the object returned by this.setState().</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">props</span>.<span class="title function_">submitNewMessage</span>(<span class="variable language_">this</span>.<span class="property">state</span>.<span class="property">input</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">      <span class="attr">input</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Type in a new Message:<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">input</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">value</span>=<span class="string">&#123;this.state.input&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">onChange</span>=<span class="string">&#123;this.handleChange&#125;/</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.submitMessage&#125;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">           &#123;/* The messages state is mapped to Presentational&#x27;s props; therefore, when rendering,</span></span><br><span class="line"><span class="language-xml">               you should access the messages state through props, instead of Presentational&#x27;s</span></span><br><span class="line"><span class="language-xml">               local state. */&#125;</span></span><br><span class="line"><span class="language-xml">          &#123;this.props.messages.map( (message, idx) =&gt; &#123;</span></span><br><span class="line"><span class="language-xml">              return (</span></span><br><span class="line"><span class="language-xml">                 <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;idx&#125;</span>&gt;</span>&#123;message&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              )</span></span><br><span class="line"><span class="language-xml">            &#125;)</span></span><br><span class="line"><span class="language-xml">          &#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// Change code above this line</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapStateToProps</span> = (<span class="params">state</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;<span class="attr">messages</span>: state&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapDispatchToProps</span> = (<span class="params">dispatch</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">submitNewMessage</span>: <span class="function">(<span class="params">message</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">dispatch</span>(<span class="title function_">addMessage</span>(message))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Container</span> = <span class="title function_">connect</span>(mapStateToProps, mapDispatchToProps)(<span class="title class_">Presentational</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AppWrapper</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">Provider</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Container</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Provider</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/Webchat.png" alt="墨韵 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>墨韵
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://moyun.com/front-end-development-libraries-%E5%85%AD/" title="Front End Development Libraries(六)">http://moyun.com/front-end-development-libraries-六/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+              <a href="/tags/React/" rel="tag"><i class="fa fa-tag"></i> React</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/front-end-development-libraries-%E5%9B%9B/" rel="prev" title="Front End Development Libraries(四)">
+                  <i class="fa fa-chevron-left"></i> Front End Development Libraries(四)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/front-end-development-libraries-%E4%BA%94/" rel="next" title="Front End Development Libraries(五)">
+                  Front End Development Libraries(五) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MOYUN</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">516k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:49</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="sitetime"></span>
+<script language=javascript>
+  	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+         		*/
+		var t1 = Date.UTC(2020,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 多级目录 -->
+  <script type="text/javascript" src="/js/category.js"></script>
+</body>
+</html>
