@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://moyun.com/algorithm%E2%80%94%E2%80%94stack-and-queue/</loc>
+    <lastmod>2023-07-25</lastmod>
+  </url>
+  <url>
     <loc>http://moyun.com/front-end-development-libraries-%E5%85%AD/</loc>
     <lastmod>2023-06-25</lastmod>
   </url>
