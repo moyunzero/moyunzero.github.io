@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-07-25T09:58:50.487Z</updated>
+  <updated>2023-07-28T12:10:00.926Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://moyun.com/algorithm%E2%80%94%E2%80%94stack-and-queue/"/>
     <id>http://moyun.com/algorithm%E2%80%94%E2%80%94stack-and-queue/</id>
     <published>2023-07-25T09:58:58.427Z</published>
-    <updated>2023-07-25T09:58:50.487Z</updated>
+    <updated>2023-07-28T12:10:00.926Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;栈和队列&quot;&gt;&lt;a href=&quot;#栈和队列&quot; class=&quot;headerlink&quot; title=&quot;栈和队列&quot;&gt;&lt;/a&gt;栈和队列&lt;/h1&gt;&lt;h2 id=&quot;1-理论基础&quot;&gt;&lt;a href=&quot;#1-理论基础&quot; class=&quot;headerlink&quot; title=&quot;1. 理论基础&quot;&gt;&lt;/a&gt;1. 理论基础&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;栈是以底层容器完成其所有的工作，对外提供统一的接口，底层容器是可插拔的（也就是说我们可以控制使用哪种容器来实现栈的功能）。&lt;/strong&gt;&lt;/p&gt;</summary>
