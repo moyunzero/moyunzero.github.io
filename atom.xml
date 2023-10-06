@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-08-25T03:10:32.658Z</updated>
+  <updated>2023-10-06T10:09:59.206Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TED —— 优秀的人是如何训练大脑的</title>
+    <link href="http://moyun.com/ted-%E2%80%94%E2%80%94-%E4%BC%98%E7%A7%80%E7%9A%84%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%AD%E7%BB%83%E5%A4%A7%E8%84%91%E7%9A%84/"/>
+    <id>http://moyun.com/ted-%E2%80%94%E2%80%94-%E4%BC%98%E7%A7%80%E7%9A%84%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%AD%E7%BB%83%E5%A4%A7%E8%84%91%E7%9A%84/</id>
+    <published>2023-10-06T10:10:11.234Z</published>
+    <updated>2023-10-06T10:09:59.206Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;TED-——-优秀的人是如何训练大脑的&quot;&gt;&lt;a href=&quot;#TED-——-优秀的人是如何训练大脑的&quot; class=&quot;headerlink&quot; title=&quot;TED —— 优秀的人是如何训练大脑的&quot;&gt;&lt;/a&gt;TED ——</summary>
+        
+      
+    
+    
+    
+    <category term="心得笔记" scheme="http://moyun.com/categories/%E5%BF%83%E5%BE%97%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="TED演讲" scheme="http://moyun.com/categories/%E5%BF%83%E5%BE%97%E7%AC%94%E8%AE%B0/TED%E6%BC%94%E8%AE%B2/"/>
+    
+    
+    <category term="TED" scheme="http://moyun.com/tags/TED/"/>
+    
+    <category term="心理暗示" scheme="http://moyun.com/tags/%E5%BF%83%E7%90%86%E6%9A%97%E7%A4%BA/"/>
+    
+    <category term="大脑" scheme="http://moyun.com/tags/%E5%A4%A7%E8%84%91/"/>
+    
+  </entry>
   
   <entry>
     <title>TED —— 如何成为一个自信的人</title>
@@ -485,30 +516,6 @@
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;1-比较-var-和-let-关键字的作用域&quot;&gt;&lt;a href=&quot;#1-比较-var-和-let-关键字的作用域&quot; class=&quot;headerlink&quot; title=&quot;1.比较 var 和 let 关键字的作用域&quot;&gt;&lt;/a&gt;1.比较 &lt;code&gt;var&lt;/code&gt; 和 &lt;code&gt;let&lt;/code&gt; 关键字的作用域&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;var&lt;/code&gt; 关键字声明变量时，它是&lt;strong&gt;全局声明&lt;/strong&gt;的，如果在函数&lt;strong&gt;内部&lt;/strong&gt;声明则是&lt;strong&gt;局部声明&lt;/strong&gt;的。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;let&lt;/code&gt; 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 &lt;code&gt;let&lt;/code&gt; 关键字声明变量时，其&lt;strong&gt;作用域&lt;/strong&gt; &lt;strong&gt;仅&lt;/strong&gt;限于该代码块、语句或表达式。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Algorithms and Data Structures(一)</title>
-    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/"/>
-    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%80/</id>
-    <published>2023-06-03T05:54:45.650Z</published>
-    <updated>2023-06-04T14:05:59.627Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
-&lt;h4 id=&quot;Basic-JavaScript&quot;&gt;&lt;a href=&quot;#Basic-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;Basic JavaScript&quot;&gt;&lt;/a&gt;Basic JavaScript&lt;/h4&gt;&lt;h5 id=&quot;1-添加注释&quot;&gt;&lt;a href=&quot;#1-添加注释&quot; class=&quot;headerlink&quot; title=&quot;1. 添加注释&quot;&gt;&lt;/a&gt;1. 添加注释&lt;/h5&gt;&lt;p&gt;被注释的代码块在 JavaScript 之中是不会执行的。 在代码中写注释，是一个可以让你自己和以后的其他人理解代码作用的好方法。&lt;/p&gt;</summary>
     
     
     
