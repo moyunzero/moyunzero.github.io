@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2023-10-06T10:11:06.283Z</updated>
+  <updated>2023-10-07T05:37:27.580Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TED —— 增强信心的三个技巧</title>
+    <link href="http://moyun.com/ted-%E2%80%94%E2%80%94-%E5%A2%9E%E5%BC%BA%E4%BF%A1%E5%BF%83%E7%9A%84%E4%B8%89%E4%B8%AA%E6%8A%80%E5%B7%A7/"/>
+    <id>http://moyun.com/ted-%E2%80%94%E2%80%94-%E5%A2%9E%E5%BC%BA%E4%BF%A1%E5%BF%83%E7%9A%84%E4%B8%89%E4%B8%AA%E6%8A%80%E5%B7%A7/</id>
+    <published>2023-10-07T05:37:38.873Z</published>
+    <updated>2023-10-07T05:37:27.580Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;TED-——-增强信心的三个技巧&quot;&gt;&lt;a href=&quot;#TED-——-增强信心的三个技巧&quot; class=&quot;headerlink&quot; title=&quot;TED —— 增强信心的三个技巧&quot;&gt;&lt;/a&gt;TED ——</summary>
+        
+      
+    
+    
+    
+    <category term="心得笔记" scheme="http://moyun.com/categories/%E5%BF%83%E5%BE%97%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="TED演讲" scheme="http://moyun.com/categories/%E5%BF%83%E5%BE%97%E7%AC%94%E8%AE%B0/TED%E6%BC%94%E8%AE%B2/"/>
+    
+    
+    <category term="TED" scheme="http://moyun.com/tags/TED/"/>
+    
+    <category term="自信" scheme="http://moyun.com/tags/%E8%87%AA%E4%BF%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>TED —— 优秀的人是如何训练大脑的</title>
@@ -491,31 +520,6 @@
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h2&gt;&lt;h3 id=&quot;1-使用测试方法&quot;&gt;&lt;a href=&quot;#1-使用测试方法&quot; class=&quot;headerlink&quot; title=&quot;1. 使用测试方法&quot;&gt;&lt;/a&gt;1. 使用测试方法&lt;/h3&gt;&lt;p&gt;在编程语言中，正则表达式用于匹配指定的字符串。 通过正则表达式创建匹配模式（规则）可以帮你完成指定匹配。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Algorithms and Data Structures(二)</title>
-    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/"/>
-    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%8C/</id>
-    <published>2023-06-04T14:05:32.842Z</published>
-    <updated>2023-06-04T14:07:40.155Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;1-比较-var-和-let-关键字的作用域&quot;&gt;&lt;a href=&quot;#1-比较-var-和-let-关键字的作用域&quot; class=&quot;headerlink&quot; title=&quot;1.比较 var 和 let 关键字的作用域&quot;&gt;&lt;/a&gt;1.比较 &lt;code&gt;var&lt;/code&gt; 和 &lt;code&gt;let&lt;/code&gt; 关键字的作用域&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;var&lt;/code&gt; 关键字声明变量时，它是&lt;strong&gt;全局声明&lt;/strong&gt;的，如果在函数&lt;strong&gt;内部&lt;/strong&gt;声明则是&lt;strong&gt;局部声明&lt;/strong&gt;的。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;let&lt;/code&gt; 关键字的行为类似，但有一些额外的功能。 在代码块、语句或表达式中使用 &lt;code&gt;let&lt;/code&gt; 关键字声明变量时，其&lt;strong&gt;作用域&lt;/strong&gt; &lt;strong&gt;仅&lt;/strong&gt;限于该代码块、语句或表达式。&lt;/p&gt;</summary>
     
     
     
