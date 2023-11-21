@@ -1967,19 +1967,8 @@
   <entry>
     <title></title>
     <url>//</url>
-    <content><![CDATA[<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1">First unique name 1</a></li><li class="tab"><a href="#first-unique-name-2">First unique name 2</a></li><li class="tab"><a href="#first-unique-name-3">First unique name 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="first-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
-
-<div class="tabs" id="test"><ul class="nav-tabs"><li class="tab active"><a href="#test-1">什么东西</a></li><li class="tab"><a href="#test-2">test 2</a></li><li class="tab"><a href="#test-3">test 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="test-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="test-2"><p><strong>This is Tab 2.</strong>    </p>
-<p>展开查看     </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    System.out.println(&quot;Hello to see U!&quot;);</span><br><span class="line">    </span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="test-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
-
-
-<details>
-    <summary>展开查看</summary>
-    <pre><code>
-    System.out.println("Hello to see U!");
-    </code></pre>
-</details>]]></content>
+    <content><![CDATA[<p>111</p>
+]]></content>
   </entry>
   <entry>
     <title>Project Exercise — Build a Technical Documentation Page</title>
