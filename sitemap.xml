@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://moyun.com/notes/index.html</loc>
+    
+    <lastmod>2023-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://moyun.com/index.html</loc>
+    
+    <lastmod>2023-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://moyun.com/ted-%E2%80%94%E2%80%94-%E5%A2%9E%E5%BC%BA%E4%BF%A1%E5%BF%83%E7%9A%84%E4%B8%89%E4%B8%AA%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2023-10-07</lastmod>
@@ -446,15 +464,6 @@
     <loc>http://moyun.com/tags/index.html</loc>
     
     <lastmod>2023-04-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://moyun.com/notes/index.html</loc>
-    
-    <lastmod>2023-04-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
