@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2024-01-05T03:08:52.980Z</updated>
+  <updated>2023-10-07T05:38:56.067Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,37 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>人间告白</title>
-    <link href="http://moyun.com/%E4%BA%BA%E9%97%B4%E5%91%8A%E7%99%BD/"/>
-    <id>http://moyun.com/%E4%BA%BA%E9%97%B4%E5%91%8A%E7%99%BD/</id>
-    <published>2024-01-05T03:06:28.903Z</published>
-    <updated>2024-01-05T03:08:52.980Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;人间告白&quot;&gt;&lt;a href=&quot;#人间告白&quot; class=&quot;headerlink&quot; title=&quot;人间告白&quot;&gt;&lt;/a&gt;人间告白&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="读书摘要" scheme="http://moyun.com/categories/%E8%AF%BB%E4%B9%A6%E6%91%98%E8%A6%81/"/>
-    
-    <category term="文学" scheme="http://moyun.com/categories/%E8%AF%BB%E4%B9%A6%E6%91%98%E8%A6%81/%E6%96%87%E5%AD%A6/"/>
-    
-    
-    <category term="爱情" scheme="http://moyun.com/tags/%E7%88%B1%E6%83%85/"/>
-    
-    <category term="困难" scheme="http://moyun.com/tags/%E5%9B%B0%E9%9A%BE/"/>
-    
-    <category term="治愈" scheme="http://moyun.com/tags/%E6%B2%BB%E6%84%88/"/>
-    
-  </entry>
   
   <entry>
     <title>TED —— 增强信心的三个技巧</title>
@@ -527,6 +496,30 @@
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&quot;调试&quot;&gt;&lt;a href=&quot;#调试&quot; class=&quot;headerlink&quot; title=&quot;调试&quot;&gt;&lt;/a&gt;调试&lt;/h2&gt;&lt;h3 id=&quot;1-使用控制台检查变量值&quot;&gt;&lt;a href=&quot;#1-使用控制台检查变量值&quot; class=&quot;headerlink&quot; title=&quot;1. 使用控制台检查变量值&quot;&gt;&lt;/a&gt;1. 使用控制台检查变量值&lt;/h3&gt;&lt;p&gt;Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
+    
+    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript Algorithms and Data Structures(三)</title>
+    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%89/"/>
+    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%B8%89/</id>
+    <published>2023-06-05T02:38:12.067Z</published>
+    <updated>2023-06-05T07:10:39.668Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h2&gt;&lt;h3 id=&quot;1-使用测试方法&quot;&gt;&lt;a href=&quot;#1-使用测试方法&quot; class=&quot;headerlink&quot; title=&quot;1. 使用测试方法&quot;&gt;&lt;/a&gt;1. 使用测试方法&lt;/h3&gt;&lt;p&gt;在编程语言中，正则表达式用于匹配指定的字符串。 通过正则表达式创建匹配模式（规则）可以帮你完成指定匹配。&lt;/p&gt;</summary>
     
     
     
