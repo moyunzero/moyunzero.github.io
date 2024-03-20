@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2024-01-05T03:36:10.089Z</updated>
+  <updated>2024-03-20T07:51:30.971Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript高级程序设计</title>
+    <link href="http://moyun.com/javascript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://moyun.com/javascript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
+    <published>2024-03-20T07:46:56.809Z</published>
+    <updated>2024-03-20T07:51:30.971Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;JavaScript高级程序设计&quot;&gt;&lt;a href=&quot;#JavaScript高级程序设计&quot; class=&quot;headerlink&quot; title=&quot;JavaScript高级程序设计&quot;&gt;&lt;/a&gt;JavaScript高级程序设计&lt;/h1&gt;&lt;h2 id=&quot;一、什么是JavaScript&quot;&gt;&lt;a href=&quot;#一、什么是JavaScript&quot; class=&quot;headerlink&quot; title=&quot;一、什么是JavaScript&quot;&gt;&lt;/a&gt;一、什么是JavaScript&lt;/h2&gt;&lt;h3 id=&quot;1-1-JavaScript&quot;&gt;&lt;a href=&quot;#1-1-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;1.1 JavaScript&quot;&gt;&lt;/a&gt;1.1 JavaScript&lt;/h3&gt;&lt;p&gt;完整的JavaScript实现包含以下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;核心（&lt;strong&gt;ECMAScript&lt;/strong&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;文档对象模型（&lt;strong&gt;DOM&lt;/strong&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;浏览器对象模型（&lt;strong&gt;BOM&lt;/strong&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Frontend Notes" scheme="http://moyun.com/categories/Frontend-Notes/"/>
+    
+    <category term="JS" scheme="http://moyun.com/categories/Frontend-Notes/JS/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>人间告白</title>
@@ -502,30 +535,6 @@
     
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&quot;基础数据结构&quot;&gt;&lt;a href=&quot;#基础数据结构&quot; class=&quot;headerlink&quot; title=&quot;基础数据结构&quot;&gt;&lt;/a&gt;基础数据结构&lt;/h2&gt;&lt;h3 id=&quot;1-使用数组存储不同类型的数据&quot;&gt;&lt;a href=&quot;#1-使用数组存储不同类型的数据&quot; class=&quot;headerlink&quot; title=&quot;1.使用数组存储不同类型的数据&quot;&gt;&lt;/a&gt;1.使用数组存储不同类型的数据&lt;/h3&gt;&lt;p&gt;以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（numbers）以及 JavaScript 中的其他数据类型&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Algorithms and Data Structures(四)</title>
-    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/"/>
-    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E5%9B%9B/</id>
-    <published>2023-06-06T00:58:43.110Z</published>
-    <updated>2023-06-08T12:59:39.976Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;调试&quot;&gt;&lt;a href=&quot;#调试&quot; class=&quot;headerlink&quot; title=&quot;调试&quot;&gt;&lt;/a&gt;调试&lt;/h2&gt;&lt;h3 id=&quot;1-使用控制台检查变量值&quot;&gt;&lt;a href=&quot;#1-使用控制台检查变量值&quot; class=&quot;headerlink&quot; title=&quot;1. 使用控制台检查变量值&quot;&gt;&lt;/a&gt;1. 使用控制台检查变量值&lt;/h3&gt;&lt;p&gt;Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试 JavaScript 代码&lt;/p&gt;</summary>
     
     
     
