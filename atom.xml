@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2024-03-20T08:54:24.933Z</updated>
+  <updated>2024-04-05T09:16:05.983Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6标准入门</title>
+    <link href="http://moyun.com/es6%E6%A0%87%E5%87%86%E5%85%A5%E9%97%A8/"/>
+    <id>http://moyun.com/es6%E6%A0%87%E5%87%86%E5%85%A5%E9%97%A8/</id>
+    <published>2024-04-05T09:14:48.260Z</published>
+    <updated>2024-04-05T09:16:05.983Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;ES6标准入门&quot;&gt;&lt;a href=&quot;#ES6标准入门&quot; class=&quot;headerlink&quot; title=&quot;ES6标准入门&quot;&gt;&lt;/a&gt;ES6标准入门&lt;/h1&gt;&lt;h2 id=&quot;一、ECMAScript-6-简介&quot;&gt;&lt;a href=&quot;#一、ECMAScript-6-简介&quot; class=&quot;headerlink&quot; title=&quot;一、ECMAScript 6 简介&quot;&gt;&lt;/a&gt;一、ECMAScript 6 简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-部署进度&quot;&gt;&lt;a href=&quot;#1-1-部署进度&quot; class=&quot;headerlink&quot; title=&quot;1.1 部署进度&quot;&gt;&lt;/a&gt;1.1 部署进度&lt;/h3&gt;&lt;p&gt;Node 是 JavaScript 的服务器运行环境（runtime）。它对 ES6 的支持度更高。除了那些默认打开的功能，还有一些语法功能已经实现了，但是默认没有打开。使用下面的命令，可以查看 Node 已经实现的 ES6 特性。&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;node --v8-options | grep harmony&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行下面的命令，可以查看你正在使用的 Node 环境对 ES6 的支持程度。&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;npm install -g es-checker&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;es-checker&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=========================================&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Passes 24 feature Dectations&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Your runtime supports 57% of ECMAScript 6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=========================================&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Frontend Notes" scheme="http://moyun.com/categories/Frontend-Notes/"/>
+    
+    <category term="ES6" scheme="http://moyun.com/categories/Frontend-Notes/ES6/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+    <category term="ES6" scheme="http://moyun.com/tags/ES6/"/>
+    
+    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript高级程序设计</title>
@@ -43,9 +74,9 @@
     
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
+    
+    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -511,30 +542,6 @@
     <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&quot;基础算法&quot;&gt;&lt;a href=&quot;#基础算法&quot; class=&quot;headerlink&quot; title=&quot;基础算法&quot;&gt;&lt;/a&gt;基础算法&lt;/h2&gt;&lt;h3 id=&quot;1-将摄氏度转换为华氏度&quot;&gt;&lt;a href=&quot;#1-将摄氏度转换为华氏度&quot; class=&quot;headerlink&quot; title=&quot;1. 将摄氏度转换为华氏度&quot;&gt;&lt;/a&gt;1. 将摄氏度转换为华氏度&lt;/h3&gt;&lt;p&gt;从摄氏转换为华氏的公式是，摄氏温度乘以 &lt;code&gt;9/5&lt;/code&gt;，再加上 &lt;code&gt;32&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;输入参数 &lt;code&gt;celsius&lt;/code&gt; 代表一个摄氏度的温度。 使用已定义的变量 &lt;code&gt;fahrenheit&lt;/code&gt;，并赋值为相应的华氏度的温度值。 使用上面提到的公式来帮助将摄氏温度转换为华氏温度。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Algorithms and Data Structures(五)</title>
-    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/"/>
-    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E4%BA%94/</id>
-    <published>2023-06-08T12:57:24.011Z</published>
-    <updated>2023-06-08T12:59:39.979Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;基础数据结构&quot;&gt;&lt;a href=&quot;#基础数据结构&quot; class=&quot;headerlink&quot; title=&quot;基础数据结构&quot;&gt;&lt;/a&gt;基础数据结构&lt;/h2&gt;&lt;h3 id=&quot;1-使用数组存储不同类型的数据&quot;&gt;&lt;a href=&quot;#1-使用数组存储不同类型的数据&quot; class=&quot;headerlink&quot; title=&quot;1.使用数组存储不同类型的数据&quot;&gt;&lt;/a&gt;1.使用数组存储不同类型的数据&lt;/h3&gt;&lt;p&gt;以下是最简单的数组（Array）示例： 这是一个一维数组（one-dimensional array），它只有一层，或者说它里面没有包含其它数组。 可以观察到，这个数组中只包含了布尔值（booleans）、字符串（strings）、数字（numbers）以及 JavaScript 中的其他数据类型&lt;/p&gt;</summary>
     
     
     
