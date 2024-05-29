@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://moyun.com/es6%E6%A0%87%E5%87%86%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2024-04-05</lastmod>
+    <loc>http://moyun.com/typescript%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-05-29</lastmod>
   </url>
   <url>
     <loc>http://moyun.com//</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-04-05</lastmod>
+  </url>
+  <url>
+    <loc>http://moyun.com/es6%E6%A0%87%E5%87%86%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2024-04-05</lastmod>
   </url>
   <url>
     <loc>http://moyun.com/javascript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>

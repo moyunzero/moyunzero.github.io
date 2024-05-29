@@ -6,7 +6,7 @@
   <link href="http://moyun.com/atom.xml" rel="self"/>
   
   <link href="http://moyun.com/"/>
-  <updated>2024-04-05T09:16:05.983Z</updated>
+  <updated>2024-05-29T14:49:14.055Z</updated>
   <id>http://moyun.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TypeScript教程</title>
+    <link href="http://moyun.com/typescript%E6%95%99%E7%A8%8B/"/>
+    <id>http://moyun.com/typescript%E6%95%99%E7%A8%8B/</id>
+    <published>2024-05-29T14:47:57.472Z</published>
+    <updated>2024-05-29T14:49:14.055Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;TypeScript教程&quot;&gt;&lt;a href=&quot;#TypeScript教程&quot; class=&quot;headerlink&quot; title=&quot;TypeScript教程&quot;&gt;&lt;/a&gt;TypeScript教程&lt;/h1&gt;&lt;h2 id=&quot;一、TypeScript-语言简介&quot;&gt;&lt;a href=&quot;#一、TypeScript-语言简介&quot; class=&quot;headerlink&quot; title=&quot;一、TypeScript 语言简介&quot;&gt;&lt;/a&gt;一、TypeScript 语言简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h3&gt;&lt;p&gt;TypeScript（简称 TS）是微软公司开发的一种基于 JavaScript （简称 JS）语言的编程语言。&lt;/p&gt;
+&lt;p&gt;TypeScript 可以看成是 JavaScript 的超集（superset），即它继承了后者的全部语法，所有 JavaScript 脚本都可以当作 TypeScript 脚本（但是可能会报错），此外它再增加了一些自己的语法。&lt;br&gt;TypeScript 对 JavaScript 添加的最主要部分，就是一个独立的类型系统。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Frontend Notes" scheme="http://moyun.com/categories/Frontend-Notes/"/>
+    
+    <category term="TypeScript" scheme="http://moyun.com/categories/Frontend-Notes/TypeScript/"/>
+    
+    
+    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="TypeScript" scheme="http://moyun.com/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ES6标准入门</title>
     <link href="http://moyun.com/es6%E6%A0%87%E5%87%86%E5%85%A5%E9%97%A8/"/>
     <id>http://moyun.com/es6%E6%A0%87%E5%87%86%E5%85%A5%E9%97%A8/</id>
     <published>2024-04-05T09:14:48.260Z</published>
-    <updated>2024-04-05T09:16:05.983Z</updated>
+    <updated>2024-04-05T09:21:18.555Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;ES6标准入门&quot;&gt;&lt;a href=&quot;#ES6标准入门&quot; class=&quot;headerlink&quot; title=&quot;ES6标准入门&quot;&gt;&lt;/a&gt;ES6标准入门&lt;/h1&gt;&lt;h2 id=&quot;一、ECMAScript-6-简介&quot;&gt;&lt;a href=&quot;#一、ECMAScript-6-简介&quot; class=&quot;headerlink&quot; title=&quot;一、ECMAScript 6 简介&quot;&gt;&lt;/a&gt;一、ECMAScript 6 简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-部署进度&quot;&gt;&lt;a href=&quot;#1-1-部署进度&quot; class=&quot;headerlink&quot; title=&quot;1.1 部署进度&quot;&gt;&lt;/a&gt;1.1 部署进度&lt;/h3&gt;&lt;p&gt;Node 是 JavaScript 的服务器运行环境（runtime）。它对 ES6 的支持度更高。除了那些默认打开的功能，还有一些语法功能已经实现了，但是默认没有打开。使用下面的命令，可以查看 Node 已经实现的 ES6 特性。&lt;/p&gt;
@@ -39,11 +65,11 @@
     
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
+    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
     <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
     
     <category term="ES6" scheme="http://moyun.com/tags/ES6/"/>
-    
-    <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -74,9 +100,9 @@
     
     <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
-    
     <category term="笔记" scheme="http://moyun.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -528,31 +554,6 @@
     <category term="Algorithm" scheme="http://moyun.com/tags/Algorithm/"/>
     
     <category term="Hash table" scheme="http://moyun.com/tags/Hash-table/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Algorithms and Data Structures(六)</title>
-    <link href="http://moyun.com/javascript-algorithms-and-data-structures-%E5%85%AD/"/>
-    <id>http://moyun.com/javascript-algorithms-and-data-structures-%E5%85%AD/</id>
-    <published>2023-06-10T09:18:03.944Z</published>
-    <updated>2023-06-10T09:21:12.737Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot;&gt;&lt;a href=&quot;#freeCodeCamp-—-JavaScript-Algorithms-and-Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;freeCodeCamp —- JavaScript Algorithms and Data Structures&quot;&gt;&lt;/a&gt;freeCodeCamp —- JavaScript Algorithms and Data Structures&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&quot;基础算法&quot;&gt;&lt;a href=&quot;#基础算法&quot; class=&quot;headerlink&quot; title=&quot;基础算法&quot;&gt;&lt;/a&gt;基础算法&lt;/h2&gt;&lt;h3 id=&quot;1-将摄氏度转换为华氏度&quot;&gt;&lt;a href=&quot;#1-将摄氏度转换为华氏度&quot; class=&quot;headerlink&quot; title=&quot;1. 将摄氏度转换为华氏度&quot;&gt;&lt;/a&gt;1. 将摄氏度转换为华氏度&lt;/h3&gt;&lt;p&gt;从摄氏转换为华氏的公式是，摄氏温度乘以 &lt;code&gt;9/5&lt;/code&gt;，再加上 &lt;code&gt;32&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;输入参数 &lt;code&gt;celsius&lt;/code&gt; 代表一个摄氏度的温度。 使用已定义的变量 &lt;code&gt;fahrenheit&lt;/code&gt;，并赋值为相应的华氏度的温度值。 使用上面提到的公式来帮助将摄氏温度转换为华氏温度。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="freeCodeCamp" scheme="http://moyun.com/categories/freeCodeCamp/"/>
-    
-    <category term="JavaScript Algorithms and Data Structures" scheme="http://moyun.com/categories/freeCodeCamp/JavaScript-Algorithms-and-Data-Structures/"/>
-    
-    
-    <category term="前端" scheme="http://moyun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="JavaScript" scheme="http://moyun.com/tags/JavaScript/"/>
     
   </entry>
   
